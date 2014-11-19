@@ -1,4 +1,4 @@
-# UCF Partnership Site Selector Theme
+# UCF Downtown Theme
 
 WordPress theme built off of UCF's Generic theme.
 
@@ -57,7 +57,7 @@ Theme-specific functions only should be defined here.  (Other required
 function files are also included at the top of this file.)
 
 ### shortcodes.php
-Where Wordpress shortcodes can be defined.  See example shortcodes for more 
+Where Wordpress shortcodes can be defined.  See example shortcodes for more
 information.
 
 ### custom-post-types.php
@@ -85,7 +85,7 @@ This theme is configured to work with the Cloud.Typography web font service.  To
 this theme, a project must be set up in Cloud.Typography that references the domain on which this repository will live.
 
 Development environments should be set up in a separate, Development Mode project in Cloud.Typography to prevent pageviews
-from development environments counting toward the Cloud.Typography monthly pageview limit.  Paste the CSS Key URL provided 
+from development environments counting toward the Cloud.Typography monthly pageview limit.  Paste the CSS Key URL provided
 by Cloud.Typography in the CSS Key URL field in the Theme Options admin area.
 
 This site's production environment should have its own Cloud.Typography project, configured identically to the Development
