@@ -10,67 +10,67 @@
 
 /* Full-size (x-large) screens (1200x+ wide) */
 @media all and (min-width: 1200px) {
- 	.parallax-feature .parallax-photo {
- 		height: 800px;
- 	}
- 	.parallax-header .parallax-photo {
- 		height: 700px;
- 	}
+  .parallax-feature .parallax-photo {
+    height: 800px;
+  }
+  .parallax-header .parallax-photo {
+    height: 550px;
+  }
 }
 @media all and (min-width: 1200px) and (max-height: 768px) {
-	/* Try to catch wider screens with less vertical space; i.e. 1366x768px */
-	.parallax-feature .parallax-photo {
-		height: 625px;
-	}
-	.parallax-header .parallax-photo {
-		height: 575px;
-	}
+  /* Try to catch wider screens with less vertical space; i.e. 1366x768px */
+  .parallax-feature .parallax-photo {
+    height: 625px;
+  }
+  .parallax-header .parallax-photo {
+    height: 450px;
+  }
 }
 
 /* "Desktop (medium/large)" screens (1199px-768px wide) */
 @media all and (max-width: 1199px) and (min-width: 768px) {
-	.parallax-feature .parallax-photo {
-		height: 625px;
-	}
-	.parallax-header .parallax-photo {
-		height: 575px;
-	}
+  .parallax-feature .parallax-photo {
+    height: 625px;
+  }
+  .parallax-header .parallax-photo {
+    height: 450px;
+  }
 }
 @media all and (max-width: 978px) {
-	.parallax-photo {
-		padding-left: 0;
-		padding-right: 0;
-	}
+  .parallax-photo {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media all and (max-width: 768px) {
-	.parallax-photo {
-		background-attachment: scroll; /* make sure iPad portrait is reset */
-	}
+  .parallax-photo {
+    background-attachment: scroll; /* make sure iPad portrait is reset */
+  }
 }
 
 /* "Tablet (small)" screens (767-481px wide) */
 @media all and (max-width: 767px) and (min-width: 481px) {
-	.parallax-feature .parallax-photo {
-		height: 625px;
-	}
-	.parallax-header .parallax-photo {
-		height: 575px;
-	}
-	.parallax-photo {
-		padding-top: 80px;
-	}
+  .parallax-feature .parallax-photo {
+    height: 625px;
+  }
+  .parallax-header .parallax-photo {
+    height: 450px;
+  }
+  .parallax-photo {
+    padding-top: 80px;
+  }
 }
 
 /* "Mobile (x-small)" screens (>=480px wide) */
 @media all and (max-width: 480px) {
-	.parallax-feature .parallax-photo {
-		height: auto;
-		padding-top: 100px;
-		padding-bottom: 160px;
-	}
-	.parallax-header .parallax-photo {
-		height: 300px;
-	}
+  .parallax-feature .parallax-photo {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 160px;
+  }
+  .parallax-header .parallax-photo {
+    height: 235px;
+  }
 }
 
 
@@ -78,256 +78,256 @@
  * Non-parallax image overrides:
  **/
 @media all and (min-width: 1200px) {
-	/* Add extra spacing btwn navbar and page content for basic subpages (w/o parallax headings) */
-	.page-base .page-content {
-		padding-top: 75px;
-		padding-bottom: 75px;
-	}
+  /* Add extra spacing btwn navbar and page content for basic subpages (w/o parallax headings) */
+  .page-base .page-content {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
 }
 
 @media all and (max-width: 1199px) and (min-width: 979px) {
-	.parallax-header h1 {
-		width: 65%;
-		font-size: 90px;
-	}
+  .parallax-header h1 {
+    width: 65%;
+    font-size: 90px;
+  }
 }
 
 @media all and (max-width: 1199px) and (min-width: 768px) {
-	.page-base h1 {
-		margin-top: 20px; /* Add extra space btwn content and navbar */
-	}
+  .page-base h1 {
+    margin-top: 20px; /* Add extra space btwn content and navbar */
+  }
 }
 
 @media all and (max-width: 978px) {
-	h1,
-	.h1 {
-		font-size: 38px;
-		line-height: 1.3em;
-	}
-	h2,
-	.h2 {
-		font-size: 18px;
-	}
-	h3,
-	.h3 {
-		font-size: 17px;
-	}
+  h1,
+  .h1 {
+    font-size: 38px;
+    line-height: 1.3em;
+  }
+  h2,
+  .h2 {
+    font-size: 18px;
+  }
+  h3,
+  .h3 {
+    font-size: 17px;
+  }
 
-	blockquote,
-	blockquote p {
-		font-size: 28px;
-	}
+  blockquote,
+  blockquote p {
+    font-size: 28px;
+  }
 
-	nav a { padding: 0 16px; }
+  nav a { padding: 0 16px; }
 
-	.callout blockquote,
-	.callout blockquote p {
-		font-size: 45px;
-		line-height: 50px;
-	}
+  .callout blockquote,
+  .callout blockquote p {
+    font-size: 45px;
+    line-height: 50px;
+  }
 
-	.whitespace-2x {
-		padding-top: 75px;
-		padding-bottom: 75px;
-	}
+  .whitespace-2x {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
 
-	.parallax-header h1 {
-		width: 60%;
-		font-size: 60px;
-		bottom: -0.32em;
-	}
-	.parallax-header-inner .cta a {
-		font-size: 26px;
-		width: 270px;
-		padding: 20px 0;
-	}
+  .parallax-header h1 {
+    width: 60%;
+    font-size: 60px;
+    bottom: -0.32em;
+  }
+  .parallax-header-inner .cta a {
+    font-size: 26px;
+    width: 270px;
+    padding: 20px 0;
+  }
 
-	.footer-cta,
-	.footer-logo {
-		margin-bottom: 40px;
-	}
+  .footer-cta,
+  .footer-logo {
+    margin-bottom: 40px;
+  }
 }
 
 @media all and (max-width: 767px) {
-	body { padding: 0; }
+  body { padding: 0; }
 
-	p,
-	ol,
-	ul,
-	li {
-		font-size: 15px;
-		line-height: 24px;
-	}
+  p,
+  ol,
+  ul,
+  li {
+    font-size: 15px;
+    line-height: 24px;
+  }
 
-	blockquote,
-	blockquote p {
-		font-size: 22px;
-	}
-	blockquote small {
-		font-size: 16px;
-	}
+  blockquote,
+  blockquote p {
+    font-size: 22px;
+  }
+  blockquote small {
+    font-size: 16px;
+  }
 
-	hr {
-		margin: 20px 0;
-	}
+  hr {
+    margin: 20px 0;
+  }
 
-	iframe,
-	embed,
-	object {
-		height: 300px;
-		margin: 20px 0 0 0;
-	}
+  iframe,
+  embed,
+  object {
+    height: 300px;
+    margin: 20px 0 0 0;
+  }
 
-	.caption {
-		padding-bottom: 15px;
-		line-height: 1.35em;
-	}
+  .caption {
+    padding-bottom: 15px;
+    line-height: 1.35em;
+  }
 
-	.whitespace,
-	.whitespace-2x,
-	.whitespace-xs {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
-	.whitespace + .whitespace,
-	.whitespace-2x + .whitespace-2x {
-		padding-top: 0;
-	}
+  .whitespace,
+  .whitespace-2x,
+  .whitespace-xs {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .whitespace + .whitespace,
+  .whitespace-2x + .whitespace-2x {
+    padding-top: 0;
+  }
 
-	nav.header-nav {
-		top: auto; /* ucf header */
-		height: 20px;
-		max-height: 20px;
-		overflow: hidden;
-		transition: max-height 0.5s ease-in-out;
-	}
-	.mobile-nav-toggle {
-		display: block;
-	}
-	nav.header-nav.mobile-active {
-		height: auto;
-		max-height: 1000px; /* Some high value to trigger the css transition (css transitions don't work when transitioning to value of 'auto') */
-	}
-	nav.header-nav.mobile-active .mobile-nav-toggle {
-		color: #DFAF0D;
-	}
-	nav.header-nav.mobile-active .hamburger {
-		border-color: #DFAF0D;
-	}
-	nav.header-nav ul li {
-		display: block;
-		width: 100%;
-		margin: 3px 0;
-	}
-	nav.header-nav ul li:first-child {
-		padding-top: 35px;
-	}
-	nav.header-nav ul li a {
-		display: block;
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
-	}
+  nav.header-nav {
+    top: auto; /* ucf header */
+    height: 20px;
+    max-height: 20px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  nav.header-nav.mobile-active {
+    height: auto;
+    max-height: 1000px; /* Some high value to trigger the css transition (css transitions don't work when transitioning to value of 'auto') */
+  }
+  nav.header-nav.mobile-active .mobile-nav-toggle {
+    color: #DFAF0D;
+  }
+  nav.header-nav.mobile-active .hamburger {
+    border-color: #DFAF0D;
+  }
+  nav.header-nav ul li {
+    display: block;
+    width: 100%;
+    margin: 3px 0;
+  }
+  nav.header-nav ul li:first-child {
+    padding-top: 35px;
+  }
+  nav.header-nav ul li a {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-	.page-content {
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
-	.page-content [class*="span"] {
-		padding-bottom: 10px;
-	}
-	.page-content .span12 {
-		/* Assume this contains a heading above another set of columns, which doesn't need padding. */
-		padding-bottom: 0;
-	}
+  .page-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .page-content [class*="span"] {
+    padding-bottom: 10px;
+  }
+  .page-content .span12 {
+    /* Assume this contains a heading above another set of columns, which doesn't need padding. */
+    padding-bottom: 0;
+  }
 
-	.parallax-content .container {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+  .parallax-content .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-	nav ul li { padding: 8px 0; }
-	nav a {
-		font-size: 14px;
-		padding: 0 10px;
-	}
+  nav ul li { padding: 8px 0; }
+  nav a {
+    font-size: 14px;
+    padding: 0 10px;
+  }
 
-	nav.header-nav {
-		padding: 10px 0;
-	}
+  nav.header-nav {
+    padding: 10px 0;
+  }
 
-	.parallax-header-inner .cta {
-		left: 0;
-	}
+  .parallax-header-inner .cta {
+    left: 0;
+  }
 
-	.parallax-header h1 {
-		width: 100%;
-		position: absolute;
-		top: 36%;
-		left: 0;
-		right: 0;
-		bottom: auto;
-		font-size: 70px;
-		text-align: center;
-		line-height: 1em;
-	}
+  .parallax-header h1 {
+    width: 100%;
+    position: absolute;
+    top: 36%;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    font-size: 70px;
+    text-align: center;
+    line-height: 1em;
+  }
 
-	.parallax-feature .parallax-photo {
-		margin-bottom: 20px;
-	}
-	.parallax-feature [class*="span"] {
-		padding-bottom: 5px;
-	}
+  .parallax-feature .parallax-photo {
+    margin-bottom: 20px;
+  }
+  .parallax-feature [class*="span"] {
+    padding-bottom: 5px;
+  }
 
-	.page-base h1 {
-		margin-top: 30px; /* Add extra space btwn content and navbar */
-	}
+  .page-base h1 {
+    margin-top: 30px; /* Add extra space btwn content and navbar */
+  }
 
-	.footer-cta {
-		padding: 0 20px;
-		font-size: 28px;
-		line-height: 36px;
-	}
+  .footer-cta {
+    padding: 0 20px;
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 @media all and (max-width: 767px) and (min-width: 481px) {
-	.callout blockquote,
-	.callout blockquote p {
-		font-size: 34px;
-		line-height: 44px;
-	}
-	.callout blockquote small {
-		font-size: 20px;
-	}	
+  .callout blockquote,
+  .callout blockquote p {
+    font-size: 34px;
+    line-height: 44px;
+  }
+  .callout blockquote small {
+    font-size: 20px;
+  }
 }
 
 @media all and (max-width: 480px) {
-	iframe,
-	embed,
-	object {
-		height: 200px;
-	}
+  iframe,
+  embed,
+  object {
+    height: 200px;
+  }
 
-	body main.page-content { padding: 100px 20px; }
+  body main.page-content { padding: 100px 20px; }
 
-	.callout blockquote,
-	.callout blockquote p {
-		font-size: 25px;
-		line-height: 28px;
-	}
-	.callout blockquote small {
-		font-size: 16px;
-		margin-top: 10px;
-	}
+  .callout blockquote,
+  .callout blockquote p {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .callout blockquote small {
+    font-size: 16px;
+    margin-top: 10px;
+  }
 
-	.cta a {
-		font-size: 22px;
-		padding: 20px 0;
-		width: 260px;
-	}
+  .cta a {
+    font-size: 22px;
+    padding: 20px 0;
+    width: 260px;
+  }
 
-	.parallax-header h1 {
-		font-size: 40px;
-		top: 34%;
-	}
+  .parallax-header h1 {
+    font-size: 40px;
+    top: 34%;
+  }
 }
