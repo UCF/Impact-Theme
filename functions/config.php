@@ -219,12 +219,8 @@ Config::$links = array(
 
 Config::$styles = array(
 	array('admin' => True, 'src' => THEME_CSS_URL.'/admin.css',),
-	THEME_STATIC_URL.'/bootstrap/bootstrap/css/bootstrap.css',
-	THEME_STATIC_URL.'/bootstrap/bootstrap/css/bootstrap-responsive.css',
 	plugins_url( 'gravityforms/css/forms.css' ),
-	//THEME_CSS_URL.'/webcom-base.css',
-	get_bloginfo('stylesheet_url'),
-	THEME_URL.'/style-responsive.css'
+	array('name' => 'theme-styles', 'src' => THEME_CSS_URL.'/style.min.css',),
 );
 
 if (!empty($theme_options['cloud_font_key'])) {
@@ -235,11 +231,7 @@ if (!empty($theme_options['cloud_font_key'])) {
 Config::$scripts = array(
 	array('admin' => True, 'src' => THEME_JS_URL.'/admin.js',),
 	array('name' => 'ucfhb-script', 'src' => '//universityheader.ucf.edu/bar/js/university-header.js',),
-	THEME_STATIC_URL.'/bootstrap/bootstrap/js/bootstrap.js',
-	array('name' => 'stellar-js',  'src' => THEME_JS_URL.'/jquery.stellar.min.js',),
-	array('name' => 'fittext-js',  'src' => THEME_JS_URL.'/jquery.fittext.js',),
-	array('name' => 'base-script',  'src' => THEME_JS_URL.'/webcom-base.js',),
-	array('name' => 'theme-script', 'src' => THEME_JS_URL.'/script.js',),
+	array('name' => 'theme-script', 'src' => THEME_JS_URL.'/script.min.js',),
 );
 
 Config::$metas = array(
