@@ -288,4 +288,43 @@ function sc_parallax_feature($attrs, $content=null) {
 	}
 }
 add_shortcode('parallax_feature', 'sc_parallax_feature');
+
+
+
+/**
+ * Shortcode for displaying the updates (Update custom post type)
+ */
+function display_updates($header) {
+	$updates = get_posts(array(
+		'post_per_page' => 4,
+		'post_type'     => 'update'
+	));
+	if ( count( $updates ) ):
+?>
+		<?php if ( !empty( $header ) ) : ?>
+			<<?php echo $header; ?>>
+				<a href="<?php echo get_post_type_archive_link( 'update' ); ?>">
+					<?php
+						$update_post_type = get_post_type_object( 'update' );
+						echo $update_post_type->labels->plural_name;
+					?>
+				</a>
+			</<?php echo $header; ?>>
+		<?php endif; ?>
+		<ul class="update-list row">
+			<?php foreach ( $updates as $key => $item ): ?>
+			<li class="update-story col-md-3 col-sm-4 col-xs-6">
+				<h3 class="update-title">
+					<a href="<?php echo $item->get_link(); ?>" class="ignore-external title">
+						<?php print $item->get_title(); ?>
+					</a>
+				</h3>
+			</li>
+			<?php endforeach; ?>
+		</ul>
+	<?php else: ?>
+		<p>Unable to fetch updates.</p>
+	<?php endif; ?>
+<?php
+}
 ?>

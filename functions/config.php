@@ -4,7 +4,7 @@
  * Responsible for running code that needs to be executed as wordpress is
  * initializing.  Good place to register scripts, stylesheets, theme elements,
  * etc.
- * 
+ *
  * @return void
  * @author Jared Lang
  **/
@@ -25,10 +25,10 @@ function __init__(){
 	));
 	foreach(Config::$styles as $style){Config::add_css($style);}
 	foreach(Config::$scripts as $script){Config::add_script($script);}
-	
+
 	global $timer;
 	$timer = Timer::start();
-	
+
 	wp_deregister_script('l10n');
 	set_defaults_for_options();
 }
@@ -66,6 +66,7 @@ define('CB_DOMAIN', $theme_options['cb_domain']);
 Config::$custom_post_types = array(
 	'Page',
 	'Post',
+	'Document',
 	'ParallaxFeature'
 );
 
@@ -221,7 +222,7 @@ Config::$styles = array(
 	THEME_STATIC_URL.'/bootstrap/bootstrap/css/bootstrap.css',
 	THEME_STATIC_URL.'/bootstrap/bootstrap/css/bootstrap-responsive.css',
 	plugins_url( 'gravityforms/css/forms.css' ),
-	//THEME_CSS_URL.'/webcom-base.css', 
+	//THEME_CSS_URL.'/webcom-base.css',
 	get_bloginfo('stylesheet_url'),
 	THEME_URL.'/style-responsive.css'
 );
@@ -257,6 +258,6 @@ function jquery_in_header() {
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js');
     wp_enqueue_script( 'jquery' );
-}    
- 
+}
+
 add_action('wp_enqueue_scripts', 'jquery_in_header');
