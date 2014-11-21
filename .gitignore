@@ -23,7 +23,7 @@ CVS
 Thumbs.db
 
 # Bower
-#static/bower_components/*
+static/bower_components/*
 
 # Sass stuff
 static/scss/.sass-cache/*
