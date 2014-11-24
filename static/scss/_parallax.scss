@@ -21,23 +21,22 @@
     left: auto;
 
     a {
-      background-color: #dfaf0D;
+      background-color: #dfaf0d;
       background-color: rgba(245, 192, 13, 0.95);
     }
   }
 }
 
 .parallax-photo {
-  background-color: #222;
   background-attachment: fixed;
+  background-color: #222;
   background-position: 50% 0;
   background-repeat: no-repeat;
-  /*height: 750px; */ /* height is defined in media queries to prevent unnecessary asset downloading */
+  box-sizing: border-box;
+  padding: 100px 0;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 100px 0;
 
   span {
     color: #fff;
@@ -74,7 +73,7 @@
 }
 
 // Full-size (x-large) screens (1200x+ wide)
-@media all and (min-width: 1200px) {
+@media all and (min-width: $large-min-display) {
   .parallax-feature .parallax-photo {
     height: 800px;
   }
@@ -84,14 +83,14 @@
   }
 }
 
-@media all and (max-width: 1199px) and (min-width: 979px) {
+@media all and (max-width: $large-min-display - 1) and (min-width: $medium-max-display) {
   .parallax-header h1 {
     font-size: 90px;
     width: 65%;
   }
 }
 
-@media all and (min-width: 1200px) and (max-height: 768px) {
+@media all and (min-width: $large-min-display) and (max-height: $medium-min-display) {
   // Try to catch wider screens with less vertical space; i.e. 1366x768px
   .parallax-feature .parallax-photo {
     height: 625px;
@@ -103,7 +102,7 @@
 }
 
 // "Desktop (medium/large)" screens (1199px-768px wide)
-@media all and (max-width: 1199px) and (min-width: 768px) {
+@media all and (max-width: $large-min-display - 1) and (min-width: $medium-min-display) {
   .parallax-feature .parallax-photo {
     height: 625px;
   }
@@ -113,7 +112,7 @@
   }
 }
 
-@media all and (max-width: 978px) {
+@media all and (max-width: $medium-max-display - 1) {
   .parallax-photo {
     padding-left: 0;
     padding-right: 0;
@@ -133,7 +132,7 @@
 }
 
 // "Tablet (small)" screens (767-481px wide)
-@media all and (max-width: 767px) and (min-width: 481px) {
+@media all and (max-width: $small-max-display) and (min-width: $xsmall-max-display + 1) {
   .parallax-feature .parallax-photo {
     height: 625px;
   }
@@ -147,7 +146,7 @@
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: $small-max-display) {
 
   .parallax-photo {
     background-attachment: scroll; // make sure iPad portrait is reset
@@ -185,7 +184,7 @@
 }
 
 // "Mobile (x-small)" screens (>=480px wide)
-@media all and (max-width: 480px) {
+@media all and (max-width: $xsmall-max-display) {
   .parallax-feature .parallax-photo {
     height: auto;
     padding-bottom: 160px;

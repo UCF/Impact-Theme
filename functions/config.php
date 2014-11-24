@@ -66,6 +66,7 @@ define('CB_DOMAIN', $theme_options['cb_domain']);
 Config::$custom_post_types = array(
 	'Page',
 	'Post',
+	'Update',
 	'Document',
 	'ParallaxFeature'
 );

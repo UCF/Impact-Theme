@@ -422,11 +422,56 @@ class Update extends CustomPostType {
 
 		$taxonomies     = array();
 
-
-		public function toHTML( $object ) {
-			$html = '<a href="'.get_permalink( $object->ID ).'">'.get_the_post_thumbnail( $object->ID, 'spotlight-thumb' ).'</a>';
-			return $html;
+	/**
+	 * Custom page listing of update posts
+	 **/
+	public function objectsToHTML($objects, $css_classes){
+		if (count($objects) < 1) {
+			return '';
 		}
+
+		$class = get_custom_post_type($objects[0]->post_type);
+		$class = new $class;
+
+		ob_start();
+		?>
+		<div class="container">
+			<div class="row">
+		<?php
+		foreach( $objects as $k => $o ) {
+			echo $class->toHTML( $o );
+			if ($k + 1 != count($objects)) {
+		?>
+			<hr>
+		<?php
+			}
+		}
+		?>
+			</div>
+		</div>
+		<?php
+		return ob_get_clean();
+	}
+
+	public function toHTML( $object ) {
+
+		// Excerpts can only be retrieved while in the Loop.
+		// 1. Save current post
+		// 2. Get Update post and set as Loop
+		// 3. Get data off of Update post
+		// 4. Set old post back into the Loop
+		global $post;
+		$save_post = $post;
+		$post = get_post( $object->ID );
+		setup_postdata($post);
+		$output = get_the_excerpt();
+		$post = $save_post;
+		setup_postdata($post);
+
+		$html = '<article><a href="' . get_permalink( $object->ID ) . '"><h2>' . $object->post_title . '</h2></a>';
+		$html = $html . $output . '</article>';
+		return $html;
+	}
 }
 
 

@@ -290,17 +290,19 @@ function sc_parallax_feature($attrs, $content=null) {
 add_shortcode('parallax_feature', 'sc_parallax_feature');
 
 
-
 /**
- * Shortcode for displaying the updates (Update custom post type)
+ * Shortcode for displaying the recent updates (Update custom post type)
  */
-function display_updates($header) {
+function sc_display_recent_updates($header) {
 	$updates = get_posts(array(
-		'post_per_page' => 4,
+		'numberposts' => 4,
 		'post_type'     => 'update'
 	));
-	if ( count( $updates ) ):
-?>
+	ob_start();
+	?>
+	<div class="recent-updates">
+	<div class="container">
+	<?php if ( count( $updates ) ): ?>
 		<?php if ( !empty( $header ) ) : ?>
 			<<?php echo $header; ?>>
 				<a href="<?php echo get_post_type_archive_link( 'update' ); ?>">
@@ -311,20 +313,32 @@ function display_updates($header) {
 				</a>
 			</<?php echo $header; ?>>
 		<?php endif; ?>
-		<ul class="update-list row">
-			<?php foreach ( $updates as $key => $item ): ?>
-			<li class="update-story col-md-3 col-sm-4 col-xs-6">
-				<h3 class="update-title">
-					<a href="<?php echo $item->get_link(); ?>" class="ignore-external title">
-						<?php print $item->get_title(); ?>
-					</a>
-				</h3>
-			</li>
-			<?php endforeach; ?>
-		</ul>
+			<ul class="update-list row">
+				<?php foreach ( $updates as $key => $item ) :
+					$item_title = get_the_title($item->ID);
+					if (strlen($item_title) > 100) {
+						// truncate string
+						$item_title = substr($item_title, 0, 100);
+						// truncate at last whole word
+						$item_title = substr($item_title, 0, strrpos($item_title, ' ')) . '&hellip;';
+					}
+				?>
+				<li class="update-story span3">
+					<h3 class="update-title">
+						<a href="<?php echo get_permalink($item->ID); ?>" class="ignore-external title">
+							<?php echo $item_title; ?>
+						</a>
+					</h3>
+				</li>
+				<?php endforeach; ?>
+			</ul>
 	<?php else: ?>
 		<p>Unable to fetch updates.</p>
 	<?php endif; ?>
+	</div>
+	</div>
 <?php
+	return ob_get_clean();
 }
+add_shortcode('display-recent-updates', 'sc_display_recent_updates');
 ?>

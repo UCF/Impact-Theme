@@ -1,0 +1,28 @@
+// Generates a flat, block-style element with colored shadows.
+// Assumes the modified element is already block-level (to prevent
+// accidental override of block/inline-block.)
+@mixin color-block($bgcolor, $hlength: 3px, $vlength: 3px, $blurradius: 0, $spread: 0, $shadowcolor: darken($bgcolor, 12%)) {
+  @include material-block();
+  background-color: $bgcolor;
+  box-shadow: $hlength $vlength 0 0 $shadowcolor;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    box-shadow: $hlength $vlength 0 0 $shadowcolor, 3px 3px 5px 0 rgba(0, 0, 0, .5); // overwrite %material-block;
+  }
+}
+
+// A box that extends outward on hover
+@mixin material-block() {
+  @include transition(all .15s ease-in-out);
+
+  &:hover,
+  &:active,
+  &:focus,
+  &.active {
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .5);
+    @include translate(-2px, -2px);
+  }
+}
