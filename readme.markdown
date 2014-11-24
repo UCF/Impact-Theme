@@ -22,23 +22,99 @@ This theme relies on Twitter's Bootstrap framework. UCF's fork of the Bootstrap 
 
 
 ## Development
+This project relies on Bower and Codekit to develop CSS and JavaScript.
 
-This theme relies on Twitter's Bootstrap framework. Bootstrap is a CSS framework that uses LESS to programatically develop stylesheets.
-UCF's fork of the Bootstrap project (http://github.com/UCF/bootstrap/) is added as submodule in static/bootstrap.
+This theme relies on Twitter's Bootstrap 2 framework which will be installed by Bower.
 
 ### Setup
-** Note: This theme uses a version of Bootstrap whose package requirements result in Bootstrap's CSS files compiling to empty files. Follow the steps below completely to install the packages so that the `make` command works correctly. (https://github.com/twitter/bootstrap/issues/8088) **
 
-0. If they're not already installed on your machine, install node and npm for node-related package management.
-1. If this is a brand new clone, run `git submodule update --init static/bootstrap` from the theme's root directory.
-2. Navigate to static/bootstrap, then run `npm install` to install necessary dependencies for building Bootstrap's .less files. These packages are excluded in the submodule .gitignore.
-3. Navigate to the submodule's node_modules/recess folder, and open **package.json**. Under 'dependencies', update 'less' from '>= 1.3.0' to '1.3.3' and save. Delete node_modules/ from within the recess directory.
-4. From the recess directory, run `npm install`.
-5. Navigate back to the root bootstrap directory and remove the compiled bootstrap directory, if it exists.
+#### Bower
+Bower is set up in this repo for handling all third-party front-end
+dependencies.  See [their website](http://bower.io/) for more information and
+installation instructions.
 
-### Compiling
-Once the setup instructions above have been completed, you can compile modified .less files from the root bootstrap directory with `make bootstrap`. Compiled files will save to a new directory 'bootstrap' within the root directory (static/bootstrap/bootstrap/).
+Whenever a third-party package needs to be included in this theme, run
+`bower install --save <package>` from the theme's root directory to download
+the package's contents to the `static/bower_components/` directory and update
+the Bower dependencies list (`bower.json`).
 
+Whenever this theme is completed, *NO* Bower components should be pushed up to
+the repo. Bower components should only be installed on developer machines and only
+the minifed CSS and JavaScript files should be checked into the repo. To install
+Bower components type `bower install` from the theme's root directory. **Note:
+Bower packages must be installed in `static/bower_components/` BEFORE
+attempting to modify any theme-specific SASS or JavaScript files.**
+
+No files in the `bower_components` directory should be modified directly.  If a
+package really needs a custom modification, consider forking the package and
+possibly hosting it on Github, then installing the package via Bower by Github
+URL.
+
+#### CodeKit
+A CodeKit config file is included in this theme's root directory.  [CodeKit]
+(http://incident57.com/codekit/) is a Mac-only tool that handles Sass and
+JavaScript compilation and minification, and also has browser refreshing tools
+and Bower compatibility built-in.
+
+CodeKit's config file is set up to make CodeKit compile (almost) all of our
+theme-specific SASS and JavaScript together with our Bower components to
+produce single, minified files for fewer client-side HTTP requests.
+
+##### CSS Asset Compiling/Minifying
+Whenever a theme-specific SASS file is updated (and CodeKit is running), all
+SASS files should compile together with the third-party packages defined in
+`static/scss/style.scss`.  The final compiled file is saved as
+`static/css/style.min.css`.
+
+Assets defined in `style.scss` should always be included in the following
+order:
+* `_variables.scss`
+* Third-party vendor assets
+* `_base.scss`
+
+_bootstrap2.scss file is used instead on including Bootstrap's bower_components file directly.
+The reason for this is because the directory import structure is not compatible with
+how CodeKit works. The _bootstrap2.scss file fixes this issue. If a new version of
+Bootstrap is used then check whether _boostrap2.scss needs to be modified or removed.
+
+Admin-specific CSS is not compiled/minified.
+
+##### JavaScript Asset Compiling/Minifying
+Whenever a theme-specific JavaScript file is updated (and CodeKit is running),
+`static/js/script.js` will be prepended with any included scripts at the top
+of the file (using `@codekit-prepend`) and is minified and saved to
+`static/js/script.min.js`.
+
+Assets defined in `script.js` should always be included in the following order:
+* Third-party vendor assets
+* `webcom-base.js`
+* `generic-base.js`
+
+All files prepended to `script.js` should work independently and can be
+registered as separate scripts with WordPress for debugging purposes if
+necessary.
+
+Admin-specific JS is not compiled/minified.
+
+#### SASS
+Non-admin, theme-specific styles for this theme are saved in `static/scss/`
+for cleaner, more organized style definitions (as opposed to managing all
+of our site's styles from a single file).  We use CodeKit to combine all the
+SASS files together and compile the final code into actual CSS
+(`static/css/style.min.css`).
+
+Individual SASS partials are combined **in a specific order**--see
+`static/scss/_base.scss`.  Note that `_variables.scss` is not included in this
+file; it is included in the final minified file before third-party packages
+are included, so that we can override SASS variables as necessary before
+processing.
+
+As a general rule, SASS partials should be combined in order from the most
+generic/abstract to the most specific.
+
+When writing view-specific styles, try to follow WordPress template naming
+conventions-- i.e., styles that are specific to the 'Person' post type should
+be in a file named `_views-single-person.scss`
 
 
 ## Important files/folders:
