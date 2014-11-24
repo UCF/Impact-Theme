@@ -2,5 +2,9 @@
 @import 'variables';
 
 // Combine vendor assets and our theme:
-@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+// Override since the SCSS imports are not correct for Bootstrap 2
+@import 'bootstrap2';
+
+// Base imports
 @import 'base';
+@import 'parallax';
