@@ -77,6 +77,12 @@ The reason for this is because the directory import structure is not compatible 
 how CodeKit works. The _bootstrap2.scss file fixes this issue. If a new version of
 Bootstrap is used then check whether _boostrap2.scss needs to be modified or removed.
 
+Bootstrap 2 glyphicons are copied from the bower_components directory and placed
+in `./static/img/` using a Codekit hooks. Make sure that the `Copy Glyphicons To Static`
+hook is enabled by going to the project -> gear icon -> hooks and checking the box.
+By default Codekit disables all new hooks to make sure the script doesn't do anything
+malicious.
+
 Admin-specific CSS is not compiled/minified.
 
 ##### JavaScript Asset Compiling/Minifying
