@@ -22,7 +22,7 @@
 
     a {
       background-color: $alt-color;
-      background-color: rgba(245, 192, 13, 0.95);
+      background-color: rgba(245, 192, 13, .95);
     }
   }
 }
@@ -45,7 +45,7 @@
     left: 50%;
     padding: 10px;
     position: absolute;
-    text-shadow: 0 2px 0 black, 0 0 10px black;
+    text-shadow: 0 2px 0 #000, 0 0 10px #000;
     top: 20%;
   }
 }
@@ -68,7 +68,7 @@
   left: 0;
   line-height: 1em;
   position: absolute;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .65);
   width: 70%;
 }
 
