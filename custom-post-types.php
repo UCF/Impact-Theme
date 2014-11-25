@@ -243,6 +243,7 @@ abstract class CustomPostType{
 	}
 }
 
+
 class Page extends CustomPostType {
 	public
 		$name           = 'page',
@@ -319,6 +320,7 @@ class Post extends CustomPostType {
 		);
 	}
 }
+
 
 class ParallaxFeature extends CustomPostType {
 	public

@@ -4,7 +4,7 @@ $featured_img_id = get_post_thumbnail_id($post->ID);
 $featured_img_f = wp_get_attachment_image_src($featured_img_id, 'parallax_feature-full');
 if ($featured_img_f) { ?>
 <main class="page" id="<?=$post->post_name?>">
-	<?php print get_parallax_page_header($post->ID); ?>
+	<?php echo get_parallax_page_header($post->ID); ?>
 	<section class="page-content">
 		<?php the_content(); ?>
 	</section>

@@ -53,6 +53,23 @@
 .parallax-header .parallax-photo {
   padding-bottom: 0;
   padding-top: 0;
+
+  .skyline {
+    background-image: url('../img/header-skyline.png');
+    @include background-size(cover);
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+
+    @media all and (max-width: $large-min-display - 1) {
+      height: 50px;
+    }
+
+    @media all and (max-width: $xsmall-max-display) {
+      height: 25px;
+    }
+  }
 }
 
 .ie8 .parallax-photo {

@@ -101,20 +101,11 @@ function get_parallax_feature_css($post_id, $d_cpt_field, $t_cpt_field, $m_cpt_f
 function get_parallax_page_header($page_id) {
 	$page = get_post($page_id);
 	ob_start();
-	print get_parallax_feature_css($page_id, 'page_image_d', 'page_image_t', 'page_image_m');
+	echo get_parallax_feature_css($page_id, 'page_image_d', 'page_image_t', 'page_image_m');
 	?>
 	<section class="parallax-content parallax-header">
 		<div class="parallax-photo" id="photo_<?=$page_id?>" data-stellar-background-ratio="0.5">
-			<div class="container parallax-header-inner">
-				<div class="row parallax-header-inner">
-					<div class="span12 parallax-header-inner">
-						<h1><?=$page->post_title?></h1>
-						<div class="cta">
-							<?php print get_cta_link(); ?>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div class="skyline"></div>
 		</div>
 	</section>
 	<?php
