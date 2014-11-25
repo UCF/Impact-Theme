@@ -423,6 +423,25 @@ class Update extends CustomPostType {
 		$taxonomies     = array();
 
 	/**
+	 * Shortcode for this custom post type.  Can be overridden for descendants.
+	 * Defaults to just outputting a list of objects outputted as defined by
+	 * toHTML method.
+	 **/
+	public function shortcode($attr){
+		$default = array(
+			'type'     => $this->options('name'),
+			'orderby' => 'post_date'
+		);
+		if (is_array($attr)){
+			$attr = array_merge($default, $attr);
+		}else{
+			$attr = $default;
+		}
+		return sc_object_list($attr);
+	}
+
+
+	/**
 	 * Custom page listing of update posts
 	 **/
 	public function objectsToHTML($objects, $css_classes){
