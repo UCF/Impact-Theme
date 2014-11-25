@@ -429,8 +429,9 @@ class Update extends CustomPostType {
 	 **/
 	public function shortcode($attr){
 		$default = array(
-			'type'     => $this->options('name'),
-			'orderby' => 'post_date'
+			'type'    => $this->options('name'),
+			'orderby' => 'post_date',
+			'order'   => 'DESC'
 		);
 		if (is_array($attr)){
 			$attr = array_merge($default, $attr);
