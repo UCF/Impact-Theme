@@ -93,10 +93,10 @@ Generic.PostTypeSearch = function($) {
 
       function perform_search(search_term) {
         var matches             = [],
-          elements            = [],
-          elements_per_column = null,
-          columns             = [],
-          post_id_sum         = 0;
+            elements            = [],
+            elements_per_column = null,
+            columns             = [],
+            post_id_sum         = 0;
 
         if(search_term.length < MINIMUM_SEARCH_MATCH_LENGTH) {
           results.empty();
@@ -119,8 +119,8 @@ Generic.PostTypeSearch = function($) {
           // Copy the associated elements
           $.each(matches, function(match_index, post_id) {
 
-            var element     = by_term.find('li[data-post-id="' + post_id + '"]:eq(0)'),
-              post_id_int = parseInt(post_id, 10);
+            var element     = by_alpha.find('li[data-post-id="' + post_id + '"]:eq(0)'),
+                post_id_int = parseInt(post_id, 10);
             post_id_sum += post_id_int;
             if(element.length == 1) {
               elements.push(element.clone());
