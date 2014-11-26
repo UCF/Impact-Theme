@@ -20,13 +20,6 @@ li {
   line-height: 26px;
 }
 
-a,
-a:hover,
-a:active,
-a:visited {
-  color: #992222;
-}
-
 h2,
 .h2,
 h3,
@@ -39,6 +32,30 @@ h6 {
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.025em;
+}
+
+a {
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  h5,
+  h6 {
+    color: $linkColor;
+  }
+
+  &:hover {
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    h5,
+    h6 {
+      color: $linkColorHover;
+    }
+  }
 }
 
 h1,

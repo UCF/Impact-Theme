@@ -443,7 +443,6 @@ class Update extends CustomPostType {
 		return sc_object_list($attr);
 	}
 
-
 	/**
 	 * Custom page listing of update posts
 	 **/
@@ -457,8 +456,7 @@ class Update extends CustomPostType {
 
 		ob_start();
 		?>
-		<div class="container">
-			<div class="row">
+		<h2>Updates</h2>
 		<?php
 		foreach( $objects as $k => $o ) {
 			echo $class->toHTML( $o );
@@ -469,8 +467,6 @@ class Update extends CustomPostType {
 			}
 		}
 		?>
-			</div>
-		</div>
 		<?php
 		return ob_get_clean();
 	}
@@ -490,21 +486,95 @@ class Update extends CustomPostType {
 		$post = $save_post;
 		setup_postdata($post);
 
-		$html = '<article><a href="' . get_permalink( $object->ID ) . '"><h2>' . $object->post_title . '</h2></a>';
+		$html = '<article><a href="' . get_permalink( $object->ID ) . '"><h3>' . $object->post_title . '</h3></a>';
 		$html = $html . $output . '</article>';
 		return $html;
 	}
 }
 
 
-class Document extends CustomPostType{
+class InTheNews extends CustomPostType
+{
 	public
-		$name           = 'document',
-		$plural_name    = 'Documents',
-		$singular_name  = 'Document',
-		$add_new_item   = 'Add New Document',
-		$edit_item      = 'Edit Document',
-		$new_item       = 'New Document',
+		$name           = 'inthenews',
+		$plural_name    = 'In the News Stories',
+		$singular_name  = 'In the News Story',
+		$add_new_item   = 'Add New In the News Story',
+		$edit_item      = 'Edit In the News Story',
+		$new_item       = 'New In the News Story',
+		$use_thumbnails = False,
+		$use_metabox    = True,
+		$use_editor     = False,
+		$use_shortcode  = True,
+		$taxonomies     = Array('category', 'experts');
+
+	public function fields() {
+		$prefix = $this->options('name').'_';
+		return Array(
+				Array(
+					'name'	=> 'Link Text',
+					'desc'	=> '',
+					'id'	=> $prefix.'text',
+					'type'	=> 'text'
+				),
+				Array(
+					'name'	=> 'Link URL',
+					'desc'	=> '',
+					'id'	=> $prefix.'url',
+					'type'	=> 'text'
+				),
+				Array(
+					'name'	=> 'Source',
+					'desc'	=> '',
+					'id'	=> $prefix.'source',
+					'type'	=> 'text'
+				)
+			);
+	}
+
+	/**
+	 * Custom page listing of update posts
+	 **/
+	public function objectsToHTML($objects, $css_classes){
+		if (count($objects) < 1) {
+			return '';
+		}
+
+		$class = get_custom_post_type($objects[0]->post_type);
+		$class = new $class;
+
+		ob_start();
+		?>
+		<h2>In the News</h2>
+		<?php
+		foreach( $objects as $k => $o ) {
+			echo $class->toHTML( $o );
+			if ($k + 1 != count($objects)) {
+		?>
+			<hr>
+		<?php
+			}
+		}
+		?>
+		<?php
+		return ob_get_clean();
+	}
+
+	public function toHTML( $object ) {
+		$html = '<article class="inthenews-item"><a href="' . get_post_meta($object->ID, 'inthenews_url', True) . '"><h3 class="inthenews-title">' . get_post_meta($object->ID, 'inthenews_text', True) . '</h3></a>' . '<span>' . get_post_meta($object->ID, 'inthenews_source', True) . '</span></article>';
+		return $html;
+	}
+}
+
+
+class Resource extends CustomPostType{
+	public
+		$name           = 'resource',
+		$plural_name    = 'Resources',
+		$singular_name  = 'Resource',
+		$add_new_item   = 'Add New Resource',
+		$edit_item      = 'Edit Resource',
+		$new_item       = 'New Resource',
 		$use_title      = True,
 		$use_editor     = False,
 		$use_shortcode  = True,
@@ -514,13 +584,13 @@ class Document extends CustomPostType{
 		$fields   = parent::fields();
 		$fields[] = array(
 			'name' => __('URL'),
-			'desc' => __('Associate this document with a URL.  This will take precedence over any uploaded file, so leave empty if you want to use a file instead.'),
+			'desc' => __('Associate this resource with a URL.  This will take precedence over any uploaded file, so leave empty if you want to use a file instead.'),
 			'id'   => $this->options('name').'_url',
 			'type' => 'text',
 		);
 		$fields[] = array(
 			'name'    => __('File'),
-			'desc'    => __('Associate this document with an already existing file.'),
+			'desc'    => __('Associate this resource with an already existing file.'),
 			'id'      => $this->options('name').'_file',
 			'type'    => 'file',
 		);
@@ -528,7 +598,7 @@ class Document extends CustomPostType{
 	}
 
 
-	static function get_document_application($form){
+	static function get_resource_application($form){
 		return mimetype_to_application(self::get_mimetype($form));
 	}
 
@@ -539,11 +609,11 @@ class Document extends CustomPostType{
 		}
 
 		$prefix   = post_type($form);
-		$document = get_post(get_post_meta($form->ID, $prefix.'_file', True));
+		$resource = get_post(get_post_meta($form->ID, $prefix.'_file', True));
 
 		$is_url = get_post_meta($form->ID, $prefix.'_url', True);
 
-		return ($is_url) ? "text/html" : $document->post_mime_type;
+		return ($is_url) ? "text/html" : $resource->post_mime_type;
 	}
 
 
@@ -591,7 +661,7 @@ class Document extends CustomPostType{
 		?>
 		<ul class="nobullet <?php if($css_classes):?><?=$css_classes?><?php else:?><?=$class->options('name')?>-list<?php endif;?>">
 			<?php foreach($objects as $o):?>
-			<li class="document <?=$class_name::get_document_application($o)?>">
+			<li class="resource <?=$class_name::get_resource_application($o)?>">
 				<?=$class->toHTML($o)?>
 			</li>
 			<?php endforeach;?>
@@ -606,8 +676,8 @@ class Document extends CustomPostType{
 	 * Outputs this item in HTML.  Can be overridden for descendants.
 	 **/
 	public function toHTML($object){
-		$title = Document::get_title($object);
-		$url   = Document::get_url($object);
+		$title = Resource::get_title($object);
+		$url   = Resource::get_url($object);
 		$html = "<a href='{$url}'>{$title}</a>";
 		return $html;
 	}

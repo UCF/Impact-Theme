@@ -71,3 +71,14 @@
     }
   }
 }
+
+.inthenews-item {
+  .inthenews-title {
+    margin-bottom: 0;
+  }
+
+  span {
+    display: block;
+    color: $grayLight;
+  }
+}

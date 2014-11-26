@@ -6,6 +6,13 @@ if ($featured_img_f) { ?>
 <main class="page" id="<?=$post->post_name?>">
 	<?php echo get_parallax_page_header($post->ID); ?>
 	<section class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h1><?php the_title();?></h1>
+				</div>
+			</div>
+		</div>
 		<?php the_content(); ?>
 	</section>
 <?php } else { ?>

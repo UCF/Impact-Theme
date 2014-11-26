@@ -131,19 +131,22 @@ function sc_post_type_search($params=array(), $content='') {
 
 	ob_start();
 	?>
-	<div class="post-type-search">
-		<div class="post-type-search-header">
-			<form class="post-type-search-form" action="." method="get">
-				<label style="display:none;">Search</label>
-				<input type="text" class="span3" placeholder="<?=$params['default_search_text']?>" />
-			</form>
-		</div>
-		<div class="post-type-search-results "></div>
-		<? if($params['show_sorting']) { ?>
-		<div class="btn-group post-type-search-sorting">
-			<button class="btn<?if($params['default_sorting'] == 'term') echo ' active';?>"><i class="icon-list-alt"></i></button>
-			<button class="btn<?if($params['default_sorting'] == 'alpha') echo ' active';?>"><i class="icon-font"></i></button>
-		</div>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="post-type-search">
+					<div class="post-type-search-header">
+						<form class="post-type-search-form" action="." method="get">
+							<label style="display:none;">Search</label>
+							<input type="text" class="span3" placeholder="<?=$params['default_search_text']?>" />
+						</form>
+					</div>
+					<div class="post-type-search-results "></div>
+					<? if($params['show_sorting']) { ?>
+					<div class="btn-group post-type-search-sorting">
+						<button class="btn<?if($params['default_sorting'] == 'term') echo ' active';?>"><i class="icon-list-alt"></i></button>
+						<button class="btn<?if($params['default_sorting'] == 'alpha') echo ' active';?>"><i class="icon-font"></i></button>
+					</div>
 		<? } ?>
 	<?
 
@@ -191,7 +194,12 @@ function sc_post_type_search($params=array(), $content='') {
 		</div>
 		<?
 	}
-	?> </div> <?
+	?>
+	</div>
+	</div>
+	</div>
+	</div>
+	<?
 	return ob_get_clean();
 }
 add_shortcode('post-type-search', 'sc_post_type_search');

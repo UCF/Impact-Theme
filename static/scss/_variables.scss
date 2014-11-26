@@ -1,5 +1,5 @@
-$iconSpritePath:      image-path("../img/glyphicons-halflings.png");
-$iconWhiteSpritePath: image-path("../img/glyphicons-halflings-white.png");
+$iconSpritePath:      "../img/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../img/glyphicons-halflings-white.png";
 
 $large-min-display:   1200px;
 $medium-max-display:  979px;
@@ -9,3 +9,4 @@ $xsmall-max-display:  480px;
 
 $offwhite:            #fafafa;
 $alt-color:           #dfaf0d;
+$linkColor:           #922 !default;
