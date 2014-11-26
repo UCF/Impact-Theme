@@ -13,7 +13,7 @@
 								));
 							?>
 						</nav>
-						<p class="footer-cta">We&rsquo;re looking for our next great partner. <?php print get_cta_link(); ?></p>
+						<p class="footer-cta">Tell us what you think about UCF Downtown. <?php print get_cta_link(); ?></p>
 						<p class="footer-logo">
 							<a target="_blank" href="http://www.ucf.edu/">Go to ucf.edu</a>
 						</p>
