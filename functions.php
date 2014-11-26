@@ -125,6 +125,16 @@ function get_cta_link() {
 	return ob_get_clean();
 }
 
+/**
+ * Displays a call to action link, using the page link provided in Theme Options.
+ **/
+function get_cta_prefix() {
+	$text = get_theme_option('cta_prefix');
+	ob_start();
+	echo $text;
+	return ob_get_clean();
+}
+
 
 /**
  * Hide unused admin tools (Links, Comments, etc)
