@@ -3,7 +3,7 @@
 $home = get_page_by_path('home');
 if (!$home) {
 	$home = $post; // Get home post
-}var_dump($home->post_title);
+}
 ?>
 
 <main class="home">
