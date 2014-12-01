@@ -11,16 +11,17 @@ if ( post_password_required() ) { ?>
 	<p class="password-protected alert">This post is password protected. Enter the password to view comments.</p>
 <?php return; } ?>
 
-<?php if ( have_comments() ) : // If comments exist for this entry, continue ?>
-<!--BEGIN #comments-->
-<div id="comments">
-
 <?php
 	$comments = get_comments(array(
 		'order'  => 'DESC',
 		'status' => 'approve',
 	));
 ?>
+
+<?php if ( have_comments() ) : // If comments exist for this entry, continue ?>
+<!--BEGIN #comments-->
+<div id="comments">
+
 <?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
 	<!--BEGIN .comment-list-->
 	<div class="comment-list">
