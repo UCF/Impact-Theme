@@ -349,4 +349,77 @@ function sc_display_recent_updates($header) {
 	return ob_get_clean();
 }
 add_shortcode('display-recent-updates', 'sc_display_recent_updates');
+
+
+function sc_comments($attr, $content=null) {
+	ob_start();
+	if ($attr['title']) {
+	?>
+		<h2 class="border-bottom comments-title"><?php echo $attr['title'] ?></h2>
+	<?php
+	}
+	comments_template('', true);
+	return ob_get_clean();
+}
+add_shortcode('comments', 'sc_comments');
+
+
+function sc_comment_form() {
+	ob_start();
+	if ( comments_open() ) {
+		?>
+		<!--BEGIN #respond-->
+		<div class="border-top<?php if(!$count):?> nocomments<?php endif;?>" id="respond">
+
+			<div class="cancel-comment-reply"><?php cancel_comment_reply_link( 'Cancel Reply' ); ?></div>
+
+			<h3 id="leave-a-reply"><?php comment_form_title( 'Post a Message', 'Leave a message to %s' ); ?></h3>
+
+			<?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>
+			<p id="login-req" class="alert">You must be <a href="<?php echo get_option( 'siteurl' ); ?>/wp-login.php?redirect_to=<?php echo urlencode( get_permalink() ); ?>">logged in</a> to post a comment.</p>
+			<?php else : ?>
+
+			<!--BEGIN #comment-form-->
+			<form id="comment-form" method="post" action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php">
+
+				<!--BEGIN #form-section-comment-->
+				<div id="form-section-comment" class="form-section">
+					<textarea name="comment" id="comment" tabindex="4" rows="10" cols="65"></textarea>
+				<!--END #form-section-comment-->
+				</div>
+
+				<!--BEGIN #form-section-author-->
+				<div id="form-section-author" class="form-section">
+					<input name="author" id="author" type="text" tabindex="1" <?php if ( $req ) echo "aria-required='true'"; ?> />
+					<label for="author"<?php if ( $req ) echo ' class="required"'; ?>>Name</label>
+				<!--END #form-section-author-->
+				</div>
+
+				<!--BEGIN #form-section-email-->
+				<div id="form-section-email" class="form-section">
+					<input name="email" id="email" type="text" tabindex="2" <?php if ( $req ) echo "aria-required='true'"; ?> />
+					<label for="email"<?php if ( $req ) echo ' class="required"'; ?>>Email</label>
+				<!--END #form-section-email-->
+				</div>
+
+				<!--BEGIN #form-section-actions-->
+				<div id="form-section-actions" class="form-section">
+					<button name="submit" id="submit" type="submit" tabindex="5">Post your comment</button>
+					<?php comment_id_fields(); ?>
+				<!--END #form-section-actions-->
+				</div>
+
+			<?php do_action( 'comment_form', $post->ID ); // Available action: comment_form ?>
+			<!--END #comment-form-->
+			</form>
+
+			<?php endif; // If registration required and not logged in ?>
+		<!--END #respond-->
+		</div>
+		<?php
+	}
+
+	return ob_get_clean();
+}
+add_shortcode('comment-form', 'sc_comment_form');
 ?>

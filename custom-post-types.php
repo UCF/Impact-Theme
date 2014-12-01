@@ -529,6 +529,7 @@ class FrequentlyAskedQuestion extends CustomPostType{
 			</div>
 		</div>
 		<?php
+		$is_row_open = False;
 		foreach( $objects as $k => $o ) {
 			if ($k % 2 == 0 || $k == 0) {
 				$is_row_open = True;
