@@ -107,7 +107,7 @@
   }
 }
 
-@media all and (min-width: $large-min-display) and (max-height: $medium-min-display) {
+@media all and (min-width: $large-min-display) and (max-height: 768px) {
   // Try to catch wider screens with less vertical space; i.e. 1366x768px
   .parallax-feature .parallax-photo {
     height: 625px;

@@ -68,6 +68,7 @@ Config::$custom_post_types = array(
 	'Post',
 	'Update',
 	'InTheNews',
+	'FrequentlyAskedQuestion',
 	'Resource',
 	'ParallaxFeature'
 );

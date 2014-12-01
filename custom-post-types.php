@@ -291,6 +291,7 @@ class Page extends CustomPostType {
 	}
 }
 
+
 class Post extends CustomPostType {
 	public
 		$name           = 'post',
@@ -488,6 +489,86 @@ class Update extends CustomPostType {
 
 		$html = '<article><a href="' . get_permalink( $object->ID ) . '"><h3>' . $object->post_title . '</h3></a>';
 		$html = $html . $output . '</article>';
+		return $html;
+	}
+}
+
+
+class FrequentlyAskedQuestion extends CustomPostType{
+	public
+		$name           = 'faq',
+		$plural_name    = 'FAQs',
+		$singular_name  = 'FAQ',
+		$add_new_item   = 'Add New FAQ',
+		$edit_item      = 'Edit FAQ',
+		$new_item       = 'New FAQ',
+		$public         = True,
+		$use_editor     = True,
+		$use_order      = True,
+		$use_metabox    = False,
+		$use_title      = True,
+		$use_shortcode  = True;
+
+	/**
+	 * Custom page listing of FAQ posts
+	 **/
+	public function objectsToHTML($objects, $css_classes){
+		if (count($objects) < 1) {
+			return '';
+		}
+
+		$class = get_custom_post_type($objects[0]->post_type);
+		$class = new $class;
+
+		ob_start();
+		?>
+		<div class="faqs">
+		<div class="row">
+			<div class="span12">
+				<hr class="faq-header-hr">
+			</div>
+		</div>
+		<?php
+		foreach( $objects as $k => $o ) {
+			if ($k % 2 == 0 || $k == 0) {
+				$is_row_open = True;
+			?>
+				<div class="row">
+			<?php
+			}
+		?>
+			<div class="span6">
+		<?php
+			echo $class->toHTML( $o );
+		?>
+			<hr class="visible-phone" >
+			</div>
+		<?php
+
+			if ($k % 2 == 1) {
+				$is_row_open = False;
+			?>
+				</div>
+				<div class="row"><div class="span6"><hr class="hidden-phone"></div><div class="span6"><hr class="hidden-phone"></div></div>
+			<?php
+			}
+		}
+
+		// Closing open row
+		if ($is_row_open) {
+		?>
+			</div>
+			<div class="row"><div class="span6"><hr class="hidden-phone"></div></div>
+		<?php
+		}
+		?>
+		</div>
+		<?php
+		return ob_get_clean();
+	}
+
+	public function toHTML( $object ) {
+		$html = '<article class="faq-item"><div class="faq-question-wrapper"><h2 class="faq-question"><span class="faq-q">Q: </span> ' . $object->post_title . '</h2></div><div class="faq-answer-wrapper"><span class="faq-a">A: </span> ' . $object->post_content . '</div></article>';
 		return $html;
 	}
 }

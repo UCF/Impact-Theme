@@ -78,7 +78,29 @@
   }
 
   span {
-    display: block;
     color: $grayLight;
+    display: block;
+  }
+}
+
+.faqs {
+  .faq-header-hr {
+    margin-top: 0;
+  }
+
+  .faq-item {
+    font-size: 18px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+    line-height: 1.3em;
+    text-transform: uppercase;
+  }
+
+  .faq-q,
+  .faq-a {
+    color: #dfaf0d;
+    font-weight: 700;
   }
 }
