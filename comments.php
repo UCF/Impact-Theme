@@ -18,54 +18,47 @@ if ( post_password_required() ) { ?>
 	));
 ?>
 
-<?php if ( have_comments() ) : // If comments exist for this entry, continue ?>
+<?php if ( $comments ) : // If comments exist for this entry, continue ?>
 <!--BEGIN #comments-->
-<div id="comments">
-
-<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
-	<!--BEGIN .comment-list-->
-	<div class="comment-list">
-		<?php
-		$is_row_open = False;
-		foreach ( $comments as $k => $comment ) :
-			if ( $k % 4 == 0 or $k == 0 ) :
-				$is_row_open = True;
-			?>
-				<div class="row">
-			<?php
-			endif;
+<div class="comments">
+	<?php
+	$is_row_open = False;
+	foreach ( $comments as $k => $comment ) :
+		if ( $k % 4 == 0 or $k == 0 ) :
+			$is_row_open = True;
 		?>
-			<div class="span3">
-				<div class="comment-item">
-					<div class="comment-date">
-						<?php comment_date('M j, Y', $comment->comment_ID); ?>
-					</div>
-					<div class="comment-content">
-						<?php comment_text($comment->comment_ID); ?>
-					</div>
-					<div class="comment-author">
-						&mdash; <?php comment_author($comment->comment_ID); ?>
-					</div>
+			<div class="row">
+		<?php
+		endif;
+	?>
+		<div class="span3">
+			<div class="comment-item">
+				<div class="comment-date">
+					<?php comment_date('M j, Y', $comment->comment_ID); ?>
+				</div>
+				<div class="comment-content">
+					<?php comment_text($comment->comment_ID); ?>
+				</div>
+				<div class="comment-author">
+					&mdash; <?php comment_author($comment->comment_ID); ?>
 				</div>
 			</div>
-		<?php
-			if ($k % 4 == 3) :
-				$is_row_open = False;
-			?>
-				</div>
-			<?php
-			endif;
-		endforeach;
-
-		if ($is_row_open) :
+		</div>
+	<?php
+		if ($k % 4 == 3) :
+			$is_row_open = False;
 		?>
 			</div>
 		<?php
 		endif;
-		?>
-	</div>
-<?php endif; ?>
+	endforeach;
 
+	if ($is_row_open) :
+	?>
+		</div>
+	<?php
+	endif;
+	?>
 <!--END #comments-->
 </div>
 <?php endif; // ( have_comments() ) ?>
