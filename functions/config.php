@@ -151,6 +151,12 @@ Config::$theme_settings = array(
 			'description' => 'Your call to action text prefix',
 			'value'       => $theme_options['cta_prefix'],
 		)),
+		new TextField(array(
+			'name'        => 'Call to Action Link Text',
+			'id'          => THEME_OPTIONS_NAME.'[cta_link_text]',
+			'description' => 'Your call to action link text',
+			'value'       => $theme_options['cta_link_text'],
+		)),
 		new SelectField(array(
 			'name'        => 'Global Call to Action link',
 			'id'          => THEME_OPTIONS_NAME.'[cta]',

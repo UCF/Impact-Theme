@@ -120,7 +120,7 @@ function get_cta_link() {
 	$link = get_permalink(get_post(get_theme_option('cta'))->ID);
 	ob_start();
 ?>
-	<a href="<?=$link?>">Comment Here.</a>
+	<a href="<?php echo $link; ?>"> <?php echo get_theme_option('cta_link_text'); ?></a>
 <?php
 	return ob_get_clean();
 }
