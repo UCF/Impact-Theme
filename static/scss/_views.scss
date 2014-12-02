@@ -415,7 +415,7 @@ footer nav {
 }
 
 
-@media all and (min-width: $large-min-display) {
+@media all and (min-width: $small-max-display - 1) {
   // Add extra spacing btwn navbar and page content for basic subpages (w/o parallax headings)
   .page-base .page-content {
     padding-bottom: 75px;

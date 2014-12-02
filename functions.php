@@ -104,7 +104,7 @@ function get_parallax_page_header($page_id) {
 	echo get_parallax_feature_css($page_id, 'page_image_d', 'page_image_t', 'page_image_m');
 	?>
 	<section class="parallax-content parallax-header">
-		<div class="parallax-photo" id="photo_<?=$page_id?>" data-stellar-background-ratio="0.5">
+		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>" data-stellar-background-ratio="0.5">
 			<div class="skyline"></div>
 		</div>
 	</section>

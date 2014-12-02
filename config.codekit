@@ -2710,17 +2710,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/static\/img\/header-skyline.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 21655,
-		"inputAbbreviatedPath": "\/static\/img\/header-skyline.png",
-		"outputAbbreviatedPath": "\/static\/img\/header-skyline.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/static\/img\/help.png": {
 		"fileType": 32768,
 		"ignore": 0,

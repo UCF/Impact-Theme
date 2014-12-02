@@ -267,7 +267,7 @@ function sc_parallax_feature($attrs, $content=null) {
 		print get_parallax_feature_css($feature->ID, 'parallax_feature_image_d', 'parallax_feature_image_t', 'parallax_feature_image_m');
 		?>
 		<section class="parallax-content parallax-feature">
-			<div class="parallax-photo" id="photo_<?=$feature->ID?>" data-stellar-background-ratio="0.5">
+			<div class="parallax-photo" id="photo_<?php echo $feature->ID; ?>" data-stellar-background-ratio="0.5">
 				<div class="container">
 					<div class="row">
 						<div class="span7 <?=$offset?>">
