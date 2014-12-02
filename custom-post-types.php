@@ -734,16 +734,18 @@ class Resource extends CustomPostType{
 	 * the toHTML method.
 	 **/
 	public function objectsToHTML($objects, $css_classes){
-		if (count($objects) < 1){ return '';}
+		if (count($objects) < 1) {
+			return '';
+		}
 
 		$class_name = get_custom_post_type($objects[0]->post_type);
 		$class      = new $class_name;
 
 		ob_start();
 		?>
-		<ul class="nobullet <?php if($css_classes):?><?=$css_classes?><?php else:?><?=$class->options('name')?>-list<?php endif;?>">
-			<?php foreach($objects as $o):?>
-			<li class="resource <?=$class_name::get_resource_application($o)?>">
+		<ul class="nobullet <?php if( $css_classes ) : ?><?=$css_classes?><?php else:?><?php echo $class->options('name'); ?>-list<?php endif;?>">
+			<?php foreach( $objects as $o ) : ?>
+			<li class="resource <?php echo $class_name::get_resource_application($o); ?>">
 				<?=$class->toHTML($o)?>
 			</li>
 			<?php endforeach;?>

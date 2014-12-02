@@ -113,7 +113,7 @@
   }
 
   .comment-item {
-    background-color: #fcebb1;
+    background-color: $light-yellow-color;
     padding: 25px;
   }
 
@@ -131,5 +131,53 @@
   .comment-author {
     font-size: 15px;
     font-weight: bold;
+  }
+}
+
+.post-type-search {
+
+  .post-type-search-results {
+    background-color: $light-yellow-color;
+    display: none;
+    margin-bottom: 10px;
+    padding-top: 10px;
+
+    .post-type-search-message {
+      padding: 0 10px 10px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      &.pdf {
+        list-style-image: url('../img/documents-pdf.png');
+      }
+
+      &.word {
+        list-style-image: url('../img/documents-word.png');
+      }
+
+      &.document {
+        list-style-image: url('../img/documents-doc.png');
+      }
+
+      &.zip {
+        list-style-image: url('../img/documents-zip.png');
+      }
+
+      &.excel {
+        list-style-image: url('../img/documents-excel.png');
+      }
+
+      &.powerpoint {
+        list-style-image: url('../img/documents-ppt.png');
+      }
+
+      &.html {
+        list-style-image: url('../img/documents-html.png');
+      }
+    }
   }
 }
