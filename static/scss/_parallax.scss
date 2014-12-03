@@ -57,6 +57,7 @@
   .skyline {
     background-image: url('../img/header-skyline.png');
     @include background-size(cover);
+    background-repeat: no-repeat;
     bottom: 0;
     height: 100px;
     position: absolute;
@@ -72,9 +73,19 @@
   }
 }
 
-.ie8 .parallax-photo {
-  background-position: center center;
-  height: 750px;
+.ie8 {
+  .parallax-header .parallax-photo .skyline {
+    height: 50px;
+  }
+
+  .page .page-content {
+    padding-top: 60px;
+  }
+
+  .parallax-photo {
+    background-position: center center;
+    height: 550px;
+  }
 }
 
 .parallax-header h1 {
