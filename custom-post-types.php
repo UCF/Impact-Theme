@@ -651,16 +651,17 @@ class InTheNews extends CustomPostType
 
 class Resource extends CustomPostType{
 	public
-		$name           = 'resource',
-		$plural_name    = 'Resources',
-		$singular_name  = 'Resource',
-		$add_new_item   = 'Add New Resource',
-		$edit_item      = 'Edit Resource',
-		$new_item       = 'New Resource',
-		$use_title      = True,
-		$use_editor     = False,
-		$use_shortcode  = True,
-		$use_metabox    = True;
+		$name          = 'resource',
+		$plural_name   = 'Resources',
+		$singular_name = 'Resource',
+		$add_new_item  = 'Add New Resource',
+		$edit_item     = 'Edit Resource',
+		$new_item      = 'New Resource',
+		$use_title     = True,
+		$use_editor    = False,
+		$use_shortcode = True,
+		$use_metabox   = True,
+		$taxonomies    = array( 'post_tag', 'resource_group' );
 
 	public function fields(){
 		$fields   = parent::fields();
@@ -743,7 +744,7 @@ class Resource extends CustomPostType{
 
 		ob_start();
 		?>
-		<ul class="nobullet <?php if( $css_classes ) : ?><?=$css_classes?><?php else:?><?php echo $class->options('name'); ?>-list<?php endif;?>">
+		<ul class="nobullet <?php if( $css_classes ) : ?><?php echo $css_classes; ?><?php else : ?><?php echo $class->options('name'); ?>-list<?php endif; ?>">
 			<?php foreach( $objects as $o ) : ?>
 			<li class="resource <?php echo $class_name::get_resource_application($o); ?>">
 				<?=$class->toHTML($o)?>

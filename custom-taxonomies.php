@@ -1,19 +1,19 @@
 <?php
 
 /**
- * Abstract class for defining custom taxonomies.  
- * 
+ * Abstract class for defining custom taxonomies.
+ *
  **/
 abstract class CustomTaxonomy {
 	public
-		$name			= 'custom_taxonomy',
-		
+		$name               = 'custom_taxonomy',
+
 		// Do not register the taxonomy with the post type here.
 		// Register it on the `taxonomies` attribute of the post type in
 		// custom-post-types.php
-		$object_type	= Array(), 
-		
-		$general_name		    = 'Post Tags',
+		$object_type        = Array(),
+
+		$general_name       = 'Post Tags',
 		$singular_name      = 'Post Tag',
 		$search_items       = 'Search Tags',
 		$popular_items      = 'Popular Tags',
@@ -25,7 +25,7 @@ abstract class CustomTaxonomy {
 		$add_new_item       = 'Add New Tag',
 		$new_item_name      = 'New Tag Name',
 		$menu_name          = NULL,
-		
+
 		$public                = True,
 		$show_in_name_menus    = NULL,
 		$show_ui               = NULL,
@@ -35,19 +35,19 @@ abstract class CustomTaxonomy {
 		$rewrite               = True,
 		$query_var             = NULL,
 		$capabilities          = Array();
-	
+
 	function __construct() {
 		if(is_null($this->show_in_name_menus)) $this->show_in_name_menus = $this->public;
 		if(is_null($this->show_ui)) $this->show_ui = $this->public;
 		if(is_null($this->show_tagcloud)) $this->show_tagcloud = $this->show_ui;
 		if(is_null($this->menu_name)) $this->menu_name = $this->general_name;
 	}
-	
+
 	public function options($key){
 		$vars = get_object_vars($this);
 		return $vars[$key];
 	}
-	
+
 	public function labels() {
 		return Array(
 				'name'                       => _x($this->options('general_name'), 'taxonomy general name'),
@@ -67,7 +67,7 @@ abstract class CustomTaxonomy {
 				'menu_name'                  => __($this->options('menu_name'))
 				);
 	}
-	
+
 	public function register() {
 		$args = Array(
 				'labels'                => $this->labels(),
@@ -83,6 +83,31 @@ abstract class CustomTaxonomy {
 			);
 		register_taxonomy($this->options('name'), $this->options('object_type'), $args);
 	}
+}
+
+
+
+/**
+ * Resource Group
+ *
+ * @author Brandon Groves
+ **/
+class ResourceGroups extends CustomTaxonomy {
+	public
+		$name               = 'resource_group',
+		$general_name       = 'Resource Groups',
+		$singular_name      = 'Resource Group',
+		$search_items       = 'Search Resource Groups',
+		$popular_items      = 'Popular Resource Groups',
+		$all_times          = 'All Resource Groups',
+		$parent_item        = 'Parent Resource Group',
+		$parent_item_colon  = 'Parent Resource Group:',
+		$edit_item          = 'Edit Resource Group',
+		$update_item        = 'Update Resource Group',
+		$add_new_item       = 'Add New Resource Group',
+		$new_item_name      = 'New Tag Resource Group',
+
+		$hierarchical = True;
 }
 
 ?>

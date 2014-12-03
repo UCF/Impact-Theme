@@ -73,6 +73,10 @@ Config::$custom_post_types = array(
 	'ParallaxFeature'
 );
 
+Config::$custom_taxonomies = array(
+	'ResourceGroups'
+);
+
 Config::$body_classes = array('default',);
 
 /**
