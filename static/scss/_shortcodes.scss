@@ -26,6 +26,10 @@
         right: -22px;
         width: 0;
 
+        @media(max-width: $small-max-display) {
+          bottom: 8px;
+        }
+
         @media(max-width: $large-min-display) {
           right: -2px;
         }
@@ -45,12 +49,16 @@
       font-size: 16px;
       font-weight: normal;
       height: 90px;
-      line-height: 1.2;
+      line-height: 1.4em;
       margin-bottom: 0;
       margin-top: 0;
       overflow: hidden;
       padding: 10px;
       width: 100%;
+
+      @media(min-width: $medium-min-display) and (max-width: $medium-max-display) {
+        height: 130px;
+      }
 
       @media(max-width: $large-min-display) {
         width: auto;
