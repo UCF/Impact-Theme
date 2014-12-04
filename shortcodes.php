@@ -422,4 +422,34 @@ function sc_comment_form() {
 	return ob_get_clean();
 }
 add_shortcode('comment-form', 'sc_comment_form');
+
+/**
+ * Output Upcoming Events via shortcode.
+ **/
+function sc_events_widget() {
+
+	ob_start();
+	?>
+	<div class="events-wrapper">
+	<?php
+	display_events();
+
+	$options  = get_option( THEME_OPTIONS_NAME );
+
+	// Assuming that the url will not end in a slash so
+	// we can append the the feed types correctly
+	$base_url = rtrim($options['events_url'], '/') . '/';
+
+	$json_url = $bas_url . 'feed.json';
+	$ics_url  = $base_url . 'feed.ics';
+	$rss_url  = $base_url . 'feed.rss';
+
+	?>
+	<p class="screen-only"><a href="<?php echo $base_url; ?>" class="events_morelink">More Events</a></p>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('events-widget', 'sc_events_widget');
+
 ?>

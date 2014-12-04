@@ -142,7 +142,6 @@
 }
 
 .post-type-search {
-
   .post-type-search-results {
     background-color: $light-yellow-color;
     display: none;
@@ -186,5 +185,12 @@
         list-style-image: url('../img/documents-html.png');
       }
     }
+  }
+}
+
+.events-wrapper {
+  table.events tbody tr:nth-child(2n+1) td, table.events tbody tr:nth-child(2n+1) th {
+    border-top: 1px solid $alt-color;
+    background-color: $light-yellow-color !important;
   }
 }

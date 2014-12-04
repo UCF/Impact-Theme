@@ -57,6 +57,8 @@ define('GA_ACCOUNT', $theme_options['ga_account']);
 define('CB_UID', $theme_options['cb_uid']);
 define('CB_DOMAIN', $theme_options['cb_domain']);
 
+# Timeout for data grabbed from feeds
+define('FEED_FETCH_TIMEOUT', 10); // seconds
 
 /**
  * Set config values including meta tags, registered custom post types, styles,
@@ -107,6 +109,29 @@ Config::$theme_settings = array(
 			'description' => 'Example: <em>UA-9876543-21</em>. Leave blank for development.',
 			'default'     => null,
 			'value'       => $theme_options['ga_account'],
+		)),
+	),
+	'Events' => array(
+		new SelectField(array(
+			'name'        => 'Events Max Items',
+			'id'          => THEME_OPTIONS_NAME.'[events_max_items]',
+			'description' => 'Maximum number of events to display whenever outputting event information.',
+			'value'       => $theme_options['events_max_items'],
+			'default'     => 4,
+			'choices'     => array(
+				'1' => 1,
+				'2' => 2,
+				'3' => 3,
+				'4' => 4,
+				'5' => 5,
+			),
+		)),
+		new TextField(array(
+			'name'        => 'Events Calendar URL',
+			'id'          => THEME_OPTIONS_NAME.'[events_url]',
+			'description' => 'Base URL for the calendar you wish to use. Example: <em>http://events.ucf.edu/mycalendar</em>',
+			'value'       => $theme_options['events_url'],
+			'default'     => 'http://events.ucf.edu',
 		)),
 	),
 	'Search' => array(
