@@ -165,39 +165,39 @@ function sc_post_type_search($params=array(), $content='') {
 				break;
 		}
 		?>
-		<div class="<?php echo $id; ?>"<? if($hide) echo ' style="display:none;"'; ?>>
-			<?php foreach($section as $section_title => $section_posts) { ?>
-				<?php if(count($section_posts) > 0 || $params['show_empty_sections']) { ?>
-					<div>
-						<h3><?php echo esc_html($section_title); ?></h3>
-						<div class="row">
-							<? if( count( $section_posts ) > 0 ) { ?>
-								<?php $posts_per_column = ceil( count( $section_posts ) / $params['column_count'] ); ?>
-								<?php foreach(range(0, $params['column_count'] - 1) as $column_index) { ?>
-									<?php $start = $column_index * $posts_per_column; ?>
-									<?php $end   = $start + $posts_per_column; ?>
-									<?php if( count($section_posts) > $start ) { ?>
-									<div class="<?php echo $params['column_width']; ?> resource-list">
-										<ul>
-										<?php foreach( array_slice($section_posts, $start, $end) as $post ) { ?>
-											<li class="<?php echo $post_type->get_resource_application($post); ?>" data-post-id="<?php echo $post->ID; ?>"><?php echo $post_type->toHTML($post); ?></li>
+					<div class="<?php echo $id; ?>"<? if($hide) echo ' style="display:none;"'; ?>>
+						<?php foreach($section as $section_title => $section_posts) { ?>
+							<?php if(count($section_posts) > 0 || $params['show_empty_sections']) { ?>
+								<div>
+									<h3><?php echo esc_html($section_title); ?></h3>
+									<div class="row">
+										<? if( count( $section_posts ) > 0 ) { ?>
+											<?php $posts_per_column = ceil( count( $section_posts ) / $params['column_count'] ); ?>
+											<?php foreach(range(0, $params['column_count'] - 1) as $column_index) { ?>
+												<?php $start = $column_index * $posts_per_column; ?>
+												<?php $end   = $start + $posts_per_column; ?>
+												<?php if( count($section_posts) > $start ) { ?>
+												<div class="<?php echo $params['column_width']; ?> resource-list">
+													<ul>
+													<?php foreach( array_slice($section_posts, $start, $end) as $post ) { ?>
+														<li class="<?php echo $post_type->get_resource_application($post); ?>" data-post-id="<?php echo $post->ID; ?>"><?php echo $post_type->toHTML($post); ?></li>
+													<?php } ?>
+													</ul>
+												</div>
+												<?php } ?>
+											<?php } ?>
 										<?php } ?>
-										</ul>
 									</div>
-									<?php } ?>
-								<?php } ?>
+								</div>
 							<?php } ?>
-						</div>
+						<?php } ?>
 					</div>
-				<?php } ?>
-			<?php } ?>
-		</div>
-		<?
+		<?php
 	}
 	?>
-	</div>
-	</div>
-	</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<?php
 	return ob_get_clean();

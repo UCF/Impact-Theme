@@ -14,6 +14,22 @@
       margin-top: 10px;
       position: relative;
 
+      &:hover:after,
+      &:focus:after,
+      &:active:after {
+        @include transition(all .15s ease-in-out);
+        bottom: 0;
+        right: -20px;
+
+        @media(max-width: $large-min-display) {
+          right: 0;
+        }
+
+        @media(max-width: $small-max-display) {
+          bottom: 10px;
+        }
+      }
+
       &:after {
         border-color: transparent transparent #54972c;
         border-style: solid;
