@@ -189,8 +189,27 @@
 }
 
 .events-wrapper {
-  table.events tbody tr:nth-child(2n+1) td, table.events tbody tr:nth-child(2n+1) th {
-    border-top: 1px solid $alt-color;
-    background-color: $light-yellow-color !important;
+  table {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+
+    &.events tbody tr:nth-child(2n+1) td, table.events tbody tr:nth-child(2n+1) th {
+      background-color: $light-yellow-color !important;
+      border-top: 1px solid $alt-color;
+    }
+
+    .date {
+      width: 70px;
+    }
+  }
+
+  .location {
+    line-height: 13px;
+
+    a {
+      color: #666;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
   }
 }
