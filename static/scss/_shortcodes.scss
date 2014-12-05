@@ -42,13 +42,21 @@
         right: -22px;
         width: 0;
 
-        @media(max-width: $small-max-display) {
-          bottom: 8px;
-        }
-
         @media(max-width: $large-min-display) {
           right: -2px;
         }
+      }
+
+      &.span3:after {
+        @media(max-width: $small-max-display) {
+          bottom: 8px;
+        }
+      }
+    }
+
+    .span3 .update-title {
+      @media(min-width: $medium-min-display) and (max-width: $medium-max-display) {
+        height: 130px;
       }
     }
 
@@ -71,10 +79,6 @@
       overflow: hidden;
       padding: 10px;
       width: 100%;
-
-      @media(min-width: $medium-min-display) and (max-width: $medium-max-display) {
-        height: 130px;
-      }
 
       @media(max-width: $large-min-display) {
         width: auto;

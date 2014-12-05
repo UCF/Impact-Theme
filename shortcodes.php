@@ -301,10 +301,14 @@ add_shortcode('parallax_feature', 'sc_parallax_feature');
 /**
  * Shortcode for displaying the recent updates (Update custom post type)
  */
-function sc_display_recent_updates($header) {
+function sc_display_recent_updates($attrs, $content=null) {
+	$header      = (array_key_exists('header', $attrs) ? $attrs['header'] : '');
+	$is_vertical = (array_key_exists('is_vertical', $attrs) ? $attrs['is_vertical'] : '');
+	$is_vertical = filter_var($is_vertical, FILTER_VALIDATE_BOOLEAN);
+
 	$updates = get_posts(array(
 		'numberposts' => 4,
-		'post_type'     => 'update'
+		'post_type'   => 'update'
 	));
 	ob_start();
 	?>
@@ -331,9 +335,9 @@ function sc_display_recent_updates($header) {
 						$item_title = substr($item_title, 0, strrpos($item_title, ' ')) . '&hellip;';
 					}
 				?>
-				<li class="update-story span3">
+				<li class="update-story <?php echo ($is_vertical ? '' : 'span3'); ?>">
 					<h3 class="update-title">
-						<a href="<?php echo get_permalink($item->ID); ?>" class="ignore-external title">
+						<a href="<?php echo get_permalink( $item->ID ); ?>" class="ignore-external title">
 							<?php echo $item_title; ?>
 						</a>
 					</h3>
