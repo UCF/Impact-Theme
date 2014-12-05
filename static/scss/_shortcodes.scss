@@ -4,6 +4,10 @@
     list-style-type: none;
     padding-left: 0;
 
+    &.vertical {
+      margin-left: 0px;
+    }
+
     @media all and (max-width: $xsmall-max-display) {
       padding-left: 20px;
       padding-right: 20px;

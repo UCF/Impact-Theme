@@ -325,7 +325,7 @@ function sc_display_recent_updates($attrs, $content=null) {
 				</a>
 			</<?php echo $header; ?>>
 		<?php endif; ?>
-			<ul class="update-list row">
+			<ul class="update-list <?php echo ($is_vertical ? 'vertical' : 'row'); ?>">
 				<?php foreach ( $updates as $key => $item ) :
 					$item_title = get_the_title($item->ID);
 					if (strlen($item_title) > 100) {
