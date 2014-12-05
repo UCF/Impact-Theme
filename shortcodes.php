@@ -256,42 +256,42 @@ add_shortcode('blockquote', 'sc_blockquote');
  **/
 function sc_parallax_feature($attrs, $content=null) {
 	$title = $attrs['title'];
-	$feature = !empty($title) ? get_page_by_title($title, 'OBJECT', 'parallax_feature') : null;
-	if ($feature) {
-		$offset = get_post_meta($feature->ID, 'parallax_feature_callout_position', true) == 'right' ? 'offset5' : '';
-		$show_cta = get_post_meta($feature->ID, 'parallax_feature_display_cta', true);
-		$cta_text = get_post_meta($feature->ID, 'parallax_feature_cta_text', true);
-		$cta_link = get_permalink(get_post_meta($feature->ID, 'parallax_feature_cta_link', true));
+	$feature = !empty( $title ) ? get_page_by_title( $title, 'OBJECT', 'parallax_feature' ) : null;
+
+	if ( $feature ) {
+		$offset = get_post_meta( $feature->ID, 'parallax_feature_callout_position', true ) == 'right' ? 'offset5' : '';
+		$show_cta = get_post_meta( $feature->ID, 'parallax_feature_display_cta', true );
+		$cta_text = get_post_meta( $feature->ID, 'parallax_feature_cta_text', true );
+		$cta_link = get_permalink( get_post_meta( $feature->ID, 'parallax_feature_cta_link', true ) );
 
 		ob_start();
-		print get_parallax_feature_css($feature->ID, 'parallax_feature_image_d', 'parallax_feature_image_t', 'parallax_feature_image_m');
+		print get_parallax_feature_css( $feature->ID, 'parallax_feature_image_d', 'parallax_feature_image_t', 'parallax_feature_image_m' );
 		?>
 		<section class="parallax-content parallax-feature">
 			<div class="parallax-photo" id="photo_<?php echo $feature->ID; ?>" data-stellar-background-ratio="0.5">
 				<div class="container">
 					<div class="row">
-						<div class="span7 <?=$offset?>">
+						<div class="span7 <?php echo $offset; ?>">
 							<div class="callout">
-								<?=apply_filters('the_content', $feature->post_content)?>
+								<?php echo apply_filters( 'the_content', $feature->post_content ); ?>
 							</div>
 						</div>
 					</div>
 				</div>
-				<?php if ($show_cta == 'on' && !empty($cta_link) && !empty($cta_text)) { ?>
+				<?php if ( $show_cta == 'on' && !empty( $cta_link ) && !empty( $cta_text ) ) { ?>
 				<div class="cta">
-					<a href="<?=$cta_link?>"><?=$cta_text?></a>
+					<a href="<?php echo $cta_link; ?>"><?php echo $cta_text; ?></a>
 				</div>
 				<?php } ?>
 			</div>
-			<?php if ($content) {
-				print apply_filters('the_content', $content);
+			<?php if ( $content ) {
+				print apply_filters( 'the_content', $content );
 			}
 			?>
 		</section>
 		<?php
 		return ob_get_clean();
-	}
-	else {
+	} else {
 		return null;
 	}
 }
