@@ -313,7 +313,7 @@ function sc_display_recent_updates($attrs, $content=null) {
 	ob_start();
 	?>
 	<div class="recent-updates">
-	<div class="container">
+	<?php echo ($is_vertical ? '' : '<div class="container">'); ?>
 	<?php if ( count( $updates ) ): ?>
 		<?php if ( !empty( $header ) ) : ?>
 			<<?php echo $header; ?>>
@@ -347,7 +347,7 @@ function sc_display_recent_updates($attrs, $content=null) {
 	<?php else: ?>
 		<p>Unable to fetch updates.</p>
 	<?php endif; ?>
-	</div>
+	<?php echo ($is_vertical ? '' : '</div>'); ?>
 	</div>
 <?php
 	return ob_get_clean();
