@@ -103,7 +103,7 @@
 // Full-size (x-large) screens (1200x+ wide)
 @media all and (min-width: $large-min-display) {
   .parallax-feature .parallax-photo {
-    height: 800px;
+    height: 550px;
   }
 
   .parallax-header .parallax-photo {
@@ -121,7 +121,7 @@
 @media all and (min-width: $large-min-display) and (max-height: 768px) {
   // Try to catch wider screens with less vertical space; i.e. 1366x768px
   .parallax-feature .parallax-photo {
-    height: 625px;
+    height: 450px;
   }
 
   .parallax-header .parallax-photo {
@@ -132,7 +132,7 @@
 // "Desktop (medium/large)" screens (1199px-768px wide)
 @media all and (max-width: $large-min-display - 1) and (min-width: $medium-min-display) {
   .parallax-feature .parallax-photo {
-    height: 625px;
+    height: 450px;
   }
 
   .parallax-header .parallax-photo {
@@ -162,7 +162,7 @@
 // "Tablet (small)" screens (767-481px wide)
 @media all and (max-width: $small-max-display) and (min-width: $xsmall-max-display + 1) {
   .parallax-feature .parallax-photo {
-    height: 625px;
+    height: 450px;
   }
 
   .parallax-header .parallax-photo {
