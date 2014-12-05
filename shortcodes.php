@@ -390,15 +390,16 @@ function sc_comment_form() {
 
 				<!--BEGIN #form-section-author-->
 				<div id="form-section-author" class="form-section">
-					<input name="author" id="author" type="text" tabindex="3" <?php if ( $req ) echo "aria-required='true'"; ?> />
 					<label for="author"<?php if ( $req ) echo ' class="required"'; ?>>Name</label>
+					<input name="author" id="author" type="text" tabindex="3" <?php if ( $req ) echo "aria-required='true'"; ?> />
+
 				<!--END #form-section-author-->
 				</div>
 
 				<!--BEGIN #form-section-email-->
 				<div id="form-section-email" class="form-section">
-					<input name="email" id="email" type="text" tabindex="4" <?php if ( $req ) echo "aria-required='true'"; ?> />
 					<label for="email"<?php if ( $req ) echo ' class="required"'; ?>>Email</label>
+					<input name="email" id="email" type="text" tabindex="4" <?php if ( $req ) echo "aria-required='true'"; ?> />
 				<!--END #form-section-email-->
 				</div>
 
