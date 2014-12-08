@@ -352,6 +352,19 @@ nav {
   padding-top: 0;
 }
 
+
+.single-update {
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .date {
+    color: $grayLight;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+}
+
 // Footer
 footer nav {
   border-bottom: 2px solid #d5d5d5;

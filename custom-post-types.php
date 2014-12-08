@@ -420,10 +420,22 @@ class Update extends CustomPostType {
 		$use_thumbnails = False,
 		$use_order      = False,
 		$use_title      = True,
-		$use_metabox    = False,
+		$use_metabox    = True,
 		$use_shortcode  = True,
 
 		$taxonomies     = array();
+
+	public function fields() {
+		$prefix = $this->options('name').'_';
+		return array(
+			array(
+				'name' => 'Release Date',
+				'desc' => 'The date the article was released.',
+				'id' => $prefix.'date',
+				'type' => 'text'
+			)
+		);
+	}
 
 	/**
 	 * Shortcode for this custom post type.  Can be overridden for descendants.
@@ -459,10 +471,14 @@ class Update extends CustomPostType {
 		?>
 		<h2>Updates</h2>
 		<?php
-		foreach( $objects as $k => $o ) {
+		foreach ( $objects as $k => $o ) {
+			?>
+			<article class="update-item <?php echo ( !empty($css_classes) ? $css_classes : '' ); ?>">
+			<?php
 			echo $class->toHTML( $o );
-			if ($k + 1 != count($objects)) {
+			if ( $k + 1 != count( $objects ) ) {
 		?>
+			</article>
 			<hr>
 		<?php
 			}
@@ -487,8 +503,8 @@ class Update extends CustomPostType {
 		$post = $save_post;
 		setup_postdata($post);
 
-		$html = '<article><a href="' . get_permalink( $object->ID ) . '"><h3>' . $object->post_title . '</h3></a>';
-		$html = $html . $output . '</article>';
+		$html = '<a href="' . get_permalink( $object->ID ) . '"><h3 class="update-title">' . $object->post_title . '</h3></a>' . '<span>' . get_post_meta($object->ID, 'update_date', True) . '</span>';
+		$html = $html . '<div class="update-excerpt">' . $output . '</div>';
 		return $html;
 	}
 }

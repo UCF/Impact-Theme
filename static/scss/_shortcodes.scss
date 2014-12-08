@@ -115,6 +115,22 @@
   }
 }
 
+.update-item {
+  &.no-excerpt .update-excerpt {
+    display: none;
+  }
+
+  .update-title {
+    margin-bottom: 0;
+  }
+
+  span {
+    color: $grayLight;
+    display: block;
+    font-style: italic;
+  }
+}
+
 .faqs {
   .faq-header-hr {
     margin-top: 0;
