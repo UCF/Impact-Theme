@@ -468,9 +468,6 @@ class Update extends CustomPostType {
 		$class = new $class;
 
 		ob_start();
-		?>
-		<h2>Updates</h2>
-		<?php
 		foreach ( $objects as $k => $o ) {
 			?>
 			<article class="update-item <?php echo ( !empty($css_classes) ? $css_classes : '' ); ?>">
