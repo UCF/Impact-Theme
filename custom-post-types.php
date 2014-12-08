@@ -168,7 +168,7 @@ abstract class CustomPostType{
 	 * Registers the custom post type and any other ancillary actions that are
 	 * required for the post to function properly.
 	 **/
-	public function register(){
+	public function register() {
 		$registration = array(
 			'labels'     => $this->labels(),
 			'supports'   => $this->supports(),
@@ -177,13 +177,13 @@ abstract class CustomPostType{
 			'_builtin'   => $this->options('built_in')
 		);
 
-		if ($this->options('use_order')){
+		if ($this->options('use_order')) {
 			$registration = array_merge($registration, array('hierarchical' => True,));
 		}
 
 		register_post_type($this->options('name'), $registration);
 
-		if ($this->options('use_shortcode')){
+		if ($this->options('use_shortcode')) {
 			add_shortcode($this->options('name').'-list', array($this, 'shortcode'));
 		}
 	}
@@ -198,12 +198,12 @@ abstract class CustomPostType{
 		$default = array(
 			'type' => $this->options('name'),
 		);
-		if (is_array($attr)){
-			$attr = array_merge($default, $attr);
+		if ( is_array( $attr ) ) {
+			$attr = array_merge( $default, $attr );
 		}else{
 			$attr = $default;
 		}
-		return sc_object_list($attr);
+		return sc_object_list( $attr );
 	}
 
 
