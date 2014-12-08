@@ -486,22 +486,8 @@ class Update extends CustomPostType {
 	}
 
 	public function toHTML( $object ) {
-
-		// Excerpts can only be retrieved while in the Loop.
-		// 1. Save current post
-		// 2. Get Update post and set as Loop
-		// 3. Get data off of Update post
-		// 4. Set old post back into the Loop
-		global $post;
-		$save_post = $post;
-		$post = get_post( $object->ID );
-		setup_postdata($post);
-		$output = get_the_excerpt();
-		$post = $save_post;
-		setup_postdata($post);
-
 		$html = '<a href="' . get_permalink( $object->ID ) . '"><h3 class="update-title">' . $object->post_title . '</h3></a>' . '<span>' . get_post_meta($object->ID, 'update_date', True) . '</span>';
-		$html = $html . '<div class="update-excerpt">' . $output . '</div>';
+		$html = $html . '<div class="update-excerpt">' . wp_trim_words( $object->post_content, 55, ' [&hellip;]' ) . '</div>';
 		return $html;
 	}
 }
