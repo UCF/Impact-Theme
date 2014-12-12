@@ -300,19 +300,19 @@ add_shortcode('parallax_feature', 'sc_parallax_feature');
 /**
  * Shortcode for displaying the recent updates (Update custom post type)
  */
-function sc_display_recent_updates($attrs, $content=null) {
-	$header      = (array_key_exists('header', $attrs) ? $attrs['header'] : '');
-	$is_vertical = (array_key_exists('is_vertical', $attrs) ? $attrs['is_vertical'] : '');
+function sc_display_recent_updates( $attrs, $content=null ) {
+	$header      = ( array_key_exists( 'header', $attrs ) ? $attrs['header'] : '' );
+	$is_vertical = ( array_key_exists( 'is_vertical', $attrs ) ? $attrs['is_vertical'] : '' );
 	$is_vertical = filter_var($is_vertical, FILTER_VALIDATE_BOOLEAN);
 
-	$updates = get_posts(array(
+	$updates = get_posts( array(
 		'numberposts' => 4,
 		'post_type'   => 'update'
-	));
+	) );
 	ob_start();
 	?>
 	<div class="recent-updates">
-	<?php echo ($is_vertical ? '' : '<div class="container">'); ?>
+	<?php echo ( $is_vertical ? '' : '<div class="container">' ); ?>
 	<?php if ( count( $updates ) ): ?>
 		<?php if ( !empty( $header ) ) : ?>
 			<<?php echo $header; ?>>
@@ -327,14 +327,14 @@ function sc_display_recent_updates($attrs, $content=null) {
 			<ul class="update-list <?php echo ($is_vertical ? 'vertical' : 'row'); ?>">
 				<?php foreach ( $updates as $key => $item ) :
 					$item_title = get_the_title($item->ID);
-					if (strlen($item_title) > 100) {
+					if ( strlen( $item_title ) > 100 ) {
 						// truncate string
-						$item_title = substr($item_title, 0, 100);
+						$item_title = substr( $item_title, 0, 100 );
 						// truncate at last whole word
-						$item_title = substr($item_title, 0, strrpos($item_title, ' ')) . '&hellip;';
+						$item_title = substr( $item_title, 0, strrpos( $item_title, ' ' ) ) . '&hellip;';
 					}
 				?>
-				<li class="update-story <?php echo ($is_vertical ? '' : 'span3'); ?>">
+				<li class="update-story <?php echo ( $is_vertical ? '' : 'span3' ); ?>">
 					<h3 class="update-title">
 						<a href="<?php echo get_permalink( $item->ID ); ?>" class="ignore-external title">
 							<?php echo $item_title; ?>
@@ -346,7 +346,7 @@ function sc_display_recent_updates($attrs, $content=null) {
 	<?php else: ?>
 		<p>Unable to fetch updates.</p>
 	<?php endif; ?>
-	<?php echo ($is_vertical ? '' : '</div>'); ?>
+	<?php echo ( $is_vertical ? '' : '</div>' ); ?>
 	</div>
 <?php
 	return ob_get_clean();
