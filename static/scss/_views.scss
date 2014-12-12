@@ -28,7 +28,7 @@ h4,
 h5,
 h6 {
   color: #222;
-  font-family: 'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
+  font-family: $font-family-h2-h6;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.025em;
@@ -60,7 +60,7 @@ a {
 
 h1,
 .h1 {
-  font-family: 'Gotham SSm 8r','Gotham SSm A','Gotham SSm B';
+  font-family: $font-family-heading;
   font-size: 58px;
   font-style: normal;
   font-weight: 800;
@@ -135,7 +135,7 @@ ul + .h4 {
 blockquote,
 blockquote p {
   color: #222;
-  font-family: 'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
+  font-family: $font-family-block;
   font-size: 32px;
   font-style: normal;
   font-weight: 200;
@@ -223,7 +223,7 @@ button.btn {
   blockquote,
   blockquote p {
     color: #fff;
-    font-family: 'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-h2-h6;
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -.025em;
@@ -242,7 +242,7 @@ button.btn {
     background-color: #222;
     color: #fff;
     display: block;
-    font-family: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-heading;
     font-size: 30px;
     font-style: normal;
     font-weight: 800;
@@ -318,7 +318,7 @@ nav {
   }
 
   a {
-    font-family: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-heading;
     font-size: 17px;
     font-style: normal;
     font-weight: 800;
@@ -381,7 +381,7 @@ footer nav {
 }
 
 .footer-cta {
-  font-family: 'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
+  font-family: $font-family-block;
   font-size: 36px;
   font-style: normal;
   font-weight: 200;
@@ -393,7 +393,7 @@ footer nav {
 
   a {
     color: #222;
-    font-family: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-heading;
     font-style: normal;
     font-weight: 800;
     text-decoration: underline;
