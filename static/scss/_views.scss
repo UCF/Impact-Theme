@@ -409,7 +409,7 @@ footer nav {
   text-align: center;
 
   a {
-    background-image: url('static/img/logo.png');
+    background-image: url('../img/logo.png');
     display: block;
     height: 86px;
     margin: auto;
@@ -422,7 +422,7 @@ footer nav {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .footer-logo a {
-    background-image: url('static/img/logo-r.png');
+    background-image: url('../img/logo-r.png');
     background-size: cover;
   }
 }
