@@ -200,7 +200,7 @@ var parallaxPhotos = function($) {
       }
       $('.parallax-photo')
         .css({
-          'background-position': '50% 0px',
+          'background-position': '50% -50px',
           'background-attachment': 'scroll',
         });
     }

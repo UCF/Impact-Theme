@@ -28,7 +28,7 @@ h4,
 h5,
 h6 {
   color: #222;
-  font-family: 'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
+  font-family: $font-family-h2-h6;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.025em;
@@ -60,7 +60,7 @@ a {
 
 h1,
 .h1 {
-  font-family: 'Gotham SSm 8r','Gotham SSm A','Gotham SSm B';
+  font-family: $font-family-heading;
   font-size: 58px;
   font-style: normal;
   font-weight: 800;
@@ -69,7 +69,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 20px;
+  font-size: 26px;
 }
 
 h3,
@@ -135,7 +135,7 @@ ul + .h4 {
 blockquote,
 blockquote p {
   color: #222;
-  font-family: 'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
+  font-family: $font-family-block;
   font-size: 32px;
   font-style: normal;
   font-weight: 200;
@@ -146,7 +146,7 @@ blockquote {
   border-left: 0;
   padding-left: 0;
 
-  blockquote small {
+  small {
     color: #222;
     display: block;
     font-family: 'Gotham SSm 5i', 'Gotham SSm A', 'Gotham SSm B';
@@ -223,7 +223,7 @@ button.btn {
   blockquote,
   blockquote p {
     color: #fff;
-    font-family: 'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-h2-h6;
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -.025em;
@@ -242,7 +242,7 @@ button.btn {
     background-color: #222;
     color: #fff;
     display: block;
-    font-family: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-heading;
     font-size: 30px;
     font-style: normal;
     font-weight: 800;
@@ -318,7 +318,7 @@ nav {
   }
 
   a {
-    font-family: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-heading;
     font-size: 17px;
     font-style: normal;
     font-weight: 800;
@@ -352,6 +352,19 @@ nav {
   padding-top: 0;
 }
 
+
+.single-update {
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .date {
+    color: $grayLight;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+}
+
 // Footer
 footer nav {
   border-bottom: 2px solid #d5d5d5;
@@ -368,7 +381,7 @@ footer nav {
 }
 
 .footer-cta {
-  font-family: 'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
+  font-family: $font-family-block;
   font-size: 36px;
   font-style: normal;
   font-weight: 200;
@@ -380,7 +393,7 @@ footer nav {
 
   a {
     color: #222;
-    font-family: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
+    font-family: $font-family-heading;
     font-style: normal;
     font-weight: 800;
     text-decoration: underline;
@@ -396,7 +409,7 @@ footer nav {
   text-align: center;
 
   a {
-    background-image: url('static/img/logo.png');
+    background-image: url('../img/logo.png');
     display: block;
     height: 86px;
     margin: auto;
@@ -409,13 +422,13 @@ footer nav {
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .footer-logo a {
-    background-image: url('static/img/logo-r.png');
+    background-image: url('../img/logo-r.png');
     background-size: cover;
   }
 }
 
 
-@media all and (min-width: $large-min-display) {
+@media all and (min-width: $small-max-display - 1) {
   // Add extra spacing btwn navbar and page content for basic subpages (w/o parallax headings)
   .page-base .page-content {
     padding-bottom: 75px;

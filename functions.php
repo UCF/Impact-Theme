@@ -1,5 +1,6 @@
 <?php
 require_once('functions/base.php');   			# Base theme functions
+require_once('functions/feeds.php');			# Where per theme settings are registered
 require_once('custom-taxonomies.php');  		# Where per theme taxonomies are defined
 require_once('custom-post-types.php');  		# Where per theme post types are defined
 require_once('functions/admin.php');  			# Admin/login functions
@@ -104,7 +105,7 @@ function get_parallax_page_header($page_id) {
 	echo get_parallax_feature_css($page_id, 'page_image_d', 'page_image_t', 'page_image_m');
 	?>
 	<section class="parallax-content parallax-header">
-		<div class="parallax-photo" id="photo_<?=$page_id?>" data-stellar-background-ratio="0.5">
+		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>" data-stellar-background-ratio="0.5">
 			<div class="skyline"></div>
 		</div>
 	</section>
@@ -120,7 +121,7 @@ function get_cta_link() {
 	$link = get_permalink(get_post(get_theme_option('cta'))->ID);
 	ob_start();
 ?>
-	<a href="<?=$link?>">Comment Here.</a>
+	<a href="<?php echo $link; ?>"> <?php echo get_theme_option('cta_link_text'); ?></a>
 <?php
 	return ob_get_clean();
 }

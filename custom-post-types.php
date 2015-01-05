@@ -168,7 +168,7 @@ abstract class CustomPostType{
 	 * Registers the custom post type and any other ancillary actions that are
 	 * required for the post to function properly.
 	 **/
-	public function register(){
+	public function register() {
 		$registration = array(
 			'labels'     => $this->labels(),
 			'supports'   => $this->supports(),
@@ -177,13 +177,13 @@ abstract class CustomPostType{
 			'_builtin'   => $this->options('built_in')
 		);
 
-		if ($this->options('use_order')){
+		if ($this->options('use_order')) {
 			$registration = array_merge($registration, array('hierarchical' => True,));
 		}
 
 		register_post_type($this->options('name'), $registration);
 
-		if ($this->options('use_shortcode')){
+		if ($this->options('use_shortcode')) {
 			add_shortcode($this->options('name').'-list', array($this, 'shortcode'));
 		}
 	}
@@ -198,12 +198,12 @@ abstract class CustomPostType{
 		$default = array(
 			'type' => $this->options('name'),
 		);
-		if (is_array($attr)){
-			$attr = array_merge($default, $attr);
+		if ( is_array( $attr ) ) {
+			$attr = array_merge( $default, $attr );
 		}else{
 			$attr = $default;
 		}
-		return sc_object_list($attr);
+		return sc_object_list( $attr );
 	}
 
 
@@ -420,10 +420,22 @@ class Update extends CustomPostType {
 		$use_thumbnails = False,
 		$use_order      = False,
 		$use_title      = True,
-		$use_metabox    = False,
+		$use_metabox    = True,
 		$use_shortcode  = True,
 
 		$taxonomies     = array();
+
+	public function fields() {
+		$prefix = $this->options('name').'_';
+		return array(
+			array(
+				'name' => 'Release Date',
+				'desc' => 'The date the article was released.',
+				'id' => $prefix.'date',
+				'type' => 'text'
+			)
+		);
+	}
 
 	/**
 	 * Shortcode for this custom post type.  Can be overridden for descendants.
@@ -456,13 +468,14 @@ class Update extends CustomPostType {
 		$class = new $class;
 
 		ob_start();
-		?>
-		<h2>Updates</h2>
-		<?php
-		foreach( $objects as $k => $o ) {
+		foreach ( $objects as $k => $o ) {
+			?>
+			<article class="update-item <?php echo ( !empty($css_classes) ? $css_classes : '' ); ?>">
+			<?php
 			echo $class->toHTML( $o );
-			if ($k + 1 != count($objects)) {
+			if ( $k + 1 != count( $objects ) ) {
 		?>
+			</article>
 			<hr>
 		<?php
 			}
@@ -473,22 +486,8 @@ class Update extends CustomPostType {
 	}
 
 	public function toHTML( $object ) {
-
-		// Excerpts can only be retrieved while in the Loop.
-		// 1. Save current post
-		// 2. Get Update post and set as Loop
-		// 3. Get data off of Update post
-		// 4. Set old post back into the Loop
-		global $post;
-		$save_post = $post;
-		$post = get_post( $object->ID );
-		setup_postdata($post);
-		$output = get_the_excerpt();
-		$post = $save_post;
-		setup_postdata($post);
-
-		$html = '<article><a href="' . get_permalink( $object->ID ) . '"><h3>' . $object->post_title . '</h3></a>';
-		$html = $html . $output . '</article>';
+		$html = '<a href="' . get_permalink( $object->ID ) . '"><h3 class="update-title">' . $object->post_title . '</h3></a>' . '<span>' . get_post_meta($object->ID, 'update_date', True) . '</span>';
+		$html = $html . '<div class="update-excerpt">' . wp_trim_words( $object->post_content, 55, ' [&hellip;]' ) . '</div>';
 		return $html;
 	}
 }
@@ -651,16 +650,17 @@ class InTheNews extends CustomPostType
 
 class Resource extends CustomPostType{
 	public
-		$name           = 'resource',
-		$plural_name    = 'Resources',
-		$singular_name  = 'Resource',
-		$add_new_item   = 'Add New Resource',
-		$edit_item      = 'Edit Resource',
-		$new_item       = 'New Resource',
-		$use_title      = True,
-		$use_editor     = False,
-		$use_shortcode  = True,
-		$use_metabox    = True;
+		$name          = 'resource',
+		$plural_name   = 'Resources',
+		$singular_name = 'Resource',
+		$add_new_item  = 'Add New Resource',
+		$edit_item     = 'Edit Resource',
+		$new_item      = 'New Resource',
+		$use_title     = True,
+		$use_editor    = False,
+		$use_shortcode = True,
+		$use_metabox   = True,
+		$taxonomies    = array( 'post_tag', 'resource_group' );
 
 	public function fields(){
 		$fields   = parent::fields();
@@ -734,16 +734,18 @@ class Resource extends CustomPostType{
 	 * the toHTML method.
 	 **/
 	public function objectsToHTML($objects, $css_classes){
-		if (count($objects) < 1){ return '';}
+		if (count($objects) < 1) {
+			return '';
+		}
 
 		$class_name = get_custom_post_type($objects[0]->post_type);
 		$class      = new $class_name;
 
 		ob_start();
 		?>
-		<ul class="nobullet <?php if($css_classes):?><?=$css_classes?><?php else:?><?=$class->options('name')?>-list<?php endif;?>">
-			<?php foreach($objects as $o):?>
-			<li class="resource <?=$class_name::get_resource_application($o)?>">
+		<ul class="nobullet <?php if( $css_classes ) : ?><?php echo $css_classes; ?><?php else : ?><?php echo $class->options('name'); ?>-list<?php endif; ?>">
+			<?php foreach( $objects as $o ) : ?>
+			<li class="resource <?php echo $class_name::get_resource_application($o); ?>">
 				<?=$class->toHTML($o)?>
 			</li>
 			<?php endforeach;?>

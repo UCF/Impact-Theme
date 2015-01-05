@@ -142,64 +142,63 @@ function sc_post_type_search($params=array(), $content='') {
 						</form>
 					</div>
 					<div class="post-type-search-results "></div>
-					<? if($params['show_sorting']) { ?>
+					<?php if($params['show_sorting']) { ?>
 					<div class="btn-group post-type-search-sorting">
 						<button class="btn<?if($params['default_sorting'] == 'term') echo ' active';?>"><i class="icon-list-alt"></i></button>
 						<button class="btn<?if($params['default_sorting'] == 'alpha') echo ' active';?>"><i class="icon-font"></i></button>
 					</div>
-		<? } ?>
-	<?
+					<?php } ?>
+	<?php
 
 	foreach($sections as $id => $section) {
 		$hide = false;
-		switch($id) {
+		switch ( $id ) {
 			case 'post-type-search-alpha':
-				if($params['default_sorting'] == 'term') {
+				if ( $params['default_sorting'] == 'term' ) {
 					$hide = True;
 				}
 				break;
 			case 'post-type-search-term':
-				if($params['default_sorting'] == 'alpha') {
+				if ( $params['default_sorting'] == 'alpha' ) {
 					$hide = True;
 				}
 				break;
 		}
 		?>
-		<div class="<?=$id?>"<? if($hide) echo ' style="display:none;"'; ?>>
-			<? foreach($section as $section_title => $section_posts) { ?>
-				<? if(count($section_posts) > 0 || $params['show_empty_sections']) { ?>
-					<div>
-						<h3><?=esc_html($section_title)?></h3>
-						<div class="row">
-							<? if(count($section_posts) > 0) { ?>
-								<? $posts_per_column = ceil(count($section_posts) / $params['column_count']); ?>
-								<? foreach(range(0, $params['column_count'] - 1) as $column_index) { ?>
-									<? $start = $column_index * $posts_per_column; ?>
-									<? $end   = $start + $posts_per_column; ?>
-									<? if(count($section_posts) > $start) { ?>
-									<div class="<?=$params['column_width']?>">
-										<ul>
-										<? foreach(array_slice($section_posts, $start, $end) as $post) { ?>
-											<li data-post-id="<?=$post->ID?>"><?=$post_type->toHTML($post)?></li>
-										<? } ?>
-										</ul>
+					<div class="<?php echo $id; ?>"<? if ( $hide ) echo ' style="display:none;"'; ?>>
+						<?php foreach ( $section as $section_title => $section_posts ) { ?>
+							<?php if ( count( $section_posts ) > 0 || $params['show_empty_sections'] ) { ?>
+								<div>
+									<h3><?php echo esc_html( $section_title ); ?></h3>
+									<div class="row">
+										<? if ( count( $section_posts ) > 0 ) { ?>
+											<?php $posts_per_column = ceil( count( $section_posts ) / $params['column_count'] ); ?>
+											<?php foreach( range( 0, $params['column_count'] - 1 ) as $column_index ) { ?>
+												<?php $start = $column_index * $posts_per_column; ?>
+												<?php if ( count( $section_posts ) > $start ) { ?>
+												<div class="<?php echo $params['column_width']; ?> resource-list">
+													<ul>
+													<?php foreach ( array_slice( $section_posts, $start, $posts_per_column ) as $post ) { ?>
+														<li class="<?php echo $post_type->get_resource_application( $post ); ?>" data-post-id="<?php echo $post->ID; ?>"><?php echo $post_type->toHTML( $post ); ?></li>
+													<?php } ?>
+													</ul>
+												</div>
+												<?php } ?>
+											<?php } ?>
+										<?php } ?>
 									</div>
-									<? } ?>
-								<? } ?>
-							<? } ?>
-						</div>
+								</div>
+							<?php } ?>
+						<?php } ?>
 					</div>
-				<? } ?>
-			<? } ?>
-		</div>
-		<?
+		<?php
 	}
 	?>
+				</div>
+			</div>
+		</div>
 	</div>
-	</div>
-	</div>
-	</div>
-	<?
+	<?php
 	return ob_get_clean();
 }
 add_shortcode('post-type-search', 'sc_post_type_search');
@@ -256,42 +255,42 @@ add_shortcode('blockquote', 'sc_blockquote');
  **/
 function sc_parallax_feature($attrs, $content=null) {
 	$title = $attrs['title'];
-	$feature = !empty($title) ? get_page_by_title($title, 'OBJECT', 'parallax_feature') : null;
-	if ($feature) {
-		$offset = get_post_meta($feature->ID, 'parallax_feature_callout_position', true) == 'right' ? 'offset5' : '';
-		$show_cta = get_post_meta($feature->ID, 'parallax_feature_display_cta', true);
-		$cta_text = get_post_meta($feature->ID, 'parallax_feature_cta_text', true);
-		$cta_link = get_permalink(get_post_meta($feature->ID, 'parallax_feature_cta_link', true));
+	$feature = !empty( $title ) ? get_page_by_title( $title, 'OBJECT', 'parallax_feature' ) : null;
+
+	if ( $feature ) {
+		$offset = get_post_meta( $feature->ID, 'parallax_feature_callout_position', true ) == 'right' ? 'offset5' : '';
+		$show_cta = get_post_meta( $feature->ID, 'parallax_feature_display_cta', true );
+		$cta_text = get_post_meta( $feature->ID, 'parallax_feature_cta_text', true );
+		$cta_link = get_permalink( get_post_meta( $feature->ID, 'parallax_feature_cta_link', true ) );
 
 		ob_start();
-		print get_parallax_feature_css($feature->ID, 'parallax_feature_image_d', 'parallax_feature_image_t', 'parallax_feature_image_m');
+		print get_parallax_feature_css( $feature->ID, 'parallax_feature_image_d', 'parallax_feature_image_t', 'parallax_feature_image_m' );
 		?>
 		<section class="parallax-content parallax-feature">
-			<div class="parallax-photo" id="photo_<?=$feature->ID?>" data-stellar-background-ratio="0.5">
+			<div class="parallax-photo" id="photo_<?php echo $feature->ID; ?>" data-stellar-background-ratio="0.5">
 				<div class="container">
 					<div class="row">
-						<div class="span7 <?=$offset?>">
+						<div class="span7 <?php echo $offset; ?>">
 							<div class="callout">
-								<?=apply_filters('the_content', $feature->post_content)?>
+								<?php echo apply_filters( 'the_content', $feature->post_content ); ?>
 							</div>
 						</div>
 					</div>
 				</div>
-				<?php if ($show_cta == 'on' && !empty($cta_link) && !empty($cta_text)) { ?>
+				<?php if ( $show_cta == 'on' && !empty( $cta_link ) && !empty( $cta_text ) ) { ?>
 				<div class="cta">
-					<a href="<?=$cta_link?>"><?=$cta_text?></a>
+					<a href="<?php echo $cta_link; ?>"><?php echo $cta_text; ?></a>
 				</div>
 				<?php } ?>
 			</div>
-			<?php if ($content) {
-				print apply_filters('the_content', $content);
+			<?php if ( $content ) {
+				print apply_filters( 'the_content', $content );
 			}
 			?>
 		</section>
 		<?php
 		return ob_get_clean();
-	}
-	else {
+	} else {
 		return null;
 	}
 }
@@ -301,15 +300,19 @@ add_shortcode('parallax_feature', 'sc_parallax_feature');
 /**
  * Shortcode for displaying the recent updates (Update custom post type)
  */
-function sc_display_recent_updates($header) {
-	$updates = get_posts(array(
+function sc_display_recent_updates( $attrs, $content=null ) {
+	$header      = ( array_key_exists( 'header', $attrs ) ? $attrs['header'] : '' );
+	$is_vertical = ( array_key_exists( 'is_vertical', $attrs ) ? $attrs['is_vertical'] : '' );
+	$is_vertical = filter_var($is_vertical, FILTER_VALIDATE_BOOLEAN);
+
+	$updates = get_posts( array(
 		'numberposts' => 4,
-		'post_type'     => 'update'
-	));
+		'post_type'   => 'update'
+	) );
 	ob_start();
 	?>
 	<div class="recent-updates">
-	<div class="container">
+	<?php echo ( $is_vertical ? '' : '<div class="container">' ); ?>
 	<?php if ( count( $updates ) ): ?>
 		<?php if ( !empty( $header ) ) : ?>
 			<<?php echo $header; ?>>
@@ -321,19 +324,19 @@ function sc_display_recent_updates($header) {
 				</a>
 			</<?php echo $header; ?>>
 		<?php endif; ?>
-			<ul class="update-list row">
+			<ul class="update-list <?php echo ($is_vertical ? 'vertical' : 'row'); ?>">
 				<?php foreach ( $updates as $key => $item ) :
 					$item_title = get_the_title($item->ID);
-					if (strlen($item_title) > 100) {
+					if ( strlen( $item_title ) > 100 ) {
 						// truncate string
-						$item_title = substr($item_title, 0, 100);
+						$item_title = substr( $item_title, 0, 100 );
 						// truncate at last whole word
-						$item_title = substr($item_title, 0, strrpos($item_title, ' ')) . '&hellip;';
+						$item_title = substr( $item_title, 0, strrpos( $item_title, ' ' ) ) . '&hellip;';
 					}
 				?>
-				<li class="update-story span3">
+				<li class="update-story <?php echo ( $is_vertical ? '' : 'span3' ); ?>">
 					<h3 class="update-title">
-						<a href="<?php echo get_permalink($item->ID); ?>" class="ignore-external title">
+						<a href="<?php echo get_permalink( $item->ID ); ?>" class="ignore-external title">
 							<?php echo $item_title; ?>
 						</a>
 					</h3>
@@ -343,7 +346,7 @@ function sc_display_recent_updates($header) {
 	<?php else: ?>
 		<p>Unable to fetch updates.</p>
 	<?php endif; ?>
-	</div>
+	<?php echo ( $is_vertical ? '' : '</div>' ); ?>
 	</div>
 <?php
 	return ob_get_clean();
@@ -384,21 +387,22 @@ function sc_comment_form() {
 
 				<!--BEGIN #form-section-comment-->
 				<div id="form-section-comment" class="form-section">
-					<textarea name="comment" id="comment" tabindex="4" rows="10" cols="65"></textarea>
+					<textarea name="comment" id="comment" tabindex="2" rows="10"></textarea>
 				<!--END #form-section-comment-->
 				</div>
 
 				<!--BEGIN #form-section-author-->
 				<div id="form-section-author" class="form-section">
-					<input name="author" id="author" type="text" tabindex="1" <?php if ( $req ) echo "aria-required='true'"; ?> />
 					<label for="author"<?php if ( $req ) echo ' class="required"'; ?>>Name</label>
+					<input name="author" id="author" type="text" tabindex="3" <?php if ( $req ) echo "aria-required='true'"; ?> />
+
 				<!--END #form-section-author-->
 				</div>
 
 				<!--BEGIN #form-section-email-->
 				<div id="form-section-email" class="form-section">
-					<input name="email" id="email" type="text" tabindex="2" <?php if ( $req ) echo "aria-required='true'"; ?> />
 					<label for="email"<?php if ( $req ) echo ' class="required"'; ?>>Email</label>
+					<input name="email" id="email" type="text" tabindex="4" <?php if ( $req ) echo "aria-required='true'"; ?> />
 				<!--END #form-section-email-->
 				</div>
 
@@ -422,4 +426,34 @@ function sc_comment_form() {
 	return ob_get_clean();
 }
 add_shortcode('comment-form', 'sc_comment_form');
+
+/**
+ * Output Upcoming Events via shortcode.
+ **/
+function sc_events_widget() {
+
+	ob_start();
+	?>
+	<div class="events-wrapper">
+	<?php
+	display_events();
+
+	$options  = get_option( THEME_OPTIONS_NAME );
+
+	// Assuming that the url will not end in a slash so
+	// we can append the the feed types correctly
+	$base_url = rtrim($options['events_url'], '/') . '/';
+
+	$json_url = $bas_url . 'feed.json';
+	$ics_url  = $base_url . 'feed.ics';
+	$rss_url  = $base_url . 'feed.rss';
+
+	?>
+	<p class="screen-only"><a href="<?php echo $base_url; ?>" class="events_morelink">More Events</a></p>
+	</div>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode('events-widget', 'sc_events_widget');
+
 ?>
