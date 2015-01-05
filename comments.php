@@ -31,7 +31,7 @@ if ( post_password_required() ) { ?>
 		<?php
 		endif;
 	?>
-		<div class="span3">
+		<div class="span4">
 			<div class="comment-item">
 				<div class="comment-date">
 					<?php comment_date('M j, Y', $comment->comment_ID); ?>
