@@ -27,14 +27,14 @@ if ( post_password_required() ) { ?>
 		<?php
 		$is_row_open = False;
 		foreach ( $comments as $k => $comment ) :
-			if ( $k % 4 == 0 or $k == 0 ) :
+			if ( $k % 3 == 0 or $k == 0 ) :
 				$is_row_open = True;
 			?>
 				<div class="row">
 			<?php
 			endif;
 		?>
-			<div class="span3">
+			<div class="span4">
 				<div class="comment-item">
 					<div class="comment-date">
 						<?php comment_date('M j, Y', $comment->comment_ID); ?>
@@ -48,7 +48,7 @@ if ( post_password_required() ) { ?>
 				</div>
 			</div>
 		<?php
-			if ($k % 4 == 3) :
+			if ($k % 3 == 2) :
 				$is_row_open = False;
 			?>
 				</div>
