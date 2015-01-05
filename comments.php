@@ -24,7 +24,7 @@ if ( post_password_required() ) { ?>
 	<?php
 	$is_row_open = False;
 	foreach ( $comments as $k => $comment ) :
-		if ( $k % 3 == 0 or $k == 0 ) :
+		if ( $k % 3 == 0 ) :
 			$is_row_open = True;
 		?>
 			<div class="row">
