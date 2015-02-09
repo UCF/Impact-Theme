@@ -71,6 +71,19 @@
       height: 25px;
     }
   }
+
+  .no-skyline {
+    @include background-size(cover);
+    background-color: #fff;
+    bottom: 0;
+    height: 25px;
+    position: absolute;
+    width: 100%;
+
+    @media all and (max-width: $xsmall-max-display) {
+      height: 0;
+    }
+  }
 }
 
 .ie8 {

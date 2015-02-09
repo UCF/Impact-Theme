@@ -106,7 +106,17 @@ function get_parallax_page_header($page_id) {
 	?>
 	<section class="parallax-content parallax-header">
 		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>" data-stellar-background-ratio="0.5">
+			<?php
+				if (get_theme_option('enable_skyline')) :
+			?>
 			<div class="skyline"></div>
+			<?php
+				else:
+			?>
+			<div class="no-skyline"></div>
+			<?php
+				endif;
+			?>
 		</div>
 	</section>
 	<?php
