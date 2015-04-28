@@ -456,4 +456,14 @@ function sc_events_widget() {
 }
 add_shortcode('events-widget', 'sc_events_widget');
 
+function sc_social_share_buttons() {
+	global $post;
+	$url = get_permalink( $post->ID );
+	$title = $post->post_title;
+
+	return display_social( $url, $title );
+}
+
+add_shortcode( 'social-share-buttons', 'sc_social_share_buttons' );
+
 ?>
