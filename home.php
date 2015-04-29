@@ -1,4 +1,5 @@
-<?php get_header(); the_post();?>
+<?php
+ get_header(); the_post();?>
 <?php
 $home = get_page_by_path('home');
 if (!$home) {
@@ -34,5 +35,11 @@ if ($featured_img_f) { ?>
 	</section>
 <?php } ?>
 </main>
+
+<?php $post_type = get_post_type($home->ID);
+	if(($stylesheet_id = get_post_meta($home->ID, $post_type.'_stylesheet', True)) !== False
+		&& ($stylesheet_url = wp_get_attachment_url($stylesheet_id)) !== False) : ?>
+		<link rel='stylesheet' href="<?=$stylesheet_url?>" type='text/css' media='all' />
+<?php endif; ?>
 
 <?php get_footer();?>
