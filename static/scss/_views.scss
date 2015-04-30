@@ -53,7 +53,7 @@ a {
     h4,
     h5,
     h6 {
-      color: $linkColorHover;
+      color: $link-hover-color;
     }
   }
 }
@@ -425,7 +425,7 @@ nav {
   }
 
   .date {
-    color: $grayLight;
+    color: $gray-light;
     font-style: italic;
     margin-bottom: 10px;
   }
