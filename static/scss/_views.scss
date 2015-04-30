@@ -364,8 +364,8 @@ button.btn {
   content: '';
   float: right;
   height: 10px;
-  margin-top: 1px;
   margin-left: 10px;
+  margin-top: 1.5px;
   width: 24px;
 }
 
@@ -396,12 +396,9 @@ nav {
 
   &.header-nav {
     background-color: #333;
-    background-color: rgba(0, 0, 0, .8);
-    left: 0;
+    background-color: #000;
     padding: 10px 0; // Creates 20px spacing btwn edges of black bar and list items
-    position: absolute;
-    right: 0;
-    top: 50px; // ucf header
+    position: relative;
     z-index: 999;
 
     a,
@@ -416,7 +413,7 @@ nav {
   padding-bottom: 55px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 
@@ -504,14 +501,6 @@ footer nav {
   }
 }
 
-
-@media all and (min-width: $small-max-display - 1) {
-  // Add extra spacing btwn navbar and page content for basic subpages (w/o parallax headings)
-  .page-base .page-content {
-    padding-bottom: 75px;
-    padding-top: 75px;
-  }
-}
 
 @media all and (max-width: $large-min-display - 1) and (min-width: $medium-min-display) {
   .page-base h1 {
@@ -612,8 +601,11 @@ footer nav {
 
   nav.header-nav {
     height: 40px;
+    left: 0;
     max-height: 40px;
     overflow: hidden;
+    position: absolute;
+    right: 0;
     top: auto; // ucf header
     transition: max-height .5s ease-in-out;
   }
@@ -655,15 +647,6 @@ footer nav {
   .page-content {
     padding-bottom: 30px;
     padding-top: 30px;
-
-    [class*="span"] {
-      padding-bottom: 10px;
-    }
-
-    .span12 {
-      // Assume this contains a heading above another set of columns, which doesn't need padding.
-      padding-bottom: 0;
-    }
   }
 
   nav ul li {

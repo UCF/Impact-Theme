@@ -200,7 +200,7 @@ var parallaxPhotos = function($) {
       }
       $('.parallax-photo')
         .css({
-          'background-position': '50% -50px',
+          'background-position': '50% -50px', // -50px UCF Header height
           'background-attachment': 'scroll',
         });
     }
@@ -208,15 +208,13 @@ var parallaxPhotos = function($) {
       $(window).stellar({
         horizontalScrolling: false,
         responsive: true,
-        parallaxElements: false
+        parallaxElements: false,
+        verticalOffset: $('.page').offset().top
       });
     }
   }
 
-  toggleStellar();
-  $(window).resize(function() {
-    toggleStellar();
-  });
+  $(window).on('load resize', toggleStellar);
 }
 
 
