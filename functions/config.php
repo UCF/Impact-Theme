@@ -253,9 +253,9 @@ Config::$theme_settings = array(
 			'value'       => $theme_options['enable_page_wysiwyg'],
 	    )),
 	    new RadioField(array(
-			'name'        => 'Disable parallax header Skyline on pages',
+			'name'        => 'Enable parallax header Skyline on pages',
 			'id'          => THEME_OPTIONS_NAME.'[enable_skyline]',
-			'description' => 'Disables the parallax header Skyline that appears at the bottom of the top div (multiple height boxes).',
+			'description' => 'Enables the parallax header Skyline that appears at the bottom of the top div (multiple height boxes).',
 			'default'     => 1,
 			'choices'     => array(
 				'On'  => 1,
