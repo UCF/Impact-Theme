@@ -271,7 +271,7 @@ class Page extends CustomPostType {
 			),
 			array(
 				'name' => 'Featured image "Desktop" size override',
-				'desc' => 'Overrides the automatically generated "Desktop" size of the featured image for this page. Recommended image size: 1199x750px.',
+				'desc' => 'Overrides the automatically generated "Desktop" size of the featured image for this page. Recommended image size: 1199x925px.',
 				'id' => $prefix.'image_d',
 				'type' => 'file',
 			),
