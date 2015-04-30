@@ -1,4 +1,4 @@
-# UCF Downtown Theme - [University of Central Florida Downtown Orlando, FL](http://www.ucf.edu/downtown/)
+# UCF Impact Theme - [University of Central Florida Downtown Orlando, FL](http://www.ucf.edu/impact/)
 
 WordPress theme built off of UCF's Generic theme for UCF's Downtown Orlando Site.
 
