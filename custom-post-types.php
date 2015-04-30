@@ -277,13 +277,13 @@ class Page extends CustomPostType {
 			),
 			array(
 				'name' => 'Featured image "Tablet" size override',
-				'desc' => 'Overrides the automatically generated "Tablet" size of the featured image for this page. Recommended image size: 767x775px.',
+				'desc' => 'Overrides the automatically generated "Tablet" size of the featured image for this page. Recommended image size: 767x450px.',
 				'id' => $prefix.'image_t',
 				'type' => 'file',
 			),
 			array(
 				'name' => 'Featured image "Mobile" size override',
-				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this page. Recommended image size: 480x475px.',
+				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this page. Recommended image size: 480x350px.',
 				'id' => $prefix.'image_m',
 				'type' => 'file',
 			),
@@ -373,13 +373,13 @@ class ParallaxFeature extends CustomPostType {
 			),
 			array(
 				'name' => 'Featured image "Tablet" size override',
-				'desc' => 'Overrides the automatically generated "Tablet" size of the featured image for this parallax feature. Recommended image size: 767x775px.',
+				'desc' => 'Overrides the automatically generated "Tablet" size of the featured image for this parallax feature. Recommended image size: 767x450px.',
 				'id' => $prefix.'image_t',
 				'type' => 'file',
 			),
 			array(
 				'name' => 'Featured image "Mobile" size override',
-				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this parallax feature. Recommended image size: 480x475px.',
+				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this parallax feature. Recommended image size: 480x350px.',
 				'id' => $prefix.'image_m',
 				'type' => 'file',
 			),

@@ -198,11 +198,20 @@ var parallaxPhotos = function($) {
       if ($(window).data('plugin_stellar')) {
         $(window).data('plugin_stellar').destroy();
       }
-      $('.parallax-photo')
-        .css({
-          'background-position': '50% -50px', // -50px UCF Header height
-          'background-attachment': 'scroll',
-        });
+      if ($(window).width() == 768) {
+        $('.parallax-photo')
+          .css({
+            'background-position': '50% -50px', // -50px UCF Header height
+            'background-attachment': 'scroll',
+          });
+      }
+      else {
+        $('.parallax-photo')
+          .css({
+            'background-position': '',
+            'background-attachment': 'scroll',
+          });
+      }
     }
     else {
       $(window).stellar({
