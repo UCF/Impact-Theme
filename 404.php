@@ -3,7 +3,7 @@
 
 <?php get_header(); the_post();?>
 	<div class="row page-content" id="page-not-found">
-		<div class="span9">
+		<div class="col-md-9">
 			<article>
 				<h1>Page Not Found</h1>
 				<?php 
@@ -22,7 +22,7 @@
 			</article>
 		</div>
 		
-		<div id="sidebar" class="span3">
+		<div id="sidebar" class="col-md-3">
 			<?=get_sidebar();?>
 		</div>
 	</div>

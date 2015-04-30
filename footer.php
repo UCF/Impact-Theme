@@ -1,7 +1,7 @@
 		<footer>
 			<div class="container">
 				<div class="row">
-					<div class="span12">
+					<div class="col-md-12">
 						<nav>
 							<?=wp_nav_menu(array(
 								'theme_location' => 'nav-menu',

@@ -8,7 +8,7 @@
 ?>
 <?php get_header(); ?>
 	<div class="row page-content" id="search-results">
-		<div class="span9">
+		<div class="col-md-9">
 			<article>
 				<h1>Search Results</h1>
 				<?php if(count($results['items'])):?>
@@ -44,7 +44,7 @@
 			</article>
 		</div>
 		
-		<div id="sidebar" class="span3">
+		<div id="sidebar" class="col-md-3">
 			<?=get_sidebar();?>
 		</div>
 	</div>
@@ -54,7 +54,7 @@
 <?php else:?>
 <?php get_header(); the_post();?>
 	<div class="row page-content" id="search-results">
-		<div class="span9">
+		<div class="col-md-9">
 			<article>
 				<h1>Search Results</h1>
 				<?php if(have_posts()):?>
@@ -75,7 +75,7 @@
 			</article>
 		</div>
 		
-		<div id="sidebar" class="span3">
+		<div id="sidebar" class="col-md-3">
 			<?=get_sidebar();?>
 		</div>
 	</div>

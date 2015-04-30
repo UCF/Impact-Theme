@@ -8,7 +8,7 @@ if ($featured_img_f) { ?>
 	<section class="page-content">
 		<div class="container">
 			<div class="row">
-				<div class="span12">
+				<div class="col-md-12">
 					<h1><?php the_title();?></h1>
 				</div>
 			</div>
@@ -20,7 +20,7 @@ if ($featured_img_f) { ?>
 	<section class="page-content">
 		<div class="container">
 			<div class="row">
-				<div class="span12">
+				<div class="col-md-12">
 					<h1><?php the_title();?></h1>
 				</div>
 			</div>

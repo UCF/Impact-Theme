@@ -23,7 +23,7 @@ function sc_post_type_search($params=array(), $content='') {
 		'taxonomy'               => 'category',
 		'show_empty_sections'    => false,
 		'non_alpha_section_name' => 'Other',
-		'column_width'           => 'span4',
+		'column_width'           => 'col-md-4',
 		'column_count'           => '3',
 		'order_by'               => 'title',
 		'order'                  => 'ASC',
@@ -258,7 +258,7 @@ function sc_parallax_feature($attrs, $content=null) {
 	$feature = !empty( $title ) ? get_page_by_title( $title, 'OBJECT', 'parallax_feature' ) : null;
 
 	if ( $feature ) {
-		$offset = get_post_meta( $feature->ID, 'parallax_feature_callout_position', true ) == 'right' ? 'offset5' : '';
+		$offset = get_post_meta( $feature->ID, 'parallax_feature_callout_position', true ) == 'right' ? 'col-md-offset-5' : '';
 		$show_cta = get_post_meta( $feature->ID, 'parallax_feature_display_cta', true );
 		$cta_text = get_post_meta( $feature->ID, 'parallax_feature_cta_text', true );
 		$cta_link = get_permalink( get_post_meta( $feature->ID, 'parallax_feature_cta_link', true ) );
@@ -270,7 +270,7 @@ function sc_parallax_feature($attrs, $content=null) {
 			<div class="parallax-photo" id="photo_<?php echo $feature->ID; ?>" data-stellar-background-ratio="0.5">
 				<div class="container">
 					<div class="row">
-						<div class="span7 <?php echo $offset; ?>">
+						<div class="col-md-7 <?php echo $offset; ?>">
 							<div class="callout">
 								<?php echo apply_filters( 'the_content', $feature->post_content ); ?>
 							</div>
@@ -334,7 +334,7 @@ function sc_display_recent_updates( $attrs, $content=null ) {
 						$item_title = substr( $item_title, 0, strrpos( $item_title, ' ' ) ) . '&hellip;';
 					}
 				?>
-				<li class="update-story <?php echo ( $is_vertical ? '' : 'span3' ); ?>">
+				<li class="update-story <?php echo ( $is_vertical ? '' : 'col-md-3' ); ?>">
 					<h3 class="update-title">
 						<a href="<?php echo get_permalink( $item->ID ); ?>" class="ignore-external title">
 							<?php echo $item_title; ?>

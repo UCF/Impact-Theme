@@ -1,7 +1,7 @@
 <?php get_header();?>
 <main>
 	<div class="page-content" id="post-list">
-		<div class="span9">
+		<div class="col-md-9">
 			<?php while(have_posts()): the_post();?>
 			<article class="<?=$post->post_status?>">
 				<h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>

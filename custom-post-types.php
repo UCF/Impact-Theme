@@ -523,7 +523,7 @@ class FrequentlyAskedQuestion extends CustomPostType{
 		?>
 		<div class="faqs">
 		<div class="row">
-			<div class="span12">
+			<div class="col-md-12">
 				<hr class="faq-header-hr">
 			</div>
 		</div>
@@ -537,7 +537,7 @@ class FrequentlyAskedQuestion extends CustomPostType{
 			<?php
 			}
 		?>
-			<div class="span6">
+			<div class="col-md-6">
 		<?php
 			echo $class->toHTML( $o );
 		?>
@@ -549,7 +549,7 @@ class FrequentlyAskedQuestion extends CustomPostType{
 				$is_row_open = False;
 			?>
 				</div>
-				<div class="row"><div class="span6"><hr class="hidden-phone"></div><div class="span6"><hr class="hidden-phone"></div></div>
+				<div class="row"><div class="col-md-6"><hr class="hidden-phone"></div><div class="col-md-6"><hr class="hidden-phone"></div></div>
 			<?php
 			}
 		}
@@ -558,7 +558,7 @@ class FrequentlyAskedQuestion extends CustomPostType{
 		if ($is_row_open) {
 		?>
 			</div>
-			<div class="row"><div class="span6"><hr class="hidden-phone"></div></div>
+			<div class="row"><div class="col-md-6"><hr class="hidden-phone"></div></div>
 		<?php
 		}
 		?>
