@@ -359,11 +359,12 @@ button.btn {
 }
 
 .hamburger {
-  border-bottom: 7px double #fff;
+  border-bottom: 6px double #fff;
   border-top: 2px solid #fff;
   content: '';
   float: right;
-  height: 3px;
+  height: 10px;
+  margin-top: 1px;
   margin-left: 10px;
   width: 24px;
 }
@@ -610,8 +611,8 @@ footer nav {
   }
 
   nav.header-nav {
-    height: 20px;
-    max-height: 20px;
+    height: 40px;
+    max-height: 40px;
     overflow: hidden;
     top: auto; // ucf header
     transition: max-height .5s ease-in-out;
