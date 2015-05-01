@@ -188,9 +188,20 @@ var parallaxPhotos = function($) {
     }
     return false;
   }
+
   /* Detect touch-enabled browsers.  (Modernizr check) */
   function isTouchDevice() {
       return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
+  }
+
+  function getBgHeight($elemWithBg) {
+    var img = new Image();
+    var url = $elemWithBg.css('background-image').match(/^url\("?(.+?)"?\)$/);
+    if (url[1]) {
+      url = url[1];
+    }
+    img.src = url;
+    return img.height;
   }
 
   var toggleStellar = function() {
@@ -201,7 +212,7 @@ var parallaxPhotos = function($) {
       if ($(window).width() == 768) {
         $('.parallax-photo')
           .css({
-            'background-position': '50% -50px', // -50px UCF Header height
+            'background-position': 'center center',
             'background-attachment': 'scroll',
           });
       }
@@ -214,11 +225,23 @@ var parallaxPhotos = function($) {
       }
     }
     else {
+      $('.parallax-photo').each(function() {
+        var $photo = $(this),
+            photoOffset = $photo.offset().top,
+            bgHeight = getBgHeight($photo),
+            photoHeight = $photo.height();
+
+        // Black magic
+        var stellarOffset = ((((bgHeight - photoHeight) / 2) - photoOffset) * 2) + photoOffset;
+
+        $photo
+          .attr('data-stellar-vertical-offset', parseInt(stellarOffset, 10))
+          .removeAttr('style');
+      });
+
       $(window).stellar({
         horizontalScrolling: false,
-        responsive: true,
-        parallaxElements: false,
-        verticalOffset: $('.page').offset().top
+        parallaxElements: false
       });
     }
   }
