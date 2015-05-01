@@ -20,3 +20,14 @@
 	margin: 3px 6px 16px 6px;
 	color: #323232;
 }
+
+.callout {
+	background-color: #f8de88;
+	background-color: rgba(249, 222, 132, 0.95)
+}
+
+@media (max-width: 480px) {
+	.left-rail {
+		margin-top: 25px;
+	}
+}
