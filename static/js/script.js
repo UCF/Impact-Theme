@@ -308,7 +308,7 @@ if (typeof jQuery != 'undefined'){
     Generic.PostTypeSearch($);
 
     addBodyClasses($);
-    parallaxPhotos($);
+    // parallaxPhotos($);
     subpageTitleSize($);
     styleGformButtons($);
     mobileNavToggle($);
