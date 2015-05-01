@@ -1,3 +1,10 @@
+h2.impact-title {
+	margin-top: 0;
+	color: #fc0;
+	font-size: 32px;
+	font-weight: 700;
+}
+
 .impact-facts {
 	list-style: none;
 	margin: 0;

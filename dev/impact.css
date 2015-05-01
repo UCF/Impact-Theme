@@ -40,6 +40,7 @@ blockquote p {
 	opacity: 0;
 	text-align: center;
 	background-color: #000;
+	font-family: "Gotham SSm 2r","Gotham SSm A","Gotham SSm B";
 	-webkit-transition: opacity 0.25s;
 	-moz-transition: opacity 0.25s;
 	transition: opacity 0.25s;
