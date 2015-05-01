@@ -42,7 +42,7 @@ h2.impact-title {
 	margin-top: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 991px) {
 	.left-rail,
 	.right-rail {
 		margin-top: 25px;
