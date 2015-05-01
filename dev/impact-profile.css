@@ -3,6 +3,7 @@ h2.impact-title {
 	color: #fc0;
 	font-size: 32px;
 	font-weight: 700;
+	text-transform: none;
 }
 
 .impact-facts {
