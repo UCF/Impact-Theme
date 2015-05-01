@@ -105,7 +105,7 @@ function get_parallax_page_header($page_id) {
 	echo get_parallax_feature_css($page_id, 'page_image_d', 'page_image_t', 'page_image_m');
 	?>
 	<section class="parallax-content parallax-header">
-		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>" data-stellar-background-ratio="0.5">
+		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>">
 			<?php
 				if (get_theme_option('enable_skyline')) :
 			?>
@@ -181,7 +181,7 @@ function display_social($url, $title) {
         </a>
         <a class="share-email" target="_blank" data-button-target="<?php echo $url; ?>" href="mailto:?subject=<?php echo $title; ?>&amp;body=Check out this story on www.ucf.edu.%0A%0A<?php echo $url; ?>" title="Share this story in an email">
         	Sahre "<?php echo $title; ?>" in an email
-        </a> 
+        </a>
     </aside>
     <?php
     return ob_get_clean();

@@ -30,7 +30,7 @@
 .parallax-photo {
   background-attachment: fixed;
   background-color: #222;
-  background-position: 50% 0;
+  background-position: center center; // not perfect with fixed position enabled due to header nav height. Overridden via js
   background-repeat: no-repeat;
   box-sizing: border-box;
   padding: 100px 0;

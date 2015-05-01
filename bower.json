@@ -17,7 +17,6 @@
   ],
   "dependencies": {
     "FitText.js": "1.2.0",
-    "bootstrap-sass-official": "v3.3.4",
-    "stellar": "v0.6.2"
+    "bootstrap-sass-official": "v3.3.4"
   }
 }

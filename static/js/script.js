@@ -1,6 +1,5 @@
 // @codekit-prepend "../bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js";
 // @codekit-prepend "../bower_components/FitText.js/jquery.fittext.js";
-// @codekit-prepend "../bower_components/stellar/src/jquery.stellar.js";
 // @codekit-prepend "webcom-base.js";
 // @codekit-prepend "generic-base.js";
 
@@ -182,7 +181,7 @@ var addBodyClasses = function($) {
 
 
 var parallaxPhotos = function($) {
-  var isTabletSize = function() {
+  function isTabletSize() {
     if ($(window).width() <= 768) {
       return true;
     }
@@ -194,66 +193,42 @@ var parallaxPhotos = function($) {
       return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
   }
 
-  function getBgHeight($elemWithBg) {
-    var img = new Image();
-    var url = $elemWithBg.css('background-image').match(/^url\("?(.+?)"?\)$/);
-    if (url[1]) {
-      url = url[1];
-    }
-    img.src = url;
-    return img.height;
-  }
-
-  var toggleStellar = function() {
+  var toggleFixedBg = function() {
     if (isTabletSize() || isTouchDevice()) {
-      if ($(window).data('plugin_stellar')) {
-        $(window).data('plugin_stellar').destroy();
-      }
-      if ($(window).width() == 768) {
-        $('.parallax-photo')
-          .css({
-            'background-position': 'center center',
-            'background-attachment': 'scroll',
-          });
-      }
-      else {
-        $('.parallax-photo')
-          .css({
-            'background-position': '',
-            'background-attachment': 'scroll',
-          });
-      }
+      $('.parallax-photo').css({
+        'background-attachment': 'scroll',
+        'background-position': 'center center'
+      });
     }
     else {
       $('.parallax-photo').each(function() {
         var $photo = $(this),
             photoOffset = $photo.offset().top,
-            bgHeight = getBgHeight($photo),
             photoHeight = $photo.height();
 
-        // Black magic
-        var stellarOffset = ((((bgHeight - photoHeight) / 2) - photoOffset) * 2) + photoOffset;
+        var img = new Image();
+        var url = $photo.css('background-image').match(/^url\("?(.+?)"?\)$/);
+        if (url[1]) {
+          url = url[1];
+        }
+        img.src = url;
 
-        $photo
-          .attr('data-stellar-vertical-offset', parseInt(stellarOffset, 10))
-          .removeAttr('style');
+        $(img).on('load', function() {
+          var imgOffset = (((img.height - photoHeight) / 2) - photoOffset) * -1;
+          $photo.css({
+            'background-attachment': 'fixed',
+            'background-position': 'center ' + imgOffset + 'px'
+          });
+        });
       });
-
-      $(window)
-        .stellar({
-          horizontalScrolling: false,
-          parallaxElements: false,
-          responsive: true
-        })
-        .trigger('scroll');
     }
-  }
+  };
 
-  $(window).on('load', toggleStellar);
+  $(window).on('load resize', toggleFixedBg);
   $(window).on('resize', function() {
-    setTimeout(toggleStellar, 150);
+    setTimeout(toggleFixedBg, 150);
   });
-}
+};
 
 
 /* Fit subpage title text within the heading's set width */
