@@ -30,7 +30,8 @@ h2.impact-title {
 
 .callout {
 	background-color: #f8de88;
-	background-color: rgba(249, 222, 132, 0.95)
+	background-color: rgba(249, 222, 132, 0.95);
+	box-shadow: none;
 }
 
 @media (max-width: 480px) {
