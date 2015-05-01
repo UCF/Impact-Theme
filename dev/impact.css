@@ -81,17 +81,15 @@ blockquote p {
 	.impact-label h2 {
 		font-size: 15px;
 	}
+
+  .impact-person img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
 	.impact-person {
-		width: 270px;
 		margin: 10px auto;
-	}
-
-	.impact-label,
-	.impact-details {
-		width: 270px;
 	}
 
 }
