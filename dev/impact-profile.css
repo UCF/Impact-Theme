@@ -1,3 +1,11 @@
+h2.impact-title {
+	margin-top: 0;
+	color: #fc0;
+	font-size: 32px;
+	font-weight: 700;
+	text-transform: none;
+}
+
 .impact-facts {
 	list-style: none;
 	margin: 0;
@@ -19,4 +27,16 @@
 	line-height: 16px;
 	margin: 3px 6px 16px 6px;
 	color: #323232;
+}
+
+.callout {
+	background-color: #f8de88;
+	background-color: rgba(249, 222, 132, 0.95);
+	box-shadow: none;
+}
+
+@media (max-width: 480px) {
+	.left-rail {
+		margin-top: 25px;
+	}
 }
