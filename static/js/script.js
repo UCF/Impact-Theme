@@ -239,14 +239,20 @@ var parallaxPhotos = function($) {
           .removeAttr('style');
       });
 
-      $(window).stellar({
-        horizontalScrolling: false,
-        parallaxElements: false
-      });
+      $(window)
+        .stellar({
+          horizontalScrolling: false,
+          parallaxElements: false,
+          responsive: true
+        })
+        .trigger('scroll');
     }
   }
 
-  $(window).on('load resize', toggleStellar);
+  $(window).on('load', toggleStellar);
+  $(window).on('resize', function() {
+    setTimeout(toggleStellar, 150);
+  });
 }
 
 
