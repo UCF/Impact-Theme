@@ -35,6 +35,13 @@ h2.impact-title {
 	box-shadow: none;
 }
 
+.right-rail h3 {
+	border-bottom: 1px solid #fc0;
+	padding-bottom: 5px;
+	margin-right: 20px;
+	margin-top: 0;
+}
+
 @media (max-width: 480px) {
 	.left-rail {
 		margin-top: 25px;
