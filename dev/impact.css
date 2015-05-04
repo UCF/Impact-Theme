@@ -58,6 +58,9 @@ blockquote p {
 
 .impact-person:hover .impact-details {
 	opacity: 1.0;
+}
+
+.impact-person .impact-details a:hover {
 	text-decoration: none;
 }
 
