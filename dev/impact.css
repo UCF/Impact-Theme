@@ -58,6 +58,7 @@ blockquote p {
 
 .impact-person:hover .impact-details {
 	opacity: 1.0;
+	text-decoration: none;
 }
 
 .impact-label h2 {
