@@ -249,111 +249,6 @@ function sc_blockquote($attr, $content='') {
 add_shortcode('blockquote', 'sc_blockquote');
 
 
-/**
- * Display a Parallax Feature.  Creates necessary markup for displaying a
- * full-screen background image with parallax effects.
- **/
-function sc_parallax_feature($attrs, $content=null) {
-	$title = $attrs['title'];
-	$feature = !empty( $title ) ? get_page_by_title( $title, 'OBJECT', 'parallax_feature' ) : null;
-
-	if ( $feature ) {
-		$offset = get_post_meta( $feature->ID, 'parallax_feature_callout_position', true ) == 'right' ? 'col-md-offset-5' : '';
-		$show_cta = get_post_meta( $feature->ID, 'parallax_feature_display_cta', true );
-		$cta_text = get_post_meta( $feature->ID, 'parallax_feature_cta_text', true );
-		$cta_link = get_permalink( get_post_meta( $feature->ID, 'parallax_feature_cta_link', true ) );
-
-		ob_start();
-		print get_parallax_feature_css( $feature->ID, 'parallax_feature_image_d', 'parallax_feature_image_t', 'parallax_feature_image_m' );
-		?>
-		<section class="parallax-content parallax-feature">
-			<div class="parallax-photo" id="photo_<?php echo $feature->ID; ?>" data-stellar-background-ratio="0.5">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-7 <?php echo $offset; ?>">
-							<div class="callout">
-								<?php echo apply_filters( 'the_content', $feature->post_content ); ?>
-							</div>
-						</div>
-					</div>
-				</div>
-				<?php if ( $show_cta == 'on' && !empty( $cta_link ) && !empty( $cta_text ) ) { ?>
-				<div class="cta">
-					<a href="<?php echo $cta_link; ?>"><?php echo $cta_text; ?></a>
-				</div>
-				<?php } ?>
-			</div>
-			<?php if ( $content ) {
-				print apply_filters( 'the_content', $content );
-			}
-			?>
-		</section>
-		<?php
-		return ob_get_clean();
-	} else {
-		return null;
-	}
-}
-add_shortcode('parallax_feature', 'sc_parallax_feature');
-
-
-/**
- * Shortcode for displaying the recent updates (Update custom post type)
- */
-function sc_display_recent_updates( $attrs, $content=null ) {
-	$header      = ( array_key_exists( 'header', $attrs ) ? $attrs['header'] : '' );
-	$is_vertical = ( array_key_exists( 'is_vertical', $attrs ) ? $attrs['is_vertical'] : '' );
-	$is_vertical = filter_var($is_vertical, FILTER_VALIDATE_BOOLEAN);
-
-	$updates = get_posts( array(
-		'numberposts' => 4,
-		'post_type'   => 'update'
-	) );
-	ob_start();
-	?>
-	<div class="recent-updates">
-	<?php echo ( $is_vertical ? '' : '<div class="container">' ); ?>
-	<?php if ( count( $updates ) ): ?>
-		<?php if ( !empty( $header ) ) : ?>
-			<<?php echo $header; ?>>
-				<a href="<?php echo get_post_type_archive_link( 'update' ); ?>">
-					<?php
-						$update_post_type = get_post_type_object( 'update' );
-						echo $update_post_type->labels->plural_name;
-					?>
-				</a>
-			</<?php echo $header; ?>>
-		<?php endif; ?>
-			<ul class="update-list <?php echo ($is_vertical ? 'vertical' : 'row'); ?>">
-				<?php foreach ( $updates as $key => $item ) :
-					$item_title = get_the_title($item->ID);
-					if ( strlen( $item_title ) > 100 ) {
-						// truncate string
-						$item_title = substr( $item_title, 0, 100 );
-						// truncate at last whole word
-						$item_title = substr( $item_title, 0, strrpos( $item_title, ' ' ) ) . '&hellip;';
-					}
-				?>
-				<li class="update-story <?php echo ( $is_vertical ? '' : 'col-md-3' ); ?>">
-					<h3 class="update-title">
-						<a href="<?php echo get_permalink( $item->ID ); ?>" class="ignore-external title">
-							<?php echo $item_title; ?>
-						</a>
-					</h3>
-				</li>
-				<?php endforeach; ?>
-			</ul>
-	<?php else: ?>
-		<p>Unable to fetch updates.</p>
-	<?php endif; ?>
-	<?php echo ( $is_vertical ? '' : '</div>' ); ?>
-	</div>
-<?php
-	return ob_get_clean();
-}
-add_shortcode('display-recent-updates', 'sc_display_recent_updates');
-
-
 function sc_comments($attr, $content=null) {
 	ob_start();
 	if ($attr['title']) {
@@ -427,6 +322,7 @@ function sc_comment_form() {
 }
 add_shortcode('comment-form', 'sc_comment_form');
 
+
 /**
  * Output Upcoming Events via shortcode.
  **/
@@ -455,6 +351,7 @@ function sc_events_widget() {
 	return ob_get_clean();
 }
 add_shortcode('events-widget', 'sc_events_widget');
+
 
 function sc_social_share_buttons() {
 	global $post;

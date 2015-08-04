@@ -67,17 +67,10 @@ define('FEED_FETCH_TIMEOUT', 10); // seconds
  **/
 Config::$custom_post_types = array(
 	'Page',
-	'Post',
-	'Update',
-	'InTheNews',
-	'FrequentlyAskedQuestion',
-	'Resource',
-	'ParallaxFeature'
+	'Post'
 );
 
-Config::$custom_taxonomies = array(
-	'ResourceGroups'
-);
+Config::$custom_taxonomies = array();
 
 Config::$body_classes = array('default',);
 

@@ -85,29 +85,4 @@ abstract class CustomTaxonomy {
 	}
 }
 
-
-
-/**
- * Resource Group
- *
- * @author Brandon Groves
- **/
-class ResourceGroups extends CustomTaxonomy {
-	public
-		$name               = 'resource_group',
-		$general_name       = 'Resource Groups',
-		$singular_name      = 'Resource Group',
-		$search_items       = 'Search Resource Groups',
-		$popular_items      = 'Popular Resource Groups',
-		$all_times          = 'All Resource Groups',
-		$parent_item        = 'Parent Resource Group',
-		$parent_item_colon  = 'Parent Resource Group:',
-		$edit_item          = 'Edit Resource Group',
-		$update_item        = 'Update Resource Group',
-		$add_new_item       = 'Add New Resource Group',
-		$new_item_name      = 'New Tag Resource Group',
-
-		$hierarchical = True;
-}
-
 ?>

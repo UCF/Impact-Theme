@@ -105,19 +105,7 @@ function get_parallax_page_header($page_id) {
 	echo get_parallax_feature_css($page_id, 'page_image_d', 'page_image_t', 'page_image_m');
 	?>
 	<section class="parallax-content parallax-header">
-		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>">
-			<?php
-				if (get_theme_option('enable_skyline')) :
-			?>
-			<div class="skyline"></div>
-			<?php
-				else:
-			?>
-			<div class="no-skyline"></div>
-			<?php
-				endif;
-			?>
-		</div>
+		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>"></div>
 	</section>
 	<?php
 	return ob_get_clean();
