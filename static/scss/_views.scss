@@ -205,9 +205,8 @@ button.btn {
 }
 
 .callout {
-  background-color: #fcc904;
-  background-color: rgba(245, 192, 13, .95);
-  box-shadow: -4px -3px 8px 0 rgba(50, 50, 50, .75);
+  background-color: #f8de88;
+  background-color: rgba(249, 222, 132, 0.95);
   display: block;
   padding: 20px;
 
@@ -235,6 +234,18 @@ button.btn {
     letter-spacing: -.025em;
     line-height: 1em;
   }
+}
+
+.callout-title {
+  margin-top: 0;
+}
+
+.wp-caption-text {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 3px 6px 16px 6px;
+  color: #323232;
 }
 
 .cta {
