@@ -363,4 +363,83 @@ function sc_social_share_buttons() {
 
 add_shortcode( 'social-share-buttons', 'sc_social_share_buttons' );
 
+
+/**
+ * Google Remarketing Shortcode
+ **/
+function sc_google_remarketing( $attr, $content='' ) {
+	$conversion_id = isset( $attr['conversion_id'] ) ? $attr['conversion_id'] : '';
+	$img_src = isset( $attr['img_src'] ) ? $attr['img_src'] : '';
+
+	if ( $conversion_id && $img_src ) {
+		ob_start();
+
+		?>
+		<script type="text/javascript">
+			// <![CDATA[
+			var google_conversion_id = <?php echo $conversion_id; ?>;
+			var google_custom_params = window.google_tag_params;
+			var google_remarketing_only = true;
+			// ]]>
+		</script>
+		<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+		<noscript>
+			<div style="display:inline">
+				<img height="1" width="1" style="border-style:none;" alt="" src="<?php echo $img_src; ?>">
+			</div>
+		</noscript>
+
+		<?php
+
+		return ob_get_clean();
+
+	} else {
+		return '';
+	}
+}
+add_shortcode( 'google-remarketing', 'sc_google_remarketing' );
+
+
+/**
+ * Facebook Audience Tracking
+ **/
+function sc_facebook_tracking( $attr, $content='' ) {
+	$audience_id = isset( $attr['audience_id'] ) ? $attr['audience_id'] : '';
+	$img_src = isset( $attr['img_src'] ) ? $attr['img_src'] : '';
+
+	if ( $audience_id && $img_src ) {
+		ob_start();
+
+	?>
+
+	<script src="text/javascript">
+		(function() {
+			var _fbq = window._fbq || (window._fbq = []);
+
+			if (!_fbq.loaded) {
+				var fbds = document.createElement('script');
+				fbds.async = true;
+				fbds.src = '//connect.facebook.net/en_US/fbds.js';
+				var s = document.getElementByTagName('script')[0];
+				s.parentNode.insertBefore(fbds, s);
+				_fbq.loaded = true;
+			}
+
+			_fbq.push(['addPixelId', '<?php echo $audience_id; ?>']);
+		})();
+
+		window._fbq = window._fbq || [];
+		window._fbq.push(['track', 'PixelInitialized', {}]);
+	</script>
+	<noscript>
+		<img height="1" width="1" alt="" style="display:none;" src="<?php echo $img_src; ?>">
+	</noscript>
+	<?php
+
+	} else {
+		return '';
+	}
+}
+add_shortcode( 'facebook-tracking', 'sc_facebook_tracking' );
+
 ?>
