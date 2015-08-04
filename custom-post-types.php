@@ -271,7 +271,7 @@ class Page extends CustomPostType {
 			),
 			array(
 				'name' => 'Featured image "Desktop" size override',
-				'desc' => 'Overrides the automatically generated "Desktop" size of the featured image for this page. Recommended image size: 1199x925px.',
+				'desc' => 'Overrides the automatically generated "Desktop" size of the featured image for this page. Recommended image size: 1199x450px.',
 				'id' => $prefix.'image_d',
 				'type' => 'file',
 			),
@@ -283,7 +283,7 @@ class Page extends CustomPostType {
 			),
 			array(
 				'name' => 'Featured image "Mobile" size override',
-				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this page. Recommended image size: 480x350px.',
+				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this page. Recommended image size: 480x300px.',
 				'id' => $prefix.'image_m',
 				'type' => 'file',
 			),
