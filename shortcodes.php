@@ -442,4 +442,13 @@ function sc_facebook_tracking( $attr, $content='' ) {
 }
 add_shortcode( 'facebook-tracking', 'sc_facebook_tracking' );
 
+
+/**
+ * Wrap arbitrary text in .lead paragraph.  Only handles single lines of text.
+ **/
+function sc_lead( $attr, $content='' ) {
+	return '<p class="lead">' . $content . '</p>';
+}
+add_shortcode( 'lead', 'sc_lead' );
+
 ?>
