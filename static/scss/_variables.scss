@@ -1,17 +1,11 @@
-$iconSpritePath:      "../img/glyphicons-halflings.png";
-$iconWhiteSpritePath: "../img/glyphicons-halflings-white.png";
-
-$large-min-display:   1200px;
-$medium-max-display:  991px;
-$medium-min-display:  768px;
-$small-max-display:   767px;
-$xsmall-max-display:  480px;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
 
 $offwhite:            #fafafa;
 $alt-color:           #dfaf0d;
-$link-color:           #922 !default;
+$link-color:          #922 !default;
 $light-yellow-color:  #fcebb1;
 
-$font-family-heading: 'Gotham SSm 8r','Gotham SSm A','Gotham SSm B';
+$font-family-heading: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-h2-h6:   'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-block:   'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
+$font-family-sans-narrow: 'Open Sans Condensed', sans-serif;

@@ -79,20 +79,20 @@
 }
 
 // Full-size (x-large) screens (1200x+ wide)
-@media all and (min-width: $large-min-display) {
+@media all and (min-width: $screen-lg-min) {
   .parallax-header .parallax-photo {
     height: 550px;
   }
 }
 
-@media all and (max-width: $large-min-display - 1) and (min-width: $medium-max-display) {
+@media all and (max-width: $screen-md-max) and (min-width: $screen-md-min) {
   .parallax-header h1 {
     font-size: 90px;
     width: 65%;
   }
 }
 
-@media all and (min-width: $large-min-display) and (max-height: 768px) {
+@media all and (min-width: $screen-lg-min) and (max-height: 768px) {
   // Try to catch wider screens with less vertical space; i.e. 1366x768px
   .parallax-header .parallax-photo {
     height: 450px;
@@ -100,13 +100,13 @@
 }
 
 // "Desktop (medium/large)" screens (1199px-768px wide)
-@media all and (max-width: $large-min-display - 1) and (min-width: $medium-min-display) {
+@media all and (max-width: $screen-md-max) and (min-width: $screen-md-min) {
   .parallax-header .parallax-photo {
     height: 450px;
   }
 }
 
-@media all and (max-width: $medium-max-display - 1) {
+@media all and (max-width: $screen-md-max) {
   .parallax-photo {
     padding-left: 0;
     padding-right: 0;
@@ -126,7 +126,7 @@
 }
 
 // "Tablet (small)" screens (767-481px wide)
-@media all and (max-width: $small-max-display) and (min-width: $xsmall-max-display + 1) {
+@media all and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
   .parallax-header .parallax-photo {
     height: 450px;
   }
@@ -136,7 +136,7 @@
   }
 }
 
-@media all and (max-width: $small-max-display) {
+@media all and (max-width: $screen-sm-max) {
 
   .parallax-photo {
     background-attachment: scroll; // make sure iPad portrait is reset
@@ -166,7 +166,7 @@
 }
 
 // "Mobile (x-small)" screens (>=480px wide)
-@media all and (max-width: $xsmall-max-display) {
+@media all and (max-width: $screen-xs-max) {
   .parallax-header .parallax-photo {
     height: 300px;
   }
