@@ -412,7 +412,7 @@ function sc_facebook_tracking( $attr, $content='' ) {
 
 	?>
 
-	<script src="text/javascript">
+	<script type="text/javascript">
 		(function() {
 			var _fbq = window._fbq || (window._fbq = []);
 
@@ -450,5 +450,23 @@ function sc_lead( $attr, $content='' ) {
 	return '<p class="lead">' . $content . '</p>';
 }
 add_shortcode( 'lead', 'sc_lead' );
+
+/**
+ * Insert tubular JS to add background video
+ **/
+function sc_tubular( $attr ) {
+	$id = $attr['id'] ? $attr['id'] : null;
+	ob_start();
+	?>
+	<script type="text/javascript" charset="utf-8" src="//cdn.lukej.me/jquery.tubular/1.0.1/jquery.tubular.1.0.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('main').tubular({videoId: '<?php echo $id; ?>'});
+		});
+	</script>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'tubular', 'sc_tubular' );
 
 ?>

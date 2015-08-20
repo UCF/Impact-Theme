@@ -1,7 +1,7 @@
 {
-  "name": "Downtown-Theme",
+  "name": "Impact-Theme",
   "version": "0.0.0",
-  "homepage": "https://github.com/UCF/Downtown-Theme",
+  "homepage": "https://github.com/UCF/Impact-Theme",
   "authors": [
     "UCF Marketing"
   ],
@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "FitText.js": "1.2.0",
+    "jquery-tubulaa.js": "0.0.1",
     "bootstrap-sass-official": "v3.3.4"
   }
 }

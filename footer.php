@@ -1,3 +1,5 @@
+
+	<?php if ( !is_front_page() ): ?>
 		<footer>
 			<div class="container">
 				<div class="row">
@@ -21,6 +23,8 @@
 				</div>
 			</div>
 		</footer>
+	<?php endif; ?>
+
 	</body>
 	<?="\n".footer_()."\n"?>
 </html>

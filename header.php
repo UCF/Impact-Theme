@@ -50,6 +50,8 @@
 
 	</head>
 	<body class="<?=body_classes()?>">
+
+	<?php if ( !is_front_page() ): ?>
 		<nav class="header-nav">
 			<a class="mobile-nav-toggle" href="#"><div class="hamburger"></div>Menu</a>
 			<?=wp_nav_menu(array(
@@ -61,3 +63,4 @@
 				));
 			?>
 		</nav>
+	<?php endif; ?>
