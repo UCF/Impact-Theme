@@ -14,10 +14,10 @@ ul,
 li {
   color: #222;
   font-family: $font-family-serif;
-  font-size: 16px;
+  // font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: 26px;
+  // line-height: 26px;
 }
 
 h2,
@@ -27,36 +27,36 @@ h3,
 h4,
 h5,
 h6 {
-  color: #222;
+  // color: #222;
   font-family: $font-family-h2-h6;
   font-style: normal;
   font-weight: 700;
   letter-spacing: -.025em;
 }
 
-a {
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  h5,
-  h6 {
-    color: $link-color;
-  }
+// a {
+//   h2,
+//   .h2,
+//   h3,
+//   .h3,
+//   h4,
+//   h5,
+//   h6 {
+//     color: $link-color;
+//   }
 
-  &:hover {
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    h5,
-    h6 {
-      color: $link-hover-color;
-    }
-  }
-}
+//   &:hover {
+//     h2,
+//     .h2,
+//     h3,
+//     .h3,
+//     h4,
+//     h5,
+//     h6 {
+//       color: $link-hover-color;
+//     }
+//   }
+// }
 
 h1,
 .h1 {
@@ -386,45 +386,45 @@ button.btn {
   width: 24px;
 }
 
-nav {
-  text-align: center;
+// nav {
+//   text-align: center;
 
-  ul {
-    line-height: 1em;
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
+//   ul {
+//     line-height: 1em;
+//     list-style-type: none;
+//     margin: 0;
+//     padding-left: 0;
 
-    li {
-      display: inline-block;
-      line-height: 1em;
-      padding: 10px 0;
-    }
-  }
+//     li {
+//       display: inline-block;
+//       line-height: 1em;
+//       padding: 10px 0;
+//     }
+//   }
 
-  a {
-    font-family: $font-family-heading;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 1em;
-    padding: 0 20px;
-    text-transform: uppercase;
-  }
+//   a {
+//     font-family: $font-family-heading;
+//     font-size: 17px;
+//     font-style: normal;
+//     font-weight: 800;
+//     line-height: 1em;
+//     padding: 0 20px;
+//     text-transform: uppercase;
+//   }
 
-  &.header-nav {
-    background-color: #333;
-    background-color: #000;
-    padding: 10px 0; // Creates 20px spacing btwn edges of black bar and list items
-    position: relative;
-    z-index: 999;
+//   &.header-nav {
+//     background-color: #333;
+//     background-color: #000;
+//     padding: 10px 0; // Creates 20px spacing btwn edges of black bar and list items
+//     position: relative;
+//     z-index: 999;
 
-    a,
-    a:hover {
-      color: #fff;
-    }
-  }
-}
+//     a,
+//     a:hover {
+//       color: #fff;
+//     }
+//   }
+// }
 
 // Subpages
 .page-content {
@@ -434,19 +434,19 @@ nav {
 
 
 // Footer
-footer nav {
-  border-bottom: 2px solid #d5d5d5;
-  padding-bottom: 25px;
+// footer nav {
+//   border-bottom: 2px solid #d5d5d5;
+//   padding-bottom: 25px;
 
-  a,
-  a:hover {
-    color: #d5d5d5 !important; // firefox fix
-  }
+//   a,
+//   a:hover {
+//     color: #d5d5d5 !important; // firefox fix
+//   }
 
-  a:hover {
-    text-decoration: underline;
-  }
-}
+//   a:hover {
+//     text-decoration: underline;
+//   }
+// }
 
 .footer-cta {
   font-family: $font-family-block;
@@ -535,7 +535,7 @@ footer nav {
     font-size: 28px;
   }
 
-  nav a { padding: 0 16px; }
+  // nav a { padding: 0 16px; }
 
   .callout blockquote,
   .callout blockquote p {
@@ -658,10 +658,10 @@ footer nav {
     padding: 8px 0;
   }
 
-  nav a {
-    font-size: 14px;
-    padding: 0 10px;
-  }
+  // nav a {
+  //   font-size: 14px;
+  //   padding: 0 10px;
+  // }
 
   nav.header-nav {
     padding: 10px 0;

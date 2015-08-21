@@ -264,6 +264,12 @@ class Page extends CustomPostType {
 		$prefix = $this->options('name').'_';
 		return array(
 			array(
+				'name' => 'Alternate Title',
+				'desc' => 'Specify an alternate title for this page.  Used at the top of individual pages and in profile lists.',
+				'id' => $prefix . 'title_alt',
+				'type' => 'text',
+			),
+			array(
 				'name' => 'Stylesheet',
 				'desc' => '',
 				'id' => $prefix.'stylesheet',
@@ -286,7 +292,7 @@ class Page extends CustomPostType {
 				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this page. Recommended image size: 480x300px.',
 				'id' => $prefix.'image_m',
 				'type' => 'file',
-			),
+			)
 		);
 	}
 }

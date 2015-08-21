@@ -15,7 +15,9 @@ function __init__(){
 	add_image_size('parallax_feature-desktop', 1199, 925, true);
 	add_image_size('parallax_feature-tablet', 767, 450, true);
 	add_image_size('parallax_feature-mobile', 480, 300, true);
+	add_image_size( 'profile-thumbnail', 500, 500, true );
 	register_nav_menu('nav-menu', __('Navigation Menu'));
+	register_nav_menu( 'profile-list', __( 'Profile List' ) );
 	register_sidebar(array(
 		'name'          => __('Sidebar'),
 		'id'            => 'sidebar',
@@ -168,24 +170,16 @@ Config::$theme_settings = array(
 			'value'       => $theme_options['organization_name'],
 		)),
 		new TextField(array(
-			'name'        => 'Call to Action Prefix',
-			'id'          => THEME_OPTIONS_NAME.'[cta_prefix]',
-			'description' => 'Your call to action text prefix',
-			'value'       => $theme_options['cta_prefix'],
+			'name'        => 'Profile list title',
+			'id'          => THEME_OPTIONS_NAME.'[profile_list_title]',
+			'description' => 'Text used in the heading for Impact profile lists.',
+			'value'       => $theme_options['profile_list_title'],
 		)),
-		new TextField(array(
-			'name'        => 'Call to Action Link Text',
-			'id'          => THEME_OPTIONS_NAME.'[cta_link_text]',
-			'description' => 'Your call to action link text',
-			'value'       => $theme_options['cta_link_text'],
-		)),
-		new SelectField(array(
-			'name'        => 'Global Call to Action link',
-			'id'          => THEME_OPTIONS_NAME.'[cta]',
-			'description' => 'Page where the "Partner with Us" links used on the site direct to.',
-			'choices'     => $pages_array,
-			'default'     => $pages_array[0],
-			'value'       => $theme_options['cta'],
+		new TextareaField(array(
+			'name'        => 'Profile list description',
+			'id'          => THEME_OPTIONS_NAME.'[profile_list_description]',
+			'description' => 'Description text for Impact profile lists.',
+			'value'       => $theme_options['profile_list_description'],
 		)),
 	),
 	'Social' => array(

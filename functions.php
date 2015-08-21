@@ -175,4 +175,68 @@ function display_social($url, $title) {
     return ob_get_clean();
 }
 
+
+/**
+ *
+ **/
+function display_profile_list() {
+	$menu_name = 'profile-list';
+
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[$menu_name] ) ) {
+		$menu = wp_get_nav_menu_object( $locations[$menu_name] );
+		$menu_items = wp_get_nav_menu_items( $menu->term_id );
+	}
+
+	ob_start();
+?>
+<nav class="profile-list">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-nopad">
+				<div class="profile-list-item profile-item-lead">
+					<div class="profile-item-inner">
+						<div class="profile-item-content">
+							<h2 class="profile-list-title"><?php echo get_theme_option( 'profile_list_title' ); ?></h2>
+							<div class="profile-list-description">
+								<?php echo get_theme_option( 'profile_list_description' ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<?php
+			if ( $menu_items ) :
+				foreach ( $menu_items as $key => $menu_item ):
+					$profile_img_id = get_post_thumbnail_id( $menu_item->object_id );
+					$profile_img_details = wp_get_attachment_image_src( $profile_img_id, 'profile-thumbnail', true );
+
+					$profile_img = $profile_img_details[0];
+					$profile_title = $menu_item->title;
+					$profile_title_alt = get_post_meta( $menu_item->object_id, 'page_title_alt', true );
+			?>
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-nopad">
+				<article class="profile-list-item">
+					<div class="profile-img" style="background-image: url(<?php echo $profile_img; ?>);"></div>
+					<a class="profile-item-inner" href="<?php echo $menu_item->url; ?>">
+						<div class="profile-item-content">
+							<?php if ( $profile_title !== $profile_title_alt ): ?>
+								<h3 class="profile-title"><?php echo $profile_title; ?></h3>
+							<?php endif; ?>
+
+							<span class="profile-title-alt"><?php echo $profile_title_alt; ?></span>
+						</div>
+					</a>
+				</article>
+			</div>
+			<?php
+				endforeach;
+			endif;
+			?>
+		</div>
+	</div>
+</nav>
+<?php
+	return ob_get_clean();
+}
 ?>

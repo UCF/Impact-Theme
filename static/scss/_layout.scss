@@ -1,0 +1,156 @@
+// Site-wide header styles
+// ...
+
+
+// Subfooter (profile list) styles
+
+.profile-list {
+  background-color: #000;
+}
+
+.profile-list-item {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  &.profile-item-lead {
+    background-color: $ucf-gold;
+
+    .profile-item-content {
+      color: #000;
+      padding: 10% 25% 10% 10%;
+      text-align: left;
+
+      @media (max-width: $screen-sm-max) {
+        padding: 10%;
+      }
+    }
+  }
+}
+
+.profile-img {
+  // @include transition(-webkit-filter .3s ease-in-out, filter .3s ease-in-out);
+  background-size: cover;
+  bottom: 0;
+  // -webkit-filter: grayscale(100%) brightness(80%) contrast(140%);
+  // filter: grayscale(100%) brightness(80%) contrast(140%);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  // .profile-list-item:hover &,
+  // .profile-list-item:focus & {
+  //   -webkit-filter: none;
+  //   filter: none;
+  // }
+}
+
+.profile-item-inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.profile-item-content {
+  color: #fff;
+  height: 100%;
+  // apply item padding here
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.profile-list-title {
+  @include narrow-text();
+  font-size: 50px;
+  margin-top: 0;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 23px;
+  }
+}
+
+.profile-list-description {
+  font-size: 18px;
+  line-height: 1.25;
+  margin-top: 20px;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 12.5px;
+    margin-top: 10px;
+  }
+}
+
+.profile-title {
+  display: block;
+  font-family: $font-family-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0;
+  max-width: 85%;
+  position: absolute;
+  right: 5%;
+  top: 6%;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+  }
+}
+
+.profile-title-alt {
+  @include narrow-text();
+  @include transition(background .3s ease-in-out);
+  bottom: 0;
+  display: block;
+  font-size: 36px;
+  left: 0;
+  padding: 10%;
+  position: absolute;
+  right: 0;
+  width: 100%;
+
+  &:before {
+    @include gradient-horizontal($ucf-gold, transparent);
+    @include transition(opacity .3s ease-in-out);
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .profile-list-item:hover &:before,
+  .profile-list-item:focus &:before {
+    opacity: 1;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 30px;
+  }
+}
+
+
+// Site-wide footer styles
