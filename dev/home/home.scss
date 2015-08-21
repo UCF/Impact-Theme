@@ -1,10 +1,22 @@
-
 $font-family-heading: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-h2-h6:   'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-block:   'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-sans-narrow: 'Open Sans Condensed', sans-serif;
 
 // Home Page
+
+#videobcg {
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -1000;
+     overflow: hidden;
+}
+
 h1 {
     color: #fff;
     font-size: 90px;
