@@ -29,5 +29,35 @@
   @media (max-width: $screen-xs-max) {
     padding-left: 0;
     padding-right: 0;
+}
+
+
+// Applies extra top/bottom padding to an element.
+.whitespace {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.whitespace-2x {
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+
+.whitespace-xs {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+@media (max-width: $screen-sm-max) {
+  .whitespace,
+  .whitespace-2x,
+  .whitespace-xs {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .whitespace + .whitespace,
+  .whitespace-2x + .whitespace-2x {
+    padding-top: 0;
   }
 }

@@ -177,7 +177,8 @@ function display_social($url, $title) {
 
 
 /**
- *
+ * Displays a full-width grid list of impact profiles, using pages in the
+ * profile-list menu.
  **/
 function display_profile_list() {
 	$menu_name = 'profile-list';
@@ -212,7 +213,7 @@ function display_profile_list() {
 					$profile_img_c = wp_get_attachment_url( get_post_meta( $menu_item->object_id, 'page_profile_list_c', true ) );
 
 					$profile_title = $menu_item->title;
-					$profile_title_alt = get_post_meta( $menu_item->object_id, 'page_title_alt', true );
+					$profile_title_alt = get_post_meta( $menu_item->object_id, 'page_subtitle', true );
 			?>
 			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-nopad">
 				<article class="profile-list-item">
@@ -239,4 +240,24 @@ function display_profile_list() {
 <?php
 	return ob_get_clean();
 }
+
+
+/**
+ * Enqueues page-specific css and js.
+ **/
+function enqueue_custom_files() {
+	global $post;
+
+	$custom_css_id = get_post_meta( $post->ID, 'page_stylesheet', True );
+	$custom_js_id = get_post_meta( $post->ID, 'page_javascript', True );
+
+	if ( $custom_css_id ) {
+		wp_enqueue_style( $post->post_name.'-stylesheet', wp_get_attachment_url( $custom_css_id ) );
+	}
+
+	if ( $custom_js_id ) {
+		wp_enqueue_script( $post->post_name.'-javascript', wp_get_attachment_url( $custom_js_id ), null, null, True );
+	}
+}
+
 ?>

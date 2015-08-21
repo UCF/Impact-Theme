@@ -6,15 +6,13 @@
 @import 'utilities';
 
 // Base styles for typography, tables, forms, and images
-// @import 'type';  TODO
+@import 'type';
 
 // Styles for components and Bootstrap component overrides
 @import 'components';
 
 // Styles for base header/footer templates and specific, per-view templates
-@import 'views';
-@import 'type';
-@import 'parallax';
+@import 'layout';
 @import 'shortcodes';
 
 @import 'layout';

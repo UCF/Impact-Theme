@@ -49,6 +49,159 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dev\/ahmed-lababidi\/ahmed-lababidi.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/ahmed-lababidi\/ahmed-lababidi.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/ahmed-lababidi\/ahmed-lababidi.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/ahmed-lababidi\/ahmed-lababidi.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/albert-manero\/albert-manero.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/albert-manero.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/albert-manero\/albert-manero.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/albert-manero.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/amy-huang\/amy-huang.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/amy-huang.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/amy-huang\/amy-huang.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/amy-huang.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/amy-iarrobino\/amy-iarrobino.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/amy-iarrobino\/amy-iarrobino.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/amy-iarrobino\/amy-iarrobino.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/amy-iarrobino\/amy-iarrobino.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/arron-smith\/aaron-smith.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/arron-smith\/aaron-smith.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/arron-smith\/arron-smith.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/arron-smith\/arron-smith.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/dwayne-houston\/dwayne-houston.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/dwayne-houston.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/dwayne-houston\/dwayne-houston.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/dwayne-houston.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/home\/home.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/home\/home.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/home\/home.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/home\/home.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/home\/home.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/home\/home.js",
+		"outputAbbreviatedPath": "\/dev\/home\/min\/home-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/dev\/home\/home.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 1,
+		"inputAbbreviatedPath": "\/dev\/home\/home.scss",
+		"outputAbbreviatedPath": "\/dev\/home\/home.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/dev\/impact-profile-template.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -72,6 +225,42 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/impact.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/michael-garcia\/michael-garcia.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/michael-garcia\/michael-garcia.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/michael-garcia\/michael-garcia.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/michael-garcia\/michael-garcia.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/shannon-payne\/shannon-payne.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/shannon-payne.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/shannon-payne\/shannon-payne.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/shannon-payne.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -138,6 +327,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/home.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/home.min.js",
+		"outputAbbreviatedPath": "\/min\/home.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
 		},
 	"\/home.php": {
 		"fileType": 8192,
@@ -2966,39 +3166,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/static\/img\/bullet.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 748,
-		"inputAbbreviatedPath": "\/static\/img\/bullet.png",
-		"outputAbbreviatedPath": "\/static\/img\/bullet.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/default-site-image-540.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 66539,
-		"inputAbbreviatedPath": "\/static\/img\/default-site-image-540.jpg",
-		"outputAbbreviatedPath": "\/static\/img\/default-site-image-540.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/default-site-image-620.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 73654,
-		"inputAbbreviatedPath": "\/static\/img\/default-site-image-620.jpg",
-		"outputAbbreviatedPath": "\/static\/img\/default-site-image-620.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/static\/img\/documents-doc.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3087,72 +3254,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/static\/img\/external.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 679,
-		"inputAbbreviatedPath": "\/static\/img\/external.png",
-		"outputAbbreviatedPath": "\/static\/img\/external.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/glyphicons-halflings-white.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 8777,
-		"inputAbbreviatedPath": "\/static\/img\/glyphicons-halflings-white.png",
-		"outputAbbreviatedPath": "\/static\/img\/glyphicons-halflings-white.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/glyphicons-halflings.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 12799,
-		"inputAbbreviatedPath": "\/static\/img\/glyphicons-halflings.png",
-		"outputAbbreviatedPath": "\/static\/img\/glyphicons-halflings.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/gradient.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 898,
-		"inputAbbreviatedPath": "\/static\/img\/gradient.png",
-		"outputAbbreviatedPath": "\/static\/img\/gradient.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/header-skyline.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1573,
-		"inputAbbreviatedPath": "\/static\/img\/header-skyline.png",
-		"outputAbbreviatedPath": "\/static\/img\/header-skyline.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/help.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1789,
-		"inputAbbreviatedPath": "\/static\/img\/help.png",
-		"outputAbbreviatedPath": "\/static\/img\/help.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/static\/img\/login-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3175,17 +3276,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/static\/img\/no-photo.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5968,
-		"inputAbbreviatedPath": "\/static\/img\/no-photo.jpg",
-		"outputAbbreviatedPath": "\/static\/img\/no-photo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/static\/img\/pegasus.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3193,17 +3283,6 @@
 		"initialSize": 448,
 		"inputAbbreviatedPath": "\/static\/img\/pegasus.png",
 		"outputAbbreviatedPath": "\/static\/img\/pegasus.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/social-32x32.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2463,
-		"inputAbbreviatedPath": "\/static\/img\/social-32x32.png",
-		"outputAbbreviatedPath": "\/static\/img\/social-32x32.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3226,17 +3305,6 @@
 		"initialSize": 3630,
 		"inputAbbreviatedPath": "\/static\/img\/social-share-extended.png",
 		"outputAbbreviatedPath": "\/static\/img\/social-share-extended.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/static\/img\/ucf_stands_for_opportunity.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3671,
-		"inputAbbreviatedPath": "\/static\/img\/ucf_stands_for_opportunity.png",
-		"outputAbbreviatedPath": "\/static\/img\/ucf_stands_for_opportunity.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3360,22 +3428,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/static\/scss\/_parallax.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/scss\/_parallax.scss",
-		"outputAbbreviatedPath": "\/static\/css\/_parallax.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/static\/scss\/_shortcodes.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -3440,22 +3492,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/static\/scss\/_views.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/scss\/_views.scss",
-		"outputAbbreviatedPath": "\/static\/css\/_views.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
 	"\/static\/scss\/style.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -3503,7 +3539,7 @@
 	"iconImageName": "globe_gray"
 	},
 "projectSettings": {
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -3645,7 +3681,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/localhost\/impact",
+	"externalServerAddress": "http:\/\/localhost:8888",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,

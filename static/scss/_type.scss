@@ -1,20 +1,110 @@
-.gold-text {
+// General
+body {
+  @include font-smoothing();
+
+  @media (max-width: $screen-xs-max) {
+    font-size: floor(($font-size-base * .9));
+  }
+}
+
+p:empty {
+  display: none;
+}
+
+
+.ucf-gold {
   color: $ucf-gold;
 }
 
-label {
-  font-family: 'Gotham SSm 8r','Gotham SSm A','Gotham SSm B';
-  font-weight: bold;
+
+// Headings
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
 }
 
+// Try to catch heading groups and apply extra spacing between copy as necessary.
+// If spacing between .span's is adjusted at certain breakpoints, be sure to update this.
+p + h1,
+p + .h1,
+ol + h1,
+ol + .h1,
+ul + h1,
+ul + .h1,
+p + h2,
+p + .h2,
+ol + h2,
+ol + .h2,
+ul + h2,
+ul + .h2,
+p + h3,
+p + .h3,
+ol + h3,
+ol + .h3,
+ul + h3,
+ul + .h3,
+p + h4,
+p + .h4,
+ol + h4,
+ol + .h4,
+ul + h4,
+ul + .h4 {
+  margin-top: 30px;
+}
+
+
+// Lead text
 .lead {
-  font-family: $font-family-block;
+  font-family: $font-family-sans-serif;
   font-size: 32px;
   font-weight: 300;
   line-height: 1.3;
 
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     font-size: 24px;
+  }
+}
+
+
+// Blockquotes
+blockquote,
+blockquote p {
+  font-family: $font-family-sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 1.3em;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 22px;
+  }
+}
+
+blockquote {
+  border-left: 0;
+  padding-left: 0;
+
+  small {
+    color: $text-color;
+    display: block;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin-top: 20px;
+    text-align: left;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -29,4 +119,40 @@ label {
   cite {
     font-weight: bold;
   }
+}
+
+
+// Horizontal dividers
+hr {
+  border-bottom-color: transparent;
+  border-top-color: $alt-color;
+  margin: 30px 0;
+
+  @media (max-width: $screen-sm-max) {
+    margin: 20px 0;
+  }
+
+  &.gray {
+    border-top-color: #eee;
+  }
+}
+
+
+// Caption text
+.caption {
+  font-size: 14px;
+  line-height: 1.2;
+
+  @media (max-width: $screen-sm-max) {
+    line-height: 1.35em;
+    padding-bottom: 15px;
+  }
+}
+
+.wp-caption-text {
+  color: #323232;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.2;
+  margin: 3px 6px 16px;
 }

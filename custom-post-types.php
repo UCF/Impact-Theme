@@ -253,7 +253,7 @@ class Page extends CustomPostType {
 		$edit_item      = 'Edit Page',
 		$new_item       = 'New Page',
 		$public         = True,
-		$use_editor     = True,
+		$use_editor     = False,
 		$use_thumbnails = False,
 		$use_order      = True,
 		$use_title      = True,
@@ -264,10 +264,16 @@ class Page extends CustomPostType {
 		$prefix = $this->options('name').'_';
 		return array(
 			array(
-				'name' => 'Alternate Title',
-				'desc' => 'Specify an alternate title for this page.  Used at the top of individual pages and in profile lists.',
-				'id' => $prefix . 'title_alt',
+				'name' => 'Subtitle',
+				'desc' => '',
+				'id'   => $prefix.'subtitle',
 				'type' => 'text',
+			),
+			array(
+				'name' => 'HTML',
+				'desc' => '',
+				'id'   => $prefix.'html',
+				'type' => 'file',
 			),
 			array(
 				'name' => 'Stylesheet',
@@ -276,21 +282,9 @@ class Page extends CustomPostType {
 				'type' => 'file',
 			),
 			array(
-				'name' => 'Featured image "Desktop" size override',
-				'desc' => 'Overrides the automatically generated "Desktop" size of the featured image for this page. Recommended image size: 1199x450px.',
-				'id' => $prefix.'image_d',
-				'type' => 'file',
-			),
-			array(
-				'name' => 'Featured image "Tablet" size override',
-				'desc' => 'Overrides the automatically generated "Tablet" size of the featured image for this page. Recommended image size: 767x450px.',
-				'id' => $prefix.'image_t',
-				'type' => 'file',
-			),
-			array(
-				'name' => 'Featured image "Mobile" size override',
-				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this page. Recommended image size: 480x300px.',
-				'id' => $prefix.'image_m',
+				'name' => 'Javascript',
+				'desc' => '',
+				'id'   => $prefix.'javascript',
 				'type' => 'file',
 			),
 			array(
