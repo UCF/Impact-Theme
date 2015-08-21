@@ -1,57 +1,113 @@
-#videobcg {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1000;
-  overflow: hidden; }
+#lead {
+  display: table; }
+  #lead #lead-content {
+    display: table-cell;
+    vertical-align: middle; }
+  #lead #video,
+  #lead #videoImage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 150%;
+    min-height: 150%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) no-repeat;
+    background-size: cover; }
+  #lead #videoImage {
+    display: none; }
+  #lead h1 {
+    color: #fff;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1em;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase; }
+  #lead h3,
+  #lead p,
+  #lead .alumni-title {
+    color: #fff;
+    font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
+    text-align: center;
+    text-transform: uppercase; }
+  #lead a:hover, #lead a:focus {
+    text-decoration: none; }
+  #lead h2 {
+    color: #ffc904;
+    letter-spacing: 6px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase; }
+  #lead .alumni-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 33px; }
+  #lead .alumni {
+    color: #ffc904;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center; }
+  #lead hr {
+    border-bottom-color: transparent;
+    border-top-color: #ffc904;
+    border-top-width: 2px;
+    margin: 3.0em auto;
+    width: 85%; }
+  #lead .explore {
+    margin-top: 6em; }
+    #lead .explore p {
+      font-size: 22px;
+      font-weight: 600; }
 
-h1 {
-  color: #fff;
-  font-size: 90px;
-  font-weight: 900;
-  margin-top: 1.5em;
-  margin-bottom: 0;
-  text-align: center;
-  text-transform: uppercase; }
+.container-full-width {
+  width: 100%; }
 
-#lead h3,
-#lead p,
-#lead .alumni-title {
-  color: #fff;
-  font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
-  text-align: center;
+#making-impact.container-full-width {
+  background-color: #000; }
+#making-impact .content {
+  margin-top: 100px;
+  margin-bottom: 100px; }
+#making-impact h2,
+#making-impact p {
+  color: #fff; }
+#making-impact h2 {
+  border-top: 3px solid #fff;
+  font-size: 70px;
+  padding-top: 30px;
   text-transform: uppercase; }
-#lead a:hover, #lead a:focus {
-  text-decoration: none; }
-#lead h2 {
+#making-impact h3 {
   color: #ffc904;
-  letter-spacing: 6px;
-  margin: 0;
-  text-align: center;
+  font-size: 22px;
+  margin-bottom: 25px;
   text-transform: uppercase; }
-#lead .alumni-title {
+#making-impact p {
   font-size: 24px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 33px; }
-#lead .alumni {
-  color: #ffc904;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 24px;
-  font-style: italic;
-  text-align: center; }
-#lead hr {
-  border-bottom-color: transparent;
-  border-top-color: #ffc904;
-  border-top-width: 2px;
-  margin: 3.0em auto;
-  width: 85%; }
-#lead .explore {
-  margin-top: 6em; }
-  #lead .explore p {
-    font-size: 22px;
-    font-weight: 600; }
+  line-height: 40px; }
+
+#give-now.container-full-width {
+  background-color: #fff; }
+#give-now h2,
+#give-now btn {
+  text-transform: uppercase; }
+#give-now h2 {
+  font-size: 50px;
+  margin-bottom: 20px; }
+#give-now p {
+  font-size: 18px;
+  line-height: 24px;
+  padding-top: 35px; }
+#give-now .btn-gold {
+  color: #000;
+  background-color: #ffc904;
+  border-color: #ffc904;
+  font-size: 28px;
+  margin-top: 60px;
+  margin: 45px 0 0 60px;
+  padding: 40px;
+  text-transform: uppercase; }
