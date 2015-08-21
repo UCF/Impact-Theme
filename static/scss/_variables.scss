@@ -1,11 +1,38 @@
+// Custom variables:
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
 
 $offwhite:            #fafafa;
 $alt-color:           #dfaf0d;
-$link-color:          #922 !default;
 $light-yellow-color:  #fcebb1;
+$ucf-gold:            #ffc904;
 
-$font-family-heading: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
-$font-family-h2-h6:   'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
-$font-family-block:   'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-sans-narrow: 'Open Sans Condensed', sans-serif;
+
+
+// Bootstrap overrides:
+
+$font-family-serif:      Georgia, 'Times New Roman', Times, serif !default;
+$font-family-sans-serif: 'Gotham SSm A', 'Gotham SSm B', sans-serif !default;
+$font-family-base:       $font-family-serif;
+
+$font-size-base: 16px !default;
+
+$font-size-h1: 42px;
+$headings-font-weight: 600;
+
+$link-color: #922 !default;
+
+// Kill border-radius on all components
+$border-radius-base: 0 !default;
+$border-radius-small: $border-radius-base !default;
+$border-radius-large: $border-radius-base !default;
+
+// Increase default horizontal/vertical padding on padded elements and components
+$padding-base-vertical: 8px;
+$padding-base-horizontal: 16px;
+$padding-large-vertical: 14px;
+$padding-large-horizontal: 28px;
+
+$icon-font-path: '../fonts/bootstrap/';
+
