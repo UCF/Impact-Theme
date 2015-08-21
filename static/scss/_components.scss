@@ -1,0 +1,85 @@
+// Force sans-serif font on common components
+.alert,
+.badge,
+.breadcrumb,
+.btn,
+.carousel,
+.collapse,
+.dropdown,
+.jumbotron,
+.label,
+.list-group,
+.media,
+.modal,
+.nav,
+.navbar,
+.pagination,
+.panel,
+.well {
+  @include no-font-smoothing();
+  @include sans-serif-text();
+}
+
+
+// btn overrides
+.btn {
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 0 solid transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  border-bottom: 6px solid $btn-default-border;
+}
+
+.btn-primary {
+  border-bottom: 6px solid $btn-primary-border;
+}
+
+.btn-success {
+  border-bottom: 6px solid $btn-success-border;
+}
+
+.btn-info {
+  border-bottom: 6px solid $btn-info-border;
+}
+
+.btn-warning {
+  border-bottom: 6px solid $btn-warning-border;
+}
+
+.btn-danger {
+  border-bottom: 6px solid $btn-danger-border;
+}
+
+.btn-xl {
+  @include button-size(18px, 36px, 24px, 1.4, 0);
+}
+
+
+// Square block divider
+.divider-squares {
+  display: block;
+  height: 32px;
+  margin: 1.2em 0;
+  padding: 0;
+
+  &:before {
+    color: #fff;
+    content: '█ █ █ █ █';
+    font-family: Georgia, 'Apple Symbols', serif;
+    font-size: 32px;
+    letter-spacing: -.075em;
+    line-height: 32px;
+  }
+}
+
+
+// UCF logo
+.ucf-logo-white {
+  height: auto;
+  max-width: 100%;
+  width: 175px; // downsize so retina devices see high-res
+}

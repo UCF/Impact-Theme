@@ -3164,17 +3164,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/static\/img\/logo-r.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 7139,
-		"inputAbbreviatedPath": "\/static\/img\/logo-r.png",
-		"outputAbbreviatedPath": "\/static\/img\/logo-r.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/static\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3316,6 +3305,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/scss\/_base.scss",
 		"outputAbbreviatedPath": "\/static\/css\/_base.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/static\/scss\/_components.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/scss\/_components.scss",
+		"outputAbbreviatedPath": "\/static\/css\/_components.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

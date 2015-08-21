@@ -3,3 +3,31 @@
   padding-left: 0;
   padding-right: 0;
 }
+
+.col-lg-nopad {
+  @media (min-width: $screen-lg-min) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.col-md-nopad {
+  @media (max-width: $screen-md-max) and (min-width: $screen-md-min) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.col-sm-nopad {
+  @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.col-xs-nopad {
+  @media (max-width: $screen-xs-max) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

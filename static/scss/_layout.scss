@@ -2,11 +2,22 @@
 // ...
 
 
-// Subfooter (profile list) styles
+// Site-wide footer styles
 
-.profile-list {
+.site-footer {
   background-color: #000;
+
+  &,
+  & p,
+  & ol,
+  & ul,
+  & a {
+    color: #fff;
+  }
 }
+
+
+// Footer profile list styles
 
 .profile-list-item {
   position: relative;
@@ -173,4 +184,121 @@
 }
 
 
-// Site-wide footer styles
+// Bottom footer contents
+
+.footer-section {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 10%;
+  padding: 0 10%;
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 30px;
+    padding: 0 6% 30px;
+  }
+
+  &.give-section-white {
+    margin-top: -5%;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 30px;
+    }
+
+    &,
+    p,
+    ol,
+    ul,
+    a {
+      color: #000;
+    }
+
+    .give-section-heading {
+      font-size: 48px;
+
+      @media (min-width: $screen-lg-min) {
+        font-size: 54px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.3;
+
+      @media (min-width: $screen-lg-min) {
+        font-size: 22px;
+      }
+    }
+
+    .btn {
+      margin-top: 1.2em;
+    }
+  }
+
+  &.footer-address {
+    @include sans-serif-text();
+    border-right: 2px solid #fff;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-sm-max) {
+      padding-left: 0;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      border-bottom: 2px solid #fff;
+      border-right: 0;
+      padding-bottom: 30px;
+      padding-left: 6%;
+    }
+
+    address {
+      line-height: inherit;
+    }
+  }
+
+  &.footer-headlines {
+    padding-right: 0;
+
+    @media (max-width: $screen-xs-max) {
+      padding-right: 6%;
+    }
+
+    .ucf-logo-white {
+      margin-top: 30px;
+    }
+  }
+}
+
+.footer-section-heading {
+  margin-bottom: 1.1em;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+
+// Site-wide layout elements
+
+.give-section-white {
+  background-color: #fff;
+  font-family: $font-family-serif;
+  padding: 10%;
+
+  @media (max-width: $screen-sm-max) {
+    padding: 8%;
+  }
+
+  &,
+  & p,
+  & ol,
+  & ul {
+    color: #000;
+  }
+}
+
+.give-section-heading {
+  @include narrow-text();
+  margin: 0 0 .5em;
+}

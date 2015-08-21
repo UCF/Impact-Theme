@@ -6,10 +6,20 @@ $link-color:          #922 !default;
 $light-yellow-color:  #fcebb1;
 $ucf-gold:            #ffc904;
 
+$brand-primary:       $ucf-gold;
+$btn-primary-color:   #000;
+
+// TODO: clean these up
 $font-family-heading: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-h2-h6:   'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
 $font-family-block:   'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
+
+$font-family-sans-serif: 'Gotham SSm 4r', 'Gotham SSm A', 'Gotham SSm B', sans-serif;
 $font-family-sans-narrow: 'Open Sans Condensed', sans-serif;
 
 $font-size-base:      16px;
 $line-height-base:    1.5;
+
+$border-radius-base: 0 !default; // Kill border-radius on all components
+$border-radius-small: $border-radius-base !default;
+$border-radius-large: $border-radius-base !default;
