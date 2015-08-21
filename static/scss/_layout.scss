@@ -33,24 +33,35 @@
 }
 
 .profile-img {
-  // @include transition(-webkit-filter .3s ease-in-out, filter .3s ease-in-out);
+  @include transition(opacity .3s ease-in-out);
   background-size: cover;
   bottom: 0;
-  // -webkit-filter: grayscale(100%) brightness(80%) contrast(140%);
-  // filter: grayscale(100%) brightness(80%) contrast(140%);
   height: 100%;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 1;
 
-  // .profile-list-item:hover &,
-  // .profile-list-item:focus & {
-  //   -webkit-filter: none;
-  //   filter: none;
-  // }
+  &.profile-img-bw {
+    opacity: 1;
+    z-index: 1;
+
+    .profile-list-item:hover &,
+    .profile-list-item:focus & {
+      opacity: 0;
+    }
+  }
+
+  &.profile-img-c {
+    opacity: 0;
+    z-index: 2;
+
+    .profile-list-item:hover &,
+    .profile-list-item:focus & {
+      opacity: 1;
+    }
+  }
 }
 
 .profile-item-inner {
@@ -64,10 +75,9 @@
 .profile-item-content {
   color: #fff;
   height: 100%;
-  // apply item padding here
   position: relative;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .profile-list-title {
@@ -129,8 +139,12 @@
   right: 0;
   width: 100%;
 
+  &:empty {
+    display: none;
+  }
+
   &:before {
-    @include gradient-horizontal($ucf-gold, transparent);
+    @include gradient-horizontal($ucf-gold, rgba(0, 0, 0, 0));
     @include transition(opacity .3s ease-in-out);
     bottom: 0;
     content: '';
@@ -140,6 +154,12 @@
     right: 0;
     top: 0;
     z-index: -1;
+
+    // IE9-specific gradient hack
+    .ie9 & {
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYzkwNCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+      filter: none;
+    }
   }
 
   .profile-list-item:hover &:before,

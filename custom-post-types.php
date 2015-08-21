@@ -292,7 +292,19 @@ class Page extends CustomPostType {
 				'desc' => 'Overrides the automatically generated "Mobile" size of the featured image for this page. Recommended image size: 480x300px.',
 				'id' => $prefix.'image_m',
 				'type' => 'file',
-			)
+			),
+			array(
+				'name' => 'Black and White profile list thumbnail',
+				'desc' => 'Recommended image size: 600x600px.',
+				'id' => $prefix.'profile_list_bw',
+				'type' => 'file',
+			),
+			array(
+				'name' => 'Color profile list thumbnail',
+				'desc' => 'Recommended image size: 600x600px.',
+				'id' => $prefix.'profile_list_c',
+				'type' => 'file',
+			),
 		);
 	}
 }

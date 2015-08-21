@@ -208,16 +208,16 @@ function display_profile_list() {
 			<?php
 			if ( $menu_items ) :
 				foreach ( $menu_items as $key => $menu_item ):
-					$profile_img_id = get_post_thumbnail_id( $menu_item->object_id );
-					$profile_img_details = wp_get_attachment_image_src( $profile_img_id, 'profile-thumbnail', true );
+					$profile_img_bw = wp_get_attachment_url( get_post_meta( $menu_item->object_id, 'page_profile_list_bw', true ) );
+					$profile_img_c = wp_get_attachment_url( get_post_meta( $menu_item->object_id, 'page_profile_list_c', true ) );
 
-					$profile_img = $profile_img_details[0];
 					$profile_title = $menu_item->title;
 					$profile_title_alt = get_post_meta( $menu_item->object_id, 'page_title_alt', true );
 			?>
 			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-nopad">
 				<article class="profile-list-item">
-					<div class="profile-img" style="background-image: url(<?php echo $profile_img; ?>);"></div>
+					<div class="profile-img profile-img-bw" style="background-image: url(<?php echo $profile_img_bw; ?>);" ></div>
+					<div class="profile-img profile-img-c" style="background-image: url(<?php echo $profile_img_c; ?>);" ></div>
 					<a class="profile-item-inner" href="<?php echo $menu_item->url; ?>">
 						<div class="profile-item-content">
 							<?php if ( $profile_title !== $profile_title_alt ): ?>
