@@ -1,33 +1,13 @@
-<?php get_header(); the_post();
-
-$featured_img_id = get_post_thumbnail_id($post->ID);
-$featured_img_f = wp_get_attachment_image_src($featured_img_id, 'parallax_feature-full');
-if ($featured_img_f) { ?>
-<main class="page" id="<?=$post->post_name?>">
-	<?php echo get_parallax_page_header($post->ID); ?>
-	<section class="page-content">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1><?php the_title();?></h1>
-				</div>
-			</div>
-		</div>
-		<?php the_content(); ?>
-	</section>
-<?php } else { ?>
-<main class="page page-base" id="<?=$post->post_name?>">
-	<section class="page-content">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1><?php the_title();?></h1>
-				</div>
-			</div>
-		</div>
-		<?php the_content(); ?>
-	</section>
-<?php } ?>
+<?php 
+	get_header(); 
+	the_post();
+	enqueue_custom_files();
+	$html_id = get_post_meta( $post->ID, 'page_html', True );
+	$html_file = wp_get_attachment_url( $html_id );
+	$html = apply_filters('the_content', file_get_contents( $html_file ) );
+?>
+<main class="page page-base" id="<?echo $post->post_name?>">
+	<?php echo $html; ?>
 </main>
 
 <?php get_footer();?>

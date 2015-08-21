@@ -469,4 +469,44 @@ function sc_tubular( $attr ) {
 }
 add_shortcode( 'tubular', 'sc_tubular' );
 
+/*
+ * Search for a image by file name and return its URL.
+ *
+ */
+function sc_image($attr) {
+	global $wpdb, $post;
+	$post_id = wp_is_post_revision($post->ID);
+	if($post_id === False) {
+		$post_id = $post->ID;
+	}
+	$url = '';
+	if(isset($attr['filename']) && $attr['filename'] != '') {
+		$sql = sprintf('SELECT * FROM %s WHERE post_title="%s" AND post_parent=%d ORDER BY post_date DESC', $wpdb->posts, $wpdb->escape($attr['filename']), $post_id);
+		$rows = $wpdb->get_results($sql);
+		if(count($rows) > 0) {
+			$obj = $rows[0];
+			if($obj->post_type == 'attachment' && stripos($obj->post_mime_type, 'image/') == 0) {
+				$url = wp_get_attachment_url($obj->ID);
+			}
+		}
+	}
+	return $url;
+}
+add_shortcode('image', 'sc_image');
+/**
+ * Same as [image], but returns markup safe to use within an element as
+ * a background image
+ **/
+function sc_background_image( $attr ) {
+	$attr = shortcode_atts( array(
+		'filename' => false,
+		'inline_css' => ''
+	), $attr, 'sc_background_image' );
+	if ( $attr['filename'] ) {
+		return sprintf( 'style="background-image: url(%s); %s"', sc_image( $attr ), $attr['inline_css'] );
+	}
+	return '';
+}
+add_shortcode( 'background-image', 'sc_background_image' );
+
 ?>

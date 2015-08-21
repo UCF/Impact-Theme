@@ -175,4 +175,19 @@ function display_social($url, $title) {
     return ob_get_clean();
 }
 
+function enqueue_custom_files() {
+	global $post;
+
+	$custom_css_id = get_post_meta( $post->ID, 'page_stylesheet', True );
+	$custom_js_id = get_post_meta( $post->ID, 'page_javascript', True );
+
+	if ( $custom_css_id ) {
+		wp_enqueue_style( $post->post_name.'-stylesheet', wp_get_attachment_url( $custom_css_id ) );
+	}
+
+	if ( $custom_js_id ) {
+		wp_enqueue_script( $post->post_name.'-javascript', wp_get_attachment_url( $custom_js_id ), null, null, True );
+	}
+}
+
 ?>
