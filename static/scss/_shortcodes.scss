@@ -115,7 +115,8 @@
   padding: 40px;
 
   h2 {
-    font-size: 36px;
+    font-family: $font-family-sans-narrow;
+    font-size: 42px;
     margin-left: 24px;
 
     @media (max-width: $screen-sm-max) {
