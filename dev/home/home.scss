@@ -1,13 +1,13 @@
-$font-family-heading: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
-$font-family-h2-h6:   'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
-$font-family-block:   'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
-$font-family-sans-narrow: 'Open Sans Condensed', sans-serif;
+@import '../../static/scss/variables';
 
-$gold: #ffc904;
+.container-full-width {
+  width: 100%;
+}
 
 // Home Page
 #lead {
   display: table;
+  position: relative;
 
   #lead-content {
     display: table-cell;
@@ -36,19 +36,12 @@ $gold: #ffc904;
 
   h1 {
     color: #fff;
-    font-size: 90px;
+    font-family: $font-family-sans-serif;
+    font-size: 120px;
+    font-style: normal;
     font-weight: 900;
     line-height: 1em;
     margin-bottom: 0;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  h3,
-  p,
-  .alumni-title {
-    color: #fff;
-    font-family: $font-family-h2-h6;
     text-align: center;
     text-transform: uppercase;
   }
@@ -58,52 +51,70 @@ $gold: #ffc904;
   }
 
   h2 {
-      color: $gold;
-      letter-spacing: 6px;
-      margin: 0;
-      text-align: center;
-      text-transform: uppercase;
+    color: $ucf-gold;
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 9px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .alumni-title {
-    font-size: 24px;
+    color: #fff;
+    font-family: $font-family-sans-serif;
+    font-size: 32px;
     font-style: normal;
-    font-weight: 800;
-    line-height: 33px;
+    font-weight: 900;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .alumni {
-    color: $gold;
+    margin-bottom: 150px;
+  }
+
+  .alumni-name {
+    color: $ucf-gold;
     font-family: $font-family-sans-narrow;
     font-size: 24px;
     font-style: italic;
+    font-weight: 400;
+    letter-spacing: 4px;
     text-align: center;
   }
 
   hr {
     border-bottom-color: transparent;
-    border-top-color: #ffc904;
+    border-top-color: $ucf-gold;
     border-top-width: 2px;
     margin: 3.0em auto;
     width: 85%;
   }
 
   .explore {
-    margin-top: 6em;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 
     p {
-      font-size: 22px;
-      font-weight: 600;
+      color: #fff;
+      font-family: $font-family-sans-serif;
+      font-style: normal;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
     }
   }
 
 } // End #lead
 
-.container-full-width {
-  width: 100%;
-}
-
-#making-impact {
+#ucf-impact {
 
   &.container-full-width {
     background-color: #000;
@@ -121,20 +132,25 @@ $gold: #ffc904;
 
   h2 {
     border-top: 3px solid #fff;
-    font-size: 70px;
+    font-family: $font-family-sans-narrow;
+    font-size: 84px;
     padding-top: 30px;
     text-transform: uppercase;
   }
 
   h3 {
-    color: $gold;
-    font-size: 22px;
+    color: $ucf-gold;
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 800;
     margin-bottom: 25px;
     text-transform: uppercase;
   }
 
   p {
-    font-size: 24px;
+    font-family: $font-family-serif;
+    font-size: 28px;
     line-height: 40px;
   }
 
@@ -151,23 +167,29 @@ $gold: #ffc904;
   }
 
   h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
+    font-family: $font-family-sans-narrow;
+    font-size: 55px;
+    font-style: normal;
+    margin: 32px 0;
   }
 
   p {
-    font-size: 18px;
-    line-height: 24px;
-    padding-top: 35px;
+    font-family: $font-family-serif;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 40px 0;
+    padding: 0;
   }
 
   .btn-gold {
     color: #000;
-    background-color: $gold;
-    border-color: $gold;
-    font-size: 28px;
-    margin-top: 60px;
-    margin: 45px 0 0 60px;
+    background-color: $ucf-gold;
+    border-color: $ucf-gold;
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+    font-size: 27px;
+    font-weight: 700;
+    margin: 40px 0;
     padding: 40px;
     text-transform: uppercase;
   }

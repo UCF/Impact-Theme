@@ -178,12 +178,12 @@
 	"\/dev\/home\/home.js": {
 		"fileType": 64,
 		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/dev\/home\/home.js",
-		"outputAbbreviatedPath": "\/dev\/home\/min\/home-min.js",
+		"outputAbbreviatedPath": "\/home.min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/dev\/home\/home.scss": {
@@ -330,7 +330,7 @@
 		},
 	"\/home.min.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/home.min.js",
 		"outputAbbreviatedPath": "\/min\/home.min-min.js",
@@ -3898,6 +3898,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/scss\/_mixins.scss",
 		"outputAbbreviatedPath": "\/static\/css\/_mixins.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/static\/scss\/_parallax.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/scss\/_parallax.scss",
+		"outputAbbreviatedPath": "\/static\/css\/_parallax.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

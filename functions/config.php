@@ -15,7 +15,7 @@ function __init__(){
 	add_image_size('parallax_feature-desktop', 1199, 925, true);
 	add_image_size('parallax_feature-tablet', 767, 450, true);
 	add_image_size('parallax_feature-mobile', 480, 300, true);
-	add_image_size( 'profile-thumbnail', 500, 500, true );
+	add_image_size( 'profile-thumbnail', 600, 600, true );
 	register_nav_menu('nav-menu', __('Navigation Menu'));
 	register_nav_menu( 'profile-list', __( 'Profile List' ) );
 	register_nav_menu( 'social-links', __( 'Social Media Profile Links' ) );

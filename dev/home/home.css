@@ -1,5 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+.container-full-width {
+  width: 100%; }
+
 #lead {
-  display: table; }
+  display: table;
+  position: relative; }
   #lead #lead-content {
     display: table-cell;
     vertical-align: middle; }
@@ -21,37 +26,44 @@
     display: none; }
   #lead h1 {
     color: #fff;
-    font-size: 90px;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 120px;
+    font-style: normal;
     font-weight: 900;
     line-height: 1em;
     margin-bottom: 0;
-    text-align: center;
-    text-transform: uppercase; }
-  #lead h3,
-  #lead p,
-  #lead .alumni-title {
-    color: #fff;
-    font-family: "Gotham SSm 7r", "Gotham SSm A", "Gotham SSm B";
     text-align: center;
     text-transform: uppercase; }
   #lead a:hover, #lead a:focus {
     text-decoration: none; }
   #lead h2 {
     color: #ffc904;
-    letter-spacing: 6px;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 9px;
     margin: 0;
     text-align: center;
     text-transform: uppercase; }
   #lead .alumni-title {
-    font-size: 24px;
+    color: #fff;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-size: 32px;
     font-style: normal;
-    font-weight: 800;
-    line-height: 33px; }
+    font-weight: 900;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase; }
   #lead .alumni {
+    margin-bottom: 150px; }
+  #lead .alumni-name {
     color: #ffc904;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 24px;
     font-style: italic;
+    font-weight: 400;
+    letter-spacing: 4px;
     text-align: center; }
   #lead hr {
     border-bottom-color: transparent;
@@ -60,34 +72,44 @@
     margin: 3.0em auto;
     width: 85%; }
   #lead .explore {
-    margin-top: 6em; }
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%; }
     #lead .explore p {
-      font-size: 22px;
-      font-weight: 600; }
+      color: #fff;
+      font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+      font-style: normal;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase; }
 
-.container-full-width {
-  width: 100%; }
-
-#making-impact.container-full-width {
+#ucf-impact.container-full-width {
   background-color: #000; }
-#making-impact .content {
+#ucf-impact .content {
   margin-top: 100px;
   margin-bottom: 100px; }
-#making-impact h2,
-#making-impact p {
+#ucf-impact h2,
+#ucf-impact p {
   color: #fff; }
-#making-impact h2 {
+#ucf-impact h2 {
   border-top: 3px solid #fff;
-  font-size: 70px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 84px;
   padding-top: 30px;
   text-transform: uppercase; }
-#making-impact h3 {
+#ucf-impact h3 {
   color: #ffc904;
-  font-size: 22px;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 800;
   margin-bottom: 25px;
   text-transform: uppercase; }
-#making-impact p {
-  font-size: 24px;
+#ucf-impact p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 28px;
   line-height: 40px; }
 
 #give-now.container-full-width {
@@ -96,18 +118,24 @@
 #give-now btn {
   text-transform: uppercase; }
 #give-now h2 {
-  font-size: 50px;
-  margin-bottom: 20px; }
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 55px;
+  font-style: normal;
+  margin: 32px 0; }
 #give-now p {
-  font-size: 18px;
-  line-height: 24px;
-  padding-top: 35px; }
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 40px 0;
+  padding: 0; }
 #give-now .btn-gold {
   color: #000;
   background-color: #ffc904;
   border-color: #ffc904;
-  font-size: 28px;
-  margin-top: 60px;
-  margin: 45px 0 0 60px;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 40px 0;
   padding: 40px;
   text-transform: uppercase; }

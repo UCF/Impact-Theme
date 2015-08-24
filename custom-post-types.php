@@ -299,6 +299,30 @@ class Page extends CustomPostType {
 				'id' => $prefix.'profile_list_c',
 				'type' => 'file',
 			),
+			array(
+				'name' => 'Header Image (Desktop - Large)',
+				'desc' => 'Header Image 1200x300',
+				'id'   => $prefix.'header_lg',
+				'type' => 'file',
+			),
+			array(
+				'name' => 'Header Image (Medium)',
+				'desc' => 'Header Image 992x248',
+				'id'   => $prefix.'header_md',
+				'type' => 'file',
+			),
+			array(
+				'name' => 'Header Image (Small)',
+				'desc' => 'Header Image 768x350',
+				'id'   => $prefix.'header_sm',
+				'type' => 'file',
+			),
+			array(
+				'name' => 'Header Image (Mobile)',
+				'desc' => 'Header Image 768x480',
+				'id'   => $prefix.'header_xs',
+				'type' => 'file',
+			),
 		);
 	}
 }

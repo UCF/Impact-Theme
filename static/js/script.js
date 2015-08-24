@@ -179,70 +179,6 @@ var addBodyClasses = function($) {
   $('body').addClass(bodyClass);
 }
 
-
-var parallaxPhotos = function($) {
-  function isTabletSize() {
-    if ($(window).width() <= 768) {
-      return true;
-    }
-    return false;
-  }
-
-  /* Detect touch-enabled browsers.  (Modernizr check) */
-  function isTouchDevice() {
-      return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
-  }
-
-  var toggleFixedBg = function() {
-    if (isTabletSize() || isTouchDevice()) {
-      $('.parallax-photo').css({
-        'background-attachment': 'scroll',
-        'background-position': 'center center'
-      });
-    }
-    else {
-      $('.parallax-photo').each(function() {
-        var $photo = $(this),
-            photoOffset = $photo.offset().top,
-            photoHeight = $photo.height();
-
-        var img = new Image();
-        var url = $photo.css('background-image').match(/^url\("?(.+?)"?\)$/);
-        if (url[1]) {
-          url = url[1];
-        }
-        img.src = url;
-
-        $(img).on('load', function() {
-          var imgOffset = (((img.height - photoHeight) / 2) - photoOffset) * -1;
-          $photo.css({
-            'background-attachment': 'fixed',
-            'background-position': 'center ' + imgOffset + 'px'
-          });
-        });
-      });
-    }
-  };
-
-  $(window).on('load resize', toggleFixedBg);
-  $(window).on('resize', function() {
-    setTimeout(toggleFixedBg, 150);
-  });
-};
-
-
-/* Fit subpage title text within the heading's set width */
-var subpageTitleSize = function($) {
-  var h1 = $('.parallax-header h1');
-  if ($('body').hasClass('ie8')) {
-    h1.fitText(0.75, { minFontSize: '20px', maxFontSize: '120px' });
-  }
-  else {
-    h1.fitText(0.7, { minFontSize: '20px', maxFontSize: '120px' });
-  }
-}
-
-
 /* Add Bootstrap button styles for GravityForm submit buttons */
 var styleGformButtons = function($) {
   $('.gform_button').addClass('btn');
@@ -308,8 +244,6 @@ if (typeof jQuery != 'undefined'){
     Generic.PostTypeSearch($);
 
     addBodyClasses($);
-    // parallaxPhotos($);
-    subpageTitleSize($);
     styleGformButtons($);
     mobileNavToggle($);
   });
