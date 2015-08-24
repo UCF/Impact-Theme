@@ -33,3 +33,17 @@
     background-size: $width $height;
   }
 }
+
+// Applies $font-family-sans-serif font library with font-style override for compatibility with old IE
+@mixin sans-serif-text() {
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+}
+
+// Applies $font-family-sans-narrow font library with necessary font overrides for consistency
+@mixin narrow-text() {
+  font-family: $font-family-sans-narrow;
+  letter-spacing: -.04em;
+  line-height: .9;
+  text-transform: uppercase;
+}
