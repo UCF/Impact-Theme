@@ -16,8 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "FitText.js": "1.2.0",
-    "jquery-tubulaa.js": "0.0.1",
-    "bootstrap-sass-official": "v3.3.4"
+    "bootstrap-sass-official": "v3.3.5"
   }
 }
