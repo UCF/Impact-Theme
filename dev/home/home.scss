@@ -26,12 +26,13 @@
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) no-repeat;
     background-size: cover;
   }
 
   #videoImage {
     display: none;
+    min-width: 100%;
+    min-height: 100%;
   }
 
   h1 {
@@ -114,7 +115,8 @@
 
 } // End #lead
 
-#ucf-impact {
+#impact-at-ucf {
+  background-repeat: no-repeat;
 
   &.container-full-width {
     background-color: #000;
@@ -154,7 +156,7 @@
     line-height: 40px;
   }
 
-} // End #making-impact
+} // End #impact-at-ucf
 
 #give-now {
   &.container-full-width {
