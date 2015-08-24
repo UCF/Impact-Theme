@@ -50,17 +50,3 @@
 
 	</head>
 	<body class="<?=body_classes()?>">
-
-	<?php if ( !is_front_page() ): ?>
-		<nav class="header-nav">
-			<a class="mobile-nav-toggle" href="#"><div class="hamburger"></div>Menu</a>
-			<?=wp_nav_menu(array(
-				'theme_location' => 'nav-menu',
-				'container' => false,
-				'menu_class' => 'menu '.get_header_styles(),
-				'menu_id' => 'header-menu',
-				'depth' => 1
-				));
-			?>
-		</nav>
-	<?php endif; ?>
