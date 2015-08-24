@@ -287,5 +287,6 @@ function enqueue_custom_files() {
 		wp_enqueue_script( $post->post_name.'-javascript', wp_get_attachment_url( $custom_js_id ), null, null, True );
 	}
 }
+add_action( 'wp_enqueue_scripts', 'enqueue_custom_files' );
 
 ?>

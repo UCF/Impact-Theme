@@ -41,21 +41,5 @@
 			};
 		</script>
 
-
-		<?php
-		global $post;
-		if ( $post ):
-			$post_type = get_post_type( $post->ID );
-			if (
-				( $stylesheet_id = get_post_meta( $post->ID, $post_type . '_stylesheet', True ) ) !== False
-				&& ( $stylesheet_url = wp_get_attachment_url( $stylesheet_id ) ) !== False
-			):
-		?>
-				<link rel="stylesheet" href="<?php echo $stylesheet_url; ?>" type="text/css" media="all">
-		<?php
-			endif;
-		endif;
-		?>
-
 	</head>
 	<body ontouchstart <?php body_class( body_classes() ); ?>>
