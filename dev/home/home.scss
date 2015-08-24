@@ -7,6 +7,7 @@
 // Home Page
 #lead {
   display: table;
+  position: relative;
 
   #lead-content {
     display: table-cell;
@@ -73,6 +74,10 @@
   }
 
   .alumni {
+    margin-bottom: 150px;
+  }
+
+  .alumni-name {
     color: $ucf-gold;
     font-family: $font-family-sans-narrow;
     font-size: 24px;
@@ -91,7 +96,10 @@
   }
 
   .explore {
-    margin-top: 6em;
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 
     p {
       color: #fff;
