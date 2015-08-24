@@ -451,27 +451,9 @@ function sc_lead( $attr, $content='' ) {
 }
 add_shortcode( 'lead', 'sc_lead' );
 
-/**
- * Insert tubular JS to add background video
- **/
-function sc_tubular( $attr ) {
-	$id = $attr['id'] ? $attr['id'] : null;
-	ob_start();
-	?>
-	<script type="text/javascript" charset="utf-8" src="//cdn.lukej.me/jquery.tubular/1.0.1/jquery.tubular.1.0.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('main').tubular({videoId: '<?php echo $id; ?>'});
-		});
-	</script>
-	<?php
-	return ob_get_clean();
-}
-add_shortcode( 'tubular', 'sc_tubular' );
 
 /*
  * Search for a image by file name and return its URL.
- *
  */
 function sc_image($attr) {
 	global $wpdb, $post;
@@ -493,6 +475,8 @@ function sc_image($attr) {
 	return $url;
 }
 add_shortcode('image', 'sc_image');
+
+
 /**
  * Same as [image], but returns markup safe to use within an element as
  * a background image
@@ -509,6 +493,7 @@ function sc_background_image( $attr ) {
 }
 add_shortcode( 'background-image', 'sc_background_image' );
 
+
 function sc_header_image_css( $attr, $content='' ) {
 	global $post;
 	ob_start();
@@ -523,6 +508,7 @@ function sc_header_image_css( $attr, $content='' ) {
 	return ob_get_clean();
 }
 add_shortcode( 'header-image-css', 'sc_header_image_css' );
+
 
 function sc_call_to_action_bar( $attr ) {
 	$attr = shortcode_atts( array(
