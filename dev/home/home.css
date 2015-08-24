@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+.container-full-width {
+  width: 100%; }
+
 #lead {
   display: table; }
   #lead #lead-content {
@@ -24,37 +27,40 @@
     color: #fff;
     font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
     font-size: 120px;
+    font-style: normal;
     font-weight: 900;
     line-height: 1em;
     margin-bottom: 0;
-    text-align: center;
-    text-transform: uppercase; }
-  #lead h3,
-  #lead p,
-  #lead .alumni-title {
-    color: #fff;
-    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
     text-align: center;
     text-transform: uppercase; }
   #lead a:hover, #lead a:focus {
     text-decoration: none; }
   #lead h2 {
     color: #ffc904;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-style: normal;
     font-size: 32px;
+    font-weight: 700;
     letter-spacing: 9px;
     margin: 0;
     text-align: center;
     text-transform: uppercase; }
   #lead .alumni-title {
+    color: #fff;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
     font-size: 32px;
     font-style: normal;
-    font-weight: 800;
-    line-height: 33px; }
+    font-weight: 900;
+    line-height: 45px;
+    text-align: center;
+    text-transform: uppercase; }
   #lead .alumni {
     color: #ffc904;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 24px;
     font-style: italic;
+    font-weight: 400;
+    letter-spacing: 4px;
     text-align: center; }
   #lead hr {
     border-bottom-color: transparent;
@@ -65,11 +71,13 @@
   #lead .explore {
     margin-top: 6em; }
     #lead .explore p {
+      color: #fff;
+      font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+      font-style: normal;
       font-size: 26px;
-      font-weight: 600; }
-
-.container-full-width {
-  width: 100%; }
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase; }
 
 #ucf-impact.container-full-width {
   background-color: #000; }
@@ -81,12 +89,16 @@
   color: #fff; }
 #ucf-impact h2 {
   border-top: 3px solid #fff;
-  font-size: 120px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 84px;
   padding-top: 30px;
   text-transform: uppercase; }
 #ucf-impact h3 {
   color: #ffc904;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
   font-size: 24px;
+  font-weight: 800;
   margin-bottom: 25px;
   text-transform: uppercase; }
 #ucf-impact p {
@@ -100,19 +112,24 @@
 #give-now btn {
   text-transform: uppercase; }
 #give-now h2 {
-  font-size: 72px;
-  margin-bottom: 20px; }
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 55px;
+  font-style: normal;
+  margin: 32px 0; }
 #give-now p {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
   line-height: 28px;
-  padding-top: 35px; }
+  margin: 40px 0;
+  padding: 0; }
 #give-now .btn-gold {
   color: #000;
   background-color: #ffc904;
   border-color: #ffc904;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
   font-size: 27px;
-  margin-top: 60px;
-  margin: 45px 0 0;
+  font-weight: 700;
+  margin: 40px 0;
   padding: 40px;
   text-transform: uppercase; }
