@@ -118,15 +118,28 @@
   h2 {
     font-size: 36px;
     margin-left: 24px;
+
+    @media (max-width: $screen-sm-max) {
+      text-align: center;
+    }
   }
 
   p {
     font-size: 24px;
+
+    @media (max-width: $screen-sm-max) {
+      text-align: center;
+    }
   }
 
   .btn-cta {
     box-shadow: 0 4px 4px #efefef;
-    padding: 22px 34px;
+    margin-top: 22px;
+    padding: 27px 34px;
+
+    @media (max-width: $screen-sm-max) {
+      @include center-block();
+    }
   }
 }
 
