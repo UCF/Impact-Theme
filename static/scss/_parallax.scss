@@ -67,18 +67,6 @@
   }
 }
 
-.parallax-header h1 {
-  bottom: -.27em;
-  color: #fff;
-  display: block;
-  font-size: 120px;
-  left: 0;
-  line-height: 1em;
-  position: absolute;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .65);
-  width: 70%;
-}
-
 // Full-size (x-large) screens (1200x+ wide)
 @media all and (min-width: $screen-lg-min) {
   .parallax-header .parallax-photo {

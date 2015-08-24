@@ -1,9 +1,10 @@
-h2.impact-title {
-	margin-top: 0;
-	color: #fc0;
-	font-size: 32px;
-	font-weight: 700;
-	text-transform: none;
+h1 {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-size: 36px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .impact-facts {
@@ -47,4 +48,34 @@ h2.impact-title {
 	.right-rail {
 		margin-top: 25px;
 	}
+}
+
+p {
+	font-size: 20px;
+	line-height: 32px;
+	margin: 24px 0 12px 0;
+}
+
+.lead {
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 40px;
+	padding: 20px 0 30px 0;
+}
+
+.lead a {
+	color: #fc0;
+}
+
+.lead a:hover {
+	text-decoration: none;
+	color: #c90;
+}
+
+.dl-horizontal {
+	font-size: 22px;
+}
+
+.dl-horizontal dt {
+	text-align: left;
 }
