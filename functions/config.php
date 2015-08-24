@@ -2,20 +2,24 @@
 
 /**
  * Responsible for running code that needs to be executed as wordpress is
- * initializing.  Good place to register scripts, stylesheets, theme elements,
- * etc.
+ * initializing.  Good place to register theme support options, widgets,
+ * menu locations, etc.
  *
  * @return void
  * @author Jared Lang
  **/
 function __init__(){
-	add_theme_support('menus');
-	add_theme_support('post-thumbnails');
+	add_theme_support( 'menus' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'title-tag' );
+
 	add_image_size('parallax_feature-full', 2000, 1200, true);
 	add_image_size('parallax_feature-desktop', 1199, 925, true);
 	add_image_size('parallax_feature-tablet', 767, 450, true);
 	add_image_size('parallax_feature-mobile', 480, 300, true);
+
 	register_nav_menu('nav-menu', __('Navigation Menu'));
+
 	register_sidebar(array(
 		'name'          => __('Sidebar'),
 		'id'            => 'sidebar',
@@ -23,16 +27,58 @@ function __init__(){
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 	));
-	foreach(Config::$styles as $style){Config::add_css($style);}
-	foreach(Config::$scripts as $script){Config::add_script($script);}
 
 	global $timer;
 	$timer = Timer::start();
 
-	wp_deregister_script('l10n');
 	set_defaults_for_options();
 }
 add_action('after_setup_theme', '__init__');
+
+
+/**
+ * Register frontend scripts and stylesheets.
+ **/
+function enqueue_frontend_theme_assets() {
+	wp_deregister_script( 'l10n' );
+
+	// Register Config css, js
+	foreach( Config::$styles as $style ) {
+		if ( !isset( $style['admin'] ) || ( isset( $style['admin'] ) && $style['admin'] !== true ) ) {
+			Config::add_css( $style );
+		}
+	}
+	foreach( Config::$scripts as $script ) {
+		if ( !isset( $script['admin'] ) || ( isset( $script['admin'] ) && $script['admin'] !== true ) ) {
+			Config::add_script( $script );
+		}
+	}
+
+	// Re-register jquery in document head
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', '//code.jquery.com/jquery-1.11.0.min.js' );
+	wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_frontend_theme_assets' );
+
+
+/**
+ * Register backend scripts and stylesheets.
+ **/
+function enqueue_backend_theme_assets() {
+	// Register Config css, js
+	foreach( Config::$styles as $style ) {
+		if ( isset( $style['admin'] ) && $style['admin'] == true ) {
+			Config::add_css( $style );
+		}
+	}
+	foreach( Config::$scripts as $script ) {
+		if ( isset( $script['admin'] ) && $script['admin'] == true ) {
+			Config::add_script( $script );
+		}
+	}
+}
+add_action( 'admin_enqueue_scripts', 'enqueue_backend_theme_assets' );
 
 
 
@@ -60,6 +106,7 @@ define('CB_DOMAIN', $theme_options['cb_domain']);
 # Timeout for data grabbed from feeds
 define('FEED_FETCH_TIMEOUT', 10); // seconds
 
+
 /**
  * Set config values including meta tags, registered custom post types, styles,
  * scripts, and any other statically defined assets that belong in the Config
@@ -73,6 +120,7 @@ Config::$custom_post_types = array(
 Config::$custom_taxonomies = array();
 
 Config::$body_classes = array('default',);
+
 
 /**
  * Grab array of pages for Config::$theme_settings:
@@ -195,24 +243,6 @@ Config::$theme_settings = array(
 		)),
 	),
 	'Social' => array(
-		new RadioField(array(
-			'name'        => 'Enable OpenGraph',
-			'id'          => THEME_OPTIONS_NAME.'[enable_og]',
-			'description' => 'Turn on the opengraph meta information used by Facebook.',
-			'default'     => 1,
-			'choices'     => array(
-				'On'  => 1,
-				'Off' => 0,
-			),
-			'value'       => $theme_options['enable_og'],
-	    )),
-		new TextField(array(
-			'name'        => 'Facebook Admins',
-			'id'          => THEME_OPTIONS_NAME.'[fb_admins]',
-			'description' => 'Comma seperated facebook usernames or user ids of those responsible for administrating any facebook pages created from pages on this site. Example: <em>592952074, abe.lincoln</em>',
-			'default'     => null,
-			'value'       => $theme_options['fb_admins'],
-		)),
 		new TextField(array(
 			'name'        => 'Facebook URL',
 			'id'          => THEME_OPTIONS_NAME.'[facebook_url]',
@@ -254,6 +284,35 @@ Config::$theme_settings = array(
 	),
 );
 
+
+/**
+ * If Yoast SEO is activated, assume we're handling ALL SEO-related
+ * modifications with it.  Don't add Facebook Opengraph theme options.
+ **/
+if ( !is_plugin_active( 'wordpress-seo/wp-seo.php' ) ) {
+	array_unshift( Config::$theme_settings['Social'],
+		new RadioField(array(
+			'name'        => 'Enable OpenGraph',
+			'id'          => THEME_OPTIONS_NAME.'[enable_og]',
+			'description' => 'Turn on the opengraph meta information used by Facebook.',
+			'default'     => 1,
+			'choices'     => array(
+				'On'  => 1,
+				'Off' => 0,
+			),
+			'value'       => $theme_options['enable_og'],
+	    )),
+		new TextField(array(
+			'name'        => 'Facebook Admins',
+			'id'          => THEME_OPTIONS_NAME.'[fb_admins]',
+			'description' => 'Comma seperated facebook usernames or user ids of those responsible for administrating any facebook pages created from pages on this site. Example: <em>592952074, abe.lincoln</em>',
+			'default'     => null,
+			'value'       => $theme_options['fb_admins'],
+		))
+	);
+}
+
+
 Config::$links = array(
 	array('rel' => 'shortcut icon', 'href' => THEME_IMG_URL.'/favicon.ico',),
 	array('rel' => 'alternate', 'type' => 'application/rss+xml', 'href' => get_bloginfo('rss_url'),),
@@ -262,7 +321,6 @@ Config::$links = array(
 
 Config::$styles = array(
 	array('admin' => True, 'src' => THEME_CSS_URL.'/admin.css',),
-	plugins_url( 'gravityforms/css/forms.css' ),
 	array('name' => 'theme-styles', 'src' => THEME_CSS_URL.'/style.min.css',),
 );
 
@@ -271,28 +329,23 @@ if (!empty($theme_options['cloud_font_key'])) {
 	//array_push(Config::$styles, array('name' => 'font-cloudtypography-admin', 'admin' => True, 'src' => $theme_options['cloud_font_key']));
 }
 
+
 Config::$scripts = array(
 	array('admin' => True, 'src' => THEME_JS_URL.'/admin.js',),
 	array('name' => 'ucfhb-script', 'src' => '//universityheader.ucf.edu/bar/js/university-header.js?use-1200-breakpoint=1',),
 	array('name' => 'theme-script', 'src' => THEME_JS_URL.'/script.min.js',),
 );
 
+
 Config::$metas = array(
-	array('charset' => 'utf-8',),
+	array( 'charset' => 'utf-8' ),
+	array( 'http-equiv' => 'X-UA-Compatible', 'content' => 'IE=Edge' ),
+	array( 'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0' ),
 );
-if ($theme_options['gw_verify']){
+
+if ( $theme_options['gw_verify'] ) {
 	Config::$metas[] = array(
 		'name'    => 'google-site-verification',
-		'content' => htmlentities($theme_options['gw_verify']),
+		'content' => htmlentities( $theme_options['gw_verify'] ),
 	);
 }
-
-
-
-function jquery_in_header() {
-    wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js');
-    wp_enqueue_script( 'jquery' );
-}
-
-add_action('wp_enqueue_scripts', 'jquery_in_header');
