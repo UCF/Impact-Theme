@@ -62,5 +62,5 @@
 			</div>
 		</footer>
 	</body>
-	<?php echo "\n" . footer_() . "\n"; ?>
+	<?php echo footer_(); ?>
 </html>
