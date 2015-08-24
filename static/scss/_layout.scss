@@ -113,30 +113,46 @@
 
 .profile-list-title {
   @include narrow-text();
-  font-size: 50px;
+  font-size: 50px; // fallback for non-vw support
+  font-size: 5vw;
   margin-top: 0;
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 50px;
+    font-size: 3.5vw;
+  }
 
   @media (max-width: $screen-sm-max) {
     font-size: 36px;
+    font-size: 5vw;
   }
 
   @media (max-width: $screen-xs-max) {
     font-size: 23px;
+    font-size: 7vw;
   }
 }
 
 .profile-list-description {
   font-size: 18px;
+  font-size: 1.8vw;
   line-height: 1.25;
   margin-top: 20px;
 
+  @media (min-width: $screen-lg-min) {
+    font-size: 18px;
+    font-size: 1.4vw;
+  }
+
   @media (max-width: $screen-sm-max) {
     font-size: 16px;
+    font-size: 2vw;
     margin-top: 15px;
   }
 
   @media (max-width: $screen-xs-max) {
     font-size: 12.5px;
+    font-size: 3.5vw;
     margin-top: 10px;
   }
 }
@@ -145,6 +161,7 @@
   display: block;
   font-family: $font-family-serif;
   font-size: 18px;
+  font-size: 1.6vw;
   font-style: italic;
   font-weight: normal;
   margin: 0;
@@ -153,12 +170,19 @@
   right: 5%;
   top: 6%;
 
+  @media (min-width: $screen-lg-min) {
+    font-size: 18px;
+    font-size: 1.3vw;
+  }
+
   @media (max-width: $screen-sm-max) {
     font-size: 16px;
+    font-size: 1.9vw;
   }
 
   @media (max-width: $screen-xs-max) {
     font-size: 14px;
+    font-size: 3.75vw;
   }
 }
 
@@ -168,18 +192,26 @@
   bottom: 0;
   display: block;
   font-size: 36px;
+  font-size: 3.5vw;
   left: 0;
   padding: 10%;
   position: absolute;
   right: 0;
   width: 100%;
 
+  @media (min-width: $screen-lg-min) {
+    font-size: 36px;
+    font-size: 2.75vw;
+  }
+
   @media (max-width: $screen-sm-max) {
     font-size: 30px;
+    font-size: 3.5vw;
   }
 
   @media (max-width: $screen-xs-max) {
     font-size: 22px;
+    font-size: 6vw;
   }
 
   &:empty {
