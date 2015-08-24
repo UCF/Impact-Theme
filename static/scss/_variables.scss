@@ -16,12 +16,15 @@ $font-family-serif:      Georgia, 'Times New Roman', Times, serif !default;
 $font-family-sans-serif: 'Gotham SSm A', 'Gotham SSm B', sans-serif !default;
 $font-family-base:       $font-family-serif;
 
-$font-size-base: 16px !default;
+$font-size-base:   16px !default;
+$line-height-base: 1.5;
 
 $font-size-h1: 42px;
 $headings-font-weight: 600;
 
-$link-color: #922 !default;
+$brand-primary:       $ucf-gold;
+$btn-primary-color:   #000;
+$link-color:          #922 !default;
 
 // Kill border-radius on all components
 $border-radius-base: 0 !default;

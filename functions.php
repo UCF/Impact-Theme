@@ -174,6 +174,105 @@ function display_social($url, $title) {
     return ob_get_clean();
 }
 
+
+/**
+ * Displays a full-width grid list of impact profiles, using pages in the
+ * profile-list menu.
+ **/
+function display_profile_list() {
+	$menu_name = 'profile-list';
+
+    if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[$menu_name] ) ) {
+		$menu = wp_get_nav_menu_object( $locations[$menu_name] );
+		$menu_items = wp_get_nav_menu_items( $menu->term_id );
+	}
+
+	ob_start();
+?>
+<nav class="profile-list">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-nopad">
+				<div class="profile-list-item profile-item-lead">
+					<div class="profile-item-inner">
+						<div class="profile-item-content">
+							<h2 class="profile-list-title"><?php echo get_theme_option( 'profile_list_title' ); ?></h2>
+							<div class="profile-list-description">
+								<?php echo get_theme_option( 'profile_list_description' ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<?php
+			if ( $menu_items ) :
+				foreach ( $menu_items as $key => $menu_item ):
+					$profile_img_bw = wp_get_attachment_url( get_post_meta( $menu_item->object_id, 'page_profile_list_bw', true ) );
+					$profile_img_c = wp_get_attachment_url( get_post_meta( $menu_item->object_id, 'page_profile_list_c', true ) );
+
+					$profile_title = $menu_item->title;
+					$profile_title_alt = get_post_meta( $menu_item->object_id, 'page_subtitle', true );
+			?>
+			<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 col-nopad">
+				<article class="profile-list-item">
+					<div class="profile-img profile-img-bw" style="background-image: url(<?php echo $profile_img_bw; ?>);" ></div>
+					<div class="profile-img profile-img-c" style="background-image: url(<?php echo $profile_img_c; ?>);" ></div>
+					<a class="profile-item-inner" href="<?php echo $menu_item->url; ?>">
+						<div class="profile-item-content">
+							<?php if ( $profile_title !== $profile_title_alt ): ?>
+								<h3 class="profile-title"><?php echo $profile_title; ?></h3>
+							<?php endif; ?>
+
+							<span class="profile-title-alt"><?php echo $profile_title_alt; ?></span>
+						</div>
+					</a>
+				</article>
+			</div>
+			<?php
+				endforeach;
+			endif;
+			?>
+		</div>
+	</div>
+</nav>
+<?php
+	return ob_get_clean();
+}
+
+
+/**
+ * Displays the organization address and phone number defined in Theme Options.
+ **/
+function display_address() {
+	$address = get_theme_option( 'organization_address' );
+	$phone = get_theme_option( 'site_contact_phone' );
+
+	ob_start();
+?>
+
+	<?php if ( $address ): ?>
+	<address>
+		<?php echo nl2br( wptexturize( $address ) ); ?>
+
+		<?php if ( $phone ): ?>
+		<br>
+		<a href="tel:<?php echo preg_replace( '/[^0-9]/', '', $phone ); ?>">
+			<?php echo $phone; ?>
+		</a>
+		<?php endif; ?>
+	</address>
+	<?php endif; ?>
+
+<?php
+	return ob_get_clean();
+}
+
+
+
+/**
+ * Enqueues page-specific css and js.
+ **/
 function enqueue_custom_files() {
 	global $post;
 

@@ -18,7 +18,53 @@
 .panel,
 .well {
   @include no-font-smoothing();
-  font-family: $font-family-sans-serif;
+  @include sans-serif-text();
+}
+
+
+// btn overrides
+.btn {
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 0 solid transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  border-bottom: 6px solid $btn-default-border;
+}
+
+.btn-primary {
+  border-bottom: 6px solid $btn-primary-border;
+}
+
+.btn-success {
+  border-bottom: 6px solid $btn-success-border;
+}
+
+.btn-info {
+  border-bottom: 6px solid $btn-info-border;
+}
+
+.btn-warning {
+  border-bottom: 6px solid $btn-warning-border;
+}
+
+.btn-danger {
+  border-bottom: 6px solid $btn-danger-border;
+}
+
+.btn-xl {
+  @include button-size(18px, 36px, 24px, 1.4, 0);
+}
+
+
+// UCF logo
+.ucf-logo-white {
+  height: auto;
+  max-width: 100%;
+  width: 175px; // downsize so retina devices see high-res
 }
 
 
@@ -116,7 +162,7 @@ iframe[name="google_conversion_frame"] {
 }
 
 
-// Social Buttons
+// Social Share Buttons
 .share-twitter,
 .share-facebook,
 .share-googleplus,
@@ -176,5 +222,44 @@ iframe[name="google_conversion_frame"] {
   &:active,
   &:focus {
     background-position: -284px -31px;
+  }
+}
+
+
+// Social Media Profile Buttons
+.social-links {
+  @extend .list-inline;
+
+  li {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  a {
+    @include sprite('../img/social-square.png', '../img/social-square-r.png', 162px, 28px);
+    display: inline-block;
+    height: 28px;
+    margin-top: 5px;
+    width: 30px;
+
+    &[href*="twitter"] {
+      background-position: -67px 0;
+    }
+
+    &[href*="facebook"] {
+      background-position: 1px 0;
+    }
+
+    &[href*="plus.google"] {
+      background-position: -133px 0;
+    }
+
+    &[href*="flickr"] {
+      background-position: -32px 0;
+    }
+
+    &[href*="youtube"] {
+      background-position: -100px 0;
+    }
   }
 }

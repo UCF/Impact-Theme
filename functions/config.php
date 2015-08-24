@@ -15,7 +15,10 @@ function __init__(){
 	add_image_size('parallax_feature-desktop', 1199, 925, true);
 	add_image_size('parallax_feature-tablet', 767, 450, true);
 	add_image_size('parallax_feature-mobile', 480, 300, true);
+	add_image_size( 'profile-thumbnail', 600, 600, true );
 	register_nav_menu('nav-menu', __('Navigation Menu'));
+	register_nav_menu( 'profile-list', __( 'Profile List' ) );
+	register_nav_menu( 'social-links', __( 'Social Media Profile Links' ) );
 	register_sidebar(array(
 		'name'          => __('Sidebar'),
 		'id'            => 'sidebar',
@@ -127,6 +130,47 @@ Config::$theme_settings = array(
 			'default'     => 'http://events.ucf.edu',
 		)),
 	),
+	'Footer' => array(
+		new TextField(array(
+			'name'        => 'Profile list title',
+			'id'          => THEME_OPTIONS_NAME.'[profile_list_title]',
+			'description' => 'Text used in the heading for Impact profile lists.',
+			'value'       => $theme_options['profile_list_title'],
+		)),
+		new TextareaField(array(
+			'name'        => 'Profile list description',
+			'id'          => THEME_OPTIONS_NAME.'[profile_list_description]',
+			'description' => 'Description text for Impact profile lists.',
+			'value'       => $theme_options['profile_list_description'],
+		)),
+		new TextField(array(
+			'name'        => 'Footer Call-to-action Title',
+			'id'          => THEME_OPTIONS_NAME.'[footer_cta_title]',
+			'description' => 'Text used in the heading for the call-to-action section of the footer.',
+			'default'     => 'What Will Your Impact Be?',
+			'value'       => $theme_options['footer_cta_title'],
+		)),
+		new TextareaField(array(
+			'name'        => 'Footer Call-to-action Description',
+			'id'          => THEME_OPTIONS_NAME.'[footer_cta_description]',
+			'description' => 'Content displayed in the call-to-action section of the footer.  Accepts HTML and shortcode content.',
+			'default'     => 'Help UCF students continue to make an impact on our community today.',
+			'value'       => $theme_options['footer_cta_description'],
+		)),
+		new TextField(array(
+			'name'        => 'Footer Call-to-action Text',
+			'id'          => THEME_OPTIONS_NAME.'[footer_cta_text]',
+			'description' => 'Text in the call-to-action button in the footer.',
+			'default'     => 'Give Now',
+			'value'       => $theme_options['footer_cta_text'],
+		)),
+		new TextField(array(
+			'name'        => 'Footer Call-to-action URL',
+			'id'          => THEME_OPTIONS_NAME.'[footer_cta_url]',
+			'description' => 'Where the call-to-action button in the footer links out to.',
+			'value'       => $theme_options['footer_cta_url'],
+		)),
+	),
 	'Search' => array(
 		new RadioField(array(
 			'name'        => 'Enable Google Search',
@@ -162,36 +206,23 @@ Config::$theme_settings = array(
 			'value'       => $theme_options['site_contact'],
 		)),
 		new TextField(array(
+			'name'        => 'Contact Phone Number',
+			'id'          => THEME_OPTIONS_NAME.'[site_contact_phone]',
+			'description' => 'Contact phone number that visitors to your site can use to contact you.',
+			'value'       => $theme_options['site_contact_phone'],
+		)),
+		new TextField(array(
 			'name'        => 'Organization Name',
 			'id'          => THEME_OPTIONS_NAME.'[organization_name]',
 			'description' => 'Your organization\'s name',
+			'default'     => 'Impact',
 			'value'       => $theme_options['organization_name'],
 		)),
-		new TextField(array(
-			'name'        => 'Call to Action Prefix',
-			'id'          => THEME_OPTIONS_NAME.'[cta_prefix]',
-			'description' => 'Your call to action text prefix',
-			'value'       => $theme_options['cta_prefix'],
-		)),
-		new TextField(array(
-			'name'        => 'Call to Action Text',
-			'id'          => THEME_OPTIONS_NAME.'[cta_text]',
-			'description' => 'Your call to action text.',
-			'value'       => $theme_options['cta_text'],
-		)),
-		new TextField(array(
-			'name'        => 'Call to Action Link Text',
-			'id'          => THEME_OPTIONS_NAME.'[cta_link_text]',
-			'description' => 'Your call to action link text',
-			'value'       => $theme_options['cta_link_text'],
-		)),
-		new SelectField(array(
-			'name'        => 'Global Call to Action link',
-			'id'          => THEME_OPTIONS_NAME.'[cta]',
-			'description' => 'Page where the "Partner with Us" links used on the site direct to.',
-			'choices'     => $pages_array,
-			'default'     => $pages_array[0],
-			'value'       => $theme_options['cta'],
+		new TextareaField(array(
+			'name'        => 'Organization Address',
+			'id'          => THEME_OPTIONS_NAME.'[organization_address]',
+			'description' => 'Your organization\'s address',
+			'value'       => $theme_options['organization_address'],
 		)),
 	),
 	'Social' => array(
