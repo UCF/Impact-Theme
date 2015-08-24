@@ -23,14 +23,6 @@ function __init__(){
 	register_nav_menu( 'profile-list', __( 'Profile List' ) );
 	register_nav_menu( 'social-links', __( 'Social Media Profile Links' ) );
 
-	register_sidebar(array(
-		'name'          => __('Sidebar'),
-		'id'            => 'sidebar',
-		'description'   => 'Sidebar found on two column page templates and search pages',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-	));
-
 	global $timer;
 	$timer = Timer::start();
 
