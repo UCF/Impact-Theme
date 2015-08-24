@@ -288,6 +288,18 @@ class Page extends CustomPostType {
 				'type' => 'file',
 			),
 			array(
+				'name' => 'Black and White profile list thumbnail',
+				'desc' => 'Recommended image size: 600x600px.',
+				'id' => $prefix.'profile_list_bw',
+				'type' => 'file',
+			),
+			array(
+				'name' => 'Color profile list thumbnail',
+				'desc' => 'Recommended image size: 600x600px.',
+				'id' => $prefix.'profile_list_c',
+				'type' => 'file',
+			),
+			array(
 				'name' => 'Header Image (Desktop - Large)',
 				'desc' => 'Header Image 1200x300',
 				'id'   => $prefix.'header_lg',

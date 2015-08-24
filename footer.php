@@ -1,26 +1,66 @@
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<nav>
-						<?=wp_nav_menu(array(
-							'theme_location' => 'nav-menu',
-							'container' => 'false',
-							'menu_class' => 'menu horizontal',
-							'menu_id' => 'footer-menu',
-							'fallback_cb' => false,
-							'depth' => 1
-							));
-						?>
-					</nav>
-					<p class="footer-cta"><?php echo get_cta_prefix(); ?> <?php echo get_cta_link(); ?></p>
-					<p class="footer-logo">
-						<a target="_blank" href="http://www.ucf.edu/">Go to ucf.edu</a>
-					</p>
+		<footer class="site-footer">
+			<?php echo display_profile_list(); ?>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-push-4 col-md-7 col-md-push-5 col-sm-12">
+						<div class="footer-headline-address-wrap">
+							<aside class="footer-section footer-address">
+								<?php
+								$org_name = get_theme_option( 'organization_name' );
+								if ( $org_name ):
+								?>
+								<h2 class="footer-section-heading"><?php echo wptexturize( $org_name ); ?></h2>
+								<?php endif; ?>
+
+								<?php echo display_address(); ?>
+
+								<a href="http://www.ucf.edu/">www.ucf.edu</a>
+
+								<?php echo wp_nav_menu( array(
+									'theme_location' => 'social-links',
+									'container' => false,
+									'menu_class' => 'social-links',
+									'depth' => 1,
+								) );
+								?>
+							</aside>
+							<aside class="footer-section footer-headlines">
+								<!-- TODO: where will this content be pulled from? -->
+								<h2 class="footer-section-heading">Headlines</h2>
+								<p>
+									A short explanation of UCF that will get the reader interested and wanting to read the story that is about twentyfive words long.
+								</p>
+								<img class="ucf-logo-white" src="<?php echo THEME_IMG_URL; ?>/logo.png" alt="UCF logo" title="UCF logo">
+							</aside>
+						</div>
+					</div>
+					<div class="col-lg-4 col-lg-pull-8 col-md-5 col-md-pull-7 col-sm-12 col-xs-nopad">
+						<aside class="footer-section give-section-white">
+							<?php
+							$cta_title = get_theme_option( 'footer_cta_title' );
+							$cta_desc = get_theme_option( 'footer_cta_description' );
+							$cta_text = get_theme_option( 'footer_cta_text' );
+							$cta_url = get_theme_option( 'footer_cta_url' );
+							?>
+
+							<?php if ( $cta_title ): ?>
+							<h2 class="give-section-heading"><?php echo wptexturize( $cta_title ); ?></h2>
+							<?php endif; ?>
+
+							<?php if ( $cta_desc ): ?>
+							<?php echo apply_filters( 'the_content', $cta_desc ); ?>
+							<?php endif; ?>
+
+							<?php if ( $cta_text && $cta_url ): ?>
+							<a class="btn btn-primary btn-xl btn-block" href="<?php echo $cta_url; ?>">
+								<?php echo wptexturize( $cta_text ); ?>
+							</a>
+							<?php endif; ?>
+						</aside>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 	</body>
-	<?="\n".footer_()."\n"?>
+	<?php echo "\n" . footer_() . "\n"; ?>
 </html>
