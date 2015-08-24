@@ -524,4 +524,42 @@ function sc_header_image_css( $attr, $content='' ) {
 }
 add_shortcode( 'header-image-css', 'sc_header_image_css' );
 
+function sc_call_to_action_bar( $attr ) {
+	$attr = shortcode_atts( array(
+		'background_color' => '#fc0',
+		'foreground_color' => '#000',
+		'button_background_color' => '#fff',
+		'button_foreground_color' => '#000',
+	), $attr, 'sc_call_to_action_bar');
+
+	$options  = get_option( THEME_OPTIONS_NAME );
+	$cta_page = get_page_by_title( $options['cta'] );
+	$cta_link = $cta_page->permalink;
+
+	ob_start();
+	?>
+
+	<div style="background-color: <?php echo $attr['background_color']; ?>; color: <?php echo $attr['foreground_color']; ?>;" class="cta-bar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h2><?php echo $options['cta_prefix']; ?></h2>
+				</div>
+				<div class="col-md-7">
+					<p><?php echo $options['cta_text']; ?></p>
+				</div>
+				<div class="col-md-2">
+					<a href="<?php echo $cta_link; ?>" class="btn btn-cta" style="background: <?php echo $attr['button_background_color']; ?>; color: <?php echo $attr['button_foreground_color']; ?>">
+						<?php echo $options['cta_link_text']; ?>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'call-to-action-bar', 'sc_call_to_action_bar' );
+
 ?>
