@@ -1,0 +1,175 @@
+$font-family-heading: 'Gotham SSm 8r', 'Gotham SSm A', 'Gotham SSm B';
+$font-family-h2-h6:   'Gotham SSm 7r', 'Gotham SSm A', 'Gotham SSm B';
+$font-family-block:   'Gotham SSm 2r', 'Gotham SSm A', 'Gotham SSm B';
+$font-family-sans-narrow: 'Open Sans Condensed', sans-serif;
+
+$gold: #ffc904;
+
+// Home Page
+#lead {
+  display: table;
+
+  #lead-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  #video,
+  #videoImage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 150%;
+    min-height: 150%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  #videoImage {
+    display: none;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1em;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h3,
+  p,
+  .alumni-title {
+    color: #fff;
+    font-family: $font-family-h2-h6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  a:hover, a:focus {
+    text-decoration: none;
+  }
+
+  h2 {
+      color: $gold;
+      letter-spacing: 6px;
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  .alumni-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 33px;
+  }
+
+  .alumni {
+    color: $gold;
+    font-family: $font-family-sans-narrow;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  hr {
+    border-bottom-color: transparent;
+    border-top-color: #ffc904;
+    border-top-width: 2px;
+    margin: 3.0em auto;
+    width: 85%;
+  }
+
+  .explore {
+    margin-top: 6em;
+
+    p {
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+
+} // End #lead
+
+.container-full-width {
+  width: 100%;
+}
+
+#making-impact {
+
+  &.container-full-width {
+    background-color: #000;
+  }
+
+  .content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  h2,
+  p {
+    color: #fff;
+  }
+
+  h2 {
+    border-top: 3px solid #fff;
+    font-size: 70px;
+    padding-top: 30px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: $gold;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+} // End #making-impact
+
+#give-now {
+  &.container-full-width {
+    background-color: #fff;
+  }
+
+  h2,
+  btn {
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 35px;
+  }
+
+  .btn-gold {
+    color: #000;
+    background-color: $gold;
+    border-color: $gold;
+    font-size: 28px;
+    margin-top: 60px;
+    margin: 45px 0 0 60px;
+    padding: 40px;
+    text-transform: uppercase;
+  }
+
+} // End #give-now

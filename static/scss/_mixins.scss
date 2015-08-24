@@ -1,35 +1,35 @@
-// Generates a flat, block-style element with colored shadows.
-// Assumes the modified element is already block-level (to prevent
-// accidental override of block/inline-block.)
-@mixin color-block($bgcolor, $hlength: 3px, $vlength: 3px, $blurradius: 0, $spread: 0, $shadowcolor: darken($bgcolor, 12%)) {
-  @include material-block();
-  background-color: $bgcolor;
-  box-shadow: $hlength $vlength 0 0 $shadowcolor;
-
-  &:hover,
-  &:active,
-  &:focus,
-  &.active {
-    box-shadow: $hlength $vlength 0 0 $shadowcolor, 3px 3px 5px 0 rgba(0, 0, 0, .5); // overwrite %material-block;
+// Disable IE10+ "x" button on input field
+@mixin ie-no-ms-clear() {
+  &::-ms-clear {
+    display: none;
   }
 }
 
-// A box that extends outward on hover
-@mixin material-block() {
-  @include transition(all .15s ease-in-out);
-
-  &:hover,
-  &:active,
-  &:focus,
-  &.active {
-    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .5);
-    @include translate(-2px, -2px);
-  }
+// Adds font smoothing to an element
+@mixin font-smoothing() {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
-@mixin background-size($size) {
-  -webkit-background-size: $size;
-     -moz-background-size: $size;
-       -o-background-size: $size;
-          background-size: $size;
+// Removes font smoothing from an element
+@mixin no-font-smoothing() {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+}
+
+// Adds necessary CSS for a spritesheet-based element.
+// Extended elements should provide a fixed width, height, and
+// background-position.
+@mixin sprite($url: '../img/spritesheet.png', $url-r: '../img/spritesheet-r.png', $width: 231px, $height: 263px) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  display: block;
+  overflow: hidden;
+  text-indent: 150%;
+  white-space: nowrap;
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url($url-r);
+    background-size: $width $height;
+  }
 }
