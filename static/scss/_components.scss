@@ -60,24 +60,6 @@
 }
 
 
-// Square block divider
-.divider-squares {
-  display: block;
-  height: 32px;
-  margin: 1.2em 0;
-  padding: 0;
-
-  &:before {
-    color: #fff;
-    content: '█ █ █ █ █';
-    font-family: Georgia, 'Apple Symbols', serif;
-    font-size: 32px;
-    letter-spacing: -.075em;
-    line-height: 32px;
-  }
-}
-
-
 // UCF logo
 .ucf-logo-white {
   height: auto;
@@ -180,7 +162,7 @@ iframe[name="google_conversion_frame"] {
 }
 
 
-// Social Buttons
+// Social Share Buttons
 .share-twitter,
 .share-facebook,
 .share-googleplus,
@@ -242,3 +224,47 @@ iframe[name="google_conversion_frame"] {
     background-position: -284px -31px;
   }
 }
+
+
+// Social Media Profile Buttons
+.social-links {
+  @extend .list-inline;
+
+  li {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+.twitter,
+.facebook,
+.googleplus,
+.flickr,
+.youtube {
+  @include sprite('../img/social-square.png', '../img/social-square-r.png', 162px, 28px);
+  display: inline-block;
+  height: 28px;
+  margin-top: 5px;
+  width: 30px;
+}
+
+.twitter {
+  background-position: -67px 0;
+}
+
+.facebook {
+  background-position: 1px 0;
+}
+
+.googleplus {
+  background-position: -133px 0;
+}
+
+.flickr {
+  background-position: -32px 0;
+}
+
+.youtube {
+  background-position: -100px 0;
+}
+

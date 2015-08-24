@@ -3309,6 +3309,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/static\/img\/social-square-r.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11376,
+		"inputAbbreviatedPath": "\/static\/img\/social-square-r.png",
+		"outputAbbreviatedPath": "\/static\/img\/social-square-r.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/static\/img\/social-square.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6130,
+		"inputAbbreviatedPath": "\/static\/img\/social-square.png",
+		"outputAbbreviatedPath": "\/static\/img\/social-square.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/static\/js\/admin.js": {
 		"fileType": 64,
 		"ignore": 1,

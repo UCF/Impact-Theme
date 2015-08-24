@@ -12,8 +12,27 @@
 								Orlando, Florida, 32816<br>
 								<a href="tel:4078232000">407.823.2000</a>
 							</address>
+
 							<a href="http://www.ucf.edu/">www.ucf.edu</a>
-							<div class="divider-squares"></div>
+
+							<!-- TODO: pull from menu? -->
+							<ul class="social-links">
+								<li>
+									<a class="facebook" target="_blank" href="">Facebook</a>
+								</li>
+								<li>
+									<a class="flickr" target="_blank" href="">Flickr</a>
+								</li>
+								<li>
+									<a class="twitter" target="_blank" href="">Twitter</a>
+								</li>
+								<li>
+									<a class="youtube" target="_blank" href="">YouTube</a>
+								</li>
+								<li>
+									<a class="googleplus" target="_blank" href="">Google+</a>
+								</li>
+							</ul>
 						</aside>
 						<aside class="footer-section footer-headlines">
 							<!-- TODO: where will this content be pulled from? -->
