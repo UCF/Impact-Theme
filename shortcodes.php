@@ -530,11 +530,13 @@ function sc_call_to_action_bar( $attr ) {
 		'foreground_color' => '#000',
 		'button_background_color' => '#fff',
 		'button_foreground_color' => '#000',
-	), $attr, 'sc_call_to_action_bar');
+		'header_text' => False,
+		'text' => False,
+		'link_text' => False,
+		'link' => False,
+	), $attr, 'sc_call_to_action_bar' );
 
-	$options  = get_option( THEME_OPTIONS_NAME );
-	$cta_page = get_page_by_title( $options['cta'] );
-	$cta_link = $cta_page->permalink;
+	if ( $attr['header_text'] && $attr['text'] && $attr['link_text'] && $attr['link'] ) :
 
 	ob_start();
 	?>
@@ -543,14 +545,14 @@ function sc_call_to_action_bar( $attr ) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3">
-					<h2><?php echo $options['cta_prefix']; ?></h2>
+					<h2><?php echo $attr['header_text']; ?></h2>
 				</div>
 				<div class="col-md-7">
-					<p><?php echo $options['cta_text']; ?></p>
+					<p><?php echo $attr['text']; ?></p>
 				</div>
 				<div class="col-md-2">
-					<a href="<?php echo $cta_link; ?>" class="btn btn-cta" style="background: <?php echo $attr['button_background_color']; ?>; color: <?php echo $attr['button_foreground_color']; ?>">
-						<?php echo $options['cta_link_text']; ?>
+					<a href="<?php echo $attr['link']; ?>" class="btn btn-cta" style="background: <?php echo $attr['button_background_color']; ?>; color: <?php echo $attr['button_foreground_color']; ?>">
+						<?php echo $attr['link_text']; ?>
 					</a>
 				</div>
 			</div>
@@ -558,7 +560,10 @@ function sc_call_to_action_bar( $attr ) {
 	</div>
 
 	<?php
-	return ob_get_clean();
+		return ob_get_clean();
+	else: // if header_text text and link_text are not set
+		return '';
+	endif;
 }
 add_shortcode( 'call-to-action-bar', 'sc_call_to_action_bar' );
 
