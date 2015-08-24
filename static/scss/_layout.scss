@@ -156,6 +156,10 @@
   @media (max-width: $screen-sm-max) {
     font-size: 16px;
   }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 14px;
+  }
 }
 
 .profile-title-alt {
@@ -169,6 +173,14 @@
   position: absolute;
   right: 0;
   width: 100%;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 30px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 22px;
+  }
 
   &:empty {
     display: none;
@@ -196,10 +208,6 @@
   .profile-list-item:hover &:before,
   .profile-list-item:focus &:before {
     opacity: 1;
-  }
-
-  @media (max-width: $screen-sm-max) {
-    font-size: 30px;
   }
 }
 
