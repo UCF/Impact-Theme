@@ -61,34 +61,33 @@ function get_parallax_feature_img($post_id, $size, $cpt_field) {
  * @param string $t_cpt_field - name (including prefix) of the meta field for the potential overridden image for tablet browsers
  * @param string $m_cpt_field - name (including prefix) of the meta field for the potential overridden image for mobile browsers
  **/
-function get_parallax_feature_css($post_id, $d_cpt_field, $t_cpt_field, $m_cpt_field) {
+function get_parallax_feature_css($post_id, $lg_cpt_field, $md_cpt_field, $sm_cpt_field, $xs_cpt_field) {
 	$featured_img_id = get_post_thumbnail_id($post_id);
 
-	$featured_img_f = wp_get_attachment_image_src($featured_img_id, 'parallax_feature-full');
-	$featured_img_d = get_parallax_feature_img($post_id, 'parallax_feature-desktop', $d_cpt_field);
-	$featured_img_t = get_parallax_feature_img($post_id, 'parallax_feature-tablet', $t_cpt_field);
-	$featured_img_m = get_parallax_feature_img($post_id, 'parallax_feature-mobile', $m_cpt_field);
-	if ($featured_img_f) { $featured_img_f = preg_replace('/^http(s)?\:/', '', $featured_img_f[0]); }
+	$featured_img_lg = get_parallax_feature_img($post_id, 'parallax_feature-full', $lg_cpt_field);
+	$featured_img_md = get_parallax_feature_img($post_id, 'parallax_feature-desktop', $md_cpt_field);
+	$featured_img_sm = get_parallax_feature_img($post_id, 'parallax_feature-tablet', $sm_cpt_field);
+	$featured_img_xs = get_parallax_feature_img($post_id, 'parallax_feature-mobile', $xs_cpt_field);
 
 	ob_start();
 ?>
 	<style type="text/css">
-		<?php if ($featured_img_f) { ?>
-		@media all and (min-width: 1200px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_f?>'); } }
+		<?php if ($featured_img_lg) { ?>
+		@media all and (min-width: 1200px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_lg?>'); } }
 		<?php } ?>
-		<?php if ($featured_img_d) { ?>
-		@media all and (max-width: 1199px) and (min-width: 768px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_d?>'); } }
+		<?php if ($featured_img_md) { ?>
+		@media all and (max-width: 1199px) and (min-width: 992px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_md?>'); } }
 		<?php } ?>
-		<?php if ($featured_img_t) { ?>
-		@media all and (max-width: 767px) and (min-width: 481px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_t?>'); } }
+		<?php if ($featured_img_sm) { ?>
+		@media all and (max-width: 991px) and (min-width: 768px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_sm?>'); } }
 		<?php } ?>
-		<?php if ($featured_img_m) { ?>
-		@media all and (max-width: 480px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_m?>'); } }
+		<?php if ($featured_img_xs) { ?>
+		@media all and (max-width: 767px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_xs?>'); } }
 		<?php } ?>
 	</style>
 	<!--[if lt IE 9]>
 	<style type="text/css">
-		#photo_<?=$post_id?> { background-image: url('<?=$featured_img_d?>'); }
+		#photo_<?=$post_id?> { background-image: url('<?=$featured_img_lg?>'); }
 	</style>
 	<![endif]-->
 <?php
@@ -102,7 +101,7 @@ function get_parallax_feature_css($post_id, $d_cpt_field, $t_cpt_field, $m_cpt_f
 function get_parallax_page_header($page_id) {
 	$page = get_post($page_id);
 	ob_start();
-	echo get_parallax_feature_css($page_id, 'page_image_d', 'page_image_t', 'page_image_m');
+	echo get_parallax_feature_css($page_id, 'page_header_lg', 'page_header_md', 'page_header_sm', 'page_header_xs');
 	?>
 	<section class="parallax-content parallax-header">
 		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>"></div>

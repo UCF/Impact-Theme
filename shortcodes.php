@@ -509,4 +509,19 @@ function sc_background_image( $attr ) {
 }
 add_shortcode( 'background-image', 'sc_background_image' );
 
+function sc_header_image_css( $attr, $content='' ) {
+	global $post;
+	ob_start();
+	echo get_parallax_feature_css( $post->ID, 'page_header_lg', 'page_header_md', 'page_header_sm', 'page_header_xs' );
+	?>
+	<section class="parallax-content parallax-header">
+		<div class="parallax-photo" id="photo_<?php echo $post->ID; ?>">
+			<?php echo $content; ?>
+		</div>
+	</section>
+	<?php
+	return ob_get_clean();
+}
+add_shortcode( 'header-image-css', 'sc_header_image_css' );
+
 ?>

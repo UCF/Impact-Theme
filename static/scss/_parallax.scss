@@ -29,6 +29,7 @@
 
 .parallax-photo {
   // background-attachment: fixed;
+  background-size: cover;
   background-color: #222;
   background-position: center center; // not perfect with fixed position enabled due to header nav height. Overridden via js
   background-repeat: no-repeat;
@@ -81,7 +82,7 @@
 // Full-size (x-large) screens (1200x+ wide)
 @media all and (min-width: $screen-lg-min) {
   .parallax-header .parallax-photo {
-    height: 550px;
+    min-height: 400px;
   }
 }
 
@@ -92,17 +93,10 @@
   }
 }
 
-@media all and (min-width: $screen-lg-min) and (max-height: 768px) {
-  // Try to catch wider screens with less vertical space; i.e. 1366x768px
-  .parallax-header .parallax-photo {
-    height: 450px;
-  }
-}
-
 // "Desktop (medium/large)" screens (1199px-768px wide)
 @media all and (max-width: $screen-md-max) and (min-width: $screen-md-min) {
   .parallax-header .parallax-photo {
-    height: 450px;
+    min-height: 300px;
   }
 }
 
@@ -128,7 +122,7 @@
 // "Tablet (small)" screens (767-481px wide)
 @media all and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
   .parallax-header .parallax-photo {
-    height: 450px;
+    min-height: 250px;
   }
 
   .parallax-photo {
@@ -140,6 +134,7 @@
 
   .parallax-photo {
     background-attachment: scroll; // make sure iPad portrait is reset
+    margin-top: 40px;
   }
 
   .parallax-content .container {
@@ -168,7 +163,8 @@
 // "Mobile (x-small)" screens (>=480px wide)
 @media all and (max-width: $screen-xs-max) {
   .parallax-header .parallax-photo {
-    height: 300px;
+    margin-top: 32px;
+    min-height: 480px;
   }
 
 
