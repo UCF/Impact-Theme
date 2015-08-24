@@ -451,23 +451,6 @@ function sc_lead( $attr, $content='' ) {
 }
 add_shortcode( 'lead', 'sc_lead' );
 
-/**
- * Insert tubular JS to add background video
- **/
-function sc_tubular( $attr ) {
-	$id = $attr['id'] ? $attr['id'] : null;
-	ob_start();
-	?>
-	<script type="text/javascript" charset="utf-8" src="//cdn.lukej.me/jquery.tubular/1.0.1/jquery.tubular.1.0.js"></script>
-	<script type="text/javascript">
-		$(function() {
-			$('main').tubular({videoId: '<?php echo $id; ?>'});
-		});
-	</script>
-	<?php
-	return ob_get_clean();
-}
-add_shortcode( 'tubular', 'sc_tubular' );
 
 /*
  * Search for a image by file name and return its URL.
@@ -493,6 +476,35 @@ function sc_image($attr) {
 	return $url;
 }
 add_shortcode('image', 'sc_image');
+
+
+/*
+ * Search for some arbitrary media in the media library.
+ */
+function sc_get_media($attr) {
+	global $wpdb, $post;
+
+	$post_id = wp_is_post_revision($post->ID);
+	if($post_id === False) {
+		$post_id = $post->ID;
+	}
+
+	$url = '';
+	if(isset($attr['filename']) && $attr['filename'] != '') {
+		$sql = sprintf('SELECT * FROM %s WHERE post_title="%s" AND post_parent=%d ORDER BY post_date DESC', $wpdb->posts, $wpdb->escape($attr['filename']), $post_id);
+		$rows = $wpdb->get_results($sql);
+		if(count($rows) > 0) {
+			$obj = $rows[0];
+			if($obj->post_type == 'attachment') {
+				$url = wp_get_attachment_url($obj->ID);
+			}
+		}
+	}
+	return $url;
+}
+add_shortcode('media', 'sc_get_media');
+
+
 /**
  * Same as [image], but returns markup safe to use within an element as
  * a background image
