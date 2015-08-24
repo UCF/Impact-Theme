@@ -243,6 +243,35 @@ function display_profile_list() {
 
 
 /**
+ * Displays the organization address and phone number defined in Theme Options.
+ **/
+function display_address() {
+	$address = get_theme_option( 'organization_address' );
+	$phone = get_theme_option( 'site_contact_phone' );
+
+	ob_start();
+?>
+
+	<?php if ( $address ): ?>
+	<address>
+		<?php echo nl2br( wptexturize( $address ) ); ?>
+
+		<?php if ( $phone ): ?>
+		<br>
+		<a href="tel:<?php echo preg_replace( '/[^0-9]/', '', $phone ); ?>">
+			<?php echo $phone; ?>
+		</a>
+		<?php endif; ?>
+	</address>
+	<?php endif; ?>
+
+<?php
+	return ob_get_clean();
+}
+
+
+
+/**
  * Enqueues page-specific css and js.
  **/
 function enqueue_custom_files() {

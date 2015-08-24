@@ -5,34 +5,24 @@
 				<div class="col-lg-8 col-lg-push-4 col-md-7 col-md-push-5 col-sm-12">
 					<div class="footer-headline-address-wrap">
 						<aside class="footer-section footer-address">
-							<!-- TODO: where will this content be pulled from? -->
-							<h2 class="footer-section-heading">Impact.</h2>
-							<address>
-								4000 Central Florida Blvd.<br>
-								Orlando, Florida, 32816<br>
-								<a href="tel:4078232000">407.823.2000</a>
-							</address>
+							<?php
+							$org_name = get_theme_option( 'organization_name' );
+							if ( $org_name ):
+							?>
+							<h2 class="footer-section-heading"><?php echo wptexturize( $org_name ); ?></h2>
+							<?php endif; ?>
+
+							<?php echo display_address(); ?>
 
 							<a href="http://www.ucf.edu/">www.ucf.edu</a>
 
-							<!-- TODO: pull from menu? -->
-							<ul class="social-links">
-								<li>
-									<a class="facebook" target="_blank" href="">Facebook</a>
-								</li>
-								<li>
-									<a class="flickr" target="_blank" href="">Flickr</a>
-								</li>
-								<li>
-									<a class="twitter" target="_blank" href="">Twitter</a>
-								</li>
-								<li>
-									<a class="youtube" target="_blank" href="">YouTube</a>
-								</li>
-								<li>
-									<a class="googleplus" target="_blank" href="">Google+</a>
-								</li>
-							</ul>
+							<?php echo wp_nav_menu( array(
+								'theme_location' => 'social-links',
+								'container' => false,
+								'menu_class' => 'social-links',
+								'depth' => 1,
+							) );
+							?>
 						</aside>
 						<aside class="footer-section footer-headlines">
 							<!-- TODO: where will this content be pulled from? -->
@@ -40,16 +30,32 @@
 							<p>
 								A short explanation of UCF that will get the reader interested and wanting to read the story that is about twentyfive words long.
 							</p>
-							<img class="ucf-logo-white" src="<?php echo THEME_IMG_URL; ?>/logo.png" alt="UCF logo" title="UCF logo"><!-- TODO -->
+							<img class="ucf-logo-white" src="<?php echo THEME_IMG_URL; ?>/logo.png" alt="UCF logo" title="UCF logo">
 						</aside>
 					</div>
 				</div>
 				<div class="col-lg-4 col-lg-pull-8 col-md-5 col-md-pull-7 col-sm-12 col-xs-nopad">
 					<aside class="footer-section give-section-white">
-						<!-- TODO: where will this content be pulled from? -->
-						<h2 class="give-section-heading">What Will Your Impact Be?</h2>
-						<p>Help UCF students continue to make an impact on our community today.</p>
-						<a class="btn btn-primary btn-xl btn-block" href="#">Give Now</a>
+						<?php
+						$cta_title = get_theme_option( 'footer_cta_title' );
+						$cta_desc = get_theme_option( 'footer_cta_description' );
+						$cta_text = get_theme_option( 'footer_cta_text' );
+						$cta_url = get_theme_option( 'footer_cta_url' );
+						?>
+
+						<?php if ( $cta_title ): ?>
+						<h2 class="give-section-heading"><?php echo wptexturize( $cta_title ); ?></h2>
+						<?php endif; ?>
+
+						<?php if ( $cta_desc ): ?>
+						<?php echo apply_filters( 'the_content', $cta_desc ); ?>
+						<?php endif; ?>
+
+						<?php if ( $cta_text && $cta_url ): ?>
+						<a class="btn btn-primary btn-xl btn-block" href="<?php echo $cta_url; ?>">
+							<?php echo wptexturize( $cta_text ); ?>
+						</a>
+						<?php endif; ?>
 					</aside>
 				</div>
 			</div>

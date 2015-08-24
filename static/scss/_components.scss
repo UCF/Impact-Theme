@@ -234,37 +234,32 @@ iframe[name="google_conversion_frame"] {
     padding-left: 4px;
     padding-right: 4px;
   }
-}
 
-.twitter,
-.facebook,
-.googleplus,
-.flickr,
-.youtube {
-  @include sprite('../img/social-square.png', '../img/social-square-r.png', 162px, 28px);
-  display: inline-block;
-  height: 28px;
-  margin-top: 5px;
-  width: 30px;
-}
+  a {
+    @include sprite('../img/social-square.png', '../img/social-square-r.png', 162px, 28px);
+    display: inline-block;
+    height: 28px;
+    margin-top: 5px;
+    width: 30px;
 
-.twitter {
-  background-position: -67px 0;
-}
+    &[href*="twitter"] {
+      background-position: -67px 0;
+    }
 
-.facebook {
-  background-position: 1px 0;
-}
+    &[href*="facebook"] {
+      background-position: 1px 0;
+    }
 
-.googleplus {
-  background-position: -133px 0;
-}
+    &[href*="plus.google"] {
+      background-position: -133px 0;
+    }
 
-.flickr {
-  background-position: -32px 0;
-}
+    &[href*="flickr"] {
+      background-position: -32px 0;
+    }
 
-.youtube {
-  background-position: -100px 0;
+    &[href*="youtube"] {
+      background-position: -100px 0;
+    }
+  }
 }
-
