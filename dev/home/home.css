@@ -20,10 +20,11 @@
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg) no-repeat;
     background-size: cover; }
   #lead #videoImage {
-    display: none; }
+    display: none;
+    min-width: 100%;
+    min-height: 100%; }
   #lead h1 {
     color: #fff;
     font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
@@ -85,32 +86,34 @@
       text-align: center;
       text-transform: uppercase; }
 
-#ucf-impact.container-full-width {
-  background-color: #000; }
-#ucf-impact .content {
-  margin-top: 100px;
-  margin-bottom: 100px; }
-#ucf-impact h2,
-#ucf-impact p {
-  color: #fff; }
-#ucf-impact h2 {
-  border-top: 3px solid #fff;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 84px;
-  padding-top: 30px;
-  text-transform: uppercase; }
-#ucf-impact h3 {
-  color: #ffc904;
-  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
-  font-style: normal;
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 25px;
-  text-transform: uppercase; }
-#ucf-impact p {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 28px;
-  line-height: 40px; }
+#impact-at-ucf {
+  background-repeat: no-repeat; }
+  #impact-at-ucf.container-full-width {
+    background-color: #000; }
+  #impact-at-ucf .content {
+    margin-top: 100px;
+    margin-bottom: 100px; }
+  #impact-at-ucf h2,
+  #impact-at-ucf p {
+    color: #fff; }
+  #impact-at-ucf h2 {
+    border-top: 3px solid #fff;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 84px;
+    padding-top: 30px;
+    text-transform: uppercase; }
+  #impact-at-ucf h3 {
+    color: #ffc904;
+    font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-transform: uppercase; }
+  #impact-at-ucf p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 28px;
+    line-height: 40px; }
 
 #give-now.container-full-width {
   background-color: #fff; }
