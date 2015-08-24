@@ -43,10 +43,6 @@
 				<?php endif;?>
 			</article>
 		</div>
-
-		<div id="sidebar" class="col-md-3">
-			<?=get_sidebar();?>
-		</div>
 	</div>
 <?php get_footer();?>
 
@@ -72,10 +68,6 @@
 					<p>No results found for "<?=htmlentities($_GET['s'])?>".</p>
 				<?php endif;?>
 			</article>
-		</div>
-
-		<div id="sidebar" class="col-md-3">
-			<?=get_sidebar();?>
 		</div>
 	</div>
 <?php get_footer();?>
