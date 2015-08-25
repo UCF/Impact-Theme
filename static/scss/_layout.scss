@@ -39,6 +39,11 @@
 
 // Footer profile list styles
 
+.profile-list {
+  position: relative;
+  z-index: 1;
+}
+
 .profile-list-item {
   position: relative;
 
@@ -249,7 +254,9 @@
 .footer-column-wrap {
   display: table;
   margin-top: -35px; // push up into .profile-list
+  position: relative;
   width: 100%;
+  z-index: 2;
 
   @media (max-width: $screen-sm-max) {
     display: block;
