@@ -37,8 +37,9 @@
 								<?php
 								$col3_title = get_theme_option( 'footer_col3_heading' );
 								$col3_content = get_theme_option( 'footer_col3_content' );
+								$col3_uselogo = get_theme_option( 'footer_col3_logo' );
 
-								if ( $col3_content ):
+								if ( $col3_content || $col3_uselogo ):
 								?>
 								<aside class="footer-section footer-customcol">
 									<?php if ( $col3_title ): ?>
@@ -47,7 +48,9 @@
 
 									<?php echo apply_filters( 'the_content', $col3_content ); ?>
 
+									<?php if ( $col3_uselogo ): ?>
 									<img class="ucf-logo-white" src="<?php echo THEME_IMG_URL; ?>/logo.png" alt="UCF logo" title="UCF logo">
+									<?php endif; ?>
 								</aside>
 								<?php endif; ?>
 							</div>
