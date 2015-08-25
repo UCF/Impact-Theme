@@ -8,17 +8,19 @@
     vertical-align: middle; }
   #impact #lead #video,
   #impact #lead #videoImage {
-    position: fixed;
-    top: 50%;
+    background-color: #000;
+    background-size: cover;
+    height: auto;
     left: 50%;
     min-width: 150%;
     min-height: 150%;
+    position: fixed;
+    top: 50%;
     width: auto;
-    height: auto;
     z-index: -100;
     -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover; }
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
   #impact #lead #videoImage {
     display: none;
     min-width: 100%;
