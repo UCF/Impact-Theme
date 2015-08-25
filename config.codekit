@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18902",
+"creatorBuild": "19051",
 "files": {
 	"\/404.php": {
 		"fileType": 8192,
@@ -135,15 +135,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/arron-smith\/arron-smith.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/dev\/css\/home.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/css\/home.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1652,6 +1643,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/static\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_reset-text.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_reset-text.scss",
+		"outputAbbreviatedPath": "\/static\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/css\/_reset-text.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/static\/bower_components\/bootstrap-sass-official\/assets\/stylesheets\/bootstrap\/mixins\/_resize.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1886,58 +1893,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
-		},
-	"\/static\/bower_components\/FitText.js\/bower.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/FitText.js\/bower.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/FitText.js\/bower-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/FitText.js\/example.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/FitText.js\/example.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/FitText.js\/jquery.fittext.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/FitText.js\/jquery.fittext.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/FitText.js\/min\/jquery.fittext-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/FitText.js\/README.md": {
-		"criticStyle": 0,
-		"enableFootnotes": 0,
-		"enableLabels": 1,
-		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/FitText.js\/README.md",
-		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/static\/bower_components\/FitText.js\/README.html",
-		"outputFormat": 0,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"parseMetadata": 1,
-		"processHTML": 0,
-		"randomFootnoteNumbers": 0,
-		"useCompatibilityMode": 0
 		},
 	"\/static\/bower_components\/jquery\/bower.json": {
 		"fileType": 524288,
@@ -2885,197 +2840,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/stellar\/component.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/component.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/component-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/grunt.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/grunt.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/min\/grunt-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/jquery.stellar.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/jquery.stellar.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/min\/jquery.stellar-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/jquery.stellar.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/jquery.stellar.min.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/min\/jquery.stellar.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.4.3.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.4.3.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/min\/jquery-1.4.3-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.9.1.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.9.1.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/min\/jquery-1.9.1-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/libs\/jquery\/jquery-2.0.0b2.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/jquery-2.0.0b2.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/min\/jquery-2.0.0b2-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/libs\/qunit\/qunit.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/qunit\/qunit.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/stellar\/libs\/qunit\/qunit.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/qunit\/qunit.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/qunit\/min\/qunit-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/package.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/package.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/package-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/README.md": {
-		"criticStyle": 0,
-		"enableFootnotes": 0,
-		"enableLabels": 1,
-		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/README.md",
-		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/README.html",
-		"outputFormat": 0,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"parseMetadata": 1,
-		"processHTML": 0,
-		"randomFootnoteNumbers": 0,
-		"useCompatibilityMode": 0
-		},
-	"\/static\/bower_components\/stellar\/src\/jquery.stellar.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/src\/jquery.stellar.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/src\/min\/jquery.stellar-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/stellar.jquery.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/stellar.jquery.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/stellar.jquery-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/test\/jquery-loader.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery-loader.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/min\/jquery-loader-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/stellar\/test\/jquery.stellar.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery.stellar.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/stellar\/test\/jquery.stellar.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery.stellar.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/stellar\/test\/jquery.stellar_test.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery.stellar_test.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/min\/jquery.stellar_test-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/static\/css\/admin.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -3781,7 +3545,7 @@
 		"uuidString": "009B8254-4F38-4F62-BBC9-EA2BA8D9A14D"
 		}
 	],
-"lastSavedByUser": "James Barnes",
+"lastSavedByUser": "Work",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -4270,10 +4034,6 @@
 			}
 		},
 	"jsLintFlags2": {
-		"ass": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"bitwise": {
 			"active": 0,
 			"flagValue": -1
@@ -4282,15 +4042,7 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"closure": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"continue": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"debug": {
+		"couch": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -4298,75 +4050,27 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"eqeq": {
+		"es6": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"evil": {
+		"eval": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"forin": {
+		"for": {
 			"active": 0,
 			"flagValue": -1
-			},
-		"indent": {
-			"active": 0,
-			"flagValue": 4
 			},
 		"maxlen": {
 			"active": 0,
 			"flagValue": 150
 			},
-		"newcap": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"node": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"nomen": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"plusplus": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"properties": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"regexp": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"rhino": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sloppy": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"stupid": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sub": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"todo": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unparam": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"vars": {
+		"this": {
 			"active": 0,
 			"flagValue": -1
 			},
