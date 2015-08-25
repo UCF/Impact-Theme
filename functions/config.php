@@ -170,6 +170,28 @@ Config::$theme_settings = array(
 			'description' => 'Where the call-to-action button in the footer links out to.',
 			'value'       => $theme_options['footer_cta_url'],
 		)),
+		new TextField(array(
+			'name'        => 'Footer 3rd Column Heading Text',
+			'id'          => THEME_OPTIONS_NAME.'[footer_col3_heading]',
+			'description' => 'Text used in the heading for the 3rd footer column.',
+			'value'       => $theme_options['footer_col3_heading'],
+		)),
+		new TextareaField(array(
+			'name'        => 'Footer 3rd Column Text',
+			'id'          => THEME_OPTIONS_NAME.'[footer_col3_content]',
+			'description' => 'Content displayed in the 3rd column of the footer.  Accepts HTML and shortcode content.  Content should be limited to 250 characters (assuming no HTML/shortcode content is added).',
+			'value'       => $theme_options['footer_col3_content'],
+		)),
+		new RadioField(array(
+			'name'        => 'Show UCF logo in 3rd column',
+			'id'          => THEME_OPTIONS_NAME.'[footer_col3_logo]',
+			'default'     => 1,
+			'choices'     => array(
+				'On'  => 1,
+				'Off' => 0,
+			),
+			'value'       => $theme_options['footer_col3_logo'],
+	    )),
 	),
 	'Search' => array(
 		new RadioField(array(

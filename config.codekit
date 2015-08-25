@@ -67,6 +67,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dev\/albert-manero\/albert-manero.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/albert-manero.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/albert-manero\/albert-manero.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/albert-manero.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/dev\/amy-huang\/amy-huang.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -121,6 +139,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dev\/css\/home.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dev\/css\/home.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/dev\/dwayne-houston\/dwayne-houston.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -141,7 +168,7 @@
 		},
 	"\/dev\/home\/home.css": {
 		"fileType": 16,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/home\/home.css",
 		"outputAbbreviatedPath": "No Output Path",
@@ -174,11 +201,11 @@
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
-		"ignoreWasSetByUser": 1,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/home\/home.scss",
-		"outputAbbreviatedPath": "\/dev\/home\/home.css",
+		"outputAbbreviatedPath": "\/dev\/css\/home.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
@@ -1912,82 +1939,6 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
-	"\/static\/bower_components\/jquery-tubular\/bower.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/bower.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/bower-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/jquery-tubular\/dist\/js\/jquery-tubular.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/dist\/js\/jquery-tubular.min.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/dist\/js\/min\/jquery-tubular.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery-tubular\/Gruntfile.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/Gruntfile.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/min\/Gruntfile-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery-tubular\/package.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/package.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/package-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/jquery-tubular\/README.md": {
-		"criticStyle": 0,
-		"enableFootnotes": 1,
-		"enableLabels": 1,
-		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/README.md",
-		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/README.html",
-		"outputFormat": 0,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"parseMetadata": 1,
-		"processHTML": 0,
-		"randomFootnoteNumbers": 0,
-		"useCompatibilityMode": 0
-		},
-	"\/static\/bower_components\/jquery-tubular\/src\/js\/jquery-tubular.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/src\/js\/jquery-tubular.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery-tubular\/src\/js\/min\/jquery-tubular-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/static\/bower_components\/jquery\/bower.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -1999,262 +1950,27 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/build\/release-notes.js": {
+	"\/static\/bower_components\/jquery\/dist\/jquery.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/build\/release-notes.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/build\/min\/release-notes-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/dist\/jquery.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/dist\/min\/jquery-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/build\/release.js": {
+	"\/static\/bower_components\/jquery\/dist\/jquery.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/build\/release.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/build\/min\/release-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/dist\/jquery.min.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/dist\/min\/jquery.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/component.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/component.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/component-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/composer.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/composer.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/composer-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/CONTRIBUTING.md": {
-		"criticStyle": 0,
-		"enableFootnotes": 1,
-		"enableLabels": 1,
-		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/CONTRIBUTING.md",
-		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/CONTRIBUTING.html",
-		"outputFormat": 0,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"parseMetadata": 1,
-		"processHTML": 0,
-		"randomFootnoteNumbers": 0,
-		"useCompatibilityMode": 0
-		},
-	"\/static\/bower_components\/jquery\/Gruntfile.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/Gruntfile.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/min\/Gruntfile-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/jquery-migrate.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/jquery-migrate.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/min\/jquery-migrate-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/jquery-migrate.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/jquery-migrate.min.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/min\/jquery-migrate.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/jquery.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/jquery.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/min\/jquery-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/jquery.min.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/jquery.min.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/min\/jquery.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/package.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/package.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/package-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/README.md": {
-		"criticStyle": 0,
-		"enableFootnotes": 1,
-		"enableLabels": 1,
-		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/README.md",
-		"maskEmailAddresses": 1,
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/README.html",
-		"outputFormat": 0,
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"parseMetadata": 1,
-		"processHTML": 0,
-		"randomFootnoteNumbers": 0,
-		"useCompatibilityMode": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/benchmark.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/benchmark.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/min\/benchmark-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/speed\/benchmarker.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/benchmarker.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/benchmarker.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/benchmarker.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/min\/benchmarker-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/speed\/closest.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/closest.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/css.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/css.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/event.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/event.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/filter.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/filter.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/find.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/find.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/speed\/jquery-basis.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/jquery-basis.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/min\/jquery-basis-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/speed\/slice.vs.concat.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/speed\/slice.vs.concat.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/static\/bower_components\/jquery\/src\/ajax.js": {
 		"fileType": 64,
@@ -2278,12 +1994,67 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/static\/bower_components\/jquery\/src\/ajax\/load.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/load.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/min\/load-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/ajax\/parseJSON.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/parseJSON.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/min\/parseJSON-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/ajax\/parseXML.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/parseXML.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/min\/parseXML-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/bower_components\/jquery\/src\/ajax\/script.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/script.js",
 		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/min\/script-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/ajax\/var\/nonce.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/var\/nonce.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/var\/min\/nonce-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/ajax\/var\/rquery.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/var\/rquery.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/ajax\/var\/min\/rquery-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2311,6 +2082,61 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/static\/bower_components\/jquery\/src\/attributes\/attr.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/attr.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/min\/attr-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/attributes\/classes.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/classes.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/min\/classes-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/attributes\/prop.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/prop.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/min\/prop-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/attributes\/support.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/support.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/min\/support-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/attributes\/val.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/val.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/attributes\/min\/val-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/bower_components\/jquery\/src\/callbacks.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2333,6 +2159,61 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/static\/bower_components\/jquery\/src\/core\/access.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/access.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/min\/access-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/core\/init.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/init.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/min\/init-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/core\/parseHTML.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/parseHTML.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/min\/parseHTML-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/core\/ready.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/ready.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/min\/ready-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/core\/var\/rsingleTag.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/var\/rsingleTag.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/core\/var\/min\/rsingleTag-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/bower_components\/jquery\/src\/css.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2344,12 +2225,177 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/static\/bower_components\/jquery\/src\/css\/addGetHookIf.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/addGetHookIf.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/min\/addGetHookIf-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/curCSS.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/curCSS.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/min\/curCSS-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/defaultDisplay.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/defaultDisplay.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/min\/defaultDisplay-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/hiddenVisibleSelectors.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/hiddenVisibleSelectors.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/min\/hiddenVisibleSelectors-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/support.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/support.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/min\/support-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/swap.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/swap.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/min\/swap-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/var\/cssExpand.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/cssExpand.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/min\/cssExpand-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/var\/getStyles.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/getStyles.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/min\/getStyles-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/var\/isHidden.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/isHidden.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/min\/isHidden-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/var\/rmargin.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/rmargin.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/min\/rmargin-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/css\/var\/rnumnonpx.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/rnumnonpx.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/css\/var\/min\/rnumnonpx-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/bower_components\/jquery\/src\/data.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data.js",
 		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/data-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/data\/accepts.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/accepts.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/min\/accepts-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/data\/Data.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/Data.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/min\/Data-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/data\/var\/data_priv.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/var\/data_priv.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/var\/min\/data_priv-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/data\/var\/data_user.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/var\/data_user.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/data\/var\/min\/data_user-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2399,12 +2445,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/src\/event-alias.js": {
+	"\/static\/bower_components\/jquery\/src\/effects\/animatedSelector.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/event-alias.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/event-alias-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/effects\/animatedSelector.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/effects\/min\/animatedSelector-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/effects\/Tween.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/effects\/Tween.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/effects\/min\/Tween-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2421,12 +2478,56 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/src\/exports.js": {
+	"\/static\/bower_components\/jquery\/src\/event\/ajax.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/exports.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/exports-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/event\/ajax.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/event\/min\/ajax-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/event\/alias.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/event\/alias.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/event\/min\/alias-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/event\/support.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/event\/support.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/event\/min\/support-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/exports\/amd.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/exports\/amd.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/exports\/min\/amd-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/exports\/global.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/exports\/global.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/exports\/min\/global-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2443,12 +2544,56 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/static\/bower_components\/jquery\/src\/jquery.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/jquery.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/jquery-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/bower_components\/jquery\/src\/manipulation.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/manipulation.js",
 		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/manipulation-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/manipulation\/_evalUrl.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/manipulation\/_evalUrl.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/manipulation\/min\/_evalUrl-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/manipulation\/support.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/manipulation\/support.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/manipulation\/min\/support-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/manipulation\/var\/rcheckableType.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/manipulation\/var\/rcheckableType.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/manipulation\/var\/min\/rcheckableType-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2487,6 +2632,50 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/static\/bower_components\/jquery\/src\/queue\/delay.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/queue\/delay.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/queue\/min\/delay-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/selector-native.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/selector-native.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/selector-native-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/selector-sizzle.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/selector-sizzle.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/selector-sizzle-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/selector.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/selector.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/selector-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/bower_components\/jquery\/src\/serialize.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2498,23 +2687,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/src\/sizzle-jquery.js": {
+	"\/static\/bower_components\/jquery\/src\/sizzle\/dist\/sizzle.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/sizzle-jquery.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/sizzle-jquery-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/sizzle\/dist\/sizzle.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/sizzle\/dist\/min\/sizzle-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/src\/support.js": {
+	"\/static\/bower_components\/jquery\/src\/sizzle\/dist\/sizzle.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/support.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/min\/support-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/sizzle\/dist\/sizzle.min.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/sizzle\/dist\/min\/sizzle.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2531,6 +2720,160 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/static\/bower_components\/jquery\/src\/traversing\/findFilter.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/traversing\/findFilter.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/traversing\/min\/findFilter-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/traversing\/var\/rneedsContext.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/traversing\/var\/rneedsContext.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/traversing\/var\/min\/rneedsContext-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/arr.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/arr.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/arr-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/class2type.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/class2type.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/class2type-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/concat.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/concat.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/concat-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/hasOwn.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/hasOwn.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/hasOwn-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/indexOf.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/indexOf.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/indexOf-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/pnum.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/pnum.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/pnum-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/push.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/push.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/push-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/rnotwhite.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/rnotwhite.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/rnotwhite-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/slice.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/slice.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/slice-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/strundefined.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/strundefined.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/strundefined-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/support.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/support.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/support-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/jquery\/src\/var\/toString.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/toString.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/src\/var\/min\/toString-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/static\/bower_components\/jquery\/src\/wrap.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2542,867 +2885,211 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/1x1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
+	"\/static\/bower_components\/stellar\/component.json": {
+		"fileType": 524288,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 693,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/1x1.jpg",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/1x1.jpg",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/component.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/component-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"outputStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/ajax\/unreleasedXHR.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/ajax\/unreleasedXHR.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/atom+xml.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/atom+xml.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/badcall.js": {
+	"\/static\/bower_components\/stellar\/grunt.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/badcall.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/badcall-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/grunt.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/min\/grunt-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/badjson.js": {
+	"\/static\/bower_components\/stellar\/jquery.stellar.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/badjson.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/badjson-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/jquery.stellar.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/min\/jquery.stellar-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/cleanScript.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/cleanScript.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/core\/cc_on.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/core\/cc_on.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/dimensions\/documentLarge.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/dimensions\/documentLarge.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/dimensions\/documentSmall.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/dimensions\/documentSmall.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/echoData.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/echoData.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/echoQuery.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/echoQuery.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/errorWithJSON.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/errorWithJSON.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/errorWithText.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/errorWithText.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/etag.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/etag.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/evalScript.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/evalScript.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/event\/focusElem.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/event\/focusElem.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/event\/longLoadScript.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/event\/longLoadScript.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/event\/promiseReady.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/event\/promiseReady.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/event\/syncReady.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/event\/syncReady.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/headers.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/headers.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/if_modified_since.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/if_modified_since.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/iframe.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/iframe.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/jquery-1.9.1.ajax_xhr.min.js": {
+	"\/static\/bower_components\/stellar\/jquery.stellar.min.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/jquery-1.9.1.ajax_xhr.min.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/jquery-1.9.1.ajax_xhr.min-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/jquery.stellar.min.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/min\/jquery.stellar.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/json.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/json.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/json_obj.js": {
+	"\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.4.3.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/json_obj.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/json_obj-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.4.3.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/min\/jquery-1.4.3-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/jsonp.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/jsonp.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/manipulation\/iframe-denied.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/manipulation\/iframe-denied.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/name.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/name.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/name.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/name.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/nocontent.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/nocontent.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/offset\/absolute.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/offset\/absolute.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/offset\/body.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/offset\/body.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/offset\/fixed.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/offset\/fixed.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/offset\/relative.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/offset\/relative.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/offset\/scroll.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/offset\/scroll.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/offset\/static.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/offset\/static.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/offset\/table.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/offset\/table.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/params_html.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/params_html.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/readywaitasset.js": {
+	"\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.9.1.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/readywaitasset.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/readywaitasset-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/jquery-1.9.1.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/min\/jquery-1.9.1-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/readywaitloader.js": {
+	"\/static\/bower_components\/stellar\/libs\/jquery\/jquery-2.0.0b2.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/readywaitloader.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/readywaitloader-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/jquery-2.0.0b2.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/jquery\/min\/jquery-2.0.0b2-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/script.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/script.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/selector\/html5_selector.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/selector\/html5_selector.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/selector\/sizzle_cache.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/selector\/sizzle_cache.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/statusText.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/statusText.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/support\/bodyBackground.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/support\/bodyBackground.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/support\/boxSizing.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/support\/boxSizing.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/support\/csp.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/support\/csp.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/support\/min\/csp-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/support\/csp.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/support\/csp.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/support\/shrinkWrapBlocks.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/support\/shrinkWrapBlocks.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/support\/testElementCrash.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/support\/testElementCrash.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/test.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/test.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/test.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/test.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/test-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/test.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/test.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/test2.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/test2.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/test3.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/test3.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/testinit.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/testinit.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/testinit-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/testrunner.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/testrunner.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/min\/testrunner-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/data\/testsuite.css": {
+	"\/static\/bower_components\/stellar\/libs\/qunit\/qunit.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/testsuite.css",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/qunit\/qunit.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/text.php": {
+	"\/static\/bower_components\/stellar\/libs\/qunit\/qunit.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/qunit\/qunit.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/libs\/qunit\/min\/qunit-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/stellar\/package.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/package.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/package-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/static\/bower_components\/stellar\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 0,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
+	"\/static\/bower_components\/stellar\/src\/jquery.stellar.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/src\/jquery.stellar.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/src\/min\/jquery.stellar-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/stellar\/stellar.jquery.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/stellar.jquery.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/stellar.jquery-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/static\/bower_components\/stellar\/test\/jquery-loader.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery-loader.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/min\/jquery-loader-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/static\/bower_components\/stellar\/test\/jquery.stellar.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery.stellar.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/static\/bower_components\/stellar\/test\/jquery.stellar.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/text.php",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery.stellar.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/static\/bower_components\/jquery\/test\/data\/with_fries_over_jsonp.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/data\/with_fries_over_jsonp.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/delegatetest.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/delegatetest.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/hovertest.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/hovertest.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/jquery.js": {
+	"\/static\/bower_components\/stellar\/test\/jquery.stellar_test.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/jquery.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/min\/jquery-min.js",
+		"inputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/jquery.stellar_test.js",
+		"outputAbbreviatedPath": "\/static\/bower_components\/stellar\/test\/min\/jquery.stellar_test-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/localfile.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/localfile.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/networkerror.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/networkerror.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/readywait.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/readywait.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/ajax.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/ajax.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/ajax-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/attributes.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/attributes.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/attributes-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/callbacks.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/callbacks.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/callbacks-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/core.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/core.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/core-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/css.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/css.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/css-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/data.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/data.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/data-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/deferred.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/deferred.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/deferred-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/deprecated.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/deprecated.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/deprecated-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/dimensions.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/dimensions.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/dimensions-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/effects.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/effects.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/effects-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/event.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/event.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/event-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/exports.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/exports.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/exports-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/manipulation.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/manipulation.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/manipulation-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/offset.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/offset.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/offset-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/queue.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/queue.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/queue-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/selector.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/selector.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/selector-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/serialize.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/serialize.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/serialize-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/support.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/support.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/support-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/traversing.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/traversing.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/traversing-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/unit\/wrap.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/wrap.js",
-		"outputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/unit\/min\/wrap-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/static\/bower_components\/jquery\/test\/xhtml.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/bower_components\/jquery\/test\/xhtml.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/static\/css\/admin.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/css\/admin.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/static\/css\/style.min.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/css\/style.min.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3968,6 +3655,38 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/static\/scss\/_profiles.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/scss\/_profiles.scss",
+		"outputAbbreviatedPath": "\/static\/css\/_profiles.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/static\/scss\/_shortcodes.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/static\/scss\/_shortcodes.scss",
+		"outputAbbreviatedPath": "\/static\/css\/_shortcodes.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/static\/scss\/_type.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -4040,6 +3759,15 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/template-profile.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/template-profile.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
@@ -4053,7 +3781,7 @@
 		"uuidString": "009B8254-4F38-4F62-BBC9-EA2BA8D9A14D"
 		}
 	],
-"lastSavedByUser": "RJ Bruneel",
+"lastSavedByUser": "James Barnes",
 "manualImportLinks": {
 	},
 "projectAttributes": {

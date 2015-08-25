@@ -246,13 +246,61 @@
 
 // Bottom footer contents
 
-.footer-headline-address-wrap {
+.footer-column-wrap {
   display: table;
-  margin-top: 40px;
+  margin-top: -35px; // push up into .profile-list
   width: 100%;
+
+  @media (max-width: $screen-sm-max) {
+    display: block;
+    margin-top: 35px;
+  }
+}
+
+.footer-address-custom-wrap,
+.footer-give-column-wrap {
+  display: table-cell;
+}
+
+.footer-give-fullwidth-wrap {
+  display: none;
+
+  @media (max-width: $screen-sm-max) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.footer-address-custom-wrap {
+  padding-bottom: 65px;
+  padding-left: 40px;
+  padding-top: 65px; // push back down from .profile-list, with extra pad
+  vertical-align: top;
+  width: 62%;
+
+  @media (min-width: $screen-lg-min) {
+    padding-left: 20px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    display: table;
+    padding-left: 0;
+    width: 100%;
+  }
 
   @media (max-width: $screen-xs-max) {
     display: block;
+    padding: 30px $grid-gutter-width / 2; // re-add l/r padding removed from parent .col-
+  }
+}
+
+.footer-give-column-wrap {
+  background-color: #fff; // "bleed" this column to the very bottom of the page
+  vertical-align: top;
+  width: 38%;
+
+  @media (max-width: $screen-sm-max) {
+    display: none;
   }
 }
 
@@ -260,26 +308,27 @@
   font-size: 13px;
   line-height: 1.8;
   padding: 0 30px;
+  vertical-align: top;
 
   @media (min-width: $screen-lg-min) {
     font-size: 14px;
     padding: 0 45px;
   }
 
+  @media (max-width: $screen-sm-min) {
+    padding: 0 40px;
+  }
+
   @media (max-width: $screen-xs-max) {
-    padding: 0 15px 30px;
+    padding: 0 15px;
   }
 
   &.give-section-white {
     margin-top: -10px;
-    padding: 35px;
-
-    @media (min-width: $screen-lg-min) {
-      padding: 40px;
-    }
+    padding: 40px;
 
     @media (max-width: $screen-sm-max) {
-      margin-top: 40px;
+      display: block;
       padding: 40px;
     }
 
@@ -318,23 +367,24 @@
   }
 
   &.footer-address,
-  &.footer-headlines {
+  &.footer-customcol {
     box-sizing: border-box;
     display: table-cell;
     width: 50%;
 
+    @media (max-width: $screen-sm-max) {
+      padding: 0 40px; // match .give-section-white padding l/r
+    }
+
     @media (max-width: $screen-xs-max) {
       display: block;
-      margin-bottom: 30px;
-      margin-top: 30px;
       width: auto;
     }
   }
 
   &.footer-address {
     @include sans-serif-text();
-    border-right: 2px solid #fff;
-    padding-left: 10px; // allow enough room for each address line to not overflow
+    padding-left: 0; // allow enough room for each address line to not overflow
     text-transform: uppercase;
 
     @media (min-width: $screen-lg-min) {
@@ -342,13 +392,10 @@
     }
 
     @media (max-width: $screen-sm-max) {
-      // match .give-section-white padding l/r
-      padding-left: 40px;
+      padding-left: 40px; // match .give-section-white padding l/r
     }
 
     @media (max-width: $screen-xs-max) {
-      border-bottom: 2px solid #fff;
-      border-right: 0;
       // match .give-section-white padding l/r, but use margins
       margin-left: 15px;
       margin-right: 15px;
@@ -365,23 +412,25 @@
     }
   }
 
-  &.footer-headlines {
+  &.footer-customcol {
+    border-left: 2px solid #fff;
     padding-right: 0;
 
     @media (max-width: $screen-sm-max) {
-      // match .give-section-white padding l/r
-      padding-right: 40px;
+      padding-right: 40px; // match .give-section-white padding l/r
     }
 
     @media (max-width: $screen-xs-max) {
+      border-left: 0 solid transparent;
+      border-top: 2px solid #fff;
       // match .give-section-white padding l/r, but use margins
       margin-left: 15px;
       margin-right: 15px;
-      padding: 0 0 30px;
+      padding: 30px 0;
     }
 
     .ucf-logo-white {
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 }
