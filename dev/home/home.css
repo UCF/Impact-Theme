@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
 #impact .container-full-width {
   width: 100%; }
 #impact #lead {
@@ -82,11 +81,11 @@
         line-height: 24px; } }
   #impact #lead .alumni-name {
     color: #ffc904;
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Gotham Cond A", "Gotham Cond B", sans-serif;
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     text-align: center; }
     @media (max-width: 991px) {
       #impact #lead .alumni-name {
