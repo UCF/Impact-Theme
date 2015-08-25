@@ -269,7 +269,6 @@ function display_address() {
 }
 
 
-
 /**
  * Enqueues page-specific css and js.
  **/
@@ -288,5 +287,61 @@ function enqueue_custom_files() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_custom_files' );
+
+
+/**
+ * Adds various allowed tags to WP's allowed tags list.
+ *
+ * Add elements and attributes to this list if WordPress' filters refuse to
+ * parse those elems/attributes, or shortcodes within them, as expected.
+ *
+ * Adding 'source' and its 'src' attr fixes usage of <source src="[media...]">
+ * after the WP 4.2.3 Shortcode API change.
+ **/
+global $allowedposttags;
+function add_kses_whitelisted_attributes( $allowedposttags, $context ) {
+	if ( $context == 'post' ) {
+		$allowedposttags['source'] = array(
+			'sizes' => true,
+			'src' => true,
+			'srcset' => true,
+			'type' => true,
+			'media' => true
+		);
+	}
+	return $allowedposttags;
+}
+add_filter( 'wp_kses_allowed_html', 'add_kses_whitelisted_attributes', 10, 2 );
+
+
+/**
+ * Displays the contents of the call-to-action in the footer.
+ **/
+function display_footer_cta() {
+	$cta_title = get_theme_option( 'footer_cta_title' );
+	$cta_desc = get_theme_option( 'footer_cta_description' );
+	$cta_text = get_theme_option( 'footer_cta_text' );
+	$cta_url = get_theme_option( 'footer_cta_url' );
+
+	ob_start();
+?>
+
+	<?php if ( $cta_title ): ?>
+	<h2 class="give-section-heading"><?php echo wptexturize( $cta_title ); ?></h2>
+	<?php endif; ?>
+
+	<?php if ( $cta_desc ): ?>
+	<?php echo apply_filters( 'the_content', $cta_desc ); ?>
+	<?php endif; ?>
+
+	<?php if ( $cta_text && $cta_url ): ?>
+	<a class="btn btn-primary btn-xl btn-block" href="<?php echo $cta_url; ?>">
+		<?php echo wptexturize( $cta_text ); ?>
+	</a>
+	<?php endif; ?>
+
+<?php
+	return ob_get_clean();
+}
 
 ?>

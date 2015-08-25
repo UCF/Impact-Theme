@@ -10,7 +10,8 @@
 
 // Styles for components and Bootstrap component overrides
 @import 'components';
-@import 'parallax.scss';
+@import 'profiles';
+@import 'parallax';
 
 // Styles for base header/footer templates and specific, per-view templates
 @import 'layout';

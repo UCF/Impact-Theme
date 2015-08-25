@@ -67,17 +67,42 @@
   }
 }
 
+.parallax-header{ 
+  h1,
+  p {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  p.profile-name {
+    color: #fc0;
+    font-family: $font-family-sans-serif;
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+}
 // Full-size (x-large) screens (1200x+ wide)
 @media all and (min-width: $screen-lg-min) {
   .parallax-header .parallax-photo {
     min-height: 400px;
   }
-}
 
-@media all and (max-width: $screen-md-max) and (min-width: $screen-md-min) {
-  .parallax-header h1 {
-    font-size: 90px;
-    width: 65%;
+  .parallax-header {
+    h1 {
+      font-size: 50px;
+      margin-top: 150px;
+    }
+
+    p.profile-name {
+      font-size: 28px;
+    }
   }
 }
 
@@ -86,24 +111,22 @@
   .parallax-header .parallax-photo {
     min-height: 300px;
   }
+
+  .parallax-header {
+    h1 {
+      font-size: 45px;
+      margin-top: 105px;
+    }
+    p.profile-name {
+      font-size: 26px;
+    }
+  }
 }
 
 @media all and (max-width: $screen-md-max) {
   .parallax-photo {
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .parallax-header h1 {
-    bottom: -.32em;
-    font-size: 60px;
-    width: 60%;
-  }
-
-  .parallax-header-inner .cta a {
-    font-size: 26px;
-    padding: 20px 0;
-    width: 270px;
   }
 }
 
@@ -115,6 +138,17 @@
 
   .parallax-photo {
     padding-top: 80px;
+  }
+
+  .parallax-header {
+    h1 {
+      font-size: 38px;
+      margin-top: 87px;
+    }
+
+    p.profile-name {
+      font-size: 22px;
+    }
   }
 }
 
@@ -133,18 +167,6 @@
   .parallax-header-inner .cta {
     left: 0;
   }
-
-  .parallax-header h1 {
-    bottom: auto;
-    font-size: 70px;
-    left: 0;
-    line-height: 1em;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 36%;
-    width: 100%;
-  }
 }
 
 // "Mobile (x-small)" screens (>=480px wide)
@@ -153,9 +175,14 @@
     min-height: 480px;
   }
 
+  .parallax-header {
+    h1 {
+      font-size: 36px;
+      margin-top: 350px;
+    }
 
-  .parallax-header h1 {
-    font-size: 40px;
-    top: 34%;
+    p.profile-name {
+      font-size: 22px;
+    }
   }
 }
