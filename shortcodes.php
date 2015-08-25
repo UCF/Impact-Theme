@@ -554,23 +554,23 @@ function sc_call_to_action_bar( $attr ) {
 	ob_start();
 	?>
 
-	<div style="background-color: <?php echo $attr['background_color']; ?>; color: <?php echo $attr['foreground_color']; ?>;" class="cta-bar">
+	<section style="background-color: <?php echo $attr['background_color']; ?>; color: <?php echo $attr['foreground_color']; ?>;" class="cta-bar">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-lg-4 col-md-4">
 					<h2><?php echo $attr['header_text']; ?></h2>
 				</div>
-				<div class="col-md-7">
+				<div class="col-lg-5 col-md-4">
 					<p><?php echo $attr['text']; ?></p>
 				</div>
-				<div class="col-md-2">
-					<a href="<?php echo $attr['link']; ?>" class="btn btn-cta" style="background: <?php echo $attr['button_background_color']; ?>; color: <?php echo $attr['button_foreground_color']; ?>">
+				<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-1">
+					<a href="<?php echo $attr['link']; ?>" class="btn btn-xl btn-cta" style="background: <?php echo $attr['button_background_color']; ?>; color: <?php echo $attr['button_foreground_color']; ?>">
 						<?php echo $attr['link_text']; ?>
 					</a>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<?php
 		return ob_get_clean();
