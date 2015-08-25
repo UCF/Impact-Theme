@@ -246,7 +246,7 @@
 
 // Bottom footer contents
 
-.footer-headline-address-wrap {
+.footer-address-custom-wrap {
   display: table;
   margin-top: 40px;
   width: 100%;
@@ -272,7 +272,7 @@
 
   &.give-section-white {
     margin-top: -10px;
-    padding: 35px;
+    padding: 35px 35px 85px; // allow room for .footer-customcol to contain ~250 characters of copy
 
     @media (min-width: $screen-lg-min) {
       padding: 40px;
@@ -318,7 +318,7 @@
   }
 
   &.footer-address,
-  &.footer-headlines {
+  &.footer-customcol {
     box-sizing: border-box;
     display: table-cell;
     width: 50%;
@@ -333,7 +333,6 @@
 
   &.footer-address {
     @include sans-serif-text();
-    border-right: 2px solid #fff;
     padding-left: 10px; // allow enough room for each address line to not overflow
     text-transform: uppercase;
 
@@ -365,7 +364,8 @@
     }
   }
 
-  &.footer-headlines {
+  &.footer-customcol {
+    border-left: 2px solid #fff;
     padding-right: 0;
 
     @media (max-width: $screen-sm-max) {
@@ -381,7 +381,7 @@
     }
 
     .ucf-logo-white {
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 }

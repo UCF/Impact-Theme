@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 col-lg-push-4 col-md-7 col-md-push-5 col-sm-12">
-						<div class="footer-headline-address-wrap">
+						<div class="footer-address-custom-wrap">
 							<aside class="footer-section footer-address">
 								<?php
 								$org_name = get_theme_option( 'organization_name' );
@@ -24,14 +24,23 @@
 								) );
 								?>
 							</aside>
-							<aside class="footer-section footer-headlines">
-								<!-- TODO: where will this content be pulled from? -->
-								<h2 class="footer-section-heading">Headlines</h2>
-								<p>
-									A short explanation of UCF that will get the reader interested and wanting to read the story that is about twentyfive words long.
-								</p>
+
+							<?php
+							$col3_title = get_theme_option( 'footer_col3_heading' );
+							$col3_content = get_theme_option( 'footer_col3_content' );
+
+							if ( $col3_content ):
+							?>
+							<aside class="footer-section footer-customcol">
+								<?php if ( $col3_title ): ?>
+								<h2 class="footer-section-heading"><?php echo wptexturize( $col3_title ); ?></h2>
+								<?php endif; ?>
+
+								<?php echo apply_filters( 'the_content', $col3_content ); ?>
+
 								<img class="ucf-logo-white" src="<?php echo THEME_IMG_URL; ?>/logo.png" alt="UCF logo" title="UCF logo">
 							</aside>
+							<?php endif; ?>
 						</div>
 					</div>
 					<div class="col-lg-4 col-lg-pull-8 col-md-5 col-md-pull-7 col-sm-12 col-xs-nopad">
