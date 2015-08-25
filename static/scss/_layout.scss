@@ -124,7 +124,7 @@
 
   @media (min-width: $screen-lg-min) {
     font-size: 50px;
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 
   @media (max-width: $screen-sm-max) {
@@ -197,21 +197,16 @@
   bottom: 0;
   display: block;
   font-size: 36px;
-  font-size: 3.5vw;
+  font-size: 3.4vw;
   left: 0;
   padding: 12%;
   position: absolute;
   right: 0;
   width: 100%;
 
-  @media (min-width: $screen-lg-min) {
-    font-size: 36px;
-    font-size: 2.75vw;
-  }
-
   @media (max-width: $screen-sm-max) {
     font-size: 30px;
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 
   @media (max-width: $screen-xs-max) {
@@ -352,10 +347,10 @@
     }
 
     .give-section-heading {
-      font-size: 46px;
+      font-size: 52px;
 
       @media (min-width: $screen-lg-min) {
-        font-size: 54px;
+        font-size: 60px;
       }
     }
 
