@@ -87,6 +87,22 @@
       }
     }
 
+    .featured-link {
+      -webkit-transition: opacity .5s ease-in;
+        -moz-transition: opacity .5s ease-in;
+          -ms-transition: opacity .5s ease-in;
+          -o-transition: opacity .5s ease-in;
+              transition: opacity .5s ease-in;
+      &.fade {
+        opacity: 0.3;
+        -webkit-transition: opacity .5s ease-in;
+          -moz-transition: opacity .5s ease-in;
+            -ms-transition: opacity .5s ease-in;
+            -o-transition: opacity .5s ease-in;
+                transition: opacity .5s ease-in;
+      }
+    }
+
     .alumni {
       margin-bottom: 150px;
       @media (max-width: $screen-sm-max) {
