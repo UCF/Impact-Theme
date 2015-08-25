@@ -231,72 +231,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/dev\/amy-huang\/img\/600x600-Amy-Huang-BW.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 13686,
-		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-BW.jpg",
-		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-BW.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dev\/amy-huang\/img\/600x600-Amy-Huang-RGB.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 17715,
-		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-RGB.jpg",
-		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-RGB.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dev\/amy-huang\/img\/Impact-Huang-LARGE-HEADER-2000-x-400.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 272677,
-		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-LARGE-HEADER-2000-x-400.jpg",
-		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-LARGE-HEADER-2000-x-400.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dev\/amy-huang\/img\/Impact-Huang-MEDIUM-HEADER-1200-x-300.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 127292,
-		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-MEDIUM-HEADER-1200-x-300.jpg",
-		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-MEDIUM-HEADER-1200-x-300.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dev\/amy-huang\/img\/Impact-Huang-SMALL-HEADER-992-x-248.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 82383,
-		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-SMALL-HEADER-992-x-248.jpg",
-		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-SMALL-HEADER-992-x-248.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/dev\/amy-huang\/img\/Impact-Huang-XSMALL-HEADER-786-x-480.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 122491,
-		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-XSMALL-HEADER-786-x-480.jpg",
-		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-XSMALL-HEADER-786-x-480.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/dev\/amy-iarrobino\/amy-iarrobino.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -306,29 +240,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/dev\/amy-iarrobino\/amy-iarrobino.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/amy-iarrobino\/amy-iarrobino.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/dev\/dwayne-houston\/dwayne-houston.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/dwayne-houston.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/dev\/dwayne-houston\/dwayne-houston.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/dwayne-houston.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -3733,15 +3649,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/static\/css\/style.min.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/css\/style.min.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/static\/css\/webcom-base.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -4248,22 +4155,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/static\/scss\/_components.scss",
 		"outputAbbreviatedPath": "\/static\/css\/_components.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/static\/scss\/_layout.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/static\/scss\/_layout.scss",
-		"outputAbbreviatedPath": "\/static\/css\/_layout.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

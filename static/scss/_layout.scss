@@ -39,6 +39,11 @@
 
 // Footer profile list styles
 
+.profile-list {
+  position: relative;
+  z-index: 1;
+}
+
 .profile-list-item {
   position: relative;
 
@@ -119,7 +124,7 @@
 
   @media (min-width: $screen-lg-min) {
     font-size: 50px;
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 
   @media (max-width: $screen-sm-max) {
@@ -172,7 +177,7 @@
 
   @media (min-width: $screen-lg-min) {
     font-size: 18px;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
   }
 
   @media (max-width: $screen-sm-max) {
@@ -192,21 +197,16 @@
   bottom: 0;
   display: block;
   font-size: 36px;
-  font-size: 3.5vw;
+  font-size: 3.4vw;
   left: 0;
-  padding: 10%;
+  padding: 12%;
   position: absolute;
   right: 0;
   width: 100%;
 
-  @media (min-width: $screen-lg-min) {
-    font-size: 36px;
-    font-size: 2.75vw;
-  }
-
   @media (max-width: $screen-sm-max) {
     font-size: 30px;
-    font-size: 3.5vw;
+    font-size: 4vw;
   }
 
   @media (max-width: $screen-xs-max) {
@@ -248,8 +248,10 @@
 
 .footer-column-wrap {
   display: table;
-  margin-top: -35px; // push up into .profile-list
+  margin-top: -15px; // push up into .profile-list
+  position: relative;
   width: 100%;
+  z-index: 2;
 
   @media (max-width: $screen-sm-max) {
     display: block;
@@ -345,10 +347,10 @@
     }
 
     .give-section-heading {
-      font-size: 46px;
+      font-size: 52px;
 
       @media (min-width: $screen-lg-min) {
-        font-size: 54px;
+        font-size: 60px;
       }
     }
 
