@@ -1,50 +1,6 @@
-.impact-facts {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.impact-facts li {
-	margin-bottom: 2.0em;
-	line-height: 1.4em;
-}
-
-.content-block blockquote p {
-	font-size: 24px;
-}
-
-.wp-caption-text {
-	font-style: italic;
-	font-size: 12px;
-	line-height: 16px;
-	margin: 3px 6px 16px 6px;
-	color: #323232;
-}
-
-.callout {
-	background-color: #f8de88;
-	background-color: rgba(249, 222, 132, 0.95);
-	box-shadow: none;
-}
-
-.right-rail h3 {
-	border-bottom: 1px solid #fc0;
-	padding-bottom: 5px;
-	margin-right: 20px;
-	margin-top: 0;
-}
-
-@media (max-width: 991px) {
-	.left-rail,
-	.right-rail {
-		margin-top: 25px;
-	}
-}
-
 p {
 	font-size: 23px;
 	font-weight: 400;
-	font-family: "Chronicle Display A", "Chronicle Display B", serif;
 	line-height: 32px;
 	margin: 24px 0 12px 0;
 }
@@ -62,6 +18,12 @@ p {
 .lead a:hover {
 	text-decoration: none;
 	color: #c90;
+}
+
+.sidebar-blockquote {
+
+	font-size: 14px;
+	font-style: italic;
 }
 
 .dl-horizontal {
