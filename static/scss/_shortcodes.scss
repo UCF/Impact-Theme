@@ -126,6 +126,9 @@
 
   p {
     font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 24px 0 12px;
 
     @media (max-width: $screen-sm-max) {
       text-align: center;
