@@ -85,6 +85,72 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dev\/albert-manero\/img\/600x600-Albert-Manero-BW.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16879,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/img\/600x600-Albert-Manero-BW.jpg",
+		"outputAbbreviatedPath": "\/dev\/albert-manero\/img\/600x600-Albert-Manero-BW.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/albert-manero\/img\/600x600-Albert-Manero-RGB.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23207,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/img\/600x600-Albert-Manero-RGB.jpg",
+		"outputAbbreviatedPath": "\/dev\/albert-manero\/img\/600x600-Albert-Manero-RGB.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/albert-manero\/img\/Impact-Manero-LARGE-HEADER-2000-x-400.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 347153,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-LARGE-HEADER-2000-x-400.jpg",
+		"outputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-LARGE-HEADER-2000-x-400.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/albert-manero\/img\/Impact-Manero-MEDIUM-HEADER-1200-x-300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 162448,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/albert-manero\/img\/Impact-Manero-SMALL-HEADER-992-x-248.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 110538,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-SMALL-HEADER-992-x-248.jpg",
+		"outputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-SMALL-HEADER-992-x-248.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/albert-manero\/img\/Impact-Manero-XSMALL-HEADER-786-x-480.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 172782,
+		"inputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-XSMALL-HEADER-786-x-480.jpg",
+		"outputAbbreviatedPath": "\/dev\/albert-manero\/img\/Impact-Manero-XSMALL-HEADER-786-x-480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dev\/amy-huang\/amy-huang.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -102,6 +168,72 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/dev\/amy-huang\/img\/600x600-Amy-Huang-BW.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 13686,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-BW.jpg",
+		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-BW.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/amy-huang\/img\/600x600-Amy-Huang-RGB.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17715,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-RGB.jpg",
+		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/600x600-Amy-Huang-RGB.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/amy-huang\/img\/Impact-Huang-LARGE-HEADER-2000-x-400.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 272677,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-LARGE-HEADER-2000-x-400.jpg",
+		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-LARGE-HEADER-2000-x-400.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/amy-huang\/img\/Impact-Huang-MEDIUM-HEADER-1200-x-300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/amy-huang\/img\/Impact-Huang-SMALL-HEADER-992-x-248.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-SMALL-HEADER-992-x-248.jpg",
+		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-SMALL-HEADER-992-x-248.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/amy-huang\/img\/Impact-Huang-XSMALL-HEADER-786-x-480.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-XSMALL-HEADER-786-x-480.jpg",
+		"outputAbbreviatedPath": "\/dev\/amy-huang\/img\/Impact-Huang-XSMALL-HEADER-786-x-480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/dev\/amy-iarrobino\/amy-iarrobino.css": {
 		"fileType": 16,
@@ -139,6 +271,50 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dev\/arron-smith\/img\/Impact-Smith-LARGE-HEADER-2000-x-400-Large.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 291988,
+		"inputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-LARGE-HEADER-2000-x-400-Large.jpg",
+		"outputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-LARGE-HEADER-2000-x-400-Large.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/arron-smith\/img\/Impact-Smith-MEDIUM-HEADER-1200-x-300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 139203,
+		"inputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/arron-smith\/img\/Impact-Smith-MOBILE-HEADER-786-x-480.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 141709,
+		"inputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-MOBILE-HEADER-786-x-480.jpg",
+		"outputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-MOBILE-HEADER-786-x-480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/arron-smith\/img\/Impact-Smith-SMALL-HEADER-992-x-248.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-SMALL-HEADER-992-x-248.jpg",
+		"outputAbbreviatedPath": "\/dev\/arron-smith\/img\/Impact-Smith-SMALL-HEADER-992-x-248.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dev\/css\/home.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -166,23 +342,71 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/dev\/home\/home.css": {
-		"fileType": 16,
+	"\/dev\/dwayne-houston\/img\/600x600-Dwayne-Houston-BW.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/home\/home.css",
-		"outputAbbreviatedPath": "No Output Path",
+		"initialSize": 17396,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/600x600-Dwayne-Houston-BW.jpg",
+		"outputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/600x600-Dwayne-Houston-BW.jpg",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
-	"\/dev\/home\/home.html": {
-		"fileType": 8192,
+	"\/dev\/dwayne-houston\/img\/600x600-Dwayne-Houston-RGB.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/home\/home.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"initialSize": 21966,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/600x600-Dwayne-Houston-RGB.jpg",
+		"outputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/600x600-Dwayne-Houston-RGB.jpg",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/dwayne-houston\/img\/Impact-Dwayne-LARGE-HEADER-2000-x-400.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 267358,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-LARGE-HEADER-2000-x-400.jpg",
+		"outputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-LARGE-HEADER-2000-x-400.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/dwayne-houston\/img\/Impact-Dwayne-MEDIUM-HEADER-1200-x-300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122830,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/dwayne-houston\/img\/Impact-Dwayne-SMALL-HEADER-992-x-248.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 77766,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-SMALL-HEADER-992-x-248.jpg",
+		"outputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-SMALL-HEADER-992-x-248.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/dwayne-houston\/img\/Impact-Dwayne-XSMALL-HEADER-786-x-480.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122038,
+		"inputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-XSMALL-HEADER-786-x-480.jpg",
+		"outputAbbreviatedPath": "\/dev\/dwayne-houston\/img\/Impact-Dwayne-XSMALL-HEADER-786-x-480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/dev\/home\/home.js": {
 		"fileType": 64,
@@ -194,22 +418,6 @@
 		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
-		},
-	"\/dev\/home\/home.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/dev\/home\/home.scss",
-		"outputAbbreviatedPath": "\/dev\/css\/home.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
 		},
 	"\/dev\/impact-profile-template.html": {
 		"fileType": 8192,
@@ -256,6 +464,72 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/dev\/shannon-payne\/img\/600x600-Shannon-Payne-BW.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18684,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/img\/600x600-Shannon-Payne-BW.jpg",
+		"outputAbbreviatedPath": "\/dev\/shannon-payne\/img\/600x600-Shannon-Payne-BW.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/shannon-payne\/img\/600x600-Shannon-Payne-RGB.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20151,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/img\/600x600-Shannon-Payne-RGB.jpg",
+		"outputAbbreviatedPath": "\/dev\/shannon-payne\/img\/600x600-Shannon-Payne-RGB.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/shannon-payne\/img\/Impact-Payne-LARGE-HEADER-2000-x-400.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 273479,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-LARGE-HEADER-2000-x-400.jpg",
+		"outputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-LARGE-HEADER-2000-x-400.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/shannon-payne\/img\/Impact-Payne-MEDIUM-HEADER-1200-x-300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 130154,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-MEDIUM-HEADER-1200-x-300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/shannon-payne\/img\/Impact-Payne-SMALL-HEADER-992-x-248.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 82320,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-SMALL-HEADER-992-x-248.jpg",
+		"outputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-SMALL-HEADER-992-x-248.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/dev\/shannon-payne\/img\/Impact-Payne-XSMALL-HEADER-786-x-480.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 125192,
+		"inputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-XSMALL-HEADER-786-x-480.jpg",
+		"outputAbbreviatedPath": "\/dev\/shannon-payne\/img\/Impact-Payne-XSMALL-HEADER-786-x-480.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/dev\/shannon-payne\/shannon-payne.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -270,6 +544,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/dev\/shannon-payne\/shannon-payne.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/footer.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/footer.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -297,6 +580,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/functions\/base.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/functions\/config.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/functions\/config.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
