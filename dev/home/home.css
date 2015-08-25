@@ -1,15 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
-.container-full-width {
+#impact .container-full-width {
   width: 100%; }
-
-#lead {
+#impact #lead {
   display: table;
   position: relative; }
-  #lead #lead-content {
+  #impact #lead #lead-content {
     display: table-cell;
     vertical-align: middle; }
-  #lead #video,
-  #lead #videoImage {
+  #impact #lead #video,
+  #impact #lead #videoImage {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -21,23 +20,26 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover; }
-  #lead #videoImage {
+  #impact #lead #videoImage {
     display: none;
     min-width: 100%;
     min-height: 100%; }
-  #lead h1 {
+  #impact #lead h1 {
     color: #fff;
     font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
     font-size: 120px;
     font-style: normal;
     font-weight: 900;
     line-height: 1em;
-    margin-bottom: 0;
+    margin: 0;
     text-align: center;
     text-transform: uppercase; }
-  #lead a:hover, #lead a:focus {
+    @media (max-width: 767px) {
+      #impact #lead h1 {
+        font-size: 55px; } }
+  #impact #lead a:hover, #impact #lead a:focus {
     text-decoration: none; }
-  #lead h2 {
+  #impact #lead h2 {
     color: #ffc904;
     font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
     font-style: normal;
@@ -47,7 +49,25 @@
     margin: 0;
     text-align: center;
     text-transform: uppercase; }
-  #lead .alumni-title {
+    @media (max-width: 767px) {
+      #impact #lead h2 {
+        font-size: 16px; } }
+  #impact #lead hr {
+    border-bottom-color: transparent;
+    border-top-color: #ffc904;
+    border-top-width: 2px;
+    margin: 3.0em auto;
+    width: 85%; }
+    @media (max-width: 767px) {
+      #impact #lead hr {
+        margin: 1.3em auto;
+        width: 50%; } }
+  #impact #lead .alumni {
+    margin-bottom: 150px; }
+    @media (max-width: 991px) {
+      #impact #lead .alumni {
+        margin-bottom: 40px; } }
+  #impact #lead .alumni-title {
     color: #fff;
     font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
     font-size: 32px;
@@ -56,9 +76,11 @@
     line-height: 45px;
     text-align: center;
     text-transform: uppercase; }
-  #lead .alumni {
-    margin-bottom: 150px; }
-  #lead .alumni-name {
+    @media (max-width: 991px) {
+      #impact #lead .alumni-title {
+        font-size: 18px;
+        line-height: 24px; } }
+  #impact #lead .alumni-name {
     color: #ffc904;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 24px;
@@ -66,18 +88,16 @@
     font-weight: 400;
     letter-spacing: 4px;
     text-align: center; }
-  #lead hr {
-    border-bottom-color: transparent;
-    border-top-color: #ffc904;
-    border-top-width: 2px;
-    margin: 3.0em auto;
-    width: 85%; }
-  #lead .explore {
+    @media (max-width: 991px) {
+      #impact #lead .alumni-name {
+        font-size: 16px;
+        margin-bottom: 40px; } }
+  #impact #lead .explore {
     bottom: 10px;
     position: absolute;
     text-align: center;
     width: 100%; }
-    #lead .explore p {
+    #impact #lead .explore p {
       color: #fff;
       font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
       font-style: normal;
