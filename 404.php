@@ -6,7 +6,7 @@
 		<div class="col-md-9">
 			<article>
 				<h1>Page Not Found</h1>
-				<?php 
+				<?php
 					$page = get_page_by_title('404');
 					if($page){
 						$content = $page->post_content;
@@ -21,10 +21,5 @@
 				<?php endif;?>
 			</article>
 		</div>
-		
-		<div id="sidebar" class="col-md-3">
-			<?=get_sidebar();?>
-		</div>
 	</div>
-	<?php get_template_part('includes/below-the-fold'); ?>
 <?php get_footer();?>

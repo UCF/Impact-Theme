@@ -31,24 +31,19 @@
 					</li>
 				<?php endforeach;?>
 				</ul>
-			
+
 				<?php if($start + $limit < $results['number']):?>
 				<a class="button more" href="./?s=<?=$_GET['s']?>&amp;start=<?=$start + $limit?>">More Results</a>
 				<?php endif;?>
-				
+
 				<?php else:?>
-					
+
 				<p>No results found for "<?=htmlentities($_GET['s'])?>".</p>
-				
+
 				<?php endif;?>
 			</article>
 		</div>
-		
-		<div id="sidebar" class="col-md-3">
-			<?=get_sidebar();?>
-		</div>
 	</div>
-	<?php get_template_part('includes/below-the-fold'); ?>
 <?php get_footer();?>
 
 <?php else:?>
@@ -69,16 +64,11 @@
 						</li>
 					<?php endwhile;?>
 					</ul>
-				<?php else:?>		
+				<?php else:?>
 					<p>No results found for "<?=htmlentities($_GET['s'])?>".</p>
 				<?php endif;?>
 			</article>
 		</div>
-		
-		<div id="sidebar" class="col-md-3">
-			<?=get_sidebar();?>
-		</div>
 	</div>
-	<?php get_template_part('includes/below-the-fold'); ?>
 <?php get_footer();?>
 <?php endif;?>

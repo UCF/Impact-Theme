@@ -29,3 +29,6 @@ static/bower_components/*
 static/scss/.sass-cache/*
 dev/*/.sass-cache/*
 typings/*
+
+# Gulp
+node_modules/*
