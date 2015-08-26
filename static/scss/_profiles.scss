@@ -67,6 +67,11 @@ $profile-text-margin-xs: 16px;
     }
   }
 
+  .img-circle {
+    margin: 30px auto 0;
+    max-width: 215px;
+  }
+
   p {
     font-weight: 400;
     margin: $profile-text-margin 0 $profile-text-margin / 2;
