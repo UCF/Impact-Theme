@@ -220,11 +220,13 @@ function display_profile_list() {
 					<div class="profile-img profile-img-c" style="background-image: url(<?php echo $profile_img_c; ?>);" ></div>
 					<a class="profile-item-inner" href="<?php echo $menu_item->url; ?>">
 						<div class="profile-item-content">
-							<?php if ( $profile_title !== $profile_title_alt ): ?>
-								<h3 class="profile-title"><?php echo $profile_title; ?></h3>
-							<?php endif; ?>
+							<h3 class="profile-title">
+								<?php if ( $profile_title !== $profile_title_alt ): ?>
+									<span class="profile-name"><?php echo $profile_title; ?></span>
+								<?php endif; ?>
 
-							<span class="profile-title-alt"><?php echo $profile_title_alt; ?></span>
+								<span class="profile-subtitle"><?php echo $profile_title_alt; ?></span>
+							</h3>
 						</div>
 					</a>
 				</article>
@@ -312,36 +314,5 @@ function add_kses_whitelisted_attributes( $allowedposttags, $context ) {
 	return $allowedposttags;
 }
 add_filter( 'wp_kses_allowed_html', 'add_kses_whitelisted_attributes', 10, 2 );
-
-
-/**
- * Displays the contents of the call-to-action in the footer.
- **/
-function display_footer_cta() {
-	$cta_title = get_theme_option( 'footer_cta_title' );
-	$cta_desc = get_theme_option( 'footer_cta_description' );
-	$cta_text = get_theme_option( 'footer_cta_text' );
-	$cta_url = get_theme_option( 'footer_cta_url' );
-
-	ob_start();
-?>
-
-	<?php if ( $cta_title ): ?>
-	<h2 class="give-section-heading"><?php echo wptexturize( $cta_title ); ?></h2>
-	<?php endif; ?>
-
-	<?php if ( $cta_desc ): ?>
-	<?php echo apply_filters( 'the_content', $cta_desc ); ?>
-	<?php endif; ?>
-
-	<?php if ( $cta_text && $cta_url ): ?>
-	<a class="btn btn-primary btn-xl btn-block" href="<?php echo $cta_url; ?>">
-		<?php echo wptexturize( $cta_text ); ?>
-	</a>
-	<?php endif; ?>
-
-<?php
-	return ob_get_clean();
-}
 
 ?>
