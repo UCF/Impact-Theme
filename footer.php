@@ -37,7 +37,9 @@
 									$org_name = get_theme_option( 'organization_name' );
 									if ( $org_name ):
 									?>
-									<h2 class="footer-section-heading"><?php echo wptexturize( $org_name ); ?></h2>
+									<h2 class="footer-section-heading">
+										<a href="<?php echo site_url(); ?>"><?php echo wptexturize( $org_name ); ?></a>
+									</h2>
 									<?php endif; ?>
 
 									<?php echo display_address(); ?>
