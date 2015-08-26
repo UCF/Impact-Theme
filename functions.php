@@ -220,11 +220,13 @@ function display_profile_list() {
 					<div class="profile-img profile-img-c" style="background-image: url(<?php echo $profile_img_c; ?>);" ></div>
 					<a class="profile-item-inner" href="<?php echo $menu_item->url; ?>">
 						<div class="profile-item-content">
-							<?php if ( $profile_title !== $profile_title_alt ): ?>
-								<h3 class="profile-title"><?php echo $profile_title; ?></h3>
-							<?php endif; ?>
+							<h3 class="profile-title">
+								<?php if ( $profile_title !== $profile_title_alt ): ?>
+									<span class="profile-name"><?php echo $profile_title; ?></span>
+								<?php endif; ?>
 
-							<span class="profile-title-alt"><?php echo $profile_title_alt; ?></span>
+								<span class="profile-subtitle"><?php echo $profile_title_alt; ?></span>
+							</h3>
 						</div>
 					</a>
 				</article>

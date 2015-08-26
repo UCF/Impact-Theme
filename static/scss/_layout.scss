@@ -163,6 +163,10 @@
 }
 
 .profile-title {
+  margin: 0;
+}
+
+.profile-name {
   display: block;
   font-family: $font-family-serif;
   font-size: 18px;
@@ -191,7 +195,7 @@
   }
 }
 
-.profile-title-alt {
+.profile-subtitle {
   @include narrow-text();
   @include transition(color .3s ease-in-out);
   bottom: 0;
