@@ -313,35 +313,4 @@ function add_kses_whitelisted_attributes( $allowedposttags, $context ) {
 }
 add_filter( 'wp_kses_allowed_html', 'add_kses_whitelisted_attributes', 10, 2 );
 
-
-/**
- * Displays the contents of the call-to-action in the footer.
- **/
-function display_footer_cta() {
-	$cta_title = get_theme_option( 'footer_cta_title' );
-	$cta_desc = get_theme_option( 'footer_cta_description' );
-	$cta_text = get_theme_option( 'footer_cta_text' );
-	$cta_url = get_theme_option( 'footer_cta_url' );
-
-	ob_start();
-?>
-
-	<?php if ( $cta_title ): ?>
-	<h2 class="give-section-heading"><?php echo wptexturize( $cta_title ); ?></h2>
-	<?php endif; ?>
-
-	<?php if ( $cta_desc ): ?>
-	<?php echo apply_filters( 'the_content', $cta_desc ); ?>
-	<?php endif; ?>
-
-	<?php if ( $cta_text && $cta_url ): ?>
-	<a class="btn btn-primary btn-xl btn-block" href="<?php echo $cta_url; ?>">
-		<?php echo wptexturize( $cta_text ); ?>
-	</a>
-	<?php endif; ?>
-
-<?php
-	return ob_get_clean();
-}
-
 ?>

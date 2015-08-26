@@ -8,7 +8,26 @@
 
 							<div class="footer-give-column-wrap">
 								<aside class="footer-section give-section-white">
-									<?php echo display_footer_cta(); ?>
+									<?php
+									$cta_title = get_theme_option( 'footer_cta_title' );
+									$cta_desc = get_theme_option( 'footer_cta_description' );
+									$cta_text = get_theme_option( 'footer_cta_text' );
+									$cta_url = get_theme_option( 'footer_cta_url' );
+
+									if ( $cta_title ):
+									?>
+									<h2 class="give-section-heading"><?php echo wptexturize( $cta_title ); ?></h2>
+									<?php endif; ?>
+
+									<?php if ( $cta_desc ): ?>
+									<?php echo apply_filters( 'the_content', $cta_desc ); ?>
+									<?php endif; ?>
+
+									<?php if ( $cta_text && $cta_url ): ?>
+									<a class="btn btn-primary btn-xl btn-block" href="<?php echo $cta_url; ?>">
+										<?php echo wptexturize( $cta_text ); ?>
+									</a>
+									<?php endif; ?>
 								</aside>
 							</div>
 
@@ -53,12 +72,6 @@
 									<?php endif; ?>
 								</aside>
 								<?php endif; ?>
-							</div>
-
-							<div class="footer-give-fullwidth-wrap">
-								<aside class="footer-section give-section-white">
-									<?php echo display_footer_cta(); ?>
-								</aside>
 							</div>
 
 						</div>

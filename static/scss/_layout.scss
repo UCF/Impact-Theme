@@ -264,15 +264,6 @@
   display: table-cell;
 }
 
-.footer-give-fullwidth-wrap {
-  display: none;
-
-  @media (max-width: $screen-sm-max) {
-    display: block;
-    width: 100%;
-  }
-}
-
 .footer-address-custom-wrap {
   padding-bottom: 65px;
   padding-left: 40px;
@@ -302,7 +293,8 @@
   width: 38%;
 
   @media (max-width: $screen-sm-max) {
-    display: none;
+    display: block;
+    width: 100%;
   }
 }
 
