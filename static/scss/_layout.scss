@@ -242,6 +242,10 @@
     display: block;
     margin-top: 35px;
   }
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 0;
+  }
 }
 
 .footer-address-custom-wrap,
@@ -312,6 +316,7 @@
     }
 
     @media (max-width: $screen-xs-max) {
+      margin-top: 0;
       padding: 30px;
     }
 
