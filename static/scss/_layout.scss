@@ -3,6 +3,10 @@
 
 
 // Site-wide layout elements
+html,
+body {
+  overflow-x: hidden;
+}
 
 .give-section-white {
   background-color: #fff;
