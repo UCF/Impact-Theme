@@ -564,7 +564,7 @@ function sc_call_to_action_bar( $attr ) {
 					<p><?php echo $attr['text']; ?></p>
 				</div>
 				<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-1">
-					<a href="<?php echo $attr['link']; ?>" class="btn btn-xl btn-cta" style="background: <?php echo $attr['button_background_color']; ?>; color: <?php echo $attr['button_foreground_color']; ?>">
+					<a href="<?php echo $attr['link']; ?>" class="btn btn-xl btn-cta btn-primary" style="background: <?php echo $attr['button_background_color']; ?>; color: <?php echo $attr['button_foreground_color']; ?>">
 						<?php echo $attr['link_text']; ?>
 					</a>
 				</div>
