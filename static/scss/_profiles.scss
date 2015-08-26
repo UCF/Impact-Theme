@@ -1,38 +1,126 @@
+$profile-text-margin: 24px;
+$profile-text-margin-xs: 16px;
+
 .page-profile {
-  p {
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 32px;
-    margin: 24px 0 12px 0;
+  font-size: 20px;
+  line-height: 1.6;
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 22px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 16px;
+  }
+
+  .profile-body {
+    padding-bottom: 100px;
+    padding-top: 30px;
+
+    @media (max-width: $screen-xs-max) {
+      padding-bottom: 40px;
+      padding-top: 20px;
+    }
+  }
+
+  .intro {
+    background-color: #000;
+    padding: 25px 0;
   }
 
   .lead {
-    color: #fff;
     border-bottom: 1px solid #fff;
-    padding: 20px 0 30px 0;
+    color: #fff;
+    font-size: 28px;
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-lg-min) {
+      font-size: 32px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 24px;
+    }
+
+    a {
+      color: $ucf-gold;
+
+      &:hover,
+      &:focus {
+        color: #c90;
+        text-decoration: none;
+      }
+    }
   }
 
-  .lead a {
-    color: #fc0;
+  .social {
+    margin-bottom: $profile-text-margin;
+    margin-top: 30px;
   }
 
-  .lead a:hover {
-    text-decoration: none;
-    color: #c90;
+  .section-heading {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .embed-responsive {
+    margin-bottom: 30px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    margin: $profile-text-margin 0 $profile-text-margin / 2;
+
+    @media (max-width: $screen-xs-max) {
+      margin: $profile-text-margin-xs 0 $profile-text-margin-xs / 2;
+    }
+  }
+
+  .sidebar-blockquote {
+    font-size: 26px;
+    margin-top: 80px;
+    text-align: right;
+
+    @media (min-width: $screen-lg-min) {
+      font-size: 28px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 0;
+      text-align: left;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
   }
 
   .dl-horizontal {
-    font-size: 22px;
-    line-height: 32px;
-  }
+    margin-top: $profile-text-margin;
 
-  .dl-horizontal dt {
-    font-family: "Gotham SSm A", "Gotham SSm B";
-    font-weight: 700;
-    text-align: left;
-  }
+    @media (max-width: $screen-xs-max) {
+      margin-top: $profile-text-margin-xs;
+    }
 
-  .dl-horizontal dd {
-    margin-bottom: 24px;
+    dt {
+      @include sans-serif-text();
+      font-weight: 700;
+      text-align: left;
+    }
+
+    dd {
+      margin-bottom: $profile-text-margin;
+      margin-left: 200px;
+
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: $profile-text-margin-xs;
+        margin-left: 0;
+      }
+    }
   }
 }
