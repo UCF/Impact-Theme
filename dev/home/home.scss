@@ -101,10 +101,10 @@ body.ie8 #video-image {
   }
 
   .featured-link {
-    @include transition(opacity .5s ease-in);
+    @include transition(opacity .3s ease-in);
 
     &.fade {
-      @include transition(opacity .5s ease-in);
+      @include transition(opacity .3s ease-in);
       opacity: .3;
     }
   }
@@ -155,7 +155,7 @@ body.ie8 #video-image {
     text-align: center;
     width: 100%;
 
-    p {
+    a.copy {
       @include sans-serif-text();
       color: #fff;
       font-size: 26px;
