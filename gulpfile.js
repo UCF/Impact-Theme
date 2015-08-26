@@ -16,6 +16,7 @@ var gulp = require('gulp'),
 
 var config = {
   sassPath: './static/scss',
+  devPath: './dev/**/',
   cssPath: './static/css',
   jsPath: './static/js',
   fontPath: './static/fonts',
@@ -47,6 +48,10 @@ gulp.task('css', function() {
     .pipe(rename('style.min.css'))
     .pipe(bless())
     .pipe(gulp.dest(config.cssPath));
+  gulp.src(config.devPath + '/*.scss')
+    .pipe(scsslint())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest("dev"));
     // .pipe(browserSync.stream());
 });
 
@@ -86,6 +91,7 @@ gulp.task('watch', function() {
   // gulp.watch(config.phpPath + '/*.php');
 
   gulp.watch(config.sassPath + '/*.scss', ['css']);
+  gulp.watch(config.devPath + '/*.scss', ['css']);
   gulp.watch(config.jsPath + '/*.js', ['js']);
 });
 

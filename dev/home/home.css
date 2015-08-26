@@ -1,5 +1,6 @@
 #impact .container-full-width {
   width: 100%; }
+
 #impact #lead {
   display: table;
   position: relative; }
@@ -7,24 +8,24 @@
     display: table-cell;
     vertical-align: middle; }
   #impact #lead #video,
-  #impact #lead #videoImage {
+  #impact #lead #video-image {
     background-color: #000;
     background-size: cover;
     height: auto;
     left: 50%;
-    min-width: 150%;
     min-height: 150%;
+    min-width: 150%;
     position: fixed;
     top: 50%;
-    width: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%); }
-  #impact #lead #videoImage {
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    z-index: -100; }
+  #impact #lead #video-image {
     display: none;
-    min-width: 100%;
-    min-height: 100%; }
+    min-height: 100%;
+    min-width: 100%; }
   #impact #lead h1 {
     color: #fff;
     font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
@@ -38,13 +39,14 @@
     @media (max-width: 767px) {
       #impact #lead h1 {
         font-size: 55px; } }
-  #impact #lead a:hover, #impact #lead a:focus {
+  #impact #lead a:hover,
+  #impact #lead a:focus {
     text-decoration: none; }
   #impact #lead h2 {
     color: #ffc904;
     font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
-    font-style: normal;
     font-size: 32px;
+    font-style: normal;
     font-weight: 700;
     letter-spacing: 9px;
     margin: 0;
@@ -57,25 +59,21 @@
     border-bottom-color: transparent;
     border-top-color: #ffc904;
     border-top-width: 2px;
-    margin: 3.0em auto;
+    margin: 3em auto;
     width: 85%; }
     @media (max-width: 767px) {
       #impact #lead hr {
         margin: 1.3em auto;
         width: 50%; } }
   #impact #lead .featured-link {
-    -webkit-transition: opacity .5s ease-in;
-    -moz-transition: opacity .5s ease-in;
-    -ms-transition: opacity .5s ease-in;
-    -o-transition: opacity .5s ease-in;
-    transition: opacity .5s ease-in; }
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out; }
     #impact #lead .featured-link.fade {
-      opacity: 0.3;
-      -webkit-transition: opacity .5s ease-in;
-      -moz-transition: opacity .5s ease-in;
-      -ms-transition: opacity .5s ease-in;
-      -o-transition: opacity .5s ease-in;
-      transition: opacity .5s ease-in; }
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+      opacity: .3; }
   #impact #lead .alumni {
     margin-bottom: 150px; }
     @media (max-width: 991px) {
@@ -114,8 +112,11 @@
     #impact #lead .explore p {
       color: #fff;
       font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
-      font-style: normal;
       font-size: 26px;
+      font-style: normal;
       font-weight: 700;
       text-align: center;
       text-transform: uppercase; }
+    #impact #lead .explore i {
+      color: #fff;
+      font-size: 40px; }

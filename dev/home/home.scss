@@ -1,5 +1,6 @@
 @import '../../static/scss/variables';
-@import '../../static/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../static/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables';
+@import '../../static/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins';
 
 #impact {
 
@@ -18,26 +19,26 @@
     }
 
     #video,
-    #videoImage {
+    #video-image {
       background-color: #000;
       background-size: cover;
       height: auto;
       left: 50%;
-      min-width: 150%;
       min-height: 150%;
+      min-width: 150%;
       position: fixed;
       top: 50%;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
       width: auto;
       z-index: -100;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-          -ms-transform: translateX(-50%) translateY(-50%);
-              transform: translateX(-50%) translateY(-50%);
     }
 
-    #videoImage {
+    #video-image {
       display: none;
-      min-width: 100%;
       min-height: 100%;
+      min-width: 100%;
     }
 
     h1 {
@@ -56,15 +57,16 @@
       }
     }
 
-    a:hover, a:focus {
+    a:hover,
+    a:focus {
       text-decoration: none;
     }
 
     h2 {
       color: $ucf-gold;
       font-family: $font-family-sans-serif;
-      font-style: normal;
       font-size: 32px;
+      font-style: normal;
       font-weight: 700;
       letter-spacing: 9px;
       margin: 0;
@@ -80,7 +82,7 @@
       border-bottom-color: transparent;
       border-top-color: $ucf-gold;
       border-top-width: 2px;
-      margin: 3.0em auto;
+      margin: 3em auto;
       width: 85%;
 
       @media (max-width: $screen-xs-max) {
@@ -90,18 +92,11 @@
     }
 
     .featured-link {
-      -webkit-transition: opacity .5s ease-in;
-        -moz-transition: opacity .5s ease-in;
-          -ms-transition: opacity .5s ease-in;
-          -o-transition: opacity .5s ease-in;
-              transition: opacity .5s ease-in;
+      @include transition(opacity .3s ease-in-out);
+
       &.fade {
-        opacity: 0.3;
-        -webkit-transition: opacity .5s ease-in;
-          -moz-transition: opacity .5s ease-in;
-            -ms-transition: opacity .5s ease-in;
-            -o-transition: opacity .5s ease-in;
-                transition: opacity .5s ease-in;
+        @include transition(opacity .3s ease-in-out);
+        opacity: .3;
       }
     }
 
@@ -152,11 +147,16 @@
       p {
         color: #fff;
         font-family: $font-family-sans-serif;
-        font-style: normal;
         font-size: 26px;
+        font-style: normal;
         font-weight: 700;
         text-align: center;
         text-transform: uppercase;
+      }
+
+      i {
+        color: #fff;
+        font-size: 40px;
       }
     }
 
