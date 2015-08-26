@@ -20,7 +20,8 @@ var config = {
   jsPath: './static/js',
   fontPath: './static/fonts',
   phpPath: './',
-  bowerDir: './static/bower_components'
+  bowerDir: './static/bower_components',
+  devPath: './dev'
 };
 
 
@@ -48,6 +49,12 @@ gulp.task('css', function() {
     .pipe(bless())
     .pipe(gulp.dest(config.cssPath));
     // .pipe(browserSync.stream());
+
+  // .scss files in /dev/ directory
+  gulp.src(config.devPath + '/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(gulp.dest(config.devPath));
 });
 
 
@@ -86,6 +93,7 @@ gulp.task('watch', function() {
   // gulp.watch(config.phpPath + '/*.php');
 
   gulp.watch(config.sassPath + '/*.scss', ['css']);
+  gulp.watch(config.devPath + '/**/*.scss', ['css']);
   gulp.watch(config.jsPath + '/*.js', ['js']);
 });
 
