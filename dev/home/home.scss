@@ -1,165 +1,157 @@
+@import '../../static/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins';
+@import '../../static/scss/mixins';
 @import '../../static/scss/variables';
-@import '../../static/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables.scss';
+@import '../../static/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables';
+
+
+#lead {
+  display: table;
+  position: relative;
+}
+
+#lead-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#video,
+#video-image {
+  @include translate(-50%, -50%);
+  background-color: #000;
+  background-size: cover;
+  height: auto;
+  left: 50%;
+  min-height: 150%;
+  min-width: 150%;
+  position: fixed;
+  top: 50%;
+  width: auto;
+  z-index: -100;
+}
+
+#video-image {
+  display: none;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+
+// Homepage-specific
 
 #impact {
 
-  .container-full-width {
-    width: 100%;
+  h1 {
+    @include sans-serif-text();
+    color: #fff;
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 1em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 55px;
+    }
   }
 
-  // Home Page
-  #lead {
-    display: table;
-    position: relative;
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
 
-    #lead-content {
-      display: table-cell;
-      vertical-align: middle;
+  .subtitle {
+    @include sans-serif-text();
+    color: $ucf-gold;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 9px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 16px;
     }
+  }
 
-    #video,
-    #videoImage {
-      background-color: #000;
-      background-size: cover;
-      height: auto;
-      left: 50%;
-      min-width: 150%;
-      min-height: 150%;
-      position: fixed;
-      top: 50%;
-      width: auto;
-      z-index: -100;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-          -ms-transform: translateX(-50%) translateY(-50%);
-              transform: translateX(-50%) translateY(-50%);
+  hr {
+    border-bottom-color: transparent;
+    border-top-color: $ucf-gold;
+    border-top-width: 2px;
+    margin: 3em auto;
+    width: 85%;
+
+    @media (max-width: $screen-xs-max) {
+      margin: 1.3em auto;
+      width: 50%;
     }
+  }
 
-    #videoImage {
-      display: none;
-      min-width: 100%;
-      min-height: 100%;
+  .featured-link {
+    @include transition(opacity .5s ease-in);
+
+    &.fade {
+      @include transition(opacity .5s ease-in); // TODO: does this need to be re-stated?
+      opacity: .3;
     }
+  }
 
-    h1 {
+  .alumni {
+    margin-bottom: 150px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .alumni-title,
+  .alumni-name {
+    display: block;
+    text-align: center;
+  }
+
+  .alumni-title {
+    @include sans-serif-text();
+    color: #fff;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 18px;
+    }
+  }
+
+  .alumni-name {
+    @include sans-serif-text();
+    color: $ucf-gold;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .explore {
+    bottom: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    p {
+      @include sans-serif-text();
       color: #fff;
-      font-family: $font-family-sans-serif;
-      font-size: 120px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 1em;
-      margin: 0;
-      text-align: center;
-      text-transform: uppercase;
-
-      @media (max-width: $screen-xs-max) {
-        font-size: 55px;
-      }
-    }
-
-    a:hover, a:focus {
-      text-decoration: none;
-    }
-
-    h2 {
-      color: $ucf-gold;
-      font-family: $font-family-sans-serif;
-      font-style: normal;
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 700;
-      letter-spacing: 9px;
-      margin: 0;
       text-align: center;
       text-transform: uppercase;
-
-      @media (max-width: $screen-xs-max) {
-        font-size: 16px;
-      }
     }
-
-    hr {
-      border-bottom-color: transparent;
-      border-top-color: $ucf-gold;
-      border-top-width: 2px;
-      margin: 3.0em auto;
-      width: 85%;
-
-      @media (max-width: $screen-xs-max) {
-        margin: 1.3em auto;
-        width: 50%;
-      }
-    }
-
-    .featured-link {
-      -webkit-transition: opacity .5s ease-in;
-        -moz-transition: opacity .5s ease-in;
-          -ms-transition: opacity .5s ease-in;
-          -o-transition: opacity .5s ease-in;
-              transition: opacity .5s ease-in;
-      &.fade {
-        opacity: 0.3;
-        -webkit-transition: opacity .5s ease-in;
-          -moz-transition: opacity .5s ease-in;
-            -ms-transition: opacity .5s ease-in;
-            -o-transition: opacity .5s ease-in;
-                transition: opacity .5s ease-in;
-      }
-    }
-
-    .alumni {
-      margin-bottom: 150px;
-      @media (max-width: $screen-sm-max) {
-        margin-bottom: 40px;
-      }
-    }
-
-    .alumni-title {
-      color: #fff;
-      font-family: $font-family-sans-serif;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: 45px;
-      text-align: center;
-      text-transform: uppercase;
-
-      @media (max-width: $screen-sm-max) {
-        font-size: 18px;
-        line-height: 24px;
-      }
-    }
-
-    .alumni-name {
-      color: $ucf-gold;
-      font-family: $font-family-sans-narrow;
-      font-size: 24px;
-      font-style: italic;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-align: center;
-
-      @media (max-width: $screen-sm-max) {
-        font-size: 16px;
-        margin-bottom: 40px;
-      }
-    }
-
-    .explore {
-      bottom: 10px;
-      position: absolute;
-      text-align: center;
-      width: 100%;
-
-      p {
-        color: #fff;
-        font-family: $font-family-sans-serif;
-        font-style: normal;
-        font-size: 26px;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-      }
-    }
-
-  } // End #lead
+  }
 
 }// end #impact

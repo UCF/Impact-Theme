@@ -26,7 +26,7 @@
 
 	function showVideoStill() {
 		$video.hide();
-		$('#videoImage').show();
+		$('#video-image').show();
 		$featuredLink.removeClass('fade');
 	}
 
