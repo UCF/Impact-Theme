@@ -528,6 +528,7 @@ function sc_header_image_css( $attr, $content='' ) {
 	?>
 	<section class="parallax-content parallax-header">
 		<div class="parallax-photo" id="photo_<?php echo $post->ID; ?>">
+			<div class="clearfix"></div>
 			<?php echo $content; ?>
 		</div>
 	</section>
