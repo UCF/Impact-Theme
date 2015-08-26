@@ -162,11 +162,11 @@
   }
 }
 
-.profile-title {
+.profile-item-title {
   margin: 0;
 }
 
-.profile-name {
+.profile-item-name {
   display: block;
   font-family: $font-family-serif;
   font-size: 18px;
@@ -195,7 +195,7 @@
   }
 }
 
-.profile-subtitle {
+.profile-item-subtitle {
   @include narrow-text();
   @include transition(color .3s ease-in-out);
   bottom: 0;
