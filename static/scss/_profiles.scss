@@ -29,7 +29,10 @@
   .dl-horizontal dt {
     font-family: "Gotham SSm A", "Gotham SSm B";
     font-weight: 700;
-    margin-bottom: 24px;
     text-align: left;
+  }
+
+  .dl-horizontal dd {
+    margin-bottom: 24px;
   }
 }
