@@ -24,6 +24,11 @@
 		}
 	}
 
+	function hideVideoStill() {
+		$('#video-image').hide();
+		$video.show();
+	}
+
 	function showVideoStill() {
 		$('#video-image').show();
 		$video.hide();
@@ -33,6 +38,7 @@
 	function setupEventHandlers() {
 		$(window).resize(resizeLead);
 		$video.on('timeupdate', toggleLinks);
+		$video.on('play', hideVideoStill);
 		$video.on('ended', showVideoStill);
 	}
 
