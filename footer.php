@@ -24,7 +24,7 @@
 									<?php endif; ?>
 
 									<?php if ( $cta_text && $cta_url ): ?>
-									<a class="btn btn-primary btn-xl btn-block" href="<?php echo $cta_url; ?>">
+									<a class="ga-event-link btn btn-primary btn-xl btn-block" data-ga-category="CTA button - footer" href="<?php echo $cta_url; ?>">
 										<?php echo wptexturize( $cta_text ); ?>
 									</a>
 									<?php endif; ?>
