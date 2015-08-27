@@ -611,7 +611,7 @@ function sc_featured_profile( $attr ) {
 		if( $page = get_page_by_title( $attr['post_title'] ) ) :
 			ob_start();
 			?>
-			<a href="<?php echo $page->post_name ?>">
+			<a href="<?php echo get_permalink( $page->ID ) ?>">
 				<span class="alumni-title">
 					<?php echo get_post_meta( $page->ID, 'page_subtitle', true ) ?>
 				</span>
