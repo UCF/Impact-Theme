@@ -581,4 +581,27 @@ function sc_call_to_action_bar( $attr ) {
 }
 add_shortcode( 'call-to-action-bar', 'sc_call_to_action_bar' );
 
+function sc_page_title( ){
+   return get_the_title();
+}
+add_shortcode( 'page_title', 'sc_page_title' );
+
+function sc_page_subtitle( ){
+	global $post;
+	$post_id = wp_is_post_revision( $post->ID );
+
+	if( $post_id === False ) {
+		$post_id = $post->ID;
+	}
+
+	$subtitle = get_post_meta( $post_id, 'page_subtitle', true );
+	
+	if( isset( $subtitle ) ) {
+		return '<span class="subtitle">' . $subtitle . '</span>';
+	} else {
+		return "";
+	}
+}
+add_shortcode( 'page_subtitle', 'sc_page_subtitle' );
+
 ?>
