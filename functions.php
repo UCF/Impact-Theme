@@ -34,15 +34,15 @@ add_filter('user_can_richedit', 'disable_wysiwyg');
 
 
 /**
- * Returns the url of the parallax feature's/page's featured image by the
+ * Returns the url of the page's header image by the
  * size specified.
  *
- * @param int $feature_id    - post ID of the parallax feature or page with featured image
+ * @param int $feature_id    - post ID of the page with header image
  * @param string $size       - image size registered with Wordpress to fetch the image by
  * @param string $cpt_field  - name (including prefix) of the meta field for the potential overridden image
  * @return string
  **/
-function get_parallax_feature_img($post_id, $size, $cpt_field) {
+function get_header_img($post_id, $size, $cpt_field) {
 	$featured_img_id = get_post_thumbnail_id($post_id);
 	$thumb = null;
 	$generated_thumb = wp_get_attachment_image_src($featured_img_id, $size);
@@ -54,59 +54,42 @@ function get_parallax_feature_img($post_id, $size, $cpt_field) {
 
 
 /**
- * Output CSS necessary for responsive parallax features.
+ * Output CSS necessary for responsive header images.
  *
- * @param int $post_id        - post ID of the parallax feature or page
+ * @param int $post_id        - post ID of the page
  * @param string $d_cpt_field - name (including prefix) of the meta field for the potential overridden image for desktop browsers
  * @param string $t_cpt_field - name (including prefix) of the meta field for the potential overridden image for tablet browsers
  * @param string $m_cpt_field - name (including prefix) of the meta field for the potential overridden image for mobile browsers
  **/
-function get_parallax_feature_css($post_id, $lg_cpt_field, $md_cpt_field, $sm_cpt_field, $xs_cpt_field) {
-	$featured_img_id = get_post_thumbnail_id($post_id);
+function get_header_image_css($post_id, $lg_cpt_field, $md_cpt_field, $sm_cpt_field, $xs_cpt_field) {
 
-	$featured_img_lg = get_parallax_feature_img($post_id, 'parallax_feature-full', $lg_cpt_field);
-	$featured_img_md = get_parallax_feature_img($post_id, 'parallax_feature-desktop', $md_cpt_field);
-	$featured_img_sm = get_parallax_feature_img($post_id, 'parallax_feature-tablet', $sm_cpt_field);
-	$featured_img_xs = get_parallax_feature_img($post_id, 'parallax_feature-mobile', $xs_cpt_field);
+	$header_img_lg = get_header_img($post_id, 'parallax_feature-full', $lg_cpt_field);
+	$header_img_md = get_header_img($post_id, 'parallax_feature-desktop', $md_cpt_field);
+	$header_img_sm = get_header_img($post_id, 'parallax_feature-tablet', $sm_cpt_field);
+	$header_img_xs = get_header_img($post_id, 'parallax_feature-mobile', $xs_cpt_field);
 
 	ob_start();
 ?>
 	<style type="text/css">
-		<?php if ($featured_img_lg) { ?>
-		@media all and (min-width: 1200px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_lg?>'); } }
+		<?php if ($header_img_lg) { ?>
+		@media all and (min-width: 1200px) { #photo_<?=$post_id?> { background-image: url('<?php echo $header_img_lg; ?>'); } }
 		<?php } ?>
-		<?php if ($featured_img_md) { ?>
-		@media all and (max-width: 1199px) and (min-width: 992px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_md?>'); } }
+		<?php if ($header_img_md) { ?>
+		@media all and (max-width: 1199px) and (min-width: 992px) { #photo_<?=$post_id?> { background-image: url('<?php echo $header_img_md; ?>'); } }
 		<?php } ?>
-		<?php if ($featured_img_sm) { ?>
-		@media all and (max-width: 991px) and (min-width: 768px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_sm?>'); } }
+		<?php if ($header_img_sm) { ?>
+		@media all and (max-width: 991px) and (min-width: 768px) { #photo_<?=$post_id?> { background-image: url('<?php echo $header_img_sm; ?>'); } }
 		<?php } ?>
-		<?php if ($featured_img_xs) { ?>
-		@media all and (max-width: 767px) { #photo_<?=$post_id?> { background-image: url('<?=$featured_img_xs?>'); } }
+		<?php if ($header_img_xs) { ?>
+		@media all and (max-width: 767px) { #photo_<?=$post_id?> { background-image: url('<?php echo $header__img_xs; ?>'); } }
 		<?php } ?>
 	</style>
 	<!--[if lt IE 9]>
 	<style type="text/css">
-		#photo_<?=$post_id?> { background-image: url('<?=$featured_img_lg?>'); }
+		#photo_<?=$post_id?> { background-image: url('<?php echo $header_img_lg; ?>'); }
 	</style>
 	<![endif]-->
 <?php
-	return ob_get_clean();
-}
-
-
-/**
- * Display a subpage parallax header image.
- **/
-function get_parallax_page_header($page_id) {
-	$page = get_post($page_id);
-	ob_start();
-	echo get_parallax_feature_css($page_id, 'page_header_lg', 'page_header_md', 'page_header_sm', 'page_header_xs');
-	?>
-	<section class="parallax-content parallax-header">
-		<div class="parallax-photo" id="photo_<?php echo $page_id; ?>"></div>
-	</section>
-	<?php
 	return ob_get_clean();
 }
 

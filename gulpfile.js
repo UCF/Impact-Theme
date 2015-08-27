@@ -51,11 +51,11 @@ gulp.task('css', function() {
     // .pipe(browserSync.stream());
 
   // .scss files in /dev/ directory
-  gulp.src(config.devPath + '/**/*.scss')
-    .pipe(scsslint())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(minifyCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest(config.devPath));
+  //gulp.src(config.devPath + '/**/*.scss')
+  //  .pipe(scsslint())
+  //  .pipe(sass().on('error', sass.logError))
+  //  .pipe(minifyCss({compatibility: 'ie8'}))
+  //  .pipe(gulp.dest(config.devPath));
 });
 
 

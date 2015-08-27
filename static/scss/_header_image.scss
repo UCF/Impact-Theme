@@ -1,5 +1,5 @@
 /**
- * Parallax image dimension responsive overrides:
+ * header-image image dimension responsive overrides:
  *
  * Note the naming conventions differ slightly from Bootstrap 2's device size naming.
  *
@@ -8,12 +8,12 @@
  * from where the background image is pushed upward on scroll.
  **/
 
-// Parallax Features, Parallax Headers
-.parallax-content {
+// header-image Features, header-image Headers
+.header-image-content {
   overflow: hidden;
 }
 
-.parallax-header-inner {
+.header-image-header-inner {
   height: 100%;
   position: relative;
 
@@ -27,7 +27,7 @@
   }
 }
 
-.parallax-photo {
+.header-image-photo {
   // background-attachment: fixed;
   background-size: cover;
   background-color: #222;
@@ -51,7 +51,7 @@
   }
 }
 
-.parallax-header .parallax-photo {
+.header-image-header .header-image-photo {
   padding-bottom: 0;
   padding-top: 0;
 }
@@ -61,13 +61,13 @@
     padding-top: 60px;
   }
 
-  .parallax-photo {
+  .header-image-photo {
     background-position: center center;
     height: 550px;
   }
 }
 
-.parallax-header{
+.header-image-header{
   h1,
   p {
     color: #fff;
@@ -90,11 +90,11 @@
 }
 // Full-size (x-large) screens (1200x+ wide)
 @media all and (min-width: $screen-lg-min) {
-  .parallax-header .parallax-photo {
+  .header-image-header .header-image-photo {
     min-height: 400px;
   }
 
-  .parallax-header {
+  .header-image-header {
     h1 {
       font-size: 50px;
       margin-top: 150px;
@@ -108,11 +108,11 @@
 
 // "Desktop (medium/large)" screens (1199px-768px wide)
 @media all and (max-width: $screen-md-max) and (min-width: $screen-md-min) {
-  .parallax-header .parallax-photo {
+  .header-image-header .header-image-photo {
     min-height: 300px;
   }
 
-  .parallax-header {
+  .header-image-header {
     h1 {
       font-size: 45px;
       margin-top: 105px;
@@ -124,7 +124,7 @@
 }
 
 @media all and (max-width: $screen-md-max) {
-  .parallax-photo {
+  .header-image-photo {
     padding-left: 0;
     padding-right: 0;
   }
@@ -132,15 +132,15 @@
 
 // "Tablet (small)" screens (767-481px wide)
 @media all and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
-  .parallax-header .parallax-photo {
+  .header-image-header .header-image-photo {
     min-height: 250px;
   }
 
-  .parallax-photo {
+  .header-image-photo {
     padding-top: 80px;
   }
 
-  .parallax-header {
+  .header-image-header {
     h1 {
       font-size: 38px;
       margin-top: 87px;
@@ -154,28 +154,28 @@
 
 @media all and (max-width: $screen-sm-max) {
 
-  .parallax-photo {
+  .header-image-photo {
     background-attachment: scroll; // make sure iPad portrait is reset
   }
 
-  .parallax-content .container {
+  .header-image-content .container {
     padding-left: 20px;
     padding-right: 20px;
   }
 
 
-  .parallax-header-inner .cta {
+  .header-image-header-inner .cta {
     left: 0;
   }
 }
 
 // "Mobile (x-small)" screens (>=480px wide)
 @media all and (max-width: $screen-xs-max) {
-  .parallax-header .parallax-photo {
+  .header-image-header .header-image-photo {
     min-height: 480px;
   }
 
-  .parallax-header {
+  .header-image-header {
     h1 {
       font-size: 36px;
       margin-top: 200px;

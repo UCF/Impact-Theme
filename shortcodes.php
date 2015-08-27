@@ -524,10 +524,10 @@ add_shortcode( 'background-image', 'sc_background_image' );
 function sc_header_image_css( $attr, $content='' ) {
 	global $post;
 	ob_start();
-	echo get_parallax_feature_css( $post->ID, 'page_header_lg', 'page_header_md', 'page_header_sm', 'page_header_xs' );
+	echo get_header_image_css( $post->ID, 'page_header_lg', 'page_header_md', 'page_header_sm', 'page_header_xs' );
 	?>
-	<section class="parallax-content parallax-header">
-		<div class="parallax-photo" id="photo_<?php echo $post->ID; ?>">
+	<section class="header-image-content header-image-header">
+		<div class="header-image-photo" id="photo_<?php echo $post->ID; ?>">
 			<div class="clearfix"></div>
 			<?php echo $content; ?>
 		</div>
