@@ -237,12 +237,12 @@ iframe[name="google_conversion_frame"] {
   @extend .list-inline;
 
   li {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
 
   a {
-    @include sprite('../img/social-square.png', '../img/social-square-r.png', 162px, 28px);
+    @include sprite('../img/social-square.png', '../img/social-square-r.png', 195px, 28px);
     display: inline-block;
     height: 28px;
     margin-top: 5px;
@@ -266,6 +266,10 @@ iframe[name="google_conversion_frame"] {
 
     &[href*="youtube"] {
       background-position: -100px 0;
+    }
+
+    &[href*="linkedin"] {
+      background-position: -166px 0;
     }
   }
 }
