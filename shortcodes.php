@@ -581,27 +581,47 @@ function sc_call_to_action_bar( $attr ) {
 }
 add_shortcode( 'call-to-action-bar', 'sc_call_to_action_bar' );
 
-function sc_page_title( ){
+function sc_page_title( ) {
    return get_the_title();
 }
 add_shortcode( 'page_title', 'sc_page_title' );
 
-function sc_page_subtitle( ){
+function sc_page_subtitle( ) {
 	global $post;
-	$post_id = wp_is_post_revision( $post->ID );
+	$subtitle = get_post_meta( $post->ID, 'page_subtitle', true );
 
-	if( $post_id === False ) {
-		$post_id = $post->ID;
-	}
-
-	$subtitle = get_post_meta( $post_id, 'page_subtitle', true );
-	
 	if( isset( $subtitle ) ) {
 		return '<span class="subtitle">' . $subtitle . '</span>';
 	} else {
-		return "";
+		return '';
 	}
 }
 add_shortcode( 'page_subtitle', 'sc_page_subtitle' );
+
+function sc_featured_profile( $attr ) {
+	$attr = shortcode_atts( array(
+		'post_title' => False,
+	), $attr, 'sc_featured_profile' );
+
+	if( isset( $attr['post_title'] ) ) :
+		if( $page = get_page_by_title( $attr['post_title'] ) ) :
+			ob_start();
+			?>
+			<a href="<?php echo $page->post_name ?>">
+				<span class="alumni-title">
+					<?php echo get_post_meta( $page->ID, 'page_subtitle', true ) ?>
+				</span>
+				<span class="alumni-name"><?php echo $attr['post_title'] ?></span>
+			</a>
+			<?php
+			return ob_get_clean();
+		else:
+			return '';
+		endif;
+	else:
+		return '';
+	endif;
+}
+add_shortcode( 'featured_profile', 'sc_featured_profile' );
 
 ?>
