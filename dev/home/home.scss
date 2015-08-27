@@ -141,7 +141,9 @@ body.ie8 #video-image {
     font-size: 32px;
     font-weight: 900;
     line-height: 1.1;
+    margin: 0 auto;
     text-transform: uppercase;
+    width: 300px;
 
     @media (max-width: $screen-sm-max) {
       font-size: 18px;
