@@ -13,6 +13,8 @@ function __init__(){
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'title-tag' );
 
+	// These are the image sizes for the header-images on the profiles.
+	// Leaving as 'parallax_feature' for backwards compatibility.
 	add_image_size('parallax_feature-full', 2000, 1200, true);
 	add_image_size('parallax_feature-desktop', 1199, 925, true);
 	add_image_size('parallax_feature-tablet', 767, 450, true);

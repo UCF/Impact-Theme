@@ -102,26 +102,6 @@
 					<p>Example:
 <pre><code>[blockquote source="UCF President John Hitt"]Research advances our understanding of the world and benefits our economy, both of which make our lives better.[/blockquote]</code></pre>
 
-
-					<h4>parallax_feature</h4>
-					<p>
-						Includes a Parallax Feature within your post/page content.
-					</p>
-					<table>
-						<tr>
-							<th scope="col">Name</th>
-							<th scope="col">Description</th>
-							<th scope="col">Default Value</th>
-						</tr>
-						<tr>
-							<td>title</td>
-							<td>The title of the Parallax Feature.</td>
-							<td>n/a</td>
-						</tr>
-					</table>
-					<p>Example:
-<pre><code>[parallax_feature title="Campus"]</code></pre>
-					
 					
 					
 					<h4>(post type)-list</h4>
