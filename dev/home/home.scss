@@ -147,6 +147,7 @@ body.ie8 #video-image {
 
     @media (max-width: $screen-sm-max) {
       font-size: 18px;
+      width: 190px;
     }
   }
 
@@ -172,16 +173,25 @@ body.ie8 #video-image {
     a.copy {
       @include sans-serif-text();
       color: #fff;
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 700;
       text-align: center;
       text-transform: uppercase;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 12px;
+      }
     }
   }
 
   .read-more {
-    color: #fff;
-    font-size: 40px;
+    color: $ucf-gold;
+    font-size: 32px;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
 } // end #impact
