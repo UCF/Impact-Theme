@@ -121,24 +121,26 @@ body {
 }
 
 .profile-list-title {
-  @include narrow-text();
-  font-size: 50px; // fallback for non-vw support
-  font-size: 5vw;
+  @include sans-serif-text();
+  font-size: 40px; // fallback for non-vw support
+  font-size: 3vw;
+  font-weight: 700;
   margin-top: 0;
+  text-transform: uppercase;
 
   @media (min-width: $screen-lg-min) {
-    font-size: 50px;
-    font-size: 4vw;
+    font-size: 45px;
+    font-size: 3vw;
   }
 
   @media (max-width: $screen-sm-max) {
-    font-size: 36px;
-    font-size: 5vw;
+    font-size: 40px;
+    font-size: 4vw;
   }
 
   @media (max-width: $screen-xs-max) {
     font-size: 23px;
-    font-size: 7vw;
+    font-size: 3vw;
   }
 }
 
