@@ -81,7 +81,7 @@ function get_header_image_css($post_id, $lg_cpt_field, $md_cpt_field, $sm_cpt_fi
 		@media all and (max-width: 991px) and (min-width: 768px) { #photo_<?=$post_id?> { background-image: url('<?php echo $header_img_sm; ?>'); } }
 		<?php } ?>
 		<?php if ($header_img_xs) { ?>
-		@media all and (max-width: 767px) { #photo_<?=$post_id?> { background-image: url('<?php echo $header__img_xs; ?>'); } }
+		@media all and (max-width: 767px) { #photo_<?=$post_id?> { background-image: url('<?php echo $header_img_xs; ?>'); } }
 		<?php } ?>
 	</style>
 	<!--[if lt IE 9]>
