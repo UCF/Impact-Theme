@@ -36,6 +36,16 @@
     color: $ucf-gold;
     text-decoration: none;
   }
+
+  &.site-title-alt {
+    color: #000;
+
+    &:hover,
+    &:focus {
+      color: $ucf-gold;
+      text-decoration: none;
+    }
+  }
 }
 
 .site-title-divider {
