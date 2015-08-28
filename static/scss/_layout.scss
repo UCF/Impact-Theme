@@ -120,9 +120,16 @@ body {
     background-color: $ucf-gold;
 
     .profile-item-content {
-      color: #000;
       padding: 10% 25% 10% 10%;
       text-align: left;
+
+      &,
+      & p,
+      & ol,
+      & ul,
+      & a {
+        color: #000;
+      }
 
       @media (max-width: $screen-sm-max) {
         padding: 10%;
