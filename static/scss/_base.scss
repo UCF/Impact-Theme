@@ -1,4 +1,5 @@
 // Import individual components for our theme in this file.
+// Includes should be listed from the most general/abstract to the most specific.
 
 
 // Base mixins, utilities
@@ -10,9 +11,10 @@
 
 // Styles for components and Bootstrap component overrides
 @import 'components';
-@import 'profiles';
 @import 'header_image';
 
 // Styles for base header/footer templates and specific, per-view templates
 @import 'layout';
+@import 'page';
+@import 'profiles';
 @import 'shortcodes';

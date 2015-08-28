@@ -38,17 +38,6 @@
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-
-  span {
-    color: #fff;
-    display: block;
-    font-size: 38px;
-    left: 50%;
-    padding: 10px;
-    position: absolute;
-    text-shadow: 0 2px 0 #000, 0 0 10px #000;
-    top: 20%;
-  }
 }
 
 .header-image-header .header-image-photo {
@@ -97,7 +86,7 @@
   .header-image-header {
     h1 {
       font-size: 50px;
-      margin-top: 150px;
+      margin-top: 85px;
     }
 
     p.profile-name {
@@ -115,8 +104,9 @@
   .header-image-header {
     h1 {
       font-size: 45px;
-      margin-top: 105px;
+      margin-top: 45px;
     }
+
     p.profile-name {
       font-size: 26px;
     }
@@ -143,7 +133,7 @@
   .header-image-header {
     h1 {
       font-size: 38px;
-      margin-top: 87px;
+      margin-top: 25px;
     }
 
     p.profile-name {
@@ -178,7 +168,7 @@
   .header-image-header {
     h1 {
       font-size: 36px;
-      margin-top: 200px;
+      margin-top: 120px;
     }
 
     p.profile-name {

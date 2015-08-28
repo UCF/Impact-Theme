@@ -528,8 +528,13 @@ function sc_header_image_css( $attr, $content='' ) {
 	?>
 	<section class="header-image-content header-image-header">
 		<div class="header-image-photo" id="photo_<?php echo $post->ID; ?>">
-			<div class="clearfix"></div>
-			<?php echo $content; ?>
+			<div class="container">
+				<a class="site-title" href="<?php echo get_site_url(); ?>">
+					<?php echo get_theme_option( 'organization_name' ); ?>
+					<div class="site-title-divider"></div>
+				</a>
+				<?php echo do_shortcode( $content ); ?>
+			</div>
 		</div>
 	</section>
 	<?php

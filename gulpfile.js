@@ -27,7 +27,7 @@ var config = {
 
 // Run Bower
 gulp.task('bower', function() {
-  bower()
+  return bower()
     .pipe(gulp.dest(config.bowerDir))
     .on('end', function() {
 
@@ -39,9 +39,9 @@ gulp.task('bower', function() {
 });
 
 
-// Compile scss files
-gulp.task('css', function() {
-  gulp.src(config.sassPath + '/*.scss')
+// Process .scss files in /static/scss/
+gulp.task('css-static', function() {
+  return gulp.src(config.sassPath + '/*.scss')
     .pipe(scsslint())
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCss({compatibility: 'ie8'}))
@@ -49,9 +49,12 @@ gulp.task('css', function() {
     .pipe(bless())
     .pipe(gulp.dest(config.cssPath));
     // .pipe(browserSync.stream());
+});
 
-  // .scss files in /dev/ directory
-  gulp.src(config.devPath + '/**/*.scss')
+
+// Process .scss files in /dev/ directory
+gulp.task('css-dev', function() {
+  return gulp.src(config.devPath + '/**/*.scss')
     .pipe(scsslint())
     .pipe(sass().on('error', sass.logError))
     .pipe(minifyCss({compatibility: 'ie8'}))
@@ -59,26 +62,33 @@ gulp.task('css', function() {
 });
 
 
+// Process all .scss files
+gulp.task('css', ['css-static', 'css-dev']);
+
+
 // Lint, concat and uglify js files.
 gulp.task('js', function() {
 
   // Run jshint on all js files in jsPath (except already minified files.)
-  gulp.src([config.jsPath + '/*.js', '!' + config.jsPath + '/*.min.js'])
+  return gulp.src([config.jsPath + '/*.js', '!' + config.jsPath + '/*.min.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jshint.reporter('fail'));
+    .pipe(jshint.reporter('fail'))
+    .on('end', function() {
 
-  // Combine and uglify js files to create script.min.js.
-  var minified = [
-    config.bowerDir + '/bootstrap-sass-official/assets/javascripts/bootstrap.js',
-    config.jsPath + '/generic-base.js',
-    config.jsPath + '/script.js'
-  ];
+      // Combine and uglify js files to create script.min.js.
+      var minified = [
+        config.bowerDir + '/bootstrap-sass-official/assets/javascripts/bootstrap.js',
+        config.jsPath + '/generic-base.js',
+        config.jsPath + '/script.js'
+      ];
 
-  gulp.src(minified)
-    .pipe(concat('script.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(config.jsPath));
+      gulp.src(minified)
+        .pipe(concat('script.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(config.jsPath));
+
+    });
 });
 
 
@@ -93,8 +103,8 @@ gulp.task('watch', function() {
   // gulp.watch(config.phpPath + '/*.php').on('change', reload);
   // gulp.watch(config.phpPath + '/*.php');
 
-  gulp.watch(config.sassPath + '/*.scss', ['css']);
-  gulp.watch(config.devPath + '/**/*.scss', ['css']);
+  gulp.watch(config.sassPath + '/*.scss', ['css-static']);
+  gulp.watch(config.devPath + '/**/*.scss', ['css-dev']);
   gulp.watch(config.jsPath + '/*.js', ['js']);
 });
 
