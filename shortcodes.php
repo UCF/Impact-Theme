@@ -533,7 +533,7 @@ function sc_header_image_css( $attr, $content='' ) {
 					<?php echo get_theme_option( 'organization_name' ); ?>
 					<div class="site-title-divider"></div>
 				</a>
-				<?php echo $content; ?>
+				<?php echo do_shortcode( $content ); ?>
 			</div>
 		</div>
 	</section>
