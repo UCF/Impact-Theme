@@ -634,9 +634,9 @@ function sc_featured_profile( $attr ) {
 add_shortcode( 'featured_profile', 'sc_featured_profile' );
 
 
-function sc_home_view_more() {
-	return get_theme_option( 'home_view_more' );
+function sc_home_cta() {
+	return get_theme_option( 'home_cta' );
 }
-add_shortcode( 'home_view_more', 'sc_home_view_more' )
+add_shortcode( 'home_cta', 'sc_home_cta' )
 
 ?>

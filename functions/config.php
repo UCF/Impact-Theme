@@ -264,10 +264,10 @@ Config::$theme_settings = array(
 	),
 	'Site' => array(
 		new TextField(array(
-			'name'        => 'Call to Action',
-			'id'          => THEME_OPTIONS_NAME.'[home_view_more]',
-			'description' => 'CTA text at the bottom of the home page.',
-			'value'       => $theme_options['home_view_more'],
+			'name'        => 'Home Page Call to Action',
+			'id'          => THEME_OPTIONS_NAME.'[home_cta]',
+			'description' => 'Call to action text at the bottom of the home page.',
+			'value'       => $theme_options['home_cta'],
 		)),
 		new TextField(array(
 			'name'        => 'Contact Email',
