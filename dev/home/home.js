@@ -1,6 +1,6 @@
 (function () {
 	var resizeTimer,
-		$window ,
+		$window,
 		$lead,
 		$video,
 		$videoImage,
@@ -20,7 +20,7 @@
 	function resizeLead() {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(function() {
-			$lead.css("height", ($window.height() - 50) + "px");
+			$lead.css('height', ($window.height() - 50) + 'px');
 		}, 250);
 	}
 
@@ -80,8 +80,8 @@
 
 		// Resize image/video
 		if ((windowWidth / windowHeight) < aspectRatio) {
-			$video.removeClass().css('height',windowHeight);
-			$videoImage.removeClass().css('height',windowHeight);
+			$video.removeClass().css('height', windowHeight);
+			$videoImage.removeClass().css('height', windowHeight);
 		} else {
 		    $video.removeClass().css('width', windowWidth);
 			$videoImage.removeClass().css('width', windowWidth);
