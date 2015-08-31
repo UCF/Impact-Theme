@@ -68,7 +68,7 @@
 	function setupEventHandlers() {
 		$window.on('resize', onResize);
 		$video.on('timeupdate', toggleLinks);
-		$video.on('play', hideVideoStill);
+		$video.on('loadstart', hideVideoStill);
 		$video.on('ended', showVideoStill);
 		$('.smooth-scroll').on('click', smoothScroll);
 	}
