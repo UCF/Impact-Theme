@@ -264,6 +264,12 @@ Config::$theme_settings = array(
 	),
 	'Site' => array(
 		new TextField(array(
+			'name'        => 'Call to Action',
+			'id'          => THEME_OPTIONS_NAME.'[home_view_more]',
+			'description' => 'CTA text at the bottom of the home page.',
+			'value'       => $theme_options['home_view_more'],
+		)),
+		new TextField(array(
 			'name'        => 'Contact Email',
 			'id'          => THEME_OPTIONS_NAME.'[site_contact]',
 			'description' => 'Contact email address that visitors to your site can use to contact you.',
