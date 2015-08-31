@@ -92,7 +92,8 @@
 			var leftOffset = -(($videoImage.width() - windowWidth) * .5);
 			$video.css('left', leftOffset);
 			$videoImage.css('left', leftOffset);
-		} else {
+		}		
+		if (windowHeight < $videoImage.height()) {
 			var topOffset = -(($videoImage.height() - windowHeight) * .5);
 			$video.css('top', topOffset);
 			$videoImage.css('top', topOffset);
