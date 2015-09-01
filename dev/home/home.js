@@ -19,7 +19,7 @@
 
 	function resizeLead() {
 		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function() {
+		resizeTimer = setTimeout(function () {
 			$lead.css('height', ($window.height() - 50) + 'px');
 		}, 250);
 	}
@@ -47,14 +47,8 @@
 		}
 	}
 
-	function hideVideoStill() {
-		$('#video-image').hide();
-		$video.show();
-	}
-
 	function showVideoStill() {
 		$('#video-image').show();
-		$video.hide();
 		$featuredLink.removeClass('fade');
 	}
 
@@ -68,8 +62,10 @@
 	function setupEventHandlers() {
 		$window.on('resize', onResize);
 		$video.on('timeupdate', toggleLinks);
-		$video.on('loadstart', hideVideoStill);
-		$video.on('ended', showVideoStill);
+		$video.on('ended', function() {
+			showVideoStill();
+			$video.hide();
+		});
 		$('.smooth-scroll').on('click', smoothScroll);
 	}
 
@@ -83,7 +79,7 @@
 			$video.removeClass().css('height', windowHeight);
 			$videoImage.removeClass().css('height', windowHeight);
 		} else {
-		    $video.removeClass().css('width', windowWidth);
+			$video.removeClass().css('width', windowWidth);
 			$videoImage.removeClass().css('width', windowWidth);
 		}
 
@@ -92,7 +88,7 @@
 			var leftOffset = -(($videoImage.width() - windowWidth) * .5);
 			$video.css('left', leftOffset);
 			$videoImage.css('left', leftOffset);
-		}		
+		}
 		if (windowHeight < $videoImage.height()) {
 			var topOffset = -(($videoImage.height() - windowHeight) * .5);
 			$video.css('top', topOffset);
@@ -100,11 +96,42 @@
 		}
 	}
 
+	// Test if video auto plays
+	function isAutoPlay() {
+
+		var mp4 = 'data:video/mp4;base64,AAAAFGZ0eXBNU05WAAACAE1TTlYAAAOUbW9vdgAAAGxtdmhkAAAAAM9ghv7PYIb+AAACWAAACu8AAQAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAnh0cmFrAAAAXHRraGQAAAAHz2CG/s9ghv4AAAABAAAAAAAACu8AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAAAAFAAAAA4AAAAAAHgbWRpYQAAACBtZGhkAAAAAM9ghv7PYIb+AAALuAAANq8AAAAAAAAAIWhkbHIAAAAAbWhscnZpZGVBVlMgAAAAAAABAB4AAAABl21pbmYAAAAUdm1oZAAAAAAAAAAAAAAAAAAAACRkaW5mAAAAHGRyZWYAAAAAAAAAAQAAAAx1cmwgAAAAAQAAAVdzdGJsAAAAp3N0c2QAAAAAAAAAAQAAAJdhdmMxAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAFAAOABIAAAASAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGP//AAAAEmNvbHJuY2xjAAEAAQABAAAAL2F2Y0MBTUAz/+EAGGdNQDOadCk/LgIgAAADACAAAAMA0eMGVAEABGjuPIAAAAAYc3R0cwAAAAAAAAABAAAADgAAA+gAAAAUc3RzcwAAAAAAAAABAAAAAQAAABxzdHNjAAAAAAAAAAEAAAABAAAADgAAAAEAAABMc3RzegAAAAAAAAAAAAAADgAAAE8AAAAOAAAADQAAAA0AAAANAAAADQAAAA0AAAANAAAADQAAAA0AAAANAAAADQAAAA4AAAAOAAAAFHN0Y28AAAAAAAAAAQAAA7AAAAA0dXVpZFVTTVQh0k/Ou4hpXPrJx0AAAAAcTVREVAABABIAAAAKVcQAAAAAAAEAAAAAAAAAqHV1aWRVU01UIdJPzruIaVz6ycdAAAAAkE1URFQABAAMAAAAC1XEAAACHAAeAAAABBXHAAEAQQBWAFMAIABNAGUAZABpAGEAAAAqAAAAASoOAAEAZABlAHQAZQBjAHQAXwBhAHUAdABvAHAAbABhAHkAAAAyAAAAA1XEAAEAMgAwADAANQBtAGUALwAwADcALwAwADYAMAA2ACAAMwA6ADUAOgAwAAABA21kYXQAAAAYZ01AM5p0KT8uAiAAAAMAIAAAAwDR4wZUAAAABGjuPIAAAAAnZYiAIAAR//eBLT+oL1eA2Nlb/edvwWZflzEVLlhlXtJvSAEGRA3ZAAAACkGaAQCyJ/8AFBAAAAAJQZoCATP/AOmBAAAACUGaAwGz/wDpgAAAAAlBmgQCM/8A6YEAAAAJQZoFArP/AOmBAAAACUGaBgMz/wDpgQAAAAlBmgcDs/8A6YEAAAAJQZoIBDP/AOmAAAAACUGaCQSz/wDpgAAAAAlBmgoFM/8A6YEAAAAJQZoLBbP/AOmAAAAACkGaDAYyJ/8AFBAAAAAKQZoNBrIv/4cMeQ==',
+			body = document.getElementsByTagName('body')[0];;
+
+		var video = document.createElement('video');
+		video.src = mp4;
+		video.autoplay = true;
+		video.volume = 0;
+		video.style.visibility = 'hidden';
+
+		body.appendChild(video);
+
+		video.play();
+
+		// triggered if autoplay fails
+		var removeVideoTimeout = setTimeout(function () {
+			body.removeChild(video);
+			$('#video').remove();
+			showVideoStill();
+		}, 50);
+
+		// triggered if autoplay works
+		video.addEventListener('play', function () {
+			clearTimeout(removeVideoTimeout);
+			body.removeChild(video);
+		}, false);
+	}
+
 	function init() {
 		cacheObjects();
 		resizeLead();
 		setupEventHandlers();
 		setImageVideoSize();
+		isAutoPlay();
 	}
 	$(init);
 } ());
