@@ -1,6 +1,6 @@
 # UCF Impact Theme - [University of Central Florida Downtown Orlando, FL](http://www.ucf.edu/impact/)
 
-WordPress theme built off of UCF's Generic theme for UCF's Downtown Orlando Site.
+WordPress theme built off of UCF's Generic theme for UCF's Student Impact, Access and Innovation Site.
 
 
 ## Installation Requirements:
