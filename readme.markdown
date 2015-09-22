@@ -1,4 +1,4 @@
-# UCF Impact Theme - [University of Central Florida Downtown Orlando, FL](http://www.ucf.edu/impact/)
+# UCF Impact Theme - [University of Central Florida Student Impact/Access to Higher Education Changes Lives](http://www.ucf.edu/impact/)
 
 WordPress theme built off of UCF's Generic theme for UCF's Student Impact, Access and Innovation Site.
 
