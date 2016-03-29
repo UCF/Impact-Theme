@@ -72,27 +72,36 @@
 	function setImageVideoSize() {
 		var windowWidth = $window.width(),
 			windowHeight = $window.height(),
-			aspectRatio = $videoImage.width() / $videoImage.height();
+			aspectRatio = $videoImage.width() / $videoImage.height(),
+			videoSizeCheckCount = 0;
 
-		// Resize image/video
-		if ((windowWidth / windowHeight) < aspectRatio) {
-			$video.removeClass().css('height', windowHeight);
-			$videoImage.removeClass().css('height', windowHeight);
+		if (videoSizeCheckCount < 100 && ($videoImage.width() === 0 || $videoImage.height() === 0)) {
+			setTimeout(function () {
+				setImageVideoSize();
+				videoSizeCheckCount++;
+			}, 50);
 		} else {
-			$video.removeClass().css('width', windowWidth);
-			$videoImage.removeClass().css('width', windowWidth);
-		}
+			// Resize image/video
+			if ((windowWidth / windowHeight) < aspectRatio) {
+				$video.removeClass().css('height', windowHeight);
+				$videoImage.removeClass().css('height', windowHeight);
+			} else {
+				$video.removeClass().css('width', windowWidth);
+				$videoImage.removeClass().css('width', windowWidth);
+			}
 
-		// Center image/video
-		if (windowWidth < $videoImage.width()) {
-			var leftOffset = -(($videoImage.width() - windowWidth) * .5);
-			$video.css('left', leftOffset);
-			$videoImage.css('left', leftOffset);
-		}
-		if (windowHeight < $videoImage.height()) {
-			var topOffset = -(($videoImage.height() - windowHeight) * .5);
-			$video.css('top', topOffset);
-			$videoImage.css('top', topOffset);
+			// Center image/video
+			if (windowWidth < $videoImage.width()) {
+				var leftOffset = -(($videoImage.width() - windowWidth) * 0.5);
+				$video.css('left', leftOffset);
+				$videoImage.css('left', leftOffset);
+			}
+
+			if (windowHeight < $videoImage.height()) {
+				var topOffset = -(($videoImage.height() - windowHeight) * 0.5);
+				$video.css('top', topOffset);
+				$videoImage.css('top', topOffset);
+			}
 		}
 	}
 
@@ -118,11 +127,15 @@
 		var removeVideoTimeout = setTimeout(function () {
 			body.removeChild(video);
 			$video.remove();
+			resizeLead();
+			setImageVideoSize();
 			showVideoStill();
 		}, 50);
 
 		// triggered if autoplay works
 		video.addEventListener('play', function () {
+			resizeLead();
+			setImageVideoSize();
 			clearTimeout(removeVideoTimeout);
 			body.removeChild(video);
 		}, false);
@@ -130,9 +143,7 @@
 
 	function init() {
 		cacheObjects();
-		resizeLead();
 		setupEventHandlers();
-		setImageVideoSize();
 		isAutoPlay();
 	}
 	$(init);
