@@ -44,7 +44,7 @@
 
 									<?php echo display_address(); ?>
 
-									<a href="http://www.ucf.edu/">www.ucf.edu</a>
+									<a href="https://www.ucf.edu/">www.ucf.edu</a>
 
 									<?php echo wp_nav_menu( array(
 										'theme_location' => 'social-links',
