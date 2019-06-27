@@ -58,14 +58,12 @@ function get_events($start, $limit) {
 	$url     = rtrim($options['events_url'], '/') . '/feed.json';
 
 	// Set a timeout
-	$opts = array('http' => array(
-						'method'  => 'GET',
-						'timeout' => FEED_FETCH_TIMEOUT
-	));
-	$context = stream_context_create( $opts );
+	$args = array(
+		'timeout' => FEED_FETCH_TIMEOUT
+	);
 
 	// Grab the feed
-	$raw_events = file_get_contents( $url, false, $context );
+	$raw_events = wp_remote_retrieve_body( wp_remote_get( $url, $args ) );
 	if ( $raw_events ) {
 		$events = json_decode($raw_events, TRUE);
 		$events = array_slice($events, $start, $limit);
