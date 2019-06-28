@@ -11,8 +11,7 @@
 	$args = array(
 		'timeout' => FEED_FETCH_TIMEOUT
 	);
-	$context = stream_context_create( $args );
-
+	
 	$html = wptexturize( do_shortcode( wp_remote_retrieve_body( wp_remote_get( $html_file, $args ) ) ) );
 ?>
 <main class="page page-profile" id="<?php echo $post->post_name; ?>">
