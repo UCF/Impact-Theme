@@ -553,7 +553,7 @@ function bootstrap_menus() {
 	class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 
-		function start_lvl( &$output, $depth ) {
+		function start_lvl( &$output, $depth = 0, $args = array() ) {
 
 			$indent = str_repeat( "\t", $depth );
 			$output    .= "\n$indent<ul class=\"dropdown-menu\">\n";
@@ -1341,7 +1341,7 @@ function opengraph_setup() {
 
 
 	// Include admins if available
-	$admins = trim( $options['fb_admins'] );
+	$admins = isset( $options['fb_admins'] ) ? trim( $options['fb_admins'] ) : '';
 	if ( strlen( $admins ) > 0 ) {
 		$metas[] = array( 'property' => 'fb:admins', 'content' => $admins );
 	}
@@ -1517,6 +1517,8 @@ add_action( 'do_meta_boxes', 'register_meta_boxes' );
  * @author Jared Lang
  * */
 function save_meta_data( $post ) {
+	$meta_box = null;
+
 	//Register custom post types metaboxes
 	foreach ( installed_custom_post_types() as $custom_post_type ) {
 		if ( post_type( $post ) == $custom_post_type->options( 'name' ) ) {
@@ -1537,6 +1539,8 @@ add_action( 'save_post', 'save_meta_data' );
  * @author Jared Lang
  * */
 function show_meta_boxes( $post ) {
+	$meta_box = null;
+
 	//Register custom post types metaboxes
 	foreach ( installed_custom_post_types() as $custom_post_type ) {
 		if ( post_type( $post ) == $custom_post_type->options( 'name' ) ) {
@@ -1570,8 +1574,12 @@ function save_default( $post_id, $field ) {
  * @author Jared Lang
  * */
 function _save_meta_data( $post_id, $meta_box ) {
+	if ( ! isset( $_POST['meta_box_nonce'] ) ) {
+		return $post_id;
+	}
+
 	// verify nonce
-	if ( !wp_verify_nonce( $_POST['meta_box_nonce'], basename( __FILE__ ) ) ) {
+	if ( ! wp_verify_nonce( $_POST['meta_box_nonce'], basename( __FILE__ ) ) ) {
 		return $post_id;
 	}
 
