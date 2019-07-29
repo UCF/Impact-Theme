@@ -96,9 +96,9 @@ define('THEME_OPTIONS_NAME', 'theme');
 define('THEME_OPTIONS_PAGE_TITLE', 'Theme Options');
 
 $theme_options = get_option(THEME_OPTIONS_NAME);
-define('GA_ACCOUNT', $theme_options['ga_account']);
-define('CB_UID', $theme_options['cb_uid']);
-define('CB_DOMAIN', $theme_options['cb_domain']);
+define('GA_ACCOUNT', isset( $theme_options['ga_account'] ) ? $theme_options['ga_account'] : null );
+define('CB_UID', isset( $theme_options['cb_uid'] ) ? $theme_options['cb_uid'] : null );
+define('CB_DOMAIN', isset( $theme_options['cb_domain'] ) ? $theme_options['cb_domain'] : null );
 
 # Timeout for data grabbed from feeds
 define('FEED_FETCH_TIMEOUT', 10); // seconds
@@ -139,14 +139,14 @@ Config::$theme_settings = array(
 			'id'          => THEME_OPTIONS_NAME.'[gw_verify]',
 			'description' => 'Example: <em>9Wsa3fspoaoRE8zx8COo48-GCMdi5Kd-1qFpQTTXSIw</em>',
 			'default'     => null,
-			'value'       => $theme_options['gw_verify'],
+			'value'       => isset( $theme_options['gw_verify'] ) ? $theme_options['gw_verify'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Google Analytics Account',
 			'id'          => THEME_OPTIONS_NAME.'[ga_account]',
 			'description' => 'Example: <em>UA-9876543-21</em>. Leave blank for development.',
 			'default'     => null,
-			'value'       => $theme_options['ga_account'],
+			'value'       => isset( $theme_options['ga_account'] ) ? $theme_options['ga_account'] : null,
 		)),
 	),
 	'Events' => array(
@@ -154,7 +154,7 @@ Config::$theme_settings = array(
 			'name'        => 'Events Max Items',
 			'id'          => THEME_OPTIONS_NAME.'[events_max_items]',
 			'description' => 'Maximum number of events to display whenever outputting event information.',
-			'value'       => $theme_options['events_max_items'],
+			'value'       => isset( $theme_options['events_max_items'] ) ? $theme_options['events_max_items'] : null,
 			'default'     => 4,
 			'choices'     => array(
 				'1' => 1,
@@ -168,7 +168,7 @@ Config::$theme_settings = array(
 			'name'        => 'Events Calendar URL',
 			'id'          => THEME_OPTIONS_NAME.'[events_url]',
 			'description' => 'Base URL for the calendar you wish to use. Example: <em>http://events.ucf.edu/mycalendar</em>',
-			'value'       => $theme_options['events_url'],
+			'value'       => isset( $theme_options['events_url'] ) ? $theme_options['events_url'] : null,
 			'default'     => 'http://events.ucf.edu',
 		)),
 	),
@@ -177,52 +177,52 @@ Config::$theme_settings = array(
 			'name'        => 'Profile list title',
 			'id'          => THEME_OPTIONS_NAME.'[profile_list_title]',
 			'description' => 'Text used in the heading for Impact profile lists.',
-			'value'       => $theme_options['profile_list_title'],
+			'value'       => isset( $theme_options['profile_list_title'] ) ? $theme_options['profile_list_title'] : null,
 		)),
 		new TextareaField(array(
 			'name'        => 'Profile list description',
 			'id'          => THEME_OPTIONS_NAME.'[profile_list_description]',
 			'description' => 'Description text for Impact profile lists.',
-			'value'       => $theme_options['profile_list_description'],
+			'value'       => isset( $theme_options['profile_list_description'] ) ? $theme_options['profile_list_description'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Footer Call-to-action Title',
 			'id'          => THEME_OPTIONS_NAME.'[footer_cta_title]',
 			'description' => 'Text used in the heading for the call-to-action section of the footer.',
 			'default'     => 'What Will Your Impact Be?',
-			'value'       => $theme_options['footer_cta_title'],
+			'value'       => isset( $theme_options['footer_cta_title'] ) ? $theme_options['footer_cta_title'] : null,
 		)),
 		new TextareaField(array(
 			'name'        => 'Footer Call-to-action Description',
 			'id'          => THEME_OPTIONS_NAME.'[footer_cta_description]',
 			'description' => 'Content displayed in the call-to-action section of the footer.  Accepts HTML and shortcode content.',
 			'default'     => 'Help UCF students continue to make an impact on our community today.',
-			'value'       => $theme_options['footer_cta_description'],
+			'value'       => isset( $theme_options['footer_cta_description'] ) ? $theme_options['footer_cta_description'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Footer Call-to-action Text',
 			'id'          => THEME_OPTIONS_NAME.'[footer_cta_text]',
 			'description' => 'Text in the call-to-action button in the footer.',
 			'default'     => 'Give Now',
-			'value'       => $theme_options['footer_cta_text'],
+			'value'       => isset( $theme_options['footer_cta_text'] ) ? $theme_options['footer_cta_text'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Footer Call-to-action URL',
 			'id'          => THEME_OPTIONS_NAME.'[footer_cta_url]',
 			'description' => 'Where the call-to-action button in the footer links out to.',
-			'value'       => $theme_options['footer_cta_url'],
+			'value'       => isset( $theme_options['footer_cta_url'] ) ? $theme_options['footer_cta_url'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Footer 3rd Column Heading Text',
 			'id'          => THEME_OPTIONS_NAME.'[footer_col3_heading]',
 			'description' => 'Text used in the heading for the 3rd footer column.',
-			'value'       => $theme_options['footer_col3_heading'],
+			'value'       => isset( $theme_options['footer_col3_heading'] ) ? $theme_options['footer_col3_heading'] : null,
 		)),
 		new TextareaField(array(
 			'name'        => 'Footer 3rd Column Text',
 			'id'          => THEME_OPTIONS_NAME.'[footer_col3_content]',
 			'description' => 'Content displayed in the 3rd column of the footer.  Accepts HTML and shortcode content.  Content should be limited to 250 characters (assuming no HTML/shortcode content is added).',
-			'value'       => $theme_options['footer_col3_content'],
+			'value'       => isset( $theme_options['footer_col3_content'] ) ? $theme_options['footer_col3_content'] : null,
 		)),
 		new RadioField(array(
 			'name'        => 'Show UCF logo in 3rd column',
@@ -232,7 +232,7 @@ Config::$theme_settings = array(
 				'On'  => 1,
 				'Off' => 0,
 			),
-			'value'       => $theme_options['footer_col3_logo'],
+			'value'       => isset( $theme_options['footer_col3_logo'] ) ? $theme_options['footer_col3_logo'] : null,
 	    )),
 	),
 	'Search' => array(
@@ -245,21 +245,21 @@ Config::$theme_settings = array(
 				'On'  => 1,
 				'Off' => 0,
 			),
-			'value'       => $theme_options['enable_google'],
+			'value'       => isset( $theme_options['enable_google'] ) ? $theme_options['enable_google'] : null,
 	    )),
 		new TextField(array(
 			'name'        => 'Search Domain',
 			'id'          => THEME_OPTIONS_NAME.'[search_domain]',
 			'description' => 'Domain to use for the built-in google search.  Useful for development or if the site needs to search a domain other than the one it occupies. Example: <em>some.domain.com</em>',
 			'default'     => null,
-			'value'       => $theme_options['search_domain'],
+			'value'       => isset( $theme_options['search_domain'] ) ? $theme_options['search_domain'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Search Results Per Page',
 			'id'          => THEME_OPTIONS_NAME.'[search_per_page]',
 			'description' => 'Number of search results to show per page of results',
 			'default'     => 10,
-			'value'       => $theme_options['search_per_page'],
+			'value'       => isset( $theme_options['search_per_page'] ) ? $theme_options['search_per_page'] : null,
 		)),
 	),
 	'Site' => array(
@@ -267,32 +267,32 @@ Config::$theme_settings = array(
 			'name'        => 'Home Page Call to Action',
 			'id'          => THEME_OPTIONS_NAME.'[home_cta]',
 			'description' => 'Call to action text at the bottom of the home page.',
-			'value'       => $theme_options['home_cta'],
+			'value'       => isset( $theme_options['home_cta'] ) ? $theme_options['home_cta'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Contact Email',
 			'id'          => THEME_OPTIONS_NAME.'[site_contact]',
 			'description' => 'Contact email address that visitors to your site can use to contact you.',
-			'value'       => $theme_options['site_contact'],
+			'value'       => isset( $theme_options['site_contact'] ) ? $theme_options['site_contact'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Contact Phone Number',
 			'id'          => THEME_OPTIONS_NAME.'[site_contact_phone]',
 			'description' => 'Contact phone number that visitors to your site can use to contact you.',
-			'value'       => $theme_options['site_contact_phone'],
+			'value'       => isset( $theme_options['site_contact_phone'] ) ? $theme_options['site_contact_phone'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Organization Name',
 			'id'          => THEME_OPTIONS_NAME.'[organization_name]',
 			'description' => 'Your organization\'s name',
 			'default'     => 'Impact',
-			'value'       => $theme_options['organization_name'],
+			'value'       => isset( $theme_options['organization_name'] ) ? $theme_options['organization_name'] : null,
 		)),
 		new TextareaField(array(
 			'name'        => 'Organization Address',
 			'id'          => THEME_OPTIONS_NAME.'[organization_address]',
 			'description' => 'Your organization\'s address',
-			'value'       => $theme_options['organization_address'],
+			'value'       => isset( $theme_options['organization_address'] ) ? $theme_options['organization_address'] : null,
 		)),
 	),
 	'Social' => array(
@@ -301,13 +301,13 @@ Config::$theme_settings = array(
 			'id'          => THEME_OPTIONS_NAME.'[facebook_url]',
 			'description' => 'URL to the facebook page you would like to direct visitors to.  Example: <em>https://www.facebook.com/CSBrisketBus</em>',
 			'default'     => null,
-			'value'       => $theme_options['facebook_url'],
+			'value'       => isset( $theme_options['facebook_url'] ) ? $theme_options['facebook_url'] : null,
 		)),
 		new TextField(array(
 			'name'        => 'Twitter URL',
 			'id'          => THEME_OPTIONS_NAME.'[twitter_url]',
 			'description' => 'URL to the twitter user account you would like to direct visitors to.  Example: <em>http://twitter.com/csbrisketbus</em>',
-			'value'       => $theme_options['twitter_url'],
+			'value'       => isset( $theme_options['twitter_url'] ) ? $theme_options['twitter_url'] : null,
 		)),
 	),
 	'Web Fonts' => array(
@@ -319,7 +319,7 @@ Config::$theme_settings = array(
 							project has been configured to deliver fonts to this site\'s domain.<br/>
 							See the <a target="_blank" href="http://www.typography.com/cloud/user-guide/managing-domains">Cloud.Typography docs on managing domains</a> for more info.',
 			'default'     => '//cloud.typography.com/730568/803468/css/fonts.css', /* CSS Key relative to PROD project */
-			'value'       => $theme_options['cloud_font_key'],
+			'value'       => isset( $theme_options['cloud_font_key'] ) ? $theme_options['cloud_font_key'] : null,
 		)),
 	),
 	'Settings' => array(
@@ -332,7 +332,7 @@ Config::$theme_settings = array(
 				'On'  => 1,
 				'Off' => 0,
 			),
-			'value'       => $theme_options['enable_page_wysiwyg'],
+			'value'       => isset( $theme_options['enable_page_wysiwyg'] ) ? $theme_options['enable_page_wysiwyg'] : null,
 	    )),
 	),
 );
@@ -355,14 +355,14 @@ if ( !is_plugin_active( 'wordpress-seo/wp-seo.php' ) ) {
 				'On'  => 1,
 				'Off' => 0,
 			),
-			'value'       => $theme_options['enable_og'],
+			'value'       => isset( $theme_options['enable_og'] ) ? $theme_options['enable_og'] : null,
 	    )),
 		new TextField(array(
 			'name'        => 'Facebook Admins',
 			'id'          => THEME_OPTIONS_NAME.'[fb_admins]',
 			'description' => 'Comma seperated facebook usernames or user ids of those responsible for administrating any facebook pages created from pages on this site. Example: <em>592952074, abe.lincoln</em>',
 			'default'     => null,
-			'value'       => $theme_options['fb_admins'],
+			'value'       => isset( $theme_options['fb_admins'] ) ? $theme_options['fb_admins'] : null,
 		))
 	);
 }
@@ -398,7 +398,7 @@ Config::$metas = array(
 	array( 'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0' ),
 );
 
-if ( $theme_options['gw_verify'] ) {
+if ( isset( $theme_options['gw_verify'] ) && $theme_options['gw_verify'] ) {
 	Config::$metas[] = array(
 		'name'    => 'google-site-verification',
 		'content' => htmlentities( $theme_options['gw_verify'] ),

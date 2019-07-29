@@ -3,9 +3,9 @@ function sc_search_form() {
 	ob_start();
 	?>
 	<div class="search">
-		<?get_search_form()?>
+		<?php get_search_form(); ?>
 	</div>
-	<?
+	<?php
 	return ob_get_clean();
 }
 add_shortcode('search_form', 'sc_search_form');
@@ -67,13 +67,13 @@ function sc_post_type_search($params=array(), $content='') {
 	<script type="text/javascript">
 		if(typeof PostTypeSearchDataManager != 'undefined') {
 			PostTypeSearchDataManager.register(new PostTypeSearchData(
-				<?=json_encode($params['column_count'])?>,
-				<?=json_encode($params['column_width'])?>,
-				<?=json_encode($search_data)?>
+				<?php echo json_encode($params['column_count']); ?>,
+				<?php echo json_encode($params['column_width']); ?>,
+				<?php echo json_encode($search_data); ?>
 			));
 		}
 	</script>
-	<?
+	<?php
 
 	// Split up this post type's posts by term
 	$by_term = array();
@@ -142,15 +142,15 @@ function sc_post_type_search($params=array(), $content='') {
 						</form>
 					</div>
 					<div class="post-type-search-results "></div>
-					<?php if($params['show_sorting']) { ?>
+					<?php if($params['show_sorting']) : ?>
 					<div class="btn-group post-type-search-sorting">
 						<button class="btn<?if($params['default_sorting'] == 'term') echo ' active';?>"><i class="icon-list-alt"></i></button>
 						<button class="btn<?if($params['default_sorting'] == 'alpha') echo ' active';?>"><i class="icon-font"></i></button>
 					</div>
-					<?php } ?>
+					<?php endif; ?>
 	<?php
 
-	foreach($sections as $id => $section) {
+	foreach($sections as $id => $section) :
 		$hide = false;
 		switch ( $id ) {
 			case 'post-type-search-alpha':
@@ -165,35 +165,33 @@ function sc_post_type_search($params=array(), $content='') {
 				break;
 		}
 		?>
-					<div class="<?php echo $id; ?>"<? if ( $hide ) echo ' style="display:none;"'; ?>>
-						<?php foreach ( $section as $section_title => $section_posts ) { ?>
-							<?php if ( count( $section_posts ) > 0 || $params['show_empty_sections'] ) { ?>
+					<div class="<?php echo $id; ?>"<?php if ( $hide ) echo ' style="display:none;"'; ?>>
+						<?php foreach ( $section as $section_title => $section_posts ) : ?>
+							<?php if ( count( $section_posts ) > 0 || $params['show_empty_sections'] ) : ?>
 								<div>
 									<h3><?php echo esc_html( $section_title ); ?></h3>
 									<div class="row">
-										<? if ( count( $section_posts ) > 0 ) { ?>
+										<?php if ( count( $section_posts ) > 0 ) : ?>
 											<?php $posts_per_column = ceil( count( $section_posts ) / $params['column_count'] ); ?>
-											<?php foreach( range( 0, $params['column_count'] - 1 ) as $column_index ) { ?>
+											<?php foreach( range( 0, $params['column_count'] - 1 ) as $column_index ) : ?>
 												<?php $start = $column_index * $posts_per_column; ?>
-												<?php if ( count( $section_posts ) > $start ) { ?>
+												<?php if ( count( $section_posts ) > $start ) : ?>
 												<div class="<?php echo $params['column_width']; ?> resource-list">
 													<ul>
-													<?php foreach ( array_slice( $section_posts, $start, $posts_per_column ) as $post ) { ?>
+													<?php foreach ( array_slice( $section_posts, $start, $posts_per_column ) as $post ) : ?>
 														<li class="<?php echo $post_type->get_resource_application( $post ); ?>" data-post-id="<?php echo $post->ID; ?>"><?php echo $post_type->toHTML( $post ); ?></li>
-													<?php } ?>
+													<?php endforeach; ?>
 													</ul>
 												</div>
-												<?php } ?>
-											<?php } ?>
-										<?php } ?>
+												<?php endif; ?>
+											<?php endforeach; ?>
+										<?php endif; ?>
 									</div>
 								</div>
-							<?php } ?>
-						<?php } ?>
+							<?php endif; ?>
+						<?php endforeach; ?>
 					</div>
-		<?php
-	}
-	?>
+	<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
@@ -463,7 +461,7 @@ function sc_image($attr) {
 	}
 	$url = '';
 	if(isset($attr['filename']) && $attr['filename'] != '') {
-		$sql = sprintf('SELECT * FROM %s WHERE post_title="%s" AND post_parent=%d ORDER BY post_date DESC', $wpdb->posts, $wpdb->escape($attr['filename']), $post_id);
+		$sql = sprintf('SELECT * FROM %s WHERE post_title="%s" AND post_parent=%d ORDER BY post_date DESC', $wpdb->posts, esc_sql($attr['filename']), $post_id);
 		$rows = $wpdb->get_results($sql);
 		if(count($rows) > 0) {
 			$obj = $rows[0];
@@ -490,7 +488,7 @@ function sc_get_media($attr) {
 
 	$url = '';
 	if(isset($attr['filename']) && $attr['filename'] != '') {
-		$sql = sprintf('SELECT * FROM %s WHERE post_title="%s" AND post_parent=%d ORDER BY post_date DESC', $wpdb->posts, $wpdb->escape($attr['filename']), $post_id);
+		$sql = sprintf('SELECT * FROM %s WHERE post_title="%s" AND post_parent=%d ORDER BY post_date DESC', $wpdb->posts, esc_sql($attr['filename']), $post_id);
 		$rows = $wpdb->get_results($sql);
 		if(count($rows) > 0) {
 			$obj = $rows[0];
