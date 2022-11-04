@@ -43,3 +43,5 @@
 
 	</head>
 	<body ontouchstart <?php body_class( body_classes() ); ?>>
+		<a class="skip-navigation bg-complementary text-inverse sr-only" href="#content">Skip to main content</a>
+		<div id="ucfhb" style="min-height: 50px; background-color: #000;"></div>
