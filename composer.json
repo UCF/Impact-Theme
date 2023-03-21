@@ -1,0 +1,8 @@
+{
+    "name": "ucf/impact-theme",
+    "description": "WordPress theme built off of UCF's Generic theme for UCF's Student Impact, Access and Innovation Site.",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
